@@ -44,6 +44,7 @@ $route['404_override'] = 'errors/error_404';
 $route['home'] = 'home';
 $route['videos'] = 'videos';
 $route['login'] = 'login';
+$route['forget'] = 'forget';
 $route['plan/([0-9a-z_-]+)'] = "plan/packages";
 
 $route['dashboard'] = "dashboard";
@@ -90,6 +91,8 @@ $route['dashboard/usuarios'] = "d_users";
 $route['dashboard/usuarios/load'] = "d_users/load";
 $route['dashboard/usuarios/load/([0-9]+)'] = "d_users/load/$1";
 $route['dashboard/usuarios/validate'] = "d_users/validate";
+
+$route['backoffice'] = "b_home";
 
 
 /* End of file routes.php */

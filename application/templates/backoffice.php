@@ -1,287 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Empresa 100% peruana que brinda distintos servicios e info-productos, que utilizando el sistema de mercadeo en red nos permite fidelizar a consumidores potenciales a la marca.">
-<meta name="keywords" content="3T,training,travel,trade,bitcoin,criptocurrency,criptomoneda,mlm,redes,multinivel,peruano,educacion,entrenamiento,forex,bursatil,viajes">
-<title>Backoffice | Travel - Training- Trade</title>
-<script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
-
-<!-- Site favicon -->
-<link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
-<link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
-<!-- /site favicon -->
-<!-- Entypo font stylesheet -->
-<link href="<?php echo site_url().'static/backoffice/css/assets/entypo.css';?>" rel="stylesheet">
-<!-- /entypo font stylesheet -->
-<link href="<?php echo site_url().'static/backoffice/css/one/style_one.css';?>" rel="stylesheet">
-<!-- Font awesome stylesheet -->
-<link href="<?php echo site_url().'static/backoffice/css/assets/font-awesome.min.css';?>" rel="stylesheet">
-<!-- /font awesome stylesheet -->
-
-<!-- Bootstrap stylesheet min version -->
-<link href="<?php echo site_url().'static/backoffice/css/assets/bootstrap.min.css';?>" rel="stylesheet">
-<!-- /bootstrap stylesheet min version -->
-
-<!-- Mouldifi core stylesheet -->
-<link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-core.css';?>" rel="stylesheet">
-<!-- /mouldifi core stylesheet -->
-
-<link href="<?php echo site_url().'static/backoffice/css/assets/mouldifi-forms.css';?>" rel="stylesheet">
-
-<!--Bootstrap-wysihtml5-->
-<link rel='stylesheet' id='bos_sb_main_css-css'  href='<?php echo site_url().'static/backoffice/css/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css';?>' type='text/css' media='all' />
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
-      <script src="js/respond.min.js"></script>
-<![endif]-->
-
-<!--[if lte IE 8]>
-	<script src="js/plugins/flot/excanvas.min.js"></script>
-<![endif]-->
-<script type="text/javascript">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="au theme template">
+  <meta name="author" content="Hau Nguyen">
+  <meta name="keywords" content="au theme template">
+  <title>Tablero</title>
+  <link href="<?php echo site_url().'static/backoffice/css/font-face.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/fontawesome-all.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/material-design-iconic-font.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/bootstrap.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/animsition.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/bootstrap-progressbar-3.3.4.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/animate.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/hamburgers.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/slick.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/select2.min.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/perfect-scrollbar.css';?>" rel="stylesheet" media="all">
+  <link href="<?php echo site_url().'static/backoffice/css/theme.css';?>" rel="stylesheet" media="all">
+  <script src="https://kit.fontawesome.com/6359484e52.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
     var site = '<?php echo site_url();?>';
-</script>
+  </script>
 </head>
-<body>
 
-<!-- Page container -->
-<div class="page-container">
-
-	<!-- Page Sidebar -->
-	<div class="page-sidebar">
-	
-		<!-- Site header  -->
-		<header class="site-header">
-		  <div class="site-logo">
-                      <a href="<?php echo site_url().'backoffice';?>">
-                          <img style="margin-left: -20% !important" src="<?php echo site_url().'static/page_front/images/logo/logo_small.png';?>" width="115px" alt="Logo Criptowin">
-                      </a>
+<body class="animsition">
+  <div class="page-wrapper">
+    <header class="header-mobile d-block d-lg-none">
+      <div class="header-mobile__bar">
+        <div class="container-fluid">
+          <div class="header-mobile-inner">
+              <a class="logo" href="<?php echo site_url().'backoffice';?>">
+                <img src="<?php echo site_url().'static/page_front/images/logo/logo.jpg';?>" alt="Empire" width="25" />
+            </a>
+              <button class="hamburger hamburger--slider" type="button">
+                  <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                  </span>
+              </button>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar-mobile">
+        <div class="container-fluid">
+          <ul class="navbar-mobile__list list-unstyled">
+            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                <li><a href="index.html">Dashboard 1</a></li>
+                <li><a href="index2.html">Dashboard 2</a></li>
+                <li><a href="index3.html">Dashboard 3</a></li>
+                <li><a href="index4.html">Dashboard 4</a></li>
+              </ul>
+            </li>
+            <li><a href="chart.html"><i class="fas fa-chart-bar"></i>Perfil</a></li>
+            <li><a href="table.html"><i class="fas fa-table"></i>Reportes</a></li>
+                <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                    <li><a href="index.html">Dashboard 1</a></li>
+                    <li><a href="index2.html">Dashboard 2</a></li>
+                    <li><a href="index3.html">Dashboard 3</a></li>
+                    <li><a href="index4.html">Dashboard 4</a></li>
+                </ul>
+            <li><a href="form.html"><i class="far fa-check-square"></i>Red</a></li>
+            <li> <a href="#"><i class="fas fa-calendar-alt"></i>Cobros</a></li>
+            <li><a href="map.html"><i class="fas fa-map-marker-alt"></i>Maps</a></li>
+            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Pages</a>
+              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="forget-pass.html">Forget Password</a></li>
+              </ul>
+            </li>
+            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-desktop"></i>UI Elements</a>
+              <ul class="navbar-mobile-sub__list list-unstyled js-sub-list">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="badge.html">Badges</a></li>
+                <li><a href="tab.html">Tabs</a></li>
+                <li><a href="card.html">Cards</a></li>
+                <li><a href="alert.html">Alerts</a></li>
+                <li><a href="progress-bar.html">Progress Bars</a></li>
+                <li><a href="modal.html">Modals</a></li>
+                <li><a href="switch.html">Switchs</a></li>
+                <li><a href="grid.html">Grids</a></li>
+                <li><a href="fontawesome.html">Fontawesome Icon</a></li>
+                <li><a href="typo.html">Typography</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+        <a href="#">
+            <img src="<?php echo site_url().'static/page_front/images/logo/logo.jpg';?>" alt="Empire" width="100"/></a>
+      </div>
+      <div class="menu-sidebar__content js-scrollbar1">
+        <nav class="navbar-sidebar">
+          <ul class="list-unstyled navbar__list">
+            <li class="active has-sub"><a class="js-arrow" href="#"><i class="fas fa-tachometer-alt"></i>Dashboard</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
+                <li><a href="index.html">Dashboard 1</a></li>
+                <li><a href="index2.html">Dashboard 2</a></li>
+                <li><a href="index3.html">Dashboard 3</a></li>
+                <li><a href="index4.html">Dashboard 4</a></li>
+              </ul>
+            </li>
+            <li><a href="chart.html"><i class="fas fa-chart-bar"></i>Perfil</a></li>
+            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-copy"></i>Red</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
+                <li><a href="">Arbol Unilevel</a></li>
+                <li><a href="">Rangos</a></li>
+              </ul>
+            </li>
+            <li><a href="table.html"><i class="fas fa-table"></i>Finanzas</a></li>
+            <li><a href="form.html"><i class="far fa-check-square"></i>Cobros</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i>Calendar</a></li>
+            <li><a href="map.html"><i class="fas fa-map-marker-alt"></i>Maps</a></li>
+            
+            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-desktop"></i>UI Elements</a>
+              <ul class="list-unstyled navbar__sub-list js-sub-list">
+                <li><a href="button.html">Button</a></li>
+                <li><a href="badge.html">Badges</a></li>
+                <li><a href="tab.html">Tabs</a></li>
+                <li><a href="card.html">Cards</a></li>
+                <li><a href="alert.html">Alerts</a></li>
+                <li><a href="progress-bar.html">Progress Bars</a></li>
+                <li><a href="modal.html">Modals</a></li>
+                <li><a href="switch.html">Switchs</a></li>
+                <li><a href="grid.html">Grids</a></li>
+                <li><a href="fontawesome.html">Fontawesome Icon</a></li>
+                <li><a href="typo.html">Typography</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+    <div class="page-container">
+      <header class="header-desktop">
+        <div class="section__content section__content--p30">
+          <div class="container-fluid">
+            <div class="header-wrap">
+              <form class="form-header" action="" method="POST"><input class="au-input au-input--xl" type="text" name="search" placeholder="Search for datas &amp; reports..." /><button class="au-btn--submit"
+                  type="submit"><i class="zmdi zmdi-search"></i></button></form>
+              <div class="header-button">
+                <div class="noti-wrap">
+                  <div class="noti__item js-item-menu"><i class="zmdi zmdi-comment-more"></i><span class="quantity">1</span>
+                    <div class="mess-dropdown js-dropdown">
+                      <div class="mess__title">
+                        <p>You have 2 news message</p>
+                      </div>
+                      <div class="mess__item">
+                        <div class="image img-cir img-40"><img src="images/icon/avatar-06.jpg" alt="Michelle Moreno" /></div>
+                        <div class="content">
+                          <h6>Michelle Moreno</h6>
+                          <p>Have sent a photo</p><span class="time">3 min ago</span></div>
+                      </div>
+                      <div class="mess__item">
+                        <div class="image img-cir img-40"><img src="images/icon/avatar-04.jpg" alt="Diane Myers" /></div>
+                        <div class="content">
+                          <h6>Diane Myers</h6>
+                          <p>You are now connected on message</p><span class="time">Yesterday</span></div>
+                      </div>
+                      <div class="mess__footer"><a href="#">View all messages</a></div>
+                    </div>
                   </div>
-		  <div class="sidebar-collapse hidden-xs">
-                      <a class="sidebar-collapse-icon" href="#"><i class="icon-menu"></i></a>
+                  <div class="noti__item js-item-menu"><i class="zmdi zmdi-email"></i><span class="quantity">1</span>
+                    <div class="email-dropdown js-dropdown">
+                      <div class="email__title">
+                        <p>You have 3 New Emails</p>
+                      </div>
+                      <div class="email__item">
+                        <div class="image img-cir img-40"><img src="images/icon/avatar-06.jpg" alt="Cynthia Harvey" /></div>
+                        <div class="content">
+                          <p>Meeting about new dashboard...</p><span>Cynthia Harvey, 3 min ago</span></div>
+                      </div>
+                      <div class="email__item">
+                        <div class="image img-cir img-40"><img src="images/icon/avatar-05.jpg" alt="Cynthia Harvey" /></div>
+                        <div class="content">
+                          <p>Meeting about new dashboard...</p><span>Cynthia Harvey, Yesterday</span></div>
+                      </div>
+                      <div class="email__item">
+                        <div class="image img-cir img-40"><img src="images/icon/avatar-04.jpg" alt="Cynthia Harvey" /></div>
+                        <div class="content">
+                          <p>Meeting about new dashboard...</p><span>Cynthia Harvey, April 12,,2018</span></div>
+                      </div>
+                      <div class="email__footer"><a href="#">See all emails</a></div>
+                    </div>
                   </div>
-		  <div class="sidebar-mobile-menu visible-xs">
-                      <a data-target="#side-nav" data-toggle="collapse" class="mobile-menu-icon" href="#">
-                          <i class="icon-menu"></i>
-                      </a>
+                  <div class="noti__item js-item-menu"><i class="zmdi zmdi-notifications"></i><span class="quantity">3</span>
+                    <div class="notifi-dropdown js-dropdown">
+                      <div class="notifi__title">
+                        <p>You have 3 Notifications</p>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c1 img-cir img-40"><i class="zmdi zmdi-email-open"></i></div>
+                        <div class="content">
+                          <p>You got a email notification</p><span class="date">April 12, 2018 06:50</span></div>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c2 img-cir img-40"><i class="zmdi zmdi-account-box"></i></div>
+                        <div class="content">
+                          <p>Your account has been blocked</p><span class="date">April 12, 2018 06:50</span></div>
+                      </div>
+                      <div class="notifi__item">
+                        <div class="bg-c3 img-cir img-40"><i class="zmdi zmdi-file-text"></i></div>
+                        <div class="content">
+                          <p>You got a new file</p><span class="date">April 12, 2018 06:50</span></div>
+                      </div>
+                      <div class="notifi__footer"><a href="#">All notifications</a></div>
+                    </div>
                   </div>
-		</header>
-		<!-- /site header -->
-		
-		<!-- Main navigation -->
-		<!-- Main navigation -->
-		<ul id="side-nav" class="main-menu navbar-collapse collapse">
-                     <?php 
-                            if($_SESSION['customer']['active']==1){
-                                $title_active='Activo';
-                                $style_active='label-success';
-                            }else{
-                                $title_active='Inactivo';
-                                $style_active='label-danger';
-                            }
-                            ?>
-                     <?php 
-                                    $url = explode("/",uri_string()); 
-                                    $style_inicio = "";
-                                    $style_misdatos = "";
-                                    $style_productos = "";
-                                    $style_unilevel = "";
-                                    $style_upgrade = "";
-                                    $style_comisiones = "";
-                                    $style_mired = "";
-                                    $style_billetera = "";
-                                    $style_pagos = "";
-                                    if(isset($url[1])){
-                                        switch ($url[1]) {
-                                            ////////
-                                                    case "profile":
-                                                        $style_misdatos = "a_active";
-                                                        break;
-                                                    case "upgrade":
-                                                        $style_upgrade = "a_active";
-                                                        break;
-                                                    case "unilevel":
-                                                        $style_unilevel = "a_active";
-                                                        break;
-                                                    case "comisiones":
-                                                        $style_comisiones = "a_active";
-                                                        break;
-                                                    case "billetera":
-                                                        $style_billetera = "a_active";
-                                                        break;
-                                                    case "cobros":
-                                                        $style_pagos = "a_active";
-                                                        break;
-                                                    case "productos":
-                                                        $style_productos = "a_active";
-                                                        break;
-                                                    case "academy":
-                                                        $style_productos = "a_active";
-                                                        break;
-                                                    case "message_confirmation":
-                                                        $style_inicio = "a_active";
-                                                        break;
-                                                    case "messages":
-                                                        $style_inicio = "a_active";
-                                                        break;
-                                                    case "compose_message":
-                                                        $style_inicio = "a_active";
-                                                        break;
-                                                    default:
-                                                         $title = "Inicio";
-                                            }
-                                    }else{
-                                        $style_inicio = "a_active";
-                                    }
-                                    ?>  
-                        <li class="has-sub"><a class="<?php echo $style_active;?>"><em class="icon-star"></em><span class="title"><?php echo $title_active;?></span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice'?>" class="<?php echo $style_inicio;?>"><i class="fa fa-tachometer fa-lg"></i><span class="title">Dashboard</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/profile'?>" class="<?php echo $style_misdatos;?>"><i class="fa fa-address-book fa-lg"></i><span class="title">Mi Perfil</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/productos'?>" class="<?php echo $style_productos;?>"><i class="fa fa-product-hunt fa-lg"></i><span class="title">Productos</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/upgrade'?>" class="<?php echo $style_upgrade;?>"><i class="fa fa-arrow-up fa-lg"></i><span class="title">Upgrade</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/unilevel'?>" class="<?php echo $style_unilevel;?>"><i class="fa fa-cubes fa-lg"></i><span class="title">Unilevel</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/comisiones'?>" class="<?php echo $style_comisiones;?>"><i class="fa fa-area-chart fa-lg"></i><span class="title">Mis Comisiones</span></a></li>
-			<li class="has-sub"><a href="<?php echo site_url().'backoffice/billetera'?>" class="<?php echo $style_billetera;?>"><i class="fa fa-btc"></i><span class="title">Billetera</span></a></li>
-                        <li class="has-sub"><a href="<?php echo site_url().'backoffice/cobros'?>" class="<?php echo $style_pagos;?>"><i class="fa fa-university fa-lg"></i><span class="title">Cobros</span></a></li>
-		</ul>
-		<!-- /main navigation -->		
-  </div>
-  <!-- /page sidebar -->
-  
-  <!-- Main container -->
-  <div class="main-container gray-bg">
-  
-		<!-- Main header -->
-		<div class="main-header row">
-		  <div class="col-sm-6 col-xs-7">
-		  
-			<!-- User info -->
-			<ul class="user-info pull-left">          
-                            <li class="profile-info dropdown">
-                                <a data-toggle="dropdown" class="dropdown-toggle" href="#" aria-expanded="false"> 
-                                    <img width="44" class="img-circle avatar" alt="" src="<?php echo site_url().'static/backoffice/images/avatar/avatar.png';?>"><?php echo $_SESSION['customer']['name'];?> &nbsp;&nbsp;<i class="fa fa-arrow-down" aria-hidden="true"></i>
-                                </a>
-
-                                          <!-- User action menu -->
-                              <ul class="dropdown-menu">
-
-                                  <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fa fa-user-circle-o" aria-hidden="true"></i>My profile</a></li>
-                                  <li><a href="<?php echo site_url().'backoffice/messages'; ?>"><i class="fa fa-comment" aria-hidden="true"></i>Mensajes</a></li>
-                                            <li class="divider"></li>
-                                            <li><a href="<?php echo site_url().'login/logout';?>"><i class="fa fa-sign-out fa-lg"></i>Salir</a></li>
-                              </ul>
-                                          <!-- /user action menu -->
-
-                            </li>
-                          </ul>
-			<!-- /user info -->
-			
-		  </div>
-		  
-		  <div class="col-sm-6 col-xs-5">
-			<div class="pull-right">
-				<!-- User alerts -->
-				<ul class="user-info pull-left">
-				
-				  <!-- /notifications -->
-				  
-				  <!-- Messages -->
-				  <li class="notifications dropdown">
-					<a data-close-others="true" data-hover="dropdown" data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                            <i class="icon-mail"></i><span class="badge badge-secondary"><?php echo $all_message;?></span></a>
-					<ul class="dropdown-menu pull-right">
-						<li class="first">
-							<div class="dropdown-content-header">Mensajes</div>
-						</li>
-						<li>
-                                                    <ul class="media-list">
-                                                        <?php 
-                                                            if($all_message == 0){ ?>
-                                                                <li>
-                                                                    <div class="media-body">
-                                                                            <span class="text-muted">No hay nuevos mensajes</span>
-                                                                        </div>
-                                                                </li>
-                                                            <?php }else{
-                                                                foreach ($obj_message as $value) { 
-                                                                    switch ($value->type) {
-                                                                        case 1:
-                                                                            //BONUS
-                                                                            $link =  "bonus";
-                                                                            break;
-                                                                        case 2:
-                                                                            //SUPPORT
-                                                                            $link =  "support";
-                                                                            break;
-                                                                        case 3:
-                                                                            //SOCIAL
-                                                                            $link =  "social";
-                                                                            break;
-                                                                } ?>
-                                                                <li class="media">
-                                                                        <div class="media-left">
-                                                                            <i class="fa fa-comments" aria-hidden="true"></i>
-                                                                        </div>
-                                                                        <div class="media-body">
-                                                                            <a class="media-heading" href="<?php echo site_url()."backoffice/messages/$link/$value->messages_id";?>">
-                                                                                    <span class="text-semibold"><?php $subject = replace_vocales_voculeshtml("$value->subject"); echo corta_texto($subject,40);?></span>
-                                                                                        <span class="media-annotation pull-right">Tue</span>
-                                                                                </a>
-                                                                            <span class="text-muted"><?php $message = replace_vocales_voculeshtml("$value->messages"); echo corta_texto($message,40);?></span>
-                                                                        </div>
-                                                                </li>
-                                                                <?php } ?>
-                                                           <?php } ?>
-                                                    </ul>
-						</li>
-                                                <li class="external-last"> <a class="danger" href="<?php echo site_url().'backoffice/messages';?>"><i class="fa fa-comments" aria-hidden="true"></i> Todos los Mensajes</a> </li>
-					</ul>
-				  </li>
-				  <!-- /messages -->
-				  
-				</ul>
-				<!-- /user alerts -->
-				
-			</div>
-		  </div>
-		</div>
-		<!-- /main header -->
-		
-	<!-- Main section-->
+                </div>
+                <div class="account-wrap">
+                  <div class="account-item clearfix js-item-menu">
+                    <div class="image"><img src="images/icon/avatar-01.jpg" alt="John Doe" /></div>
+                    <div class="content"><a class="js-acc-btn" href="#">john doe</a></div>
+                    <div class="account-dropdown js-dropdown">
+                      <div class="info clearfix">
+                        <div class="image">
+                          <a href="#"><img src="images/icon/avatar-01.jpg" alt="John Doe" /></a>
+                        </div>
+                        <div class="content">
+                          <h5 class="name"><a href="#">john doe</a></h5><span class="email"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="0a606562646e656f4a6f726b677a666f24696567">[email&#160;protected]</a></span></div>
+                      </div>
+                      <div class="account-dropdown__body">
+                        <div class="account-dropdown__item"><a href="#"><i class="zmdi zmdi-account"></i>Account</a></div>
+                        <div class="account-dropdown__item"><a href="#"><i class="zmdi zmdi-settings"></i>Setting</a></div>
+                        <div class="account-dropdown__item"><a href="#"><i class="zmdi zmdi-money-box"></i>Billing</a></div>
+                      </div>
+                      <div class="account-dropdown__footer"><a href="#"><i class="zmdi zmdi-power"></i>Logout</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- START MAIN SECTION-->
             <?php echo $body;?> 
-      <!--START FOOTER-->
-      <footer class="footer-main"> 
-			© Copyright 2017. All Rights Reserved  -<strong> 3T Company</strong>
-      </footer>	
-  <!-- /main container -->
+      <!-- END MAIN SECTION-->
+  </div>
+  </div>
+  <script src="<?php echo site_url().'static/backoffice/js/jquery-3.2.1.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/popper.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/bootstrap.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/slick.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/wow.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/animsition.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/bootstrap-progressbar.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/jquery.waypoints.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/jquery.counterup.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/circle-progress.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/perfect-scrollbar.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/Chart.bundle.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/select2.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="<?php echo site_url().'static/backoffice/js/main.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
+  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="27d243113242fdd8b9f794f9-|49" defer=""></script>
   
-</div>
-<!-- /page container -->
-
-<!--Load JQuery-->
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/bootstrap.min.js';?>"></script>
-
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.metisMenu.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery-ui.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.blockUI.js';?>"></script>
-<!--Float Charts-->
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.tooltip.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.resize.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.selection.min.js';?>"></script>        
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.pie.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/jquery.flot.time.min.js';?>"></script>
-<script src="<?php echo site_url().'static/backoffice/js/assets/functions.js';?>"></script>
-
-<!--ChartJs-->
-<script src="<?php echo site_url().'static/backoffice/js/assets/Chart.min.js';?>"></script>
 </body>
 </html>

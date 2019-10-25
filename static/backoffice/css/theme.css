@@ -220,7 +220,8 @@ section {
 }
 .page-content--bge5 {
     background: #e5e5e5;
-    height: 100vh
+    height: 100vh;
+    overflow: auto;
 }
 .login-wrap {
     max-width: 540px;
