@@ -94,6 +94,7 @@ $route['dashboard/usuarios/validate'] = "d_users/validate";
 
 $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_profile";
+$route['backoffice/finance'] = "b_finance";
 
 
 /* End of file routes.php */

@@ -52,7 +52,7 @@
                         <a class="register-link" href="<?php echo site_url().'forget';?>">¿Olvidaste tu Contraseña?</a>
                     </label>
                 </div>
-                  <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Iniciar Sesión</button>
+                  <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Accesar Oficina Virtual</button>
                 <div class="social-login-content">
                   <div class="social-button"><button class="au-btn au-btn--block au-btn--blue m-b-20">sign in with facebook</button><button class="au-btn au-btn--block au-btn--blue2">sign in with twitter</button></div>
                 </div>
