@@ -1,51 +1,73 @@
-<header class="header-area">
-  <div class="classy-nav-container breakpoint-off">
-    <div class="container">
-      <nav class="classy-navbar justify-content-between" id="conferNav">
-        <a class="nav-brand" href="">
-              <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo">
-          </a>
-        <div class="classy-navbar-toggler">
-          <span class="navbarToggler"><span></span><span></span><span></span></span>
-        </div>
-        <div class="classy-menu">
-          <div class="classycloseIcon">
-            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+<header class="top_panel top_panel_custom top_panel_custom_1120 top_panel_custom_home-header without_bg_image">
+  <div data-elementor-type="post" data-elementor-id="1120" class="elementor elementor-1120 elementor-bc-flex-widget" data-elementor-settings="[]">
+    <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+        <section class="elementor-element elementor-element-d1827a0 elementor-section-content-middle sc_layouts_row sc_layouts_row_type_compact sc_layouts_row_fixed sc_layouts_row_fixed_always sc_layouts_hide_on_mobile scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+          data-id="d1827a0" data-element_type="section">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-9279192 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-50 elementor-top-column"
+                data-id="9279192" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-84bc527 elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="84bc527"
+                      data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
+                      <div class="elementor-widget-container">
+                          <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_1213054179" class="sc_layouts_logo sc_layouts_logo_default"> 
+                            <img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="logo empire" width="117" height="23"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-fb3072f sc_layouts_column sc_layouts_column_align_right sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-50 elementor-top-column" data-id="fb3072f" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-61dcb6e elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="61dcb6e" data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
+                      <div class="elementor-widget-container">
+                        <?php $this->load->view("nav");?>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="classynav">
-            <ul id="nav">
-              <li class="active">
-                  <a href="<?php echo site_url();?>">Home</a>
-              </li>
-              <li><a href="#">Pages</a>
-                <ul class="dropdown"> 
-                  <li><a href="<?php echo site_url();?>">- Home</a></li>
-                  <li><a href="about.html">- About Us</a></li>
-                  <li><a href="speakers.html">- Speakears</a></li>
-                  <li><a href="schedule.html">- Schedule</a></li>
-                  <li><a href="tickets.html">- Tickets</a></li>
-                  <li><a href="blog.html">- Blog</a></li>
-                  <li><a href="single-blog.html">- Single Blog</a></li>
-                  <li><a href="contact.html">- Contact</a></li>
-                  <li><a href="#">- Dropdown</a>
-                    <ul class="dropdown">
-                      <li><a href="#">- Dropdown Item</a></li>
-                      <li><a href="#">- Dropdown Item</a></li>
-                      <li><a href="#">- Dropdown Item</a></li>
-                      <li><a href="#">- Dropdown Item</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="speakers.html">Speakears</a></li>
-              <li><a href="<?php echo site_url().'videos';?>">Vídeos</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>
+        </section>
+        <section class="elementor-element elementor-element-9dcab01 elementor-section-content-middle sc_layouts_row sc_layouts_row_type_compact sc_layouts_row_fixed sc_layouts_row_fixed_always sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+          data-id="9dcab01" data-element_type="section">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-9e2f186 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-33 elementor-top-column"
+                data-id="9e2f186" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-e5cbffa elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="e5cbffa"
+                      data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
+                      <div class="elementor-widget-container">
+                        <a href="#" id="trx_sc_layouts_logo_807356314" class="sc_layouts_logo sc_layouts_logo_default">
+                            <img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-89d527d sc_layouts_column sc_layouts_column_align_right sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-66 elementor-top-column" data-id="89d527d" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-0295dd8 elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="0295dd8"
+                      data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
+                      <div class="elementor-widget-container">
+                        <div id="trx_sc_layouts_menu_1822028888" class="sc_layouts_iconed_text sc_layouts_menu_mobile_button sc_layouts_menu_mobile_button_burger without_menu"><a class="sc_layouts_item_link sc_layouts_iconed_text_link" href="#"><span class="sc_layouts_item_icon sc_layouts_iconed_text_icon trx_addons_icon-menu"></span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
-        </div>
-      </nav>
+        </section>
+      </div>
     </div>
   </div>
 </header>

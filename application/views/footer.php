@@ -1,105 +1,184 @@
-  <footer class="footer-area bg-img bg-overlay-2 section-padding-100-0">
-    <div class="main-footer-area">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-                <a href="#" class="footer-logo"><img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" alt="logo"></a>
-              <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
-              <div class="social-info">
-                <a href="#"><i class="zmdi zmdi-facebook"></i></a>
-                <a href="#"><i class="zmdi zmdi-instagram"></i></a>
-                <a href="#"><i class="zmdi zmdi-twitter"></i></a>
-                <a href="#"><i class="zmdi zmdi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-
-              <h5 class="widget-title">Contact</h5>
-
-              <div class="footer-contact-info">
-                <p><i class="zmdi zmdi-map"></i> 184 Main Collins Street</p>
-                <p><i class="zmdi zmdi-phone"></i> (226) 446 9371</p>
-                <p><i class="zmdi zmdi-email"></i> software.contreras@gmail.com</p>
-                <p><i class="zmdi zmdi-globe"></i> www.confer.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-
-              <h5 class="widget-title">Workshops</h5>
-
-              <ul class="footer-nav">
-                <li><a href="#">OSHA Compliance</a></li>
-                <li><a href="#">Microsoft Excel Basics</a></li>
-                <li><a href="#">Forum Speaker Series</a></li>
-                <li><a href="#">Tedx Moscow Conference</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single-footer-widget mb-60 wow fadeInUp" data-wow-delay="300ms">
-
-              <h5 class="widget-title">Gallery</h5>
-
-              <div class="footer-gallery">
-                <div class="row">
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/21.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/21.jpg';?>" alt=""></a>
-                  </div>
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/22.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/22.jpg';?>" alt=""></a>
-                  </div>
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/23.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/23.jpg';?>" alt=""></a>
-                  </div>
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/24.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/24.jpg';?>" alt=""></a>
-                  </div>
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/25.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/25.jpg';?>" alt=""></a>
-                  </div>
-                  <div class="col-4">
-                    <a href="<?php echo site_url().'static/page_front/images/bg-img/26.jpg';?>" class="single-gallery-item"><img src="<?php echo site_url().'static/page_front/images/bg-img/26.jpg';?>" alt=""></a>
+<footer class="footer_wrap footer_custom footer_custom_322 footer_custom_main-footer scheme_dark">
+  <div data-elementor-type="post" data-elementor-id="322" class="elementor elementor-322" data-elementor-settings="[]">
+    <div class="elementor-inner">
+      <div class="elementor-section-wrap">
+        <section class="elementor-element elementor-element-f69c6f4 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f69c6f4" data-element_type="section">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-139f128 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="139f128" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-7da192f sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet sc_layouts_hide_on_mobile elementor-widget elementor-widget-spacer" data-id="7da192f" data-element_type="widget" data-widget_type="spacer.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                          <div class="elementor-spacer-inner"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-a5eeaea elementor-widget elementor-widget-spacer" data-id="a5eeaea" data-element_type="widget" data-widget_type="spacer.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                          <div class="elementor-spacer-inner"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="copywrite-content">
-        <div class="row">
-
-          <div class="col-12 col-md-6">
-            <div class="copywrite-text">
-              <p>
-                Copyright &copy;
-                <script type="cf287faf9857d5fe6bcbe766-text/javascript">
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a>Rolando </a>
-              </p>
+        </section>
+        <section class="elementor-element elementor-element-1510d9b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="1510d9b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-510710b sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column"  data-id="510710b" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-2da7145 elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="2da7145"
+                      data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
+                      <div class="elementor-widget-container">
+                        <a href="#" id="trx_sc_layouts_logo_573357616" class="sc_layouts_logo sc_layouts_logo_default"><img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-9ef6420 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-divider"  data-id="9ef6420" data-element_type="widget" data-widget_type="divider.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-divider"> <span class="elementor-divider-separator"></span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-6ba48d3 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="6ba48d3" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-1faaaf0 elementor-widget elementor-widget-trx_widget_contacts" data-id="1faaaf0" data-element_type="widget" data-widget_type="trx_widget_contacts.default">
+                      <div class="elementor-widget-container">
+                        <div id="trx_widget_contacts_538909106" class="widget_area sc_widget_contacts">
+                          <aside id="trx_widget_contacts_538909106_widget" class="widget widget_contacts">
+                            <h5 class="widget_title">Main Office</h5>
+                            <div class="contacts_wrap">
+                              <div class="contacts_info"><span class="contacts_address">Nassau Blvd <br> New Hyde Park, NY 11040</span><a href="tel:+12345678990" class="contacts_phone">+1 234 567 89 90</a></div>
+                            </div>
+                          </aside>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-079e533 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-divider" data-id="079e533" data-element_type="widget" data-widget_type="divider.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-divider"> <span class="elementor-divider-separator"></span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-4a08045 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="4a08045" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-8b11d18 elementor-widget elementor-widget-wp-widget-nav_menu" data-id="8b11d18" data-element_type="widget" data-widget_type="wp-widget-nav_menu.default">
+                      <div class="elementor-widget-container">
+                        <aside id="wp-widget-nav_menu" class="widget wp-widget-nav_menu">
+                          <h5 class="widget_title">Useful Links</h5>
+                          <div class="menu-useful-links-container">
+                            <ul id="menu-useful-links" class="menu">
+                              <li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320"><a href="http://corporate.rhodos.axiomthemes.com/solutions/">Solutions</a></li>
+                              <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a href="http://corporate.rhodos.axiomthemes.com/our-team/">Our Team</a></li>
+                              <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://corporate.rhodos.axiomthemes.com/our-mission/">Mission</a></li>
+                              <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="http://corporate.rhodos.axiomthemes.com/our-history/">History</a></li>
+                              <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-318"><a href="http://corporate.rhodos.axiomthemes.com/privacy-policy/">Privacy Policy</a></li>
+                              <li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="http://corporate.rhodos.axiomthemes.com/service-plus/">Service Plus</a></li>
+                            </ul>
+                          </div>
+                        </aside>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-7b11da0 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-divider" data-id="7b11da0" data-element_type="widget" data-widget_type="divider.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-divider"> <span class="elementor-divider-separator"></span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="elementor-element elementor-element-ba53fa2 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="ba53fa2" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-eeae90c elementor-widget elementor-widget-trx_widget_socials" data-id="eeae90c" data-element_type="widget" data-widget_type="trx_widget_socials.default">
+                      <div class="elementor-widget-container">
+                        <div id="trx_widget_socials_224207210" class="widget_area sc_widget_socials">
+                          <aside id="trx_widget_socials_224207210_widget" class="widget widget_socials">
+                            <h5 class="widget_title">Socials</h5>
+                            <div class="socials_wrap sc_align_left">
+                              <a target="_blank" href="https://twitter.com/axiom_themes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter"><span class="icon-twitter"></span></span>
+                              </a>
+                              <a target="_blank" href="https://www.facebook.com/AxiomThemes-505060569826537/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
+                              </a>
+                              <a target="_blank" href="https://dribbble.com/AxiomThemes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_dribbble"><span class="icon-dribbble"></span></span>
+                              </a>
+                              <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
+                              </a>
+                            </div>
+                          </aside>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="col-12 col-md-6">
-            <div class="footer-menu">
-              <ul class="nav">
-                <li><a href="#"><i class="zmdi zmdi-circle"></i> Terms of Service</a></li>
-                <li><a href="#"><i class="zmdi zmdi-circle"></i> Privacy Policy</a></li>
-              </ul>
+        </section>
+        <section class="elementor-element elementor-element-3469224 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="3469224" data-element_type="section">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-f5b885b sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="f5b885b" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-f118faf sc_layouts_hide_on_mobile elementor-widget elementor-widget-spacer" data-id="f118faf" data-element_type="widget" data-widget_type="spacer.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                          <div class="elementor-spacer-inner"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-741f73d elementor-widget elementor-widget-divider" data-id="741f73d" data-element_type="widget" data-widget_type="divider.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-divider"> <span class="elementor-divider-separator"></span> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
+        <section class="elementor-element elementor-element-868c446 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="868c446" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+          <div class="elementor-container elementor-column-gap-extended">
+            <div class="elementor-row">
+              <div class="elementor-element elementor-element-a992967 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="a992967" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                  <div class="elementor-widget-wrap">
+                    <div class="sc_layouts_item elementor-element elementor-element-3cb36d1 elementor-widget elementor-widget-text-editor" data-id="3cb36d1" data-element_type="widget" data-widget_type="text-editor.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix">
+                          <p style="text-align: left;"><a href="https://themeforest.net/user/axiomthemes/portfolio" target="_blank" rel="noopener">AxiomThemes</a> 2019. All Rights
+                            Reserved.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="sc_layouts_item elementor-element elementor-element-9509f3c elementor-widget elementor-widget-spacer" data-id="9509f3c" data-element_type="widget" data-widget_type="spacer.default">
+                      <div class="elementor-widget-container">
+                        <div class="elementor-spacer">
+                          <div class="elementor-spacer-inner"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
