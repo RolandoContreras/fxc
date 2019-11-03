@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" class="no-js scheme_default">
+<!--http://corporate.rhodos.axiomthemes.com-->
 <!--START HEAD-->
 <?php $this->load->view("head");?>
 <!--END HEAD-->
@@ -93,7 +94,7 @@
 							revslider_showDoubleJqueryError("#rev_slider_2_1");
 						}else{
 							revapi2 = tpj("#rev_slider_2_1").show().revolution({
-								jsFileLocation:"//corporate.rhodos.axiomthemes.com/wp-content/plugins/revslider/public/assets/js/",
+								jsFileLocation:"",
 								sliderLayout:"fullscreen",
 								visibilityLevels:"1240,1024,768,480",
 								gridwidth:1280,
@@ -282,12 +283,10 @@
 </section>
 <!--END QUE HACEMOS?-->
 <!--ESPACIO-->
-<section class="elementor-element elementor-element-c8aef60 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-  data-id="c8aef60" data-element_type="section">
+<section class="elementor-element elementor-element-c8aef60 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="c8aef60" data-element_type="section">
   <div class="elementor-container elementor-column-gap-extended">
     <div class="elementor-row">
-      <div class="elementor-element elementor-element-f09d6f8 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-        data-id="f09d6f8" data-element_type="column">
+      <div class="elementor-element elementor-element-f09d6f8 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="f09d6f8" data-element_type="column">
         <div class="elementor-column-wrap elementor-element-populated">
           <div class="elementor-widget-wrap">
             <div class="elementor-element elementor-element-6c49e1d sc_height_huge elementor-widget elementor-widget-spacer" data-id="6c49e1d" data-element_type="widget"
@@ -454,7 +453,7 @@
                   <div class="sc_services_columns_wrap sc_item_columns sc_item_posts_container sc_item_columns_4 trx_addons_columns_wrap columns_padding_bottom no_margin">
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-217 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/post-15-copyright-800x450.jpg);">
+                          <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-15-copyright-800x450.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">01</span>
                                 <h6 class="sc_services_item_title">
@@ -467,7 +466,7 @@
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-216 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/post-3-copyright-800x450.jpg);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-3-copyright-800x450.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">02</span>
                                 <h6 class="sc_services_item_title">
@@ -480,7 +479,7 @@
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-215 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/post-16-copyright-800x800.jpg);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-16-copyright-800x800.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">03</span>
                             <h6 class="sc_services_item_title">
@@ -492,7 +491,7 @@
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-212 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/post-1-copyright-1-800x450.jpg);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-1-copyright-1-800x450.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">04</span>
                                 <h6 class="sc_services_item_title">
@@ -572,7 +571,8 @@
                                   <div class="slides slider-wrapper swiper-wrapper sc_item_columns_1">
                                     <div class="slider-slide swiper-slide">
                                       <div class="sc_testimonials_item">
-                                        <div class="sc_testimonials_item_author_avatar"><img width="150" height="150" src="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-150x150.jpg"
+                                        <div class="sc_testimonials_item_author_avatar">
+                                            <img width="150" height="150" src="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-150x150.jpg"
                                             class="attachment-rhodos-thumb-square size-rhodos-thumb-square wp-post-image" alt="Tina Lewis" srcset="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-150x150.jpg 150w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-400x400.jpg 400w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-500x500.jpg 500w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-300x300.jpg 300w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-768x768.jpg 768w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-370x370.jpg 370w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-90x90.jpg 90w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-800x800.jpg 800w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright-390x390.jpg 390w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/2test-copyright.jpg 900w"
                                             sizes="(max-width: 150px) 100vw, 150px" /></div>
                                         <div class="sc_testimonials_item_content">
@@ -606,7 +606,8 @@
                                     </div>
                                     <div class="slider-slide swiper-slide">
                                       <div class="sc_testimonials_item">
-                                        <div class="sc_testimonials_item_author_avatar"><img width="150" height="150" src="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-150x150.jpg"
+                                        <div class="sc_testimonials_item_author_avatar">
+                                            <img width="150" height="150" src="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-150x150.jpg"
                                             class="attachment-rhodos-thumb-square size-rhodos-thumb-square wp-post-image" alt="Kylie Jones" srcset="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-150x150.jpg 150w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-400x400.jpg 400w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-500x500.jpg 500w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-300x300.jpg 300w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-768x768.jpg 768w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-370x370.jpg 370w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-90x90.jpg 90w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-800x800.jpg 800w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright-390x390.jpg 390w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/1test-copyright.jpg 900w"
                                             sizes="(max-width: 150px) 100vw, 150px" /></div>
                                         <div class="sc_testimonials_item_content">
@@ -653,7 +654,6 @@
 </div>
 </div>
 </div>
-        
 <!--START VIDEO 2 POPUP        -->
 <div class="elementor-element elementor-element-b43a892 animated-fast sc_inner_width_none sc_layouts_column_icons_position_left elementor-invisible elementor-column elementor-col-50 elementor-top-column"
   data-id="b43a892" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:100,&quot;animation_mobile&quot;:&quot;none&quot;}">
@@ -706,138 +706,22 @@
 <!--END FOOTER-->
 </div>
 </div>
-<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> <script type="text/javascript">
-			var ajaxRevslider;
-			jQuery(document).ready(function() {
-				// CUSTOM AJAX CONTENT LOADING FUNCTION
-				ajaxRevslider = function(obj) {
-				
-					// obj.type : Post Type
-					// obj.id : ID of Content to Load
-					// obj.aspectratio : The Aspect Ratio of the Container / Media
-					// obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
-					
-					var content	= '';
-					var data	= {
-						action:			'revslider_ajax_call_front',
-						client_action:	'get_slider_html',
-						token:			'810d6aee69',
-						type:			obj.type,
-						id:				obj.id,
-						aspectratio:	obj.aspectratio
-					};
-					
-					// SYNC AJAX REQUEST
-					jQuery.ajax({
-						type:		'post',
-						url:		'http://corporate.rhodos.axiomthemes.com/wp-admin/admin-ajax.php',
-						dataType:	'json',
-						data:		data,
-						async:		false,
-						success:	function(ret, textStatus, XMLHttpRequest) {
-							if(ret.success == true)
-								content = ret.data;								
-						},
-						error:		function(e) {
-							console.log(e);
-						}
-					});
-					
-					 // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
-					 return content;						 
-				};
-				
-				// CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
-				var ajaxRemoveRevslider = function(obj) {
-					return jQuery(obj.selector + ' .rev_slider').revkill();
-				};
-				// EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION				
-				if (jQuery.fn.tpessential !== undefined) 					
-					if(typeof(jQuery.fn.tpessential.defaults) !== 'undefined') 
-						jQuery.fn.tpessential.defaults.ajaxTypes.push({type: 'revslider', func: ajaxRevslider, killfunc: ajaxRemoveRevslider, openAnimationSpeed: 0.3});   
-						// type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
-						// func: the Function Name which is Called once the Item with the Post Type has been clicked
-						// killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
-						// openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
-					
-				
-				
-			});
-		</script>
-<div class="trx_addons_demo_options_wrapper">
-  <div id="trx_addons_demo_panel" class="trx_addons_demo_panel">
-    <div class="trx_addons_demo_panel_header">
-      <h5 class="trx_addons_demo_option_title">Cevolution Web</h5>
-    </div>
-    <div class="trx_addons_quick_option_list">
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://rhodos.axiomthemes.com/" aria-label="Delos">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/agency.jpg" alt="Delos"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://corporate.rhodos.axiomthemes.com/" aria-label="Heraklion">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/corporate.jpg" alt="Heraklion"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://creative.rhodos.axiomthemes.com/" aria-label="Lindos">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/creative.jpg" alt="Lindos"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://startup.rhodos.axiomthemes.com/" aria-label="Naxos">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/startup.jpg" alt="Naxos"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://finance.rhodos.axiomthemes.com/" aria-label="Mykonos">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/finance.jpg" alt="Mykonos"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://conference.rhodos.axiomthemes.com/" aria-label="Kos">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/conference.jpg" alt="Kos"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://it-agency.rhodos.axiomthemes.com/" aria-label="Corfu">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/it-agency.jpg" alt="Corfu"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://company.rhodos.axiomthemes.com/" aria-label="Santorini">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/company.jpg" alt="Santorini"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://designer-cv.rhodos.axiomthemes.com/" aria-label="Kefalonia">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/designer-cv.jpg" alt="Kefalonia"></div>
-        </a>
-      </div>
-      <div class="trx_addons_demo_list_item">
-        <a class="hint_bottom hint_bounce" href="http://business-coach.rhodos.axiomthemes.com/" aria-label="Crete">
-          <div class="item_overlay"><img src="http://corporate.rhodos.axiomthemes.com/wp-content/themes/rhodos/theme-specific/_toolbar/images/business-coach.jpg" alt="Crete"></div>
-        </a>
-      </div>
-    </div>
-    <div class="trx_addons_demo_panel_footer"><a class="trx_addons_panel_button sc_button" href="https://themeforest.net/checkout/from_item/23113690?license=regular&size=source&ref=themerex" target="_blank">Purchase Rhodos</a></div>
-  </div>
-</div>
+<a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> 
 <script type="text/javascript">
-		if(typeof revslider_showDoubleJqueryError === "undefined") {
-			function revslider_showDoubleJqueryError(sliderID) {
-				var err = "<div class='rs_error_message_box'>";
-				err += "<div class='rs_error_message_oops'>Oops...</div>";
-				err += "<div class='rs_error_message_content'>";
-				err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
-				err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' ->  'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
-				err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
-				err += "</div>";
-			err += "</div>";
-				jQuery(sliderID).show().html(err);
-			}
-		}		</script>
+    if(typeof revslider_showDoubleJqueryError === "undefined") {
+            function revslider_showDoubleJqueryError(sliderID) {
+                    var err = "<div class='rs_error_message_box'>";
+                    err += "<div class='rs_error_message_oops'>Oops...</div>";
+                    err += "<div class='rs_error_message_content'>";
+                    err += "You have some jquery.js library include that comes after the Slider Revolution files js inclusion.<br>";
+                    err += "To fix this, you can:<br>&nbsp;&nbsp;&nbsp; 1. Set 'Module General Options' ->  'jQuery & OutPut Filters' -> 'Put JS to Body' to on";
+                    err += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jQuery.js inclusion and remove it";
+                    err += "</div>";
+            err += "</div>";
+                    jQuery(sliderID).show().html(err);
+            }
+    }		
+</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/chart.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
@@ -847,38 +731,18 @@
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.magnific-popup.min.js';?>'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var TRX_ADDONS_STORAGE = {"ajax_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-admin\/admin-ajax.php","ajax_nonce":"84a9115997","site_url":"http:\/\/corporate.rhodos.axiomthemes.com","post_id":"293","vc_edit_mode":"0","popup_engine":"magnific","scroll_progress":"hide","animate_inner_links":"0","add_target_blank":"0","menu_collapse":"0","menu_collapse_icon":"icon-more","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_search_error":"Search error! Try again later.","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","msg_validation_error":"Error data validation!","msg_name_empty":"The name can't be empty","msg_name_long":"Too long name","msg_email_empty":"Too short (or empty) email address","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","ajax_views":"","menu_cache":[".menu_mobile_inner > nav > ul"],"login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","shapes_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/trx_addons\/css\/shapes\/","msg_rating_already_marked":"You have already rated this post with mark {{X}}","elementor_stretched_section_container":".page_wrap","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
+var TRX_ADDONS_STORAGE = {"ajax_url":"","ajax_nonce":"84a9115997","site_url":"<?php echo site_url(); ?>","post_id":"293","vc_edit_mode":"0","popup_engine":"magnific","scroll_progress":"hide","animate_inner_links":"0","add_target_blank":"0","menu_collapse":"0","menu_collapse_icon":"icon-more","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_search_error":"Search error! Try again later.","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","msg_validation_error":"Error data validation!","msg_name_empty":"The name can't be empty","msg_name_long":"Too long name","msg_email_empty":"Too short (or empty) email address","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","ajax_views":"","menu_cache":[".menu_mobile_inner > nav > ul"],"login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","shapes_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/trx_addons\/css\/shapes\/","msg_rating_already_marked":"You have already rated this post with mark {{X}}","elementor_stretched_section_container":".page_wrap","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/trx_addons.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.blockUI.min.js?ver=2.70';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/toolbar.js';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wpgdprcData = {"ajaxURL":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-admin\/admin-ajax.php","ajaxSecurity":"cfb29d64fc","isMultisite":"","path":"\/","blogId":""};
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/front.js?ver=1564737041';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var RHODOS_STORAGE = {"ajax_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-admin\/admin-ajax.php","ajax_nonce":"84a9115997","site_url":"http:\/\/corporate.rhodos.axiomthemes.com","theme_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/","site_scheme":"scheme_default","user_logged_in":"","mobile_layout_width":"767","mobile_device":"","menu_side_stretch":"","menu_side_icons":"1","background_video":"","use_mediaelements":"1","admin_mode":"","msg_ajax_error":"Invalid server answer!","alter_link_color":"#ed6240","button_hover":"arrow","stretch_tabs_area":"1"};
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-and-player.min.js?ver=4.2.6-78496d1';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-migrate.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var _wpmejsSettings = {"pluginPath":"\/wp-includes\/js\/mediaelement\/","classPrefix":"mejs-","stretching":"responsive"};
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-mediaelement.min.js?ver=5.2.4';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var mc4wp_forms_config = [];
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/forms-api.min.js?ver=4.5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend-modules.min.js?ver=2.6.7';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/position.min.js?ver=1.11.4';?>'></script>
@@ -886,7 +750,7 @@ var mc4wp_forms_config = [];
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/waypoints.min.js?ver=4.0.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper2.min.js?ver=4.4.6';?>'></script>
 <script type='text/javascript'>
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.6.7","urls":{"assets":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"general":{"elementor_stretched_section_container":".page_wrap","elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":293,"title":"Home","excerpt":""}};
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.6.7","urls":{"assets":""},"settings":{"page":[],"general":{"elementor_stretched_section_container":".page_wrap","elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":293,"title":"Home","excerpt":""}};
 </script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend.min.js?ver=2.6.7';?>'></script>
 <!--START VIDEO 1-->
@@ -894,16 +758,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   <div data-elementor-type="post" data-elementor-id="1940" class="elementor elementor-1940 elementor-bc-flex-widget" data-elementor-settings="[]">
     <div class="elementor-inner">
       <div class="elementor-section-wrap">
-        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-          data-id="f819189" data-element_type="section">
+        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f819189" data-element_type="section">
           <div class="elementor-container elementor-column-gap-no">
             <div class="elementor-row">
-              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-                data-id="5fd8f0c" data-element_type="column">
+              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="5fd8f0c" data-element_type="column">
                 <div class="elementor-column-wrap elementor-element-populated">
                   <div class="elementor-widget-wrap">
-                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget"
-                      data-widget_type="trx_widget_video.default">
+                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget" data-widget_type="trx_widget_video.default">
                       <div class="elementor-widget-container">
                         <div id="trx_widget_video_582495321" class="widget_area sc_widget_video">
                           <aside id="trx_widget_video_582495321_widget" class="widget widget_video">
@@ -932,16 +793,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   <div data-elementor-type="post" data-elementor-id="1940" class="elementor elementor-1940 elementor-bc-flex-widget" data-elementor-settings="[]">
     <div class="elementor-inner">
       <div class="elementor-section-wrap">
-        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-          data-id="f819189" data-element_type="section">
+        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f819189" data-element_type="section">
           <div class="elementor-container elementor-column-gap-no">
             <div class="elementor-row">
-              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-                data-id="5fd8f0c" data-element_type="column">
+              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="5fd8f0c" data-element_type="column">
                 <div class="elementor-column-wrap elementor-element-populated">
                   <div class="elementor-widget-wrap">
-                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget"
-                      data-widget_type="trx_widget_video.default">
+                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget" data-widget_type="trx_widget_video.default">
                       <div class="elementor-widget-container">
                         <div id="trx_widget_video_210669036" class="widget_area sc_widget_video">
                           <aside id="trx_widget_video_210669036_widget" class="widget widget_video">
@@ -970,16 +828,13 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   <div data-elementor-type="post" data-elementor-id="1940" class="elementor elementor-1940 elementor-bc-flex-widget" data-elementor-settings="[]">
     <div class="elementor-inner">
       <div class="elementor-section-wrap">
-        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-          data-id="f819189" data-element_type="section">
+        <section class="elementor-element elementor-element-f819189 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"  data-id="f819189" data-element_type="section">
           <div class="elementor-container elementor-column-gap-no">
             <div class="elementor-row">
-              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-                data-id="5fd8f0c" data-element_type="column">
+              <div class="elementor-element elementor-element-5fd8f0c sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="5fd8f0c" data-element_type="column">
                 <div class="elementor-column-wrap elementor-element-populated">
                   <div class="elementor-widget-wrap">
-                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget"
-                      data-widget_type="trx_widget_video.default">
+                    <div class="elementor-element elementor-element-34f9b4d elementor-widget elementor-widget-trx_widget_video" data-id="34f9b4d" data-element_type="widget" data-widget_type="trx_widget_video.default">
                       <div class="elementor-widget-container">
                         <div id="trx_widget_video_53552487" class="widget_area sc_widget_video">
                           <aside id="trx_widget_video_53552487_widget" class="widget widget_video">
@@ -1004,6 +859,5 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     </div>
   </div>
 </div>
-
 </body>
 </html>

@@ -80,12 +80,24 @@
                           <h5 class="widget_title">Useful Links</h5>
                           <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
-                              <li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320"><a href="http://corporate.rhodos.axiomthemes.com/solutions/">Solutions</a></li>
-                              <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a href="http://corporate.rhodos.axiomthemes.com/our-team/">Our Team</a></li>
-                              <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="http://corporate.rhodos.axiomthemes.com/our-mission/">Mission</a></li>
-                              <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315"><a href="http://corporate.rhodos.axiomthemes.com/our-history/">History</a></li>
-                              <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-318"><a href="http://corporate.rhodos.axiomthemes.com/privacy-policy/">Privacy Policy</a></li>
-                              <li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a href="http://corporate.rhodos.axiomthemes.com/service-plus/">Service Plus</a></li>
+                              <li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320">
+                                  <a href="#">Solutions</a>
+                              </li>
+                              <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
+                                  <a href="#">Our Team</a>
+                              </li>
+                              <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316">
+                                  <a href="#">Mission</a>
+                              </li>
+                              <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315">
+                                  <a href="#">History</a>
+                              </li>
+                              <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-318">
+                                  <a href="#">Privacy Policy</a>
+                              </li>
+                              <li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319">
+                                  <a href="#">Service Plus</a>
+                              </li>
                             </ul>
                           </div>
                         </aside>
@@ -160,7 +172,7 @@
                     <div class="sc_layouts_item elementor-element elementor-element-3cb36d1 elementor-widget elementor-widget-text-editor" data-id="3cb36d1" data-element_type="widget" data-widget_type="text-editor.default">
                       <div class="elementor-widget-container">
                         <div class="elementor-text-editor elementor-clearfix">
-                          <p style="text-align: left;"><a href="https://themeforest.net/user/axiomthemes/portfolio" target="_blank" rel="noopener">AxiomThemes</a> 2019. All Rights
+                          <p style="text-align: left;"><a href="https://themeforest.net/user/axiomthemes/portfolio" target="_blank" rel="noopener">Cevolution Web</a> 2019. All Rights
                             Reserved.</p>
                         </div>
                       </div>
