@@ -93,7 +93,10 @@ $route['dashboard/usuarios/load/([0-9]+)'] = "d_users/load/$1";
 $route['dashboard/usuarios/validate'] = "d_users/validate";
 
 $route['backoffice'] = "b_home";
+
 $route['backoffice/profile'] = "b_profile";
+$route['backoffice/profile/update_password'] = "b_profile/update_password";
+
 $route['backoffice/finance'] = "b_finance";
 
 $route['salir'] = "login/logout";
