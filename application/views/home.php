@@ -6,15 +6,12 @@
 <!--END HEAD-->
 <body class="home page-template-default page page-id-293 wp-custom-logo ua_gecko frontpage woocommerce-no-js body_tag scheme_default blog_mode_front body_style_wide  is_stream blog_style_excerpt sidebar_hide expand_content remove_margins trx_addons_present header_type_custom header_style_header-custom-1120 header_position_over menu_style_top no_layout elementor-default elementor-page elementor-page-293">
     <div class="body_wrap">
-        <div class="page_wrap">
-            <!--START HEADER-->    
+        <!--START HEADER-->    
             <?php $this->load->view("header");?>
             <!--END HEADER-->        
             <div class="menu_mobile_overlay"></div>
                     <?php $this->load->view("nav_mobile")?>
-        </div>
     </div>
-
 <div class="page_content_wrap">
 <div class="content_wrap">
 <div class="content">
@@ -169,7 +166,9 @@
 </rs-module-wrap>
 
 </div>
-</aside></div> </div>
+</aside>
+</div> 
+</div>
 </div>
 </div>
 </div>

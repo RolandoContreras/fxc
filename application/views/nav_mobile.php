@@ -9,19 +9,8 @@
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-293 current_page_item menu-item-321">
                         <a href="<?php echo site_url();?>" aria-current="page"><span>Inicio</span></a>
                     </li>
-                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-254">
-                        <a href="<?php echo site_url().'about';?>"><span>Acerca</span></a>
-                            <ul class="sub-menu">
-                            <li id="menu-item-292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-292">
-                                <a href="#"><span>Misión</span></a></li>
-                            <li id="menu-item-284"
-                              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-284">
-                                <a href="#"><span>Visión</span></a></li>
-                            <li id="menu-item-268"
-                              class="menu-item menu-item-type-post_type menu-item-object-page menu-item-268">
-                                <a href="#"><span>Historia</span></a>
-                            </li>
-                          </ul>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
+                        <a href="<?php echo site_url().'contact';?>"><span>Acerca</span></a>
                     </li>
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
                         <a href="<?php echo site_url().'contact';?>"><span>Contáctanos</span></a>
@@ -41,3 +30,8 @@
                   <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
                   </a>
             </div>
+    </div>
+</div>
+    
+    
+   

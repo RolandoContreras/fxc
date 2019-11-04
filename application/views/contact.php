@@ -1,478 +1,317 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en-US"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en-US"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en-US"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!-->
-<html lang="en-US"> 
-<!--<![endif]-->
-<!--STAR HEAD-->
-<?php $this->load->view("head");?>
+<html lang="en-US" class="no-js scheme_default">
+<!--START HEAD-->
+<?php $this->load->view("head2");?>
 <!--END HEAD-->
-<body class="page-template-default page page-id-12 wpb-js-composer js-comp-ver-5.3 vc_responsive header-absolute">
-    <div class="mobile-menu-wrapper mobile-menu-fullscreen">
-    	<!--GET NAV MOBILE-->
-           <?php $this->load->view("nav_mobile");?>
-           <!--END GET NAV MOBILE-->
-    </div>
-
-<div class="mobile-menu-overlay"></div>
-	<div class="wrapper" id="main-wrapper">
-		<style>header.site-header {padding-top: 35px;}</style>
-                <style>header.site-header {padding-bottom: 35px;}</style>
-                <!--START HEADER 2-->
-                <?php $this->load->view("header_2");?>
-                <!--END HEADER 2-->
-<script type="text/javascript">
-	var headerOptions = headerOptions || {};
-	//jQuery.extend( headerOptions, {"stickyHeader":false} );
-	Object.assign( headerOptions, {"stickyHeader":false} );
-</script>
-<div class="vc-container">
-<div class="vc-parent-row row-stretch_row_content_no_spaces"><div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner "><div class="wpb_wrapper"><style> #el_59e451473d203 { height: 500px; } </style>
-
-<div class="lab-google-map cd-google-map  vc_custom_1497880485373">
-	<div id="el_59e451473d203"></div>
-    <div class="cd-zoom cd-zoom-in hidden"></div>
-    <div class="cd-zoom cd-zoom-out hidden"></div>
-</div>
-
-<script type="text/javascript">
-var labVcMaps = labVcMaps || [];
-labVcMaps.push({
-	id: 'el_59e451473d203',
-	
-	locations: [{"marker_image":"<?php echo site_url().'static/page_front/icon/pin-2.png';?>","retina_marker":"yes","latitude":"-12.1416088","longitude":"-76.99181550000003","marker_title":"3T Lima","marker_description":"<p>Av. La Encalada # 1171,<br \/>\nMonterrico - Santiago de surco,<br \/>\nLima - Perú<\/p>\n<p><b>Horario de Trabajo:<\/b><br \/>\Lunes \u2014 Viernes (08:00 \u2014 17:00)<br \/>\nSabados (09:00 \u2014 15:00)<\/p>\n","marker_image_size":[128,128]}],
-	
-	zoom: 6,
-	scrollwheel: false,
-	dropPins: true,
-	panBy: [0,0],
-	tilt: 0,
-	heading: 0,
-	
-	mapType: 'roadmap',
-	
-	panControl: false,
-	zoomControl: true,
-	mapTypeControl: false,
-	scaleControl: false,
-	streetViewControl: false,
-	overviewMapControl: false,
-	plusMinusZoom: false,
-	
-	
-	styles: [
-  {
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#65afdd"
-      },
-      {
-        "lightness": 50
-      },
-      {
-        "weight": 2
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.country",
-    "elementType": "geometry.stroke",
-    "stylers": [
-      {
-        "color": "#0052a0"
-      },
-      {
-        "visibility": "on"
-      },
-      {
-        "weight": 1.5
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.country",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.province",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "hue": "#0074b9"
-      },
-      {
-        "saturation": 59
-      },
-      {
-        "lightness": -42
-      }
-    ]
-  },
-  {
-    "featureType": "landscape.natural.terrain",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "landscape.natural.terrain",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#0078b9"
-      },
-      {
-        "saturation": -29
-      },
-      {
-        "lightness": 30
-      }
-    ]
-  },
-  {
-    "featureType": "transit",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#65afdd"
-      },
-      {
-        "lightness": 10
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry.fill",
-    "stylers": [
-      {
-        "color": "#0052a0"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#65afdd"
-      }
-    ]
-  }
-]});
-</script>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="vc_row-full-width vc_clearfix"></div>
-</div>
-    <div class="vc-parent-row row-default">
-        <div class="vc_row wpb_row vc_row-fluid services-row">
-            <div class="service-box wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
-                <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                        <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
-                            <figure class="wpb_wrapper vc_figure">
-                                <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/marcador.png';?>" class="vc_single_image-img attachment-full" alt="paquete" />
-                            </figure>
-                        </div>
-                        <div class="wpb_text_column wpb_content_element  post-formatting " >
-                            <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Selecciona un Paquete</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Elije un paquete y sé parte de nueva revolución de 3T.");?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-box wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
-                <div class="vc_column-inner ">
-                    <div class="wpb_wrapper">
-                        <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
-                                <figure class="wpb_wrapper vc_figure">
-                                        <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/mapa.png';?>" class="vc_single_image-img attachment-full" alt="paquete" />
-                                </figure>
-                        </div>
-                        <div class="wpb_text_column wpb_content_element  post-formatting " >
-                            <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Planifica tu trabajo</h3>
-                                <p style="text-align: center;"><?php echo replace_vocales_voculeshtml("Arma tu estrategia y aplica el plan de acción.");?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-box wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
-                <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                        <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
-                            <figure class="wpb_wrapper vc_figure">
-                                <img width="128" height="128" src="<?php echo site_url().'static/page_front/icon/avion.png';?>" class="vc_single_image-img attachment-full" alt="productos" />
-                            </figure>
-                        </div>
-                        <div class="wpb_text_column wpb_content_element  post-formatting " >
-                            <div class="wpb_wrapper">
-                                <h3 style="text-align: center;">Pruebas los productos</h3>
-                                    <p style="text-align: center;">Empieza a viajar, entrenar y hacer trading y cambia tu vida.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="service-box wpb_column vc_column_container vc_col-sm-3 vc_col-xs-6">
-                <div class="vc_column-inner">
-                    <div class="wpb_wrapper">
-                        <div  class="wpb_single_image wpb_content_element vc_align_center   retina-icon">
-                            <figure class="wpb_wrapper vc_figure">
-                                    <img src="<?php echo site_url().'static/page_front/icon/moneda.png';?>" alt="resultados" />
-                            </figure>
-                        </div>
-                        <div class="wpb_text_column wpb_content_element  post-formatting " >
-                            <div class="wpb_wrapper">
-                                    <h3 style="text-align: center;">Obtendrás resultados</h3>
-                                        <p style="text-align: center;">En los próximos 90 días tendrás los resultados que esperas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="vc-parent-row row-stretch_row vc_custom_1497449323625">
-        <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid contact-form-area vc_row-has-fill">
-            <div class="wpb_column vc_column_container vc_col-sm-12">
-                <div class="vc_column-inner vc_custom_1498222572351">
-                    <div class="wpb_wrapper">
-                        <div class="section-title ">
-                        <H2><?php echo replace_vocales_voculeshtml("Contáctenos");?></H2>
-                            <p><?php echo replace_vocales_voculeshtml("Mantente en contacto llenando el formulario, llámenos o visítenos en nuestras oficinas.");?></p>
-                        </div>
-                        <div class="vc-parent-row row-default">
-                            <div class="vc_row wpb_row vc_inner vc_row-fluid">
-                                <div class="wpb_column vc_column_container vc_col-sm-8">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="lab-contact-form contact-form ">
-                                                <form class="contact-form">
-                                                        <div class="row">
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Nombre:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                        <input name="name" id="name" type="text" data-label="Name" style="border-style: outset !important; width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Correo:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                          <input name="email" id="email" type="email" data-label="Email" style="border-style: outset !important; width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-12">
-                                                                <div class="form-group labeled-input-row">
-                                                                    <div class="col-md-4">
-                                                                        <label>Asunto:</label>
-                                                                    </div>
-                                                                    <div class="col-md-8">
-                                                                          <input name="subject" id="subject" type="text" data-label="Destination" style="border-style: outset !important;width:100% !important">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                                <div class="col-sm-12">
-                                                                    <div class="form-group labeled-textarea-row">
-                                                                        <div class="col-md-12">
-                                                                            <label>Mensaje:</label>
-                                                                        </div>
-                                                                        <textarea name="message" id="message" data-label="Message" style="border-style: outset !important;"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                        </div> <!-- row -->
-                                                        <a href="javascript:void(0);" onclick="send_messages();" class="button">
-                                                                <span class="pre-submit">Enviar Mensaje</span>
-<!--                                                                <span class="success-msg">Thank you #, message sent! <i class="flaticon-verification24"></i></span>
-                                                                <span class="loading-bar">
-                                                                        <span></span>
-                                                                </span>-->
-                                                        </a>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-1 vc_hidden-sm vc_hidden-xs">
-                                    <div class="vc_column-inner ">
-                                        <div class="wpb_wrapper"></div>
-                                    </div>
-                                </div>
-                                <div class="wpb_column vc_column_container vc_col-sm-3">
-                                    <div class="vc_column-inner">
-                                        <div class="wpb_wrapper">
-                                            <div class="wpb_text_column wpb_content_element  post-formatting " >
-                                                <div class="wpb_wrapper">
-                                                    <p><span style="color: #222222;"><strong>Visítanos:</strong></span></p>
-                                                        <p>Av. La Encalada # 1171</p>
-                                                        <p>Monterrico - Santiago de surco</p>
-                                                        <p><?php echo replace_vocales_voculeshtml("Lima, Perú");?></p>
-                                                        <p>&nbsp;</p>
-                                                        <p><span style="color: #222222;"><strong>Horario de Trabajo</strong>:</span></p>
-                                                        <p>Lunes — Viernes (<span style="color: #222222;"><strong>08:00 — 17:00</strong></span>)</p>
-                                                        <p>Sabados (<span style="color: #222222;"><strong>09:00 — 15:00</strong></span>)</p>
-                                                        <p>&nbsp;</p>
-                            <!--                            <p><span style="color: #222222;"><strong>Or ring our phones:</strong></span></p>
-                                                        <p><a href="tel:+44 20 3457 5495">+44 20 3457 5495</a> (UK)</p>
-                                                        <p><a href="tel:+353 1 878 3944">+353 1 878 3944</a> (Ireland)</p>-->
+<body class="page-template-default page page-id-183 wp-custom-logo ua_gecko woocommerce-no-js body_tag scheme_default blog_mode_page body_style_wide is_single sidebar_hide expand_content trx_addons_present header_type_custom header_style_header-custom-394 header_position_default menu_style_top no_layout elementor-default elementor-page elementor-page-183">
+  <div class="body_wrap">
+    <div class="page_wrap">
+        <!--START HEAD-->
+        <?php $this->load->view("header2");?>
+        <!--END HEAD-->
+      <div class="menu_mobile_overlay"></div>
+        <!--START NAV MOBILE-->
+        <?php $this->load->view("nav_mobile");?>
+        <!--START NAV MOBILE-->
+      <div class="page_content_wrap">
+        <div class="content_wrap">
+          <div class="content">
+            <article id="post-183" class="post_item_single post_type_page post-183 page type-page status-publish hentry">
+              <div class="post_content entry-content">
+                <div data-elementor-type="post" data-elementor-id="183" class="elementor elementor-183 elementor-bc-flex-widget" data-elementor-settings="[]">
+                  <div class="elementor-inner">
+                    <div class="elementor-section-wrap">
+                      <section class="elementor-element elementor-element-149773c scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="149773c" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-extended">
+                          <div class="elementor-row">
+                            <div class="elementor-element elementor-element-f2fd9a0 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="f2fd9a0" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <section class="elementor-element elementor-element-24fe46b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section" data-id="24fe46b" data-element_type="section">
+                                    <div class="elementor-container elementor-column-gap-no">
+                                      <div class="elementor-row">
+                                        <div class="elementor-element elementor-element-eecd9d1 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-50 elementor-inner-column" data-id="eecd9d1" data-element_type="column">
+                                          <div class="elementor-column-wrap elementor-element-populated">
+                                            <div class="elementor-widget-wrap">
+                                              <div class="elementor-element elementor-element-0dc3923 elementor-widget elementor-widget-trx_sc_title" data-id="0dc3923" data-element_type="widget" data-widget_type="trx_sc_title.default">
+                                                <div class="elementor-widget-container">
+                                                  <div id="trx_sc_title_1810378888" class="sc_title sc_title_decoration">
+                                                    <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_decoration">Información de Contacto</h6>
+                                                    <h3 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_decoration sc_item_title_tag">Manténte en Contacto <br> Con Nosotros</h3>
+                                                  </div>
                                                 </div>
+                                              </div>
                                             </div>
+                                          </div>
                                         </div>
+                                        <div class="elementor-element elementor-element-288d1e0 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-50 elementor-inner-column" data-id="288d1e0" data-element_type="column">
+                                          <div class="elementor-column-wrap">
+                                            <div class="elementor-widget-wrap"></div>
+                                          </div>
+                                        </div>
+                                      </div>
                                     </div>
+                                  </section>
                                 </div>
+                              </div>
                             </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="elementor-element elementor-element-9ef5cf6 elementor-section-content-middle sc_push_y_large_negative elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9ef5cf6" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-extended">
+                          <div class="elementor-row">
+                            <div class="elementor-element elementor-element-565a868 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="565a868" data-element_type="column">
+                              <div class="elementor-column-wrap">
+                                <div class="elementor-widget-wrap"></div>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-2e50a8b sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="2e50a8b" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div class="elementor-element elementor-element-17e1e02 elementor-widget elementor-widget-trx_sc_googlemap" data-id="17e1e02" data-element_type="widget" data-widget_type="trx_sc_googlemap.default">
+                                    <div class="elementor-widget-container">
+                                      <div id="trx_sc_googlemap_1982202304_wrap" class="sc_googlemap_wrap">
+                                        <div id="trx_sc_googlemap_1982202304" class="sc_googlemap sc_googlemap_default trx_addons_inline_90411295" data-zoom="13" data-center="40.7488032,-73.6624737" data-style="light" data-cluster-icon="">
+                                            <iframe src="https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=13&q=40.7388032,-73.6624737" aria-label="One"></iframe>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-ac244a5 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-spacer" data-id="ac244a5" data-element_type="widget" data-widget_type="spacer.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-26b2805 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="26b2805" data-element_type="column">
+                              <div class="elementor-column-wrap">
+                                <div class="elementor-widget-wrap"></div>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-003dd82 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-25 elementor-top-column" data-id="003dd82" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div class="elementor-element elementor-element-3b6d7b0 elementor-widget elementor-widget-text-editor" data-id="3b6d7b0" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-text-editor elementor-clearfix">
+                                        <p>Vivamus dictum semper efficitur. Morbi pulvinar viverra rutrum. Morbi pretium consequat eros. Sed aliquet tincidunt
+                                          commodo. Etiam facilisis neque at metus hendrerit congue. Aliquam erat volutpat. Interdum et malesuada fames
+                                          ac ante ipsum.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-9f34981 elementor-widget elementor-widget-spacer" data-id="9f34981" data-element_type="widget" data-widget_type="spacer.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-0bd3891 elementor-widget elementor-widget-text-editor" data-id="0bd3891" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-text-editor elementor-clearfix">
+                                        <h6 class="trx_addons_title_extra">Address:</h6>
+                                        <p>Nassau Blvd New Hyde Park, NY 11040</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-fadde01 elementor-widget elementor-widget-text-editor" data-id="fadde01" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-text-editor elementor-clearfix">
+                                        <h6 class="trx_addons_title_extra">Get in touch:</h6>
+                                        <p><a href="tel:+1 234 567 89 90">+1 234 567 89 90</a>,
+                                          <a href="">
+                                              <span class="__cf_email__" data-cfemail="55262025253a272115302d34382539307b363a38">[email&#160;protected]</span></a>
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-f85e0fd elementor-widget elementor-widget-text-editor" data-id="f85e0fd"
+                                    data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-text-editor elementor-clearfix">
+                                        <h6 class="trx_addons_title_extra">Redes Sociales:</h6>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-b93565a elementor-widget elementor-widget-spacer" data-id="b93565a" data-element_type="widget" data-widget_type="spacer.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="elementor-element elementor-element-f44f30c elementor-widget elementor-widget-trx_widget_socials" data-id="f44f30c" data-element_type="widget" data-widget_type="trx_widget_socials.default">
+                                    <div class="elementor-widget-container">
+                                      <div id="trx_widget_socials_1853971549" class="widget_area sc_widget_socials">
+                                        <aside id="trx_widget_socials_1853971549_widget" class="widget widget_socials">
+                                          <div class="socials_wrap sc_align_left">
+                                            <a target="_blank" href="https://twitter.com/axiom_themes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter"><span class="icon-twitter"></span></span>
+                                            </a>
+                                            <a target="_blank" href="https://www.facebook.com/AxiomThemes-505060569826537/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
+                                            </a>
+                                            <a target="_blank" href="https://dribbble.com/AxiomThemes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_dribbble"><span class="icon-dribbble"></span></span>
+                                            </a>
+                                            <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
+                                            </a>
+                                          </div>
+                                        </aside>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="elementor-element elementor-element-9b83dcf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                        data-id="9b83dcf" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-extended">
+                          <div class="elementor-row">
+                            <div class="elementor-element elementor-element-3009489 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
+                              data-id="3009489" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div class="elementor-element elementor-element-ef6b194 sc_height_large elementor-widget elementor-widget-spacer" data-id="ef6b194"
+                                    data-element_type="widget" data-widget_type="spacer.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-spacer">
+                                        <div class="elementor-spacer-inner"></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="elementor-element elementor-element-650ae33 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+                        data-id="650ae33" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-extended">
+                          <div class="elementor-row">
+                            <div class="elementor-element elementor-element-bf07e4a sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-16 elementor-top-column"
+                              data-id="bf07e4a" data-element_type="column">
+                              <div class="elementor-column-wrap">
+                                <div class="elementor-widget-wrap"></div>
+                              </div>
+                            </div>
+                            <div class="elementor-element elementor-element-a7a3700 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-66 elementor-top-column"
+                              data-id="a7a3700" data-element_type="column">
+                              <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                                  <div class="elementor-element elementor-element-bd8175d elementor-widget elementor-widget-shortcode" data-id="bd8175d"
+                                    data-element_type="widget" data-widget_type="shortcode.default">
+                                    <div class="elementor-widget-container">
+                                      <div class="elementor-shortcode">
+                                        <div role="form" class="wpcf7" id="wpcf7-f188-p183-o1" lang="en-US" dir="ltr">
+                                          <div class="screen-reader-response"></div>
+                                          <form action="/contact-us/#wpcf7-f188-p183-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                                            <div style="display: none;"><input type="hidden" name="_wpcf7" value="188" /><input type="hidden" name="_wpcf7_version" value="5.1.3" /><input
+                                                type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f188-p183-o1"
+                                              /><input type="hidden" name="_wpcf7_container_post" value="183" /></div>
+                                            <div class="columns_wrap">
+                                              <div class="column-1_2">
+                                                  <span class="wpcf7-form-control-wrap text-your-name">
+                                                      <input type="text" name="text-your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" />
+                                                  </span>
+                                              </div>
+                                              <div
+                                                class="column-1_2">
+                                                  <span class="wpcf7-form-control-wrap email-your-email">
+                                                      <input type="email" name="email-your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" /></span></div>
+                                        </div>
+                                        <div class="columns_wrap">
+                                          <div class="column-1_1">
+                                              <span class="wpcf7-form-control-wrap textarea-your-message">
+                                                  <textarea name="textarea-your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea>
+                                              </span>
+                                          </div>
+                                        </div>
+                                        <div class="columns_wrap">
+                                          <div class="column-1_1">
+                                              <span class="wpcf7-form-control-wrap wpgdprc">
+                                                  <span class="wpcf7-form-control wpcf7-validates-as-required wpcf7-wpgdprc">
+                                                      <span class="wpcf7-list-item">
+                                                          <input type="checkbox" name="wpgdprc" value="1" aria-required="true" aria-invalid="false" />
+                                                          <span class="wpcf7-list-item-label">I agree that my submitted data is being collected and stored.</span>
+                                                      </span>
+                                            </span>
+                                            </span>
+                                          </div>
+                                        </div>
+                                        <div class="columns_wrap">
+                                          <div class="column-1_1 center">
+                                              <input type="submit" value="Send Your Message" class="wpcf7-form-control wpcf7-submit" />
+                                          </div>
+                                        </div>
+                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="elementor-element elementor-element-b3660ba sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-16 elementor-top-column" data-id="b3660ba" data-element_type="column">
+                            <div class="elementor-column-wrap">
+                              <div class="elementor-widget-wrap"></div>
+                            </div>
+                          </div>
                         </div>
                     </div>
+                    </section>
+                  </div>
                 </div>
-            </div>
+              </div>
+          </div>
+          </article>
         </div>
-        <div class="vc_row-full-width vc_clearfix"></div>
+      </div>
     </div>
-</div>
-    <script src="<?php echo site_url().'static/page_front/js/contact.js';?>"></script>
-    <script src="<?php echo site_url().'static/assets/spin/js/spin.min.js';?>"></script>
-    <script src="<?php echo site_url().'static/page_front/js/jquery.min.js';?>"></script>
-    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.css" />
-<style>.contact-form input, 
-.contact-form textarea {
- 	background: #FFF;
-	border: none;
-	padding: 10px 15px;
-}
-
-.message-form .form-group {
-	margin-bottom: 25px;	
-}
-
-.message-form .form-group .placeholder {
-	border: none;
-}
-
-.contact-form textarea { 
-	line-height: 2;
-}
-
-.message-form .form-group.absolute .placeholder {
-	padding: 0px;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder label {
-	padding: 12px;
-	font-weight: 500;
-}
-
-.message-form .form-group .placeholder.ver-two {
-	background: #FFF;
-}
-
-.wpb_wrapper .lab-contact-form .form-group .placeholder.ver-two label {
-    padding: 12px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-}
-
-.contact-form .send {
-	margin: 0px;
-}</style>
-	</div>	
-    <!--START FOOTER-->
-    <?php $this->load->view("footer");?>
-    <!--END FOOTER-->
-<style>
-.wrapper {padding-top: 0px !important}
-</style>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_main.js?ver=1.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/bos_date.js?ver=1.0';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=4.8.2';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/js_composer_front.min.js?ver=5.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/main.min.js?ver=2.1.3';?>'></script>
-<script type='text/javascript' src='//maps.googleapis.com/maps/api/js?key= AIzaSyDMXJTazGcfmeoXHr6wf96AKergYCwWLTg '></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/maps.js?ver=4.8.2';?>'></script>
-<!-- Google Code for Click Conversion Page -->
-<script type="text/javascript">
+<!--START FOOTER-->        
+<?php $this->load->view("footer");?>        
+<!--END FOOTER-->    
+  </div>
+  </div>
+  <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> 
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/chart.min.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/revolution.tools.min.js?ver=6.0';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/rs6.min.js?ver=6.0.8';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper.min.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.magnific-popup.min.js';?>'></script>
+<script type='text/javascript'>
 /* <![CDATA[ */
-var google_conversion_id = 991533214;
-var google_custom_params = window.google_tag_params;
-var google_remarketing_only = true;
+var TRX_ADDONS_STORAGE = {"ajax_url":"","ajax_nonce":"84a9115997","site_url":"<?php echo site_url(); ?>","post_id":"293","vc_edit_mode":"0","popup_engine":"magnific","scroll_progress":"hide","animate_inner_links":"0","add_target_blank":"0","menu_collapse":"0","menu_collapse_icon":"icon-more","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_search_error":"Search error! Try again later.","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","msg_validation_error":"Error data validation!","msg_name_empty":"The name can't be empty","msg_name_long":"Too long name","msg_email_empty":"Too short (or empty) email address","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","ajax_views":"","menu_cache":[".menu_mobile_inner > nav > ul"],"login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","shapes_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/trx_addons\/css\/shapes\/","msg_rating_already_marked":"You have already rated this post with mark {{X}}","elementor_stretched_section_container":".page_wrap","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
 /* ]]> */
 </script>
-<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
-<style>iframe[name="google_conversion_frame"] { position: absolute; left: -99999px; }</style>
-		
-	<!-- ET: 0.070381879806519s 2.1.3ch -->
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/trx_addons.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.blockUI.min.js?ver=2.70';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/toolbar.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/front.js?ver=1564737041';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-and-player.min.js?ver=4.2.6-78496d1';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-migrate.min.js?ver=5.2.4';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-mediaelement.min.js?ver=5.2.4';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=5.2.4';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/forms-api.min.js?ver=4.5.3';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend-modules.min.js?ver=2.6.7';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/position.min.js?ver=1.11.4';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/dialog.min.js?ver=4.7.3';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/waypoints.min.js?ver=4.0.2';?>'></script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper2.min.js?ver=4.4.6';?>'></script>
+<script type='text/javascript'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.6.7","urls":{"assets":""},"settings":{"page":[],"general":{"elementor_stretched_section_container":".page_wrap","elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":293,"title":"Home","excerpt":""}};
+</script>
+<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend.min.js?ver=2.6.7';?>'></script>
 </body>
 </html>
