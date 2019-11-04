@@ -41,7 +41,9 @@
                 <a id="slider-2-slide-2-layer-4" class="rs-layer trx-addons-playbutton" href="#popup_video" target="_self" data-type="button"
                   data-color="#000000" data-xy="x:30px;y:c;yo:-160px;" data-text="s:18;l:75;ls:-4px;a:center;" data-dim="w:75px;h:75px;" data-rsp_bd="off" data-border="bor:75px,75px,75px,75px;"
                   data-frame_0="sX:0.8;sY:0.8;tp:600;" data-frame_1="tp:600;e:Linear.easeNone;st:1020;sR:1020;" data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7680;"
-                  data-frame_hover="c:#ed6240;bgc:#fff;boc:transparent;bor:75px,75px,75px,75px;oX:50;oY:50;sp:0;" style="z-index:5;background-color:#ffffff;font-family:Barlow;cursor:pointer;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;"><i class="fa-play"></i></a>
+                  data-frame_hover="c:#ed6240;bgc:#fff;boc:transparent;bor:75px,75px,75px,75px;oX:50;oY:50;sp:0;" style="z-index:5;background-color:#ffffff;font-family:Barlow;cursor:pointer;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
+                    <span class="sc_icon_type_ icon-play"></span>
+                </a>
                 <rs-layer id="slider-2-slide-2-layer-6" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:31px;y:c;yo:-12px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:870;sp:600;sR:870;"
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7530;" style="z-index:6;font-family:Barlow;">Top Unique Solutions<br>for Your Business</rs-layer>
@@ -142,18 +144,7 @@
 					});
 				</script>
                                 <script>
-					var htmlDivCss = ' #rev_slider_2_1_wrapper rs-loader.spinner2{ background-color: #ed6240 !important; } '
-					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
-					if(htmlDiv) {
-						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
-					}else{
-						var htmlDiv = document.createElement('div');
-						htmlDiv.innerHTML = '';
-						document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
-					}
-				</script>
-                                <script>
-					var htmlDivCss = unescape("%23rev_slider_2_1_wrapper%20.custom.tparrows%20%7B%0A%09cursor%3Apointer%3B%0A%09background%3A%23000%3B%0A%09background%3Argba%280%2C0%2C0%2C0.5%29%3B%0A%09width%3A40px%3B%0A%09height%3A40px%3B%0A%09position%3Aabsolute%3B%0A%09display%3Ablock%3B%0A%09z-index%3A1000%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.custom.tparrows%3Ahover%20%7B%0A%09background%3A%23000%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.custom.tparrows%3Abefore%20%7B%0A%09font-family%3A%20%27revicons%27%3B%0A%09font-size%3A15px%3B%0A%09color%3A%23fff%3B%0A%09display%3Ablock%3B%0A%09line-height%3A%2040px%3B%0A%09text-align%3A%20center%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.custom.tparrows.tp-leftarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce824%27%3B%0A%7D%0A%23rev_slider_2_1_wrapper%20.custom.tparrows.tp-rightarrow%3Abefore%20%7B%0A%09content%3A%20%27%5Ce825%27%3B%0A%7D%0A%0A%0A.custom.tp-bullets%20%7B%0A%7D%0A.custom.tp-bullets%3Abefore%20%7B%0A%09content%3A%27%20%27%3B%0A%09position%3Aabsolute%3B%0A%09width%3A100%25%3B%0A%09height%3A100%25%3B%0A%09background%3Atransparent%3B%0A%09padding%3A10px%3B%0A%09margin-left%3A-10px%3Bmargin-top%3A-10px%3B%0A%09box-sizing%3Acontent-box%3B%0A%7D%0A.custom%20.tp-bullet%20%7B%0A%09width%3A12px%3B%0A%09height%3A12px%3B%0A%09position%3Aabsolute%3B%0A%09background%3A%23aaa%3B%0A%20%20%20%20background%3Argba%28125%2C125%2C125%2C0.5%29%3B%0A%09cursor%3A%20pointer%3B%0A%09box-sizing%3Acontent-box%3B%0A%7D%0A.custom%20.tp-bullet%3Ahover%2C%0A.custom%20.tp-bullet.selected%20%7B%0A%09background%3Argb%28125%2C125%2C125%29%3B%0A%7D%0A.custom%20.tp-bullet-image%20%7B%0A%7D%0A.custom%20.tp-bullet-title%20%7B%0A%7D%0A%0A");
+					var htmlDivCss = ' #rev_slider_2_1_wrapper rs-loader.spinner2{ background-color: #ed6240 !important; }'
 					var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
 					if(htmlDiv) {
 						htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
@@ -164,7 +155,6 @@
 					}
 				</script>
 </rs-module-wrap>
-
 </div>
 </aside>
 </div> 
@@ -721,7 +711,6 @@
             }
     }		
 </script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/chart.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/revolution.tools.min.js?ver=6.0';?>'></script>
@@ -735,17 +724,14 @@ var TRX_ADDONS_STORAGE = {"ajax_url":"","ajax_nonce":"84a9115997","site_url":"<?
 </script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/trx_addons.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.blockUI.min.js?ver=2.70';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/toolbar.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/front.js?ver=1564737041';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-and-player.min.js?ver=4.2.6-78496d1';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-migrate.min.js?ver=5.2.4';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-mediaelement.min.js?ver=5.2.4';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/forms-api.min.js?ver=4.5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend-modules.min.js?ver=2.6.7';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/position.min.js?ver=1.11.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/dialog.min.js?ver=4.7.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/waypoints.min.js?ver=4.0.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper2.min.js?ver=4.4.6';?>'></script>
 <script type='text/javascript'>

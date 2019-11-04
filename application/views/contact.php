@@ -170,16 +170,13 @@
                           </div>
                         </div>
                       </section>
-                      <section class="elementor-element elementor-element-9b83dcf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                        data-id="9b83dcf" data-element_type="section">
+                      <section class="elementor-element elementor-element-9b83dcf elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="9b83dcf" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-extended">
                           <div class="elementor-row">
-                            <div class="elementor-element elementor-element-3009489 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-                              data-id="3009489" data-element_type="column">
+                            <div class="elementor-element elementor-element-3009489 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="3009489" data-element_type="column">
                               <div class="elementor-column-wrap elementor-element-populated">
                                 <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-element-ef6b194 sc_height_large elementor-widget elementor-widget-spacer" data-id="ef6b194"
-                                    data-element_type="widget" data-widget_type="spacer.default">
+                                  <div class="elementor-element elementor-element-ef6b194 sc_height_large elementor-widget elementor-widget-spacer" data-id="ef6b194" data-element_type="widget" data-widget_type="spacer.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-spacer">
                                         <div class="elementor-spacer-inner"></div>
@@ -192,63 +189,49 @@
                           </div>
                         </div>
                       </section>
-                      <section class="elementor-element elementor-element-650ae33 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                        data-id="650ae33" data-element_type="section">
+                      <section class="elementor-element elementor-element-650ae33 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="650ae33" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-extended">
                           <div class="elementor-row">
-                            <div class="elementor-element elementor-element-bf07e4a sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-16 elementor-top-column"
-                              data-id="bf07e4a" data-element_type="column">
+                            <div class="elementor-element elementor-element-bf07e4a sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-16 elementor-top-column" sdata-id="bf07e4a" data-element_type="column">
                               <div class="elementor-column-wrap">
                                 <div class="elementor-widget-wrap"></div>
                               </div>
                             </div>
-                            <div class="elementor-element elementor-element-a7a3700 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-66 elementor-top-column"
-                              data-id="a7a3700" data-element_type="column">
+                            <div class="elementor-element elementor-element-a7a3700 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-66 elementor-top-column" data-id="a7a3700" data-element_type="column">
                               <div class="elementor-column-wrap elementor-element-populated">
                                 <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-element-bd8175d elementor-widget elementor-widget-shortcode" data-id="bd8175d"
-                                    data-element_type="widget" data-widget_type="shortcode.default">
+                                  <div class="elementor-element elementor-element-bd8175d elementor-widget elementor-widget-shortcode" data-id="bd8175d" data-element_type="widget" data-widget_type="shortcode.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-shortcode">
                                         <div role="form" class="wpcf7" id="wpcf7-f188-p183-o1" lang="en-US" dir="ltr">
                                           <div class="screen-reader-response"></div>
-                                          <form action="/contact-us/#wpcf7-f188-p183-o1" method="post" class="wpcf7-form" novalidate="novalidate">
-                                            <div style="display: none;"><input type="hidden" name="_wpcf7" value="188" /><input type="hidden" name="_wpcf7_version" value="5.1.3" /><input
-                                                type="hidden" name="_wpcf7_locale" value="en_US" /><input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f188-p183-o1"
-                                              /><input type="hidden" name="_wpcf7_container_post" value="183" /></div>
+                                          <form action="javascript:void(0);" class="wpcf7-form" enctype="multipart/form-data">
                                             <div class="columns_wrap">
                                               <div class="column-1_2">
                                                   <span class="wpcf7-form-control-wrap text-your-name">
-                                                      <input type="text" name="text-your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Your Name" />
+                                                      <input type="text" name="name" id="name" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Nombre" />
+                                                      <span id="message_name" role="alert" class="wpcf7-not-valid-tip">El Nombre es requerido</span>
                                                   </span>
                                               </div>
-                                              <div
-                                                class="column-1_2">
+                                              <div class="column-1_2">
                                                   <span class="wpcf7-form-control-wrap email-your-email">
-                                                      <input type="email" name="email-your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" /></span></div>
+                                                      <input type="text" name="email" id="email"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Email" />
+                                                      <span id="message_email" role="alert" class="wpcf7-not-valid-tip">El Email es requerido</span>
+                                                  </span>
+                                              </div>
                                         </div>
                                         <div class="columns_wrap">
                                           <div class="column-1_1">
                                               <span class="wpcf7-form-control-wrap textarea-your-message">
-                                                  <textarea name="textarea-your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea>
+                                                  <textarea name="message" id="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Mensaje"></textarea>
+                                                  <span id="message_comments" role="alert" class="wpcf7-not-valid-tip">El Mensaje es requerido</span>
                                               </span>
                                           </div>
                                         </div>
-                                        <div class="columns_wrap">
-                                          <div class="column-1_1">
-                                              <span class="wpcf7-form-control-wrap wpgdprc">
-                                                  <span class="wpcf7-form-control wpcf7-validates-as-required wpcf7-wpgdprc">
-                                                      <span class="wpcf7-list-item">
-                                                          <input type="checkbox" name="wpgdprc" value="1" aria-required="true" aria-invalid="false" />
-                                                          <span class="wpcf7-list-item-label">I agree that my submitted data is being collected and stored.</span>
-                                                      </span>
-                                            </span>
-                                            </span>
-                                          </div>
-                                        </div>
+                                        <div class="columns_wrap"><div class="column-1_1"></div></div>
                                         <div class="columns_wrap">
                                           <div class="column-1_1 center">
-                                              <input type="submit" value="Send Your Message" class="wpcf7-form-control wpcf7-submit" />
+                                              <button onclick="send_message();"  class="wpcf7-form-control">Enviar Mensaje</button>
                                           </div>
                                         </div>
                                         <div class="wpcf7-response-output wpcf7-display-none"></div>
@@ -282,36 +265,16 @@
   </div>
   </div>
   <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> 
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/chart.min.js';?>'></script>
+<script src='<?php echo site_url().'static/page_front/js/script/contact.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/revolution.tools.min.js?ver=6.0';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/rs6.min.js?ver=6.0.8';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper.min.js';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.magnific-popup.min.js';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var TRX_ADDONS_STORAGE = {"ajax_url":"","ajax_nonce":"84a9115997","site_url":"<?php echo site_url(); ?>","post_id":"293","vc_edit_mode":"0","popup_engine":"magnific","scroll_progress":"hide","animate_inner_links":"0","add_target_blank":"0","menu_collapse":"0","menu_collapse_icon":"icon-more","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_search_error":"Search error! Try again later.","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","msg_validation_error":"Error data validation!","msg_name_empty":"The name can't be empty","msg_name_long":"Too long name","msg_email_empty":"Too short (or empty) email address","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","ajax_views":"","menu_cache":[".menu_mobile_inner > nav > ul"],"login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","shapes_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/trx_addons\/css\/shapes\/","msg_rating_already_marked":"You have already rated this post with mark {{X}}","elementor_stretched_section_container":".page_wrap","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/trx_addons.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.blockUI.min.js?ver=2.70';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/toolbar.js';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/front.js?ver=1564737041';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-and-player.min.js?ver=4.2.6-78496d1';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-migrate.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-mediaelement.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/forms-api.min.js?ver=4.5.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend-modules.min.js?ver=2.6.7';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/position.min.js?ver=1.11.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/dialog.min.js?ver=4.7.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/waypoints.min.js?ver=4.0.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper2.min.js?ver=4.4.6';?>'></script>
-<script type='text/javascript'>
-var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.6.7","urls":{"assets":""},"settings":{"page":[],"general":{"elementor_stretched_section_container":".page_wrap","elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":293,"title":"Home","excerpt":""}};
-</script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend.min.js?ver=2.6.7';?>'></script>
 </body>
 </html>

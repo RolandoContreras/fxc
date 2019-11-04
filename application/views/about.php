@@ -429,32 +429,19 @@
     </div>
   </div>
    <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> 
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/chart.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/revolution.tools.min.js?ver=6.0';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/rs6.min.js?ver=6.0.8';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.magnific-popup.min.js';?>'></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var TRX_ADDONS_STORAGE = {"ajax_url":"","ajax_nonce":"84a9115997","site_url":"<?php echo site_url(); ?>","post_id":"293","vc_edit_mode":"0","popup_engine":"magnific","scroll_progress":"hide","animate_inner_links":"0","add_target_blank":"0","menu_collapse":"0","menu_collapse_icon":"icon-more","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_magnific_loading":"Loading image","msg_magnific_error":"Error loading image","msg_error_like":"Error saving your like! Please, try again later.","msg_field_name_empty":"The name can't be empty","msg_field_email_empty":"Too short (or empty) email address","msg_field_email_not_valid":"Invalid email address","msg_field_text_empty":"The message text can't be empty","msg_search_error":"Search error! Try again later.","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","msg_validation_error":"Error data validation!","msg_name_empty":"The name can't be empty","msg_name_long":"Too long name","msg_email_empty":"Too short (or empty) email address","msg_email_long":"E-mail address is too long","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","ajax_views":"","menu_cache":[".menu_mobile_inner > nav > ul"],"login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page should be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!","shapes_url":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-content\/themes\/rhodos\/trx_addons\/css\/shapes\/","msg_rating_already_marked":"You have already rated this post with mark {{X}}","elementor_stretched_section_container":".page_wrap","msg_sc_googlemap_not_avail":"Googlemap service is not available","msg_sc_googlemap_geocoder_error":"Error while geocode address"};
-/* ]]> */
-</script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/trx_addons.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/jquery.blockUI.min.js?ver=2.70';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/toolbar.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/front.js?ver=1564737041';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-and-player.min.js?ver=4.2.6-78496d1';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/mediaelement-migrate.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-mediaelement.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/wp-embed.min.js?ver=5.2.4';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/forms-api.min.js?ver=4.5.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/frontend-modules.min.js?ver=2.6.7';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/position.min.js?ver=1.11.4';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/dialog.min.js?ver=4.7.3';?>'></script>
-<script type='text/javascript' src='<?php echo site_url().'static/page_front/js/waypoints.min.js?ver=4.0.2';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/swiper2.min.js?ver=4.4.6';?>'></script>
 <script type='text/javascript'>
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"2.6.7","urls":{"assets":""},"settings":{"page":[],"general":{"elementor_stretched_section_container":".page_wrap","elementor_global_image_lightbox":"yes","elementor_enable_lightbox_in_editor":"yes"}},"post":{"id":293,"title":"Home","excerpt":""}};

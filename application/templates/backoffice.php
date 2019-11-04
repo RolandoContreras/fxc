@@ -43,6 +43,45 @@
           </div>
         </div>
       </div>
+        
+      <?php 
+            $url = explode("/",uri_string()); 
+            $style_home = "";
+            $style_profile = "";
+            $style_network = "";
+            $style_finance = "";
+            $style_pay = "";
+            $style_range = "";
+            $style_file = "";
+            
+            if(isset($url[1])){
+                $nav = "$url[1]";
+                switch ($nav) {
+                    case "profile":
+                        $style_profile = "active";
+                        break;
+                    case "network":
+                        $style_network = "active";
+                        break;
+                    case "finance":
+                        $style_finance = "active";
+                        break;
+                    case "pay":
+                        $style_pay = "active";
+                        break;
+                    case "range":
+                        $style_range = "active";
+                        break;
+                    case "file":
+                        $style_file = "active";
+                        break;
+                    default:
+                        $style_home = "active";
+                    }
+            }else{
+                $style_home = "active";
+            }?>    
+        
       <nav class="navbar-mobile">
         <div class="container-fluid">
           <ul class="navbar-mobile__list list-unstyled">
@@ -74,21 +113,33 @@
       <div class="menu-sidebar__content js-scrollbar1">
         <nav class="navbar-sidebar">
           <ul class="list-unstyled navbar__list">
-            <li class="active has-sub"><a class="js-arrow" href="<?php echo site_url().'backoffice';?>"><i class="fas fa-tachometer-alt"></i>Panel</a></li>
-            <li><a href="<?php echo site_url().'backoffice/profile';?>"><i class="fas fa-address-book"></i>Perfil</a></li>
-            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-code-branch"></i>Red</a>
+            <li class="<?php echo $style_home;?> has-sub">
+                <a class="js-arrow" href="<?php echo site_url().'backoffice';?>"><i class="fas fa-tachometer-alt"></i>Panel</a>
+            </li>
+            <li class="<?php echo $style_profile;?> has-sub">
+                <a href="<?php echo site_url().'backoffice/profile';?>"><i class="fas fa-address-book"></i>Perfil</a>
+            </li>
+            <li class="<?php echo $style_network;?> has-sub">
+                <a class="js-arrow" href="#"><i class="fas fa-code-branch"></i>Red</a>
               <ul class="list-unstyled navbar__sub-list js-sub-list">
                 <li><a href="<?php echo site_url().'backoffice/unilevel';?>">Arbol Unilevel</a></li>
               </ul>
             </li>
-            <li><a href="<?php echo site_url().'backoffice/finance';?>"><i class="fas fa-chart-line"></i>Finanzas</a></li>
-            <li><a href="<?php echo site_url().'backoffice/pay';?>"><i class="far fa-money-bill-alt"></i>Cobros</a></li>
-            <li><a href="<?php echo site_url().'backoffice/range';?>"><i class="fas fa-trophy"></i>Rangos</a></li>
-            <li class="has-sub"><a class="js-arrow" href="#"><i class="fas fa-file-archive"></i>Material</a>
-              <ul class="list-unstyled navbar__sub-list js-sub-list">
-                <li><a href="<?php echo site_url().'backoffice/tools';?>">Material Red</a></li>
-                <li><a href="<?php echo site_url().'backoffice/tools_legal';?>">Documentos Legales</a></li>
-              </ul>
+            <li class="<?php echo $style_finance;?> has-sub">
+                <a href="<?php echo site_url().'backoffice/finance';?>"><i class="fas fa-chart-line"></i>Finanzas</a>
+            </li>
+            <li class="<?php echo $style_pay;?> has-sub">
+                <a href="<?php echo site_url().'backoffice/pay';?>"><i class="far fa-money-bill-alt"></i>Cobros</a>
+            </li>
+            <li class="<?php echo $style_range;?> has-sub">
+                <a href="<?php echo site_url().'backoffice/range';?>"><i class="fas fa-trophy"></i>Rangos</a>
+            </li>
+            <li class="<?php echo $style_file;?> has-sub">
+                <a class="js-arrow" href="#"><i class="fas fa-file-archive"></i>Material</a>
+                    <ul class="list-unstyled navbar__sub-list js-sub-list">
+                      <li><a href="<?php echo site_url().'backoffice/tools';?>">Material Red</a></li>
+                      <li><a href="<?php echo site_url().'backoffice/tools_legal';?>">Documentos Legales</a></li>
+                    </ul>
             </li>
           </ul>
         </nav>

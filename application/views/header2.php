@@ -16,7 +16,7 @@
                                     <div class="elementor-widget-wrap">
                                       <div class="sc_layouts_item elementor-element elementor-element-c4992ed elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="c4992ed" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                         <div class="elementor-widget-container">
-                                          <a href="http://corporate.rhodos.axiomthemes.com/" id="trx_sc_layouts_logo_653443971" class="sc_layouts_logo sc_layouts_logo_default">
+                                            <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_653443971" class="sc_layouts_logo sc_layouts_logo_default">
                                               <img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
                                         </div>
                                       </div>
@@ -68,29 +68,33 @@
                               </div>
                             </div>
                           </section>
-                          <div class="sc_layouts_item elementor-element elementor-element-c926640 sc_height_extra_large elementor-widget elementor-widget-spacer"
-                            data-id="c926640" data-element_type="widget" data-widget_type="spacer.default">
+                          <div class="sc_layouts_item elementor-element elementor-element-c926640 sc_height_extra_large elementor-widget elementor-widget-spacer" data-id="c926640" data-element_type="widget" data-widget_type="spacer.default">
                             <div class="elementor-widget-container">
                               <div class="elementor-spacer">
                                 <div class="elementor-spacer-inner"></div>
                               </div>
                             </div>
                           </div>
-                          <section class="elementor-element elementor-element-9c9b81b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"
-                            data-id="9c9b81b" data-element_type="section">
+                          <section class="elementor-element elementor-element-9c9b81b elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-inner-section"  data-id="9c9b81b" data-element_type="section">
                             <div class="elementor-container elementor-column-gap-extended">
                               <div class="elementor-row">
-                                <div class="elementor-element elementor-element-8d4f1ad sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-inner-column"
-                                  data-id="8d4f1ad" data-element_type="column">
+                                <div class="elementor-element elementor-element-8d4f1ad sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-inner-column" data-id="8d4f1ad" data-element_type="column">
                                   <div class="elementor-column-wrap elementor-element-populated">
                                     <div class="elementor-widget-wrap">
-                                      <div class="sc_layouts_item elementor-element elementor-element-09c5f36 elementor-widget elementor-widget-trx_sc_layouts_title"
-                                        data-id="09c5f36" data-element_type="widget" data-widget_type="trx_sc_layouts_title.default">
+                                      <div class="sc_layouts_item elementor-element elementor-element-09c5f36 elementor-widget elementor-widget-trx_sc_layouts_title" data-id="09c5f36" data-element_type="widget" data-widget_type="trx_sc_layouts_title.default">
                                         <div class="elementor-widget-container">
                                           <div id="trx_sc_layouts_title_655826656" class="sc_layouts_title sc_align_center with_content without_image without_tint">
                                             <div class="sc_layouts_title_content">
                                               <div class="sc_layouts_title_title">
-                                                <h1 class="sc_layouts_title_caption">Contact Us</h1>
+                                                  <?php 
+                                    $url = explode("/",uri_string()); 
+                                    $nav = $url[0];
+                                    if($nav == "about"){
+                                        $text = "Acerca";
+                                    }else{
+                                        $text = "Contáctenos";
+                                    }?>  
+                                                <h1 class="sc_layouts_title_caption"><?php echo $text;?></h1>
                                               </div>
                                               <div class="sc_layouts_title_breadcrumbs">
                                                 <div class="breadcrumbs">

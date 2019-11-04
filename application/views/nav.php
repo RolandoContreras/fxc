@@ -3,11 +3,11 @@
     <li id="menu-item-321" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-293 current_page_item menu-item-321">
         <a href="<?php echo site_url();?>" aria-current="page"><span>Inicio</span></a>
     </li>
-    <li id="menu-item-254" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-254">
+    <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
       <a href="<?php echo site_url().'about';?>"><span>Acerca</span></a>
     </li>
     <li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
-        <a href="<?php echo site_url().'contact';?>"><span>Contáctanos</span></a>
+        <a href="<?php echo site_url().'contact';?>"><span>Contáctenos</span></a>
     </li>
     <li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
         <a href="<?php echo site_url().'login';?>"><span>Login</span></a>

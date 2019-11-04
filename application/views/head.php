@@ -6,9 +6,6 @@
   <link rel="pingback" href="">
   <title>Empire - Fonde de Inversión</title>
   <link rel='dns-prefetch' href='//fonts.googleapis.com' />
-  <script type="text/javascript">
-    window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/corporate.rhodos.axiomthemes.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-  </script>
   <style type="text/css">
     img.wp-smiley,img.emoji {display: inline !important;border: none !important;box-shadow: none !important;height: 1em !important;width: 1em !important;margin: 0 .07em !important;vertical-align: -0.1em !important;background: none !important;padding: 0 !important;}
   </style>
@@ -30,15 +27,6 @@
   <link property="stylesheet" rel='stylesheet' id='magnific-popup-css' href='<?php echo site_url().'static/page_front/css/magnific-popup.min.css';?>' type='text/css' media='all' />
   <link property="stylesheet" rel='stylesheet' id='trx_addons-css' href='<?php echo site_url().'static/page_front/css/trx_addons.css';?>' type='text/css' media='all' />
   <link property="stylesheet" rel='stylesheet' id='trx_addons-animation-css' href='<?php echo site_url().'static/page_front/css/trx_addons.animation.css';?>' type='text/css' media='all' />
-  <link property="stylesheet" rel='stylesheet' id='woocommerce-layout-css' href='<?php echo site_url().'static/page_front/css/woocommerce-layout.css?ver=3.6.5';?>' type='text/css' media='all' />
-  <link property="stylesheet" rel='stylesheet' id='woocommerce-smallscreen-css' href='<?php echo site_url().'static/page_front/css/woocommerce-smallscreen.css?ver=3.6.5';?>' type='text/css' media='only screen and (max-width: 768px)' />
-  <link property="stylesheet" rel='stylesheet' id='woocommerce-general-css' href='<?php echo site_url().'static/page_front/css/woocommerce.css?ver=3.6.5';?>' type='text/css' media='all' />
-  <style id='woocommerce-inline-inline-css' type='text/css'>
-    .woocommerce form .form-row .required { visibility: visible; }
-  </style>
-  <link property="stylesheet" rel='stylesheet' id='rhodos-toolbar-icons-css' href='<?php echo site_url().'static/page_front/css/fontello-toolbar.css';?>' type='text/css' media='all' />
-  <link property="stylesheet" rel='stylesheet' id='rhodos-toolbar-icons-animation-css' href='<?php echo site_url().'static/page_front/css/animation.css';?>' type='text/css' media='all' />
-  <link property="stylesheet" rel='stylesheet' id='rhodos-toolbar-css' href='<?php echo site_url().'static/page_front/css/toolbar.css';?>' type='text/css' media='all' />
   <link property="stylesheet" rel='stylesheet' id='elementor-icons-css' href='<?php echo site_url().'static/page_front/css/elementor-icons.min.css?ver=5.3.0';?>' type='text/css' media='all' />
   <link property="stylesheet" rel='stylesheet' id='elementor-animations-css' href='<?php echo site_url().'static/page_front/css/animations.min.css?ver=2.6.7';?>' type='text/css' media='all' />
   <link property="stylesheet" rel='stylesheet' id='elementor-frontend-css' href='<?php echo site_url().'static/page_front/css/frontend.min.css?ver=2.6.7';?>' type='text/css' media='all' />

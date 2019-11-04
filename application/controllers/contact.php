@@ -27,41 +27,40 @@ class Contact extends CI_Controller {
 		$this->load->view('contact');
 	}
         public function send_messages(){
-            if($this->input->is_ajax_request()){ 
-                
-                $name = $this->input->post('name');  
-                $email = $this->input->post('email');  
-                $subject = $this->input->post('subject');  
-                $message = $this->input->post('message');  
-                
-                
-                //validate background
-                $this->form_validation->set_rules('name','name',"required|trim");
-                $this->form_validation->set_rules('email','email','required|trim'); 
-                $this->form_validation->set_rules('subject','subject','required|trim'); 
-                $this->form_validation->set_rules('message','message','required');              
-                $this->form_validation->set_message('required','Campo requerido %s');   
+         //GET DATA BY POST
+         if($this->input->is_ajax_request()){   
+                $name = $this->input->post("name");
+                $email = $this->input->post("email");
+                $message = $this->input->post("message");
 
-                
-                if ($this->form_validation->run($this)== false){ 
-                    $data['message'] = "false";
-                    $data['print'] = "Complete todos los datos correctamente";
-                }else{
-                    //status_value 0 means (not read)
-                    $data = array(
-                        'name' => $name,
-                        'email' => $email,
-                        'comment' => $message,
-                        'subject' => $subject,
-                        'date_comment' => date("Y-m-d H:i:s"),
-                        'status_value' => 0,
-                    );
-                    $this->obj_comments->insert($data);
-                    $data['print'] = "Mensaje enviado correctamente";
-                    $data['message'] = "true";       
-                }         
-                echo json_encode($data);  
-                exit();      
+                //SAVE MESSAGES BD
+                //status_value 0 means (not read)
+                        $data = array(
+                            'name' => $name,
+                            'email' => $email,
+                            'comment' => $message,
+                            'date_comment' => date("Y-m-d H:i:s"),
+                            'active' => 1,
+                            'status_value' => 1,
+                        );
+                        $this->obj_comments->insert($data);
+
+                //SEND MESSAGES
+                $mensaje = wordwrap("<html><body>"
+                        . "<h1>Hay una pregunta por responder</h1><br/>"
+                        . "<h3>Datos del Solicitante</h3><br/>"
+                        . "Nombre: <em>$name</em><br/>"
+                        . "Telefono: <em>$phone</em><br/>"
+                        . "Email: <em>$email</em><br/>"
+                        . "<p>$comments<p></body></html>", 70, "\n", true);
+                $titulo = $subject;
+                $headers = "MIME-Version: 1.0\r\n"; 
+                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                $headers .= "From: Red NFN: Red de Consumo Inteligente < noreplay@newfuturenetwork.com >\r\n";
+                $bool = mail("contacto@newfuturenetwork.com",$titulo,$mensaje,$headers); 
+                $data = true;
+                echo json_encode($data);            
+                exit();
             }
-        }   
+    } 
 }
