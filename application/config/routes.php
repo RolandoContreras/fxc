@@ -96,6 +96,8 @@ $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_profile";
 $route['backoffice/finance'] = "b_finance";
 
+$route['salir'] = "login/logout";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */
