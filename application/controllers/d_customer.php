@@ -7,7 +7,7 @@ class D_customer extends CI_Controller{
         $this->load->model("customer_model","obj_customer");
         $this->load->model("paises_model","obj_paises");
         $this->load->model("regiones_model","obj_regiones");
-        $this->load->model("franchise_model","obj_franchise");
+        $this->load->model("kit_model","obj_kit");
     }   
                 
     public function index(){  
@@ -21,9 +21,9 @@ class D_customer extends CI_Controller{
                                     customer.last_name,
                                     customer.created_at,
                                     customer.active,
-                                    franchise.name as franchise,
+                                    kit.name as kit,
                                     customer.status_value",
-                        "join" => array('franchise, franchise.franchise_id = customer.franchise_id'),
+                        "join" => array('kit, kit.kit_id = customer.kit_id'),
                         "group" => "customer.customer_id"
                
                );

@@ -40,23 +40,23 @@
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
-                                <td align="center"><?php echo $value->franchise;?></td>
+                                <td align="center"><?php echo str_to_mayusculas($value->kit);?></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
-                                        $valor = "Inactivo para bonos";
+                                        $valor = "Inactivo";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "Activo para bonos";
+                                        $valor = "Activo";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
                                 <td align="center">
                                     <?php if ($value->status_value == 0) {
-                                        $valor = "Inactivo";
+                                        $valor = "Inactivo para sistema";
                                         $stilo = "label label-important";
                                     }else{
-                                        $valor = "Activo";
+                                        $valor = "Activo para sistema";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>

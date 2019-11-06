@@ -7,12 +7,12 @@
 <!-- main content -->
 <div id="main_content" class="span9">
     <div class="row-fluid">
-        <div class="widget_container">
+        <div class="widget_container" style="width: 110%;">
             <div class="well">
                     <div class="navbar navbar-static navbar_as_heading">
                             <div class="navbar-inner">
-                                    <div class="container" style="width: 100%;">
-                                            <a class="brand">LISTADO DETALLE DE COBRO</a>
+                                    <div class="container" style="width: 110%;">
+                                            <a class="brand">LISTADO DE  COMISIONES</a>
                                     </div>
                             </div>
                     </div>
@@ -23,49 +23,48 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>ID</th>
+                                <th>CODIGO</th>
                                 <th>FECHA</th>
-                                <th>NOMBRE COMISIÓN</th>
-                                <th>MONTO</th>
-                                <th>BILLETERA NORMAL</th>
-                                <th>ESTADO</th>
+                                <th>USUARIO</th>
+                                <th>ASOCIADO</th>
+                                <th>BONO</th>
+                                <th>MONTO</th> 
+                                <th>ESTADO</th> 
+                                <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $sum_normal = "";?>
-                            <?php foreach ($obj_pay_commission as $value): ?>
-                            <?php $sum_normal += $value->normal_account;?>
                             <tr>
+                            <?php foreach ($obj_comission as $value): ?>
                                 <td align="center"><?php echo $value->commissions_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td align="center"><?php echo $value->name;?></td>
-                                <td align="center"><b><?php echo $value->amount;?></b></td>
-                                <td align="center"><a class="pending"><b><?php echo $value->normal_account;?></a></b></td>
+                                <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
+                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><?php echo $value->bonus;?></td>
+                                <td align="center" class="label-success" style="color:#fff;"><b><?php echo $value->amount;?></b></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 2) {
-                                        $valor = "Devuelto o Cancelado";
-                                        $stilo = "label label-important";
+                                    <?php if (($value->status_value == 1) || ($value->status_value == 2)) {
+                                        $valor = "Abonado";
+                                        $stilo = "label label-default";
                                     }elseif($value->status_value == 3){
-                                        $valor = "Es espera de procesamiento";
+                                        $valor = "Espera de procesar";
                                         $stilo = "label label-warning";
                                     }elseif($value->status_value == 4){
                                         $valor = "Pagado";
                                         $stilo = "label label-success";
-                                    } ?>
+                                    }?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
-                                </tr>
+                                <td>
+                                    <div class="operation">
+                                        <div class="btn-group">
+                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->commissions_id;?>');"><i class="fa fa-edit"></i> Editar</button>
+                                          </div>
+                                    </div>
+                                </td>
+                            </tr>
                             <?php endforeach; ?>
-                                
                         </tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td align="center"><a class="pending"><b><?php echo $sum_normal;?></a></b></td>
-                            <td></td>
-                        </tr>
                     </table>
             </div>
            <!--</form>-->         
@@ -76,7 +75,8 @@
 <script type="text/javascript">
    $(document).ready(function() {
     $('#table').dataTable( {
+         "order": [[ 0, "desc" ]]
     } );
 } );
 </script>
-<script src="static/cms/js/cobros.js"></script>
+<script src="static/cms/js/comission.js"></script>

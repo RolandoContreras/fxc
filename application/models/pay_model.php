@@ -15,26 +15,36 @@ BITSHARE S.A.C
 * Fecha: 16/11/2016
 ****/
 
-class about_model_atributos{	
-    var $about_id='';
-    var $name='';
-    var $title='';
-    var $text='';
+class pay_model_atributos{	
+    var $pay_id='';
+    var $customer_id='';
+    var $date='';
+    var $obs='';
+    var $active='';
     var $status_value='';
+    var $created_at='';
+    var $created_by='';
+    var $update_at='';
+    var $update_by='';
 }
 
-class About_Model extends CI_Model{ 
+class Pay_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'about';
-	$this->table_id = 'about_id';
-        $this->about_id='';
-        $this->name='';
-        $this->title='';
-        $this->text='';
+        $this->table = 'pay';
+	$this->table_id = 'pay_id';
+        $this->pay_id='';
+        $this->customer_id='';
+        $this->date='';
+        $this->obs='';
+        $this->active='';
 	$this->status_value='';
-	$this->fields = new about_model_atributos();
+        $this->created_at='';
+        $this->created_by='';
+        $this->update_at='';
+        $this->update_by='';
+	$this->fields = new pay_model_atributos();
     }   
     
     public function fields(){
@@ -120,14 +130,5 @@ class About_Model extends CI_Model{
         $dato = $query->row();
         return $dato;       
   }
-  
-   public function verificar_username($username,$password){        
-        $this->db->where('$username',$username);
-        $this->db->where('password', $password);
-        $this->db->from($this->table);
-        $query = $this->db->get();                     
-        return $query->row();        
-   }
-  
 } //FIN DEL MODELO EXTENDIDO
 ?>

@@ -1,7 +1,7 @@
 <?php if ( ! defined("BASEPATH")) exit("No direct script access allowed"); 
 /*****
 * Generator Class MC v.1.55
-BITSHARE S.A.C
+* WAVELINE S.A.C.
 * Proyecto
 * V. 1.0
 * Iniciado: 29/09/2015
@@ -12,48 +12,30 @@ BITSHARE S.A.C
 * @EXTIENDE EL MODELO
 * Descripcion: se utilizara para nuevas funciones
 * Creador: Rolando Contreras H.
-* Fecha: 16/11/2016
+* Fecha: 29/09/2015
 ****/
 
-class activation_message_model_atributos{	
-    var $activation_message_id='';
-    var $subject='';
-    var $message='';
-    var $name='';
-    var $franchise='';
-    var $customer_id='';
-    var $date='';
-    var $status_value='';
-    var $created_at='';
-    var $created_by='';
-    var $updated_at='';
-    var $updated_by='';
+class paises_model_atributos{	
+    var $id='';
+    var $id_idioma='';
+    var $nombre='';
+    var $x='';
+    var $y='';
 }
 
-class Activation_message_model extends CI_Model{ 
+class Paises_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'activation_message';
-	$this->table_id = 'activation_message_id';
-        $this->activation_message_id='';
-        $this->subject='';
-        $this->message='';
-        $this->name='';
-        $this->franchise='';
-        $this->customer_id='';
-        $this->date='';
-	$this->status_value='';
-        $this->created_at='';
-        $this->created_by='';
-        $this->updated_at='';
-        $this->updated_by='';
-	$this->fields = new activation_message_model_atributos();
+        $this->table = 'paises';
+	$this->table_id = 'id';
+        $this->id='';
+	$this->id_idioma='';
+        $this->nombre='';
+        $this->x='';
+        $this->y='';
+	$this->fields = new paises_model_atributos();
     }   
-    
-    public function fields(){
-    }
-    
     public function insert($data){
       $this->db->insert($this->table, $data);
       return $this->db->insert_id();

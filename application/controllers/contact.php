@@ -28,6 +28,7 @@ class Contact extends CI_Controller {
 	}
         public function send_messages(){
          //GET DATA BY POST
+            
          if($this->input->is_ajax_request()){   
                 $name = $this->input->post("name");
                 $email = $this->input->post("email");
@@ -44,21 +45,7 @@ class Contact extends CI_Controller {
                             'status_value' => 1,
                         );
                         $this->obj_comments->insert($data);
-
-                //SEND MESSAGES
-                $mensaje = wordwrap("<html><body>"
-                        . "<h1>Hay una pregunta por responder</h1><br/>"
-                        . "<h3>Datos del Solicitante</h3><br/>"
-                        . "Nombre: <em>$name</em><br/>"
-                        . "Telefono: <em>$phone</em><br/>"
-                        . "Email: <em>$email</em><br/>"
-                        . "<p>$comments<p></body></html>", 70, "\n", true);
-                $titulo = $subject;
-                $headers = "MIME-Version: 1.0\r\n"; 
-                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                $headers .= "From: Red NFN: Red de Consumo Inteligente < noreplay@newfuturenetwork.com >\r\n";
-                $bool = mail("contacto@newfuturenetwork.com",$titulo,$mensaje,$headers); 
-                $data = true;
+                $data['message'] = true;
                 echo json_encode($data);            
                 exit();
             }

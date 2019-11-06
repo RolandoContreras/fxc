@@ -24,29 +24,28 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
-                                <th>USERNAME</th>
-                                <th>CONTRASEÑA</th>
+                                <th>ID</th>
                                 <th>NOMBRE</th>
+                                <th>CONTRASEÑA</th>
                                 <th>E-MAIL</th>
                                 <th>PRIVILEGIOS</th>
                                 <th>FECHA DE CREACIÓN</th>
                                 <th>ESTADO</th> 
+                                <th>ESTADO SISTEMA</th> 
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <?php foreach ($obj_users as $value): ?>
-                                <td align="center"><b><?php echo $value->user_name;?></b></td>
-                                <td align="center"><b><?php echo $value->password;?></b></td>
+                                <td align="center"><b><?php echo $value->user_id;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center"><b><?php echo $value->password;?></b></td>
                                 <td align="center"><?php echo $value->email;?></td>
                                 <td align="center">
                                     <?php 
-                                    if ($value->privilage == 3){
+                                    if ($value->privilage == 2){
                                         echo "<b>"."Control Total"."</b>";
-                                    }elseif($value->privilage == 2){
-                                        echo "<b>"."Control Medio"."</b>";
                                     }else{
                                         echo "<b>"."Control Simple"."</b>";
                                     }
@@ -55,11 +54,21 @@
                                 </td>
                                 <td align="center"><?php echo formato_fecha($value->created_at);?></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 0) {
+                                    <?php if ($value->active == 0) {
                                         $valor = "Inactivo";
                                         $stilo = "label label-important";
                                     }else{
                                         $valor = "Activo";
+                                        $stilo = "label label-success";
+                                    } ?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                </td>
+                                <td align="center">
+                                    <?php if ($value->status_value == 0) {
+                                        $valor = "Inactivo para sistema";
+                                        $stilo = "label label-important";
+                                    }else{
+                                        $valor = "Activo para sistema";
                                         $stilo = "label label-success";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>

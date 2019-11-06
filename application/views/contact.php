@@ -155,8 +155,6 @@
                                             </a>
                                             <a target="_blank" href="https://www.facebook.com/AxiomThemes-505060569826537/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
                                             </a>
-                                            <a target="_blank" href="https://dribbble.com/AxiomThemes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_dribbble"><span class="icon-dribbble"></span></span>
-                                            </a>
                                             <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
                                             </a>
                                           </div>
@@ -209,13 +207,13 @@
                                             <div class="columns_wrap">
                                               <div class="column-1_2">
                                                   <span class="wpcf7-form-control-wrap text-your-name">
-                                                      <input type="text" name="name" id="name" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Nombre" />
+                                                      <input type="text" name="name" onkeypress="fade_name();" id="name" size="40" class="wpcf7-form-control wpcf7-text" placeholder="Nombre" />
                                                       <span id="message_name" role="alert" class="wpcf7-not-valid-tip">El Nombre es requerido</span>
                                                   </span>
                                               </div>
                                               <div class="column-1_2">
                                                   <span class="wpcf7-form-control-wrap email-your-email">
-                                                      <input type="text" name="email" id="email"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Email" />
+                                                      <input type="text" name="email" onkeypress="fade_email();" id="email"  size="40" class="wpcf7-form-control wpcf7-text wpcf7-email" placeholder="Email" />
                                                       <span id="message_email" role="alert" class="wpcf7-not-valid-tip">El Email es requerido</span>
                                                   </span>
                                               </div>
@@ -223,18 +221,27 @@
                                         <div class="columns_wrap">
                                           <div class="column-1_1">
                                               <span class="wpcf7-form-control-wrap textarea-your-message">
-                                                  <textarea name="message" id="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Mensaje"></textarea>
+                                                  <textarea name="message" id="message" onkeypress="fade_comments();" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Mensaje"></textarea>
                                                   <span id="message_comments" role="alert" class="wpcf7-not-valid-tip">El Mensaje es requerido</span>
                                               </span>
                                           </div>
                                         </div>
-                                        <div class="columns_wrap"><div class="column-1_1"></div></div>
+                                              
+                                              
+                                          <div class="columns_wrap">
+                                              <div class="column-1_1">
+                                                <div class="form-group has-feedback"><br/>
+                                                    <div class="g-recaptcha" data-sitekey="6Lc684YUAAAAAKbiFYJvMx83vmSSJHH8N03PXnKx"></div>
+                                                    <div id="captcha_messages" class="wpcf7-response-output wpcf7-display-none wpcf7-validation-errors" role="alert">Captcha no verificado</div><br/>
+                                                </div>
+                                              </div>
+                                          </div>
                                         <div class="columns_wrap">
                                           <div class="column-1_1 center">
                                               <button onclick="send_message();"  class="wpcf7-form-control">Enviar Mensaje</button>
                                           </div>
                                         </div>
-                                        <div class="wpcf7-response-output wpcf7-display-none"></div>
+                                        <div id="messages_respose" class="wpcf7-response-output wpcf7-display-none wpcf7-display-none wpcf7-mail-sent-ok" role="alert">Gracias por tu mensaje. Ha sido enviado.</div>
                                         </form>
                                       </div>
                                     </div>
@@ -266,6 +273,8 @@
   </div>
   <a href="#" class="trx_addons_scroll_to_top trx_addons_icon-up" title="Scroll to top"></a> 
 <script src='<?php echo site_url().'static/page_front/js/script/contact.js';?>'></script>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/superfish.min.js';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/scripts.js?ver=5.1.3';?>'></script>
 <script type='text/javascript' src='<?php echo site_url().'static/page_front/js/revolution.tools.min.js?ver=6.0';?>'></script>

@@ -25,12 +25,11 @@
                             <tr>
                                 <th>ID</th>
                                 <th>FECHA</th>
-                                <th>MONTO</th>
-                                <th>CUOTA</th>
-                                <th>TOTAL PAGAR</th>
                                 <th>USUARIO</th>
                                 <th>NOMBRES</th>
                                 <th>DIRECCIÓN</th>
+                                <th>OBS</th>
+                                <th>MONTO</th>
                                 <th>ESTADO</th>
                                 <th>ACCIONES</th>
                             </tr>
@@ -40,12 +39,11 @@
                             <tr>
                                 <td align="center"><?php echo $value->pay_id;?></td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td align="center"><b><a class="pending"><?php echo $value->amount;?></a></b></td>
-                                <td align="center"><b><a style="color:red;"><?php echo $value->fee;?></a></b></td>
-                                <td align="center"><b><a style="color:green;"><?php echo $value->amount_total;?></a></b></td>
                                 <td align="center"><b><?php echo $value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->btc_address;?></td>
+                                <td align="center"><?php echo $value->obs;?></td>
+                                <td align="center" style="color:#fff;" class="label-success"><?php echo $value->amount;?></td>
                                 <td align="center">
                                     <?php if ($value->status_value == 2) {
                                         $valor = "Devuelto o Cancelado";
@@ -62,9 +60,11 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="ver_detalle('<?php echo $value->pay_id;?>');">VER</button>
-                                                    <button class="btn btn-small" onclick="pagado('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>');">Pagado</button>
-                                                    <button class="btn btn-small" onclick="devolver('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>');">Devolver</button>
+                                                    <button class="btn btn-small" onclick="ver_detalle('<?php echo $value->pay_id;?>');"><i class="fa fa-eye"></i> Ver</button>
+                                                    <button class="btn btn-small" onclick="edit_pay('<?php echo $value->pay_id;?>');"><i class="fa fa-edit"></i>  Editar</button>
+                                                    <button class="btn btn-small" onclick="pagado('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>');"><i class="fa fa-check"></i> Pagado</button>
+                                                    <button class="btn btn-small" onclick="devolver('<?php echo $value->pay_id;?>','<?php echo $value->first_name;?>','<?php echo $value->username;?>','<?php echo $value->amount;?>','<?php echo $value->email;?>');"><i class="fa fa-chevron-left"></i> Devolver</button>
+                                                    
                                           </div>
                                     </div>
                                 </td>

@@ -3,7 +3,7 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CMS - 3T - Travel - Training- Trade</title>
+        <title>CMS - 3T</title>
         <base href="<?php echo site_url();?>">
         <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
         <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
@@ -23,6 +23,8 @@
         <!-- color style -->
         <link href="static/cms/css/core/dark.css" rel="stylesheet">
         <link href="static/cms/css/core/bootstrap-responsive.css" rel="stylesheet">
+        <link href="static/cms/plugins/datepicker/css/datepicker.css" rel="stylesheet">
+        <link href="static/cms/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet">
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
         <script src="plugins/html5.js"></script>
@@ -34,13 +36,21 @@
         <script src="static/cms/plugins/datepicker/js/bootstrap-datepicker.js"></script>
         <script src="static/cms/plugins/wysiwyg/bootstrap-wysihtml5.js"></script>
         <script type="text/javascript" src="static/cms/js/browserplus-min.js"></script>
+        <script type="text/javascript" src="static/cms/plugins/plupload/js/plupload.full.js"></script>
+        <script type="text/javascript" src="static/cms/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
 
         <script src="static/cms/js/core/jquery.validate.min.js"></script>
         <script src="static/cms/js/core/bootstrap-alert.js"></script>
         
+        <script src="static/cms/js/demo.js"></script>
+        
+        <script src="static/cms/plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
+        
+        
         <script type="text/javascript">
             var site = '<?php echo site_url();?>';
         </script>
+        <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
     </head>
 <body>
 <!-- top fixed navbar -->
@@ -82,13 +92,20 @@
                                     <div id="dashboardsb" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/mesaje_global";?>"><i class="icon-large icon-th"></i>Mensajes</a></li>
-                                            <?php if($_SESSION['usercms']['privilage'] == 3){ ?>
+                                            <li><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/correos";?>"><i class="icon-large icon-th"></i>Correos Masivos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/kit";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
+                                            <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>
-                                            <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
                                         </ul>
                                         </div>
                                     </div>
@@ -97,18 +114,15 @@
                             if($_SESSION['usercms']['privilage'] == 3){ ?>
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#secciones">
-                                        Secciones
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
+                                        Activaciones
                                         </a>
                                     </div>
-                                    <div id="secciones" class="accordion-body collapse">
+                                    <div id="activaciones" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/about";?>"><i class="icon-large icon-th"></i>Acerca</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/product";?>"><i class="icon-large icon-th"></i>Productos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/customer";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/brand";?>"><i class="icon-large icon-th"></i>Marcas</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/work";?>"><i class="icon-large icon-th"></i>Trabajos</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/confirmation_activaciones";?>"><i class="icon-large icon-th"></i>Confirmación</a></li>
+                                             <li><a href="<?php echo site_url()."dashboard/activaciones";?>"><i class="icon-large icon-th"></i>Activaciones</a></li>
                                         </ul>
                                         </div>
                                     </div>
@@ -116,13 +130,13 @@
                         <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">
-                                        Cobros
+                                        Pagos
                                         </a>
                                     </div>
                                     <div id="cobros" class="accordion-body collapse">
                                       <div class="accordion-inner">
                                         <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/cobros";?>"><i class="icon-large icon-th"></i>Cobros</a></li>
+                                             <li><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
                                         </ul>
                                         </div>
                                     </div>
