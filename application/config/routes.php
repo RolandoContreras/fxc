@@ -45,6 +45,13 @@ $route['home'] = 'home';
 $route['login'] = 'login';
 $route['forget'] = 'forget';
 
+$route['service'] = 'service';
+$route['fund'] = 'service';
+$route['course'] = 'service';
+$route['club'] = 'service';
+$route['investment'] = 'service';
+
+
 
 $route['backoffice'] = "b_home";
 

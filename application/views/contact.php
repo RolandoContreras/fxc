@@ -99,9 +99,10 @@
                                   <div class="elementor-element elementor-element-3b6d7b0 elementor-widget elementor-widget-text-editor" data-id="3b6d7b0" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-text-editor elementor-clearfix">
-                                        <p>Vivamus dictum semper efficitur. Morbi pulvinar viverra rutrum. Morbi pretium consequat eros. Sed aliquet tincidunt
-                                          commodo. Etiam facilisis neque at metus hendrerit congue. Aliquam erat volutpat. Interdum et malesuada fames
-                                          ac ante ipsum.</p>
+                                        <p>Estaremos encantado de atender tus solicitudes. Puedes comunicarte con nosotros a través de nuestra página web, vía telefónica o visitarnos en nuestra oficina principal.
+                                            <br/><br/>Para solicitar una reunión personalizada con nuestros asesores en nuestra oficina, asegura de reservar una cita con nosotros.
+                                        Gracias por tu tiempo y confianza.
+                                        </p>
                                       </div>
                                     </div>
                                   </div>
@@ -112,21 +113,20 @@
                                       </div>
                                     </div>
                                   </div>
-                                  <div class="elementor-element elementor-element-0bd3891 elementor-widget elementor-widget-text-editor" data-id="0bd3891" data-element_type="widget" data-widget_type="text-editor.default">
+<!--                                  <div class="elementor-element elementor-element-0bd3891 elementor-widget elementor-widget-text-editor" data-id="0bd3891" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-text-editor elementor-clearfix">
                                         <h6 class="trx_addons_title_extra">Address:</h6>
                                         <p>Nassau Blvd New Hyde Park, NY 11040</p>
                                       </div>
                                     </div>
-                                  </div>
+                                  </div>-->
                                   <div class="elementor-element elementor-element-fadde01 elementor-widget elementor-widget-text-editor" data-id="fadde01" data-element_type="widget" data-widget_type="text-editor.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-text-editor elementor-clearfix">
-                                        <h6 class="trx_addons_title_extra">Get in touch:</h6>
-                                        <p><a href="tel:+1 234 567 89 90">+1 234 567 89 90</a>,
-                                          <a href="">
-                                              <span class="__cf_email__" data-cfemail="55262025253a272115302d34382539307b363a38">[email&#160;protected]</span></a>
+                                        <h6 class="trx_addons_title_extra">Manténte en Contacto:</h6>
+                                        <p>+51(1) 409 5566,&nbsp;
+                                            <a><span>contact@mibcacapital.com</span></a>
                                         </p>
                                       </div>
                                     </div>
@@ -151,11 +151,14 @@
                                       <div id="trx_widget_socials_1853971549" class="widget_area sc_widget_socials">
                                         <aside id="trx_widget_socials_1853971549_widget" class="widget widget_socials">
                                           <div class="socials_wrap sc_align_left">
-                                            <a target="_blank" href="https://twitter.com/axiom_themes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter"><span class="icon-twitter"></span></span>
+                                            <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                                <span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
                                             </a>
-                                            <a target="_blank" href="https://www.facebook.com/AxiomThemes-505060569826537/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
+                                            <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                                <span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
                                             </a>
-                                            <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
+                                            <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                                <span class="social_icon social_icon_twitter"><span class="icon-youtube"></span></span>
                                             </a>
                                           </div>
                                         </aside>

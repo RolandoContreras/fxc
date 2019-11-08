@@ -36,7 +36,8 @@
         <rs-module id="rev_slider_2_1" style="display:none;" data-version="6.0.8">
             <rs-slides>
               <rs-slide data-key="rs-2" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-1-copyright-100x50.jpg"
-                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;"><img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-1-copyright.jpg" title="Home" data-bg="p:left center;" data-panzoom="ss:100;se:106;"
+                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-1-copyright.jpg" title="Home" data-bg="p:left center;" data-panzoom="ss:100;se:106;"
                   class="rev-slidebg" data-no-retina>
                 <a id="slider-2-slide-2-layer-4" class="rs-layer trx-addons-playbutton" href="#popup_video" target="_self" data-type="button"
                   data-color="#000000" data-xy="x:30px;y:c;yo:-160px;" data-text="s:18;l:75;ls:-4px;a:center;" data-dim="w:75px;h:75px;" data-rsp_bd="off" data-border="bor:75px,75px,75px,75px;"
@@ -46,40 +47,44 @@
                 </a>
                 <rs-layer id="slider-2-slide-2-layer-6" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:31px;y:c;yo:-12px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:870;sp:600;sR:870;"
-                  data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7530;" style="z-index:6;font-family:Barlow;">Top Unique Solutions<br>for Your Business</rs-layer>
+                  data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7530;" style="z-index:6;font-family:Barlow;">Soluciones para <br>rentabilizar tu dinero</rs-layer>
                 <rs-layer id="slider-2-slide-2-layer-7" class="trx-addons-crp-description" data-type="text" data-color="#d3d7d9"
                   data-rsp_ch="on" data-xy="x:34px;y:c;yo:122px;" data-text="s:20;l:28;ls:0px;a:inherit;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:1120;sp:800;sR:1120;"
-                  data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7080;" style="z-index:7;font-family:Hind;">Our clients are the best, because they trust us with their<br> business, and we make it work for them flawlessly!</rs-layer><a id="slider-2-slide-2-layer-8"
-                  class="rs-layer trx-addons-crp-button rev-btn" href="/contact-us/" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:30px;y:c;yo:219px;"
+                  data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7080;" style="z-index:7;font-family:Hind;">Nuestros clientes merecen toda la confianza, transparencia y el mejor asesoramiento<br/> que ayuden a tomar buenas decisiones para hacer crecer sus inversiones.</rs-layer><a id="slider-2-slide-2-layer-8"
+                    class="rs-layer trx-addons-crp-button rev-btn" href="<?php echo site_url().'contact';?>" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:30px;y:c;yo:219px;"
                   data-text="s:15;l:23;ls:0px;fw:600;a:inherit;" data-rsp_bd="off" data-padding="t:18;r:50;b:18;l:50;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:1710;sR:1710;"
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:6990;" data-frame_hover="bgc:#5db469;boc:transparent;bor:0px,0px,0px,0px;bos:none;bow:0px,0px,0px,0px;oX:50;oY:50;sp:0;"
-                  style="z-index:8;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Get In Touch</a>    </rs-slide>
+                  style="z-index:8;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Mantente en contacto</a></rs-slide>
               <rs-slide data-key="rs-3" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-2-copyright-100x50.jpg"
-                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;"><img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-2-copyright.jpg" title="Home" data-panzoom="ss:100;se:106;" class="rev-slidebg"
-                  data-no-retina>
+                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-2-copyright.jpg" title="Home" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <rs-layer id="slider-2-slide-3-layer-1" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:c;yo:-106px;"
                   data-text="s:71;l:71;ls:-3px;fw:700;a:center;" data-frame_0="y:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:500;sp:600;sR:500;" data-frame_999="o:0;tp:600;st:w;sR:7900;"
-                  style="z-index:5;font-family:Barlow;">Modern Approach<br>to Every New Project</rs-layer>
+                  style="z-index:5;font-family:Barlow;">Múltiples formas para alcanzar <br>la libertad financiera</rs-layer>
                 <rs-layer id="slider-2-slide-3-layer-5" class="trx-addons-crp-description-center" data-type="text"
                   data-color="#d3d7d9" data-rsp_ch="on" data-xy="x:c;y:c;yo:29px;" data-text="s:20;l:28;ls:0px;a:center;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:840;sp:600;sR:840;"
-                  data-frame_999="o:0;tp:600;st:w;sR:7560;" style="z-index:6;font-family:Hind;">Our clients are the best, because they trust us with their<br> business, and we make it work for them flawlessly!</rs-layer><a id="slider-2-slide-3-layer-3"
-                  class="rs-layer trx-addons-crp-button-wide rev-btn" href="/solutions/" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:c;y:c;yo:126px;"
+                  data-frame_999="o:0;tp:600;st:w;sR:7560;" style="z-index:6;font-family:Hind;">Con el asesoramiento de nuestros profesional top en el rubro de finanzas<br/> te ayudaremos a que cumpas tus sueños rápidamente.</rs-layer>
+                  <a id="slider-2-slide-3-layer-3"
+                    class="rs-layer trx-addons-crp-button-wide rev-btn" href="<?php echo site_url().'about';?>" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:c;y:c;yo:126px;"
                   data-text="s:15;l:23;ls:0px;fw:500;a:center;" data-rsp_bd="off" data-padding="t:18;r:62;b:18;l:62;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power2.easeOut;st:1320;sR:1320;"
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7380;" data-frame_hover="bgc:#5db469;boc:transparent;bor:0px,0px,0px,0px;bos:none;bow:0px,0px,0px,0px;oX:50;oY:50;sp:0;"
-                  style="z-index:7;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Services</a>    </rs-slide>
+                  style="z-index:7;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Nosotros</a>    
+              </rs-slide>
               <rs-slide data-key="rs-4" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-3-copyright-100x50.jpg"
-                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;"><img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-3-copyright.jpg" title="Home" data-bg="p:center right;" data-panzoom="ss:100;se:106;"
-                  class="rev-slidebg" data-no-retina>
+                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-3-copyright.jpg" title="Home" data-bg="p:center right;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <rs-layer id="slider-2-slide-4-layer-1" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:30px;y:c;yo:-111px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:680;sp:600;sR:680;"
-                  data-frame_999="o:0;tp:600;st:w;sR:7720;" style="z-index:5;font-family:Barlow;"> Branding Ideas for <br> Startups & Corporations</rs-layer>
+                  data-frame_999="o:0;tp:600;st:w;sR:7720;" style="z-index:5;font-family:Barlow;"> Únete a la mejor <br/> empresa de inversiones</rs-layer>
                 <rs-layer id="slider-2-slide-4-layer-3" class="trx-addons-crp-description" data-type="text"
                   data-color="#d3d7d9" data-rsp_ch="on" data-xy="x:30px;y:c;yo:21px;" data-text="s:20;l:28;ls:0px;a:inherit;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:930;sp:800;sR:930;"
-                  data-frame_999="o:0;tp:600;st:w;sR:7270;" style="z-index:6;font-family:Hind;">Our clients are the best, because they trust us with their<br> business, and we make it work for them flawlessly!</rs-layer><a id="slider-2-slide-4-layer-4"
-                  class="rs-layer trx-addons-crp-button-wide rev-btn" href="/our-history/" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:29px;y:c;yo:120px;"
+                  data-frame_999="o:0;tp:600;st:w;sR:7270;" style="z-index:6;font-family:Hind;">Muchos inversionistas buscan empresas fiables en donde puedan depositar su tiempo<br/> conocimiento y sobre todo su dinero. Hoy en día nosotros somos la mejor opción del mercado.</rs-layer>
+                  <a id="slider-2-slide-4-layer-4"
+                  class="rs-layer trx-addons-crp-button-wide rev-btn" href="<?php echo site_url().'register';?>" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:29px;y:c;yo:120px;"
                   data-text="s:15;l:23;ls:0px;fw:500;a:inherit;" data-rsp_bd="off" data-padding="t:18;r:62;b:18;l:62;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power2.easeOut;st:1400;sR:1400;"
                   data-frame_999="o:0;tp:600;st:w;sR:7300;" data-frame_hover="bgc:#5db469;boc:transparent;bor:0px,0px,0px,0px;bos:none;bow:0px,0px,0px,0px;oX:50;oY:50;sp:0;"
-                  style="z-index:7;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">About Us</a>    </rs-slide>
+                  style="z-index:7;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Regístrate</a>    
+              </rs-slide>
             </rs-slides>
         <rs-progress class="rs-bottom" style="visibility: hidden !important;"></rs-progress>
 </rs-module>
@@ -168,29 +173,24 @@
 </section>
     
 <!--START QUE HACEMOS?-->
-<section class="elementor-element elementor-element-5e7cf14c elementor-section-stretched scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-  data-id="5e7cf14c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+<section class="elementor-element elementor-element-5e7cf14c elementor-section-stretched scheme_dark elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="5e7cf14c" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
   <div class="elementor-container elementor-column-gap-extended">
     <div class="elementor-row">
-      <div class="elementor-element elementor-element-1df3c149 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-        data-id="1df3c149" data-element_type="column">
+      <div class="elementor-element elementor-element-1df3c149 sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="1df3c149" data-element_type="column">
         <div class="elementor-column-wrap elementor-element-populated">
           <div class="elementor-widget-wrap">
-            <div class="elementor-element elementor-element-8c9f0a7 sc_height_huge elementor-widget elementor-widget-spacer" data-id="8c9f0a7" data-element_type="widget"
-              data-widget_type="spacer.default">
+            <div class="elementor-element elementor-element-8c9f0a7 sc_height_huge elementor-widget elementor-widget-spacer" data-id="8c9f0a7" data-element_type="widget" data-widget_type="spacer.default">
               <div class="elementor-widget-container">
                 <div class="elementor-spacer">
                   <div class="elementor-spacer-inner"></div>
                 </div>
               </div>
             </div>
-            <div class="elementor-element elementor-element-66a6a4d animated-fast elementor-invisible elementor-widget elementor-widget-trx_sc_title" data-id="66a6a4d"
-              data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;,&quot;_animation_delay&quot;:100,&quot;_animation_mobile&quot;:&quot;none&quot;}"
-              data-widget_type="trx_sc_title.default">
+            <div class="elementor-element elementor-element-66a6a4d animated-fast elementor-invisible elementor-widget elementor-widget-trx_sc_title" data-id="66a6a4d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInRight&quot;,&quot;_animation_delay&quot;:100,&quot;_animation_mobile&quot;:&quot;none&quot;}" data-widget_type="trx_sc_title.default">
               <div class="elementor-widget-container">
                 <div id="trx_sc_title_263263861" class="sc_title color_style_dark sc_title_default">
-                  <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_default">what we do</h6>
-                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Welcome To Our Business <br> Consulting Agency</h1>
+                  <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_default">¿Qué hacemos?</h6>
+                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Bienvenido a BCA Capital</h1>
                 </div>
               </div>
             </div>
@@ -211,29 +211,29 @@
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-004-bulb"><span class="sc_icon_type_ icon-004-bulb"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Consulting</span></h4>
-                        <div class="sc_icons_item_description"><span>We provide all types of business & financial consultations.</span></div>
+                        <h4 class="sc_icons_item_title"><span>Asesoramiento</span></h4>
+                        <div class="sc_icons_item_description"><span>Tenemos un staff de profesionales en finanzas y emprendimiento.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-003-target-arrow"><span class="sc_icon_type_ icon-003-target-arrow"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Individual Approach</span></h4>
-                        <div class="sc_icons_item_description"><span>Finding the right approach is key to successful communication.</span></div>
+                        <h4 class="sc_icons_item_title"><span>Enseñanza</span></h4>
+                        <div class="sc_icons_item_description"><span>Aprenderás de nuestros profesionales toda la información de los mercados de inversiones.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-006-chess"><span class="sc_icon_type_ icon-006-chess"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Management</span></h4>
-                        <div class="sc_icons_item_description"><span>Professional structure will take care of the tasks.</span></div>
+                        <h4 class="sc_icons_item_title"><span>Administración de Fondos</span></h4>
+                        <div class="sc_icons_item_description"><span>Nuestros traders profesionales te ayudaran a rentabilizar tu inversión hasta un 8% mensual.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-030-target-cross"><span class="sc_icon_type_ icon-030-target-cross"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Market Research</span></h4>
-                        <div class="sc_icons_item_description"><span>To keep you up-to-date, we do the research and analysis.</span><span></span></div>
+                        <h4 class="sc_icons_item_title"><span>Inversiones</span></h4>
+                        <div class="sc_icons_item_description"><span>Tendrás una cartera de empresa en crecimiento filtradas con BCA para invertir.</span><span></span></div>
                       </div>
                     </div>
                   </div>
@@ -252,7 +252,8 @@
               data-id="c610ff8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300,&quot;_animation_mobile&quot;:&quot;none&quot;}"
               data-widget_type="trx_sc_button.default">
               <div class="elementor-widget-container">
-                <a href="http://corporate.rhodos.axiomthemes.com/solutions/" id="trx_sc_button_1730074961" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left"><span class="sc_button_text"><span class="sc_button_title">More Services</span></span>
+                <a href="http://corporate.rhodos.axiomthemes.com/solutions/" id="trx_sc_button_1730074961" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                    <span class="sc_button_text"><span class="sc_button_title">Más Servicios</span></span>
                 </a>
               </div>
             </div>
@@ -304,7 +305,7 @@
               <div class="elementor-widget-container">
                 <div id="trx_sc_title_906100002" class="sc_title sc_title_default">
                   <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_default">Acerca de Nosotros</h6>
-                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Somos expertos en inversiones<br> negocios</h1>
+                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Somos expertos en<br/> asesoramiento e inversiones</h1>
                 </div>
               </div>
             </div>
@@ -337,8 +338,8 @@
                         <div class="elementor-element elementor-element-c41b6bc elementor-widget elementor-widget-trx_sc_title" data-id="c41b6bc" data-element_type="widget" data-widget_type="trx_sc_title.default">
                           <div class="elementor-widget-container">
                             <div id="trx_sc_title_1641294767" class="sc_title sc_title_decoration">
-                              <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_decoration">Quienes somos?</h6>
-                              <h3 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_decoration sc_item_title_tag">Fondos de <br> Inversión</h3>
+                              <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_decoration">¿Qué hacemos?</h6>
+                              <h3 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_decoration sc_item_title_tag">Cartera de<br> Inversiones</h3>
                             </div>
                           </div>
                         </div>
@@ -373,7 +374,7 @@
             <div class="elementor-element elementor-element-5ccbc6a elementor-widget elementor-widget-image" data-id="5ccbc6a" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <div class="elementor-image">
-                    <img width="495" height="534" src="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/img-10-copyright.jpg" class="attachment-full size-full" alt="" srcset="http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/img-10-copyright.jpg 495w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/img-10-copyright-278x300.jpg 278w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/img-10-copyright-370x399.jpg 370w, http://corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/08/img-10-copyright-390x421.jpg 390w" sizes="(max-width: 495px) 100vw, 495px" /> </div>
+                    <img width="495" height="534" src="<?php echo site_url().'static/page_front/images/asesor.jpg';?>" class="attachment-full size-full" alt="" srcset="<?php echo site_url().'static/page_front/images/asesor.jpg';?> 495w, <?php echo site_url().'static/page_front/images/asesor-278x300.jpg';?> 278w, <?php echo site_url().'static/page_front/images/asesor-370x399.jpg';?> 370w, <?php echo site_url().'static/page_front/images/asesor-390x421.jpg';?> 390w" sizes="(max-width: 495px) 100vw, 495px" /> </div>
               </div>
             </div>
             <div class="elementor-element elementor-element-4e8f368 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-spacer" data-id="4e8f368" data-element_type="widget" data-widget_type="spacer.default">
@@ -397,12 +398,11 @@
             <div class="elementor-element elementor-element-05c4ac1 elementor-widget elementor-widget-text-editor" data-id="05c4ac1" data-element_type="widget" data-widget_type="text-editor.default">
               <div class="elementor-widget-container">
                 <div class="elementor-text-editor elementor-clearfix">
-                  <p>If you are looking for new business ideas, want to do rebranding or even launch a startup, you might need professional assistance from
-                    our experts! We help you set up effective strategies for achieving your goals by using creative approach!</p>
+                  <p>Si usted está buscando nuevas ideas para generar dinero, quiere asociarse a una empresa confiable y ser asesorado por los mejores financistas del medio, entonces es posible que necesite nuestra ayuda. ¡Le ayudaremos a tener un abanico de posibilidad para alcanzar sus objetivos y siempre de la ayuda de BCA Capital!</p>
                   <ul class="trx_addons_list_success">
-                    <li>Innovative ideas</li>
-                    <li>Professional assistance</li>
-                    <li>Financial advisory</li>
+                    <li>Múltiples ideas de inversión</li>
+                    <li>Asesoramiento de profesionales</li>
+                    <li>Inversiones seguras y rentables</li>
                   </ul>
                 </div>
               </div>
@@ -416,7 +416,7 @@
             </div>
             <div class="elementor-element elementor-element-beb7b76 elementor-widget elementor-widget-trx_sc_button" data-id="beb7b76" data-element_type="widget" data-widget_type="trx_sc_button.default">
               <div class="elementor-widget-container">
-                <a href="#" id="trx_sc_button_1040775399" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                  <a href="<?php echo site_url().'about';?>" id="trx_sc_button_1040775399" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
                     <span class="sc_button_text">
                         <span class="sc_button_title">Más Acerca de nosotros</span></span>
                 </a>
@@ -442,52 +442,52 @@
                   <div class="sc_services_columns_wrap sc_item_columns sc_item_posts_container sc_item_columns_4 trx_addons_columns_wrap columns_padding_bottom no_margin">
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-217 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                          <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-15-copyright-800x450.jpg';?>);">
+                          <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/fondo.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">01</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="#">Top-rated financial advisors &#038; marketers</a>
+                                    <a href="<?php echo site_url().'fund';?>">Fondo de inversión &#038; Economistas especializados</a>
                                 </h6>
                           </div>
-                          <a class="sc_services_item_link" href="#"></a>
+                          <a class="sc_services_item_link" href="<?php echo site_url().'fund';?>"></a>
                         </div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-216 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-3-copyright-800x450.jpg';?>);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/forex.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">02</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="#">Detailed business analysis and the best solutions</a>
+                                    <a href="<?php echo site_url().'course';?>">Cursos &#038; Asesoramiento en el mercado secundario</a>
                                 </h6>
                           </div>
-                          <a class="sc_services_item_link" href="#"></a>
+                          <a class="sc_services_item_link" href="<?php echo site_url().'course';?>"></a>
                         </div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-215 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-16-copyright-800x800.jpg';?>);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/viajes.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">03</span>
                             <h6 class="sc_services_item_title">
-                                <a href="#">Financial &#038; marketing consulting services</a></h6>
+                                <a href="<?php echo site_url().'club';?>">Club privado &#038; Membresias vacacionales</a></h6>
                           </div>
-                          <a class="sc_services_item_link" href="#"></a>
+                          <a class="sc_services_item_link" href="<?php echo site_url().'club';?>"></a>
                         </div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4 ">
                       <div class="sc_services_item no_links without_content with_image with_number post-212 cpt_services type-cpt_services status-publish has-post-thumbnail hentry cpt_services_group-features">
-                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/post-1-copyright-1-800x450.jpg';?>);">
+                        <div class="sc_services_item_header " style="background-image: url(<?php echo site_url().'static/page_front/images/invest.jpg';?>);">
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">04</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="#">Successful business models for your projects</a>
+                                    <a href="<?php echo site_url().'investment';?>">Múltiples opciones de inversión en BCA</a>
                                 </h6>
                           </div>
-                            <a class="sc_services_item_link" href="#"></a>
+                            <a class="sc_services_item_link" href="<?php echo site_url().'investment';?>"></a>
                         </div>
                       </div>
                     </div>
@@ -503,7 +503,7 @@
 </section>
 <!--END SERVICIOS-->    
 <!--START TESTIMONIOS-->
-<section class="elementor-element elementor-element-73557cf elementor-section-stretched elementor-section-full_width elementor-section-content-middle scheme_dark elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
+<!--<section class="elementor-element elementor-element-73557cf elementor-section-stretched elementor-section-full_width elementor-section-content-middle scheme_dark elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
   data-id="73557cf" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
   <div class="elementor-container elementor-column-gap-no">
     <div class="elementor-row">
@@ -630,8 +630,8 @@
                 </div>
               </div>
             </section>
-<!--START TESTIMONIOS-->
-<!--ESPACIO-->    
+START TESTIMONIOS
+ESPACIO    
 <div class="elementor-element elementor-element-36d7055 sc_height_large elementor-widget elementor-widget-spacer" data-id="36d7055" data-element_type="widget" data-widget_type="spacer.default">
   <div class="elementor-widget-container">
     <div class="elementor-spacer">
@@ -639,11 +639,11 @@
     </div>
   </div>
 </div>
-<!--ESPACIO-->    
+ESPACIO    
 </div>
 </div>
 </div>
-<!--START VIDEO 2 POPUP        -->
+START VIDEO 2 POPUP        
 <div class="elementor-element elementor-element-b43a892 animated-fast sc_inner_width_none sc_layouts_column_icons_position_left elementor-invisible elementor-column elementor-col-50 elementor-top-column"
   data-id="b43a892" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;,&quot;animation_delay&quot;:100,&quot;animation_mobile&quot;:&quot;none&quot;}">
   <div class="elementor-column-wrap elementor-element-populated">
@@ -676,10 +676,10 @@
     </div>
   </div>
 </div>
-<!--END VIDEO 2 POPUP-->        
+END VIDEO 2 POPUP        
 </div>
 </div>
-</section>
+</section>-->
     
 
 </div>

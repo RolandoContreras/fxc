@@ -55,9 +55,11 @@
                       <div class="elementor-widget-container">
                         <div id="trx_widget_contacts_538909106" class="widget_area sc_widget_contacts">
                           <aside id="trx_widget_contacts_538909106_widget" class="widget widget_contacts">
-                            <h5 class="widget_title">Main Office</h5>
+                            <h5 class="widget_title">Oficina Principal</h5>
                             <div class="contacts_wrap">
-                              <div class="contacts_info"><span class="contacts_address">Nassau Blvd <br> New Hyde Park, NY 11040</span><a href="tel:+12345678990" class="contacts_phone">+1 234 567 89 90</a></div>
+                              <div class="contacts_info">
+                                  <span class="contacts_address">Próximamente</span>
+                                  <a class="contacts_phone">+51(1) 409 5566</a></div>
                             </div>
                           </aside>
                         </div>
@@ -81,22 +83,19 @@
                           <div class="menu-useful-links-container">
                             <ul id="menu-useful-links" class="menu">
                               <li id="menu-item-320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-320">
-                                  <a href="#">Solutions</a>
+                                  <a href="<?php echo site_url();?>">Inicio</a>
                               </li>
                               <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
-                                  <a href="#">Our Team</a>
+                                  <a href="<?php echo site_url().'about';?>">Acerca</a>
                               </li>
+                              <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
+                                  <a href="<?php echo site_url().'service';?>">Servicios</a>
+                              </li>s
                               <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316">
-                                  <a href="#">Mission</a>
+                                  <a href="<?php echo site_url().'contact';?>">Contáctenos</a>
                               </li>
                               <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315">
-                                  <a href="#">History</a>
-                              </li>
-                              <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-318">
-                                  <a href="#">Privacy Policy</a>
-                              </li>
-                              <li id="menu-item-319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319">
-                                  <a href="#">Service Plus</a>
+                                  <a href="<?php echo site_url().'login';?>">Login</a>
                               </li>
                             </ul>
                           </div>
@@ -118,15 +117,16 @@
                       <div class="elementor-widget-container">
                         <div id="trx_widget_socials_224207210" class="widget_area sc_widget_socials">
                           <aside id="trx_widget_socials_224207210_widget" class="widget widget_socials">
-                            <h5 class="widget_title">Socials</h5>
+                            <h5 class="widget_title">Sociales</h5>
                             <div class="socials_wrap sc_align_left">
-                              <a target="_blank" href="https://twitter.com/axiom_themes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_twitter"><span class="icon-twitter"></span></span>
+                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                  <span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
                               </a>
-                              <a target="_blank" href="https://www.facebook.com/AxiomThemes-505060569826537/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
+                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                  <span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
                               </a>
-                              <a target="_blank" href="https://dribbble.com/AxiomThemes" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_dribbble"><span class="icon-dribbble"></span></span>
-                              </a>
-                              <a target="_blank" href="https://www.instagram.com/axiom_themes/" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons"><span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
+                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                                  <span class="social_icon social_icon_twitter"><span class="icon-youtube"></span></span>
                               </a>
                             </div>
                           </aside>
@@ -172,7 +172,7 @@
                     <div class="sc_layouts_item elementor-element elementor-element-3cb36d1 elementor-widget elementor-widget-text-editor" data-id="3cb36d1" data-element_type="widget" data-widget_type="text-editor.default">
                       <div class="elementor-widget-container">
                         <div class="elementor-text-editor elementor-clearfix">
-                          <p style="text-align: left;"><a href="https://themeforest.net/user/axiomthemes/portfolio" target="_blank" rel="noopener">Cevolution Web</a> 2019. All Rights
+                          <p style="text-align: left;"><a href="#" target="_blank" rel="noopener">Cevolution Web</a> 2019. All Rights
                             Reserved.</p>
                         </div>
                       </div>

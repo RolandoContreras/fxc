@@ -1,72 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="au theme template">
-  <meta name="author" content="Hau Nguyen">
-  <meta name="keywords" content="au theme template">
-  <title>Recuperar Contraseña</title>
-  <link href="<?php echo site_url().'static/backoffice/css/font-face.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/font-awesome.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/fontawesome-all.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/material-design-iconic-font.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/bootstrap.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/animsition.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/bootstrap-progressbar-3.3.4.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/animate.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/hamburgers.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/slick.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/select2.min.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/perfect-scrollbar.css';?>" rel="stylesheet" media="all">
-  <link href="<?php echo site_url().'static/backoffice/css/theme.css';?>" rel="stylesheet" media="all">
-</head>
-<body class="animsition">
-  <div class="page-wrapper">
-    <div class="page-content--bge5">
-      <div class="container">
-        <div class="login-wrap">
-          <div class="login-content">
-            <div class="login-logo">
-                <a href="<?php echo site_url().'forget';?>">
-                  <img src="<?php echo site_url().'static/page_front/images/logo/logo.jpg';?>" alt="Empire" width="100" />
-              </a>
+        <title>Olvidó su contraseña - BCA Capital</title>
+        <base href="<?php echo site_url();?>"/>
+        <meta charset="utf-8">
+        <meta content="ie=edge" http-equiv="x-ua-compatible">
+        <meta name="description" content="Ganhe dinheiro no mercado multinível digital e financeiro, conheça a 18K Ronaldinho, uma empresa digital com produtos que aumentarão sua saúde física e financeira! #VEMPRATRIBO, a tribo lendária do R10! Clique no link e saiba mais.">
+        <meta name="author" content="Ingresar Oficina Virtual">
+        <meta name="keyword" content="bca capital, bca">
+        <meta content="width=device-width, initial-scale=1" name="viewport">
+        <link href="favicon.png" rel="shortcut icon">
+        <link href="apple-touch-icon.png" rel="apple-touch-icon">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet" type="text/css">
+        <link href="<?php echo site_url().'static/page_front/css/login/main.css?version=4.4.0';?>" rel="stylesheet">
+               <style>
+            .goog-te-banner-frame.skiptranslate {
+                display: none !important;
+            }
+            .goog-tooltip {
+                display: none !important;
+            }
+            .goog-tooltip:hover {
+                display: none !important;
+            }
+            .goog-text-highlight {
+                background-color: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+            }
+            .goog-te-banner-frame.skiptranslate {
+                display: none !important;
+            }
+            body {
+                top: 0px !important; 
+            }
+            *::first-letter {
+                    text-transform: uppercase;
+            }
+        </style>
+        <script>
+            var site = '<?php echo site_url();?>';
+        </script>
+    </head>
+    <body class="auth-wrapper vanta-bg">
+            <div class="all-wrapper menu-side">
+        <div class="auth-box-w">
+            <div class="logo-w">
+                <img src="https://18kworld.com/img/logo.png" style="max-width: 250px; filter: brightness(20%);">
             </div>
-            <div class="login-form">
-              <form action="" method="post">
+            <h4 class="auth-header">
+                Recuperar Contraseña
+            </h4>
+            <form class="form" action="javascript:void(0);">
                 <div class="form-group">
-                    <label>Ingresa tu E-mail</label>
-                    <input class="au-input au-input--full" type="email" name="email" placeholder="Email">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" id="code" name="code" placeholder="Usuario" autofocus="">
+                    <div class="pre-icon os-icon os-icon-user-male-circle"></div>
                 </div>
-                  <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">Solicitar</button>
-              </form>
-                <div class="register-link">
-                  <p>¿Aún no tienes una cuenta?<a href="<?php echo site_url().'register';?>">&nbsp;&nbsp;Regístrate Aquí</a></p>
-              </div>
-                <div class="register-link">
-                  <p><a href="<?php echo site_url().'login';?>">&nbsp;&nbsp;Iniciar Sesión</a></p>
+                <div class="form-group">
+                    <div class="g-recaptcha" data-sitekey="6Lc684YUAAAAAKbiFYJvMx83vmSSJHH8N03PXnKx"></div>
                 </div>
-            </div>
-          </div>
+                <div class="form-group has-feedback" style="display: none;" id="captcha_messages">
+                    <div class="alert alert-danger validation-errors">
+                        <p class="user_login_id" style="text-align: center;">Captcha no verificado</p>
+                    </div>
+                </div>
+                <div class="form-group has-feedback" style="display: none;" id="no_messages">
+                    <div class="alert alert-danger validation-errors">
+                        <p class="user_login_id" style="text-align: center;">El usuario no existe.</p>
+                    </div>
+                </div>
+                <div class="form-group has-feedback" style="display: none;" id="messages">
+                    <div class="alert alert-success validation-errors">
+                        <p class="user_login_id" style="text-align: center;">Mensaje eviado al correo.</p>
+                    </div>
+                </div>  
+                <div class="buttons-w">
+                    <button onclick="login();" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
+                    <a href="<?php echo site_url().'forgot';?>" style="width: 100%; display: block; text-align: center;" class="link">¿Olvido su contraseña?</a>
+                    <div style="margin-top:20px;">
+                        <style>
+                            .langselector img {
+                                width: 30px;
+                                height: 20px;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </form>
         </div>
-      </div>
     </div>
-  </div>
-  <script src="<?php echo site_url().'static/backoffice/js/jquery-3.2.1.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/popper.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/bootstrap.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/slick.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/wow.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/animsition.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/bootstrap-progressbar.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/jquery.waypoints.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/jquery.counterup.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/circle-progress.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/perfect-scrollbar.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/Chart.bundle.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/select2.min.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="<?php echo site_url().'static/backoffice/js/main.js';?>" type="27d243113242fdd8b9f794f9-text/javascript"></script>
-  <script src="https://ajax.cloudflare.com/cdn-cgi/scripts/95c75768/cloudflare-static/rocket-loader.min.js" data-cf-settings="27d243113242fdd8b9f794f9-|49" defer=""></script>
-</body>
+           </body>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<script src='<?php echo site_url().'static/page_front/js/script/login.js';?>'></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/jquery.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/popper.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/bootstrap.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/jquery-confirm.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/jquery.blockUI.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/sweetalert.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/stats.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/functions.js?r=3617';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/three.min.js';?>"></script>
+<script src="<?php echo site_url().'static/page_front/js/script/login/vanta.globe.min.js';?>"></script>
+    <script>
+        VANTA.GLOBE({
+            el: ".vanta-bg",
+            color:  0x897431           
 
+        });
+    </script>
+</body>
 </html>

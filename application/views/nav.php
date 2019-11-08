@@ -6,10 +6,13 @@
     <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
       <a href="<?php echo site_url().'about';?>"><span>Acerca</span></a>
     </li>
-    <li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-207">
+    <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
+      <a href="<?php echo site_url().'service';?>"><span>Servicios</span></a>
+    </li>
+    <li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
         <a href="<?php echo site_url().'contact';?>"><span>Contáctenos</span></a>
     </li>
-    <li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
+    <li id="menu-item-238" class="menu-item menu-item-type-post_type menu-item-object-page">
         <a href="<?php echo site_url().'login';?>"><span>Login</span></a>
     </li>
   </ul>
