@@ -90,9 +90,12 @@
                               </li>
                               <li id="menu-item-317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317">
                                   <a href="<?php echo site_url().'service';?>">Servicios</a>
-                              </li>s
+                              </li>
                               <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316">
                                   <a href="<?php echo site_url().'contact';?>">Contáctenos</a>
+                              </li>
+                              <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315">
+                                  <a href="<?php echo site_url().'faq';?>">FAQs</a>
                               </li>
                               <li id="menu-item-315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-315">
                                   <a href="<?php echo site_url().'login';?>">Login</a>

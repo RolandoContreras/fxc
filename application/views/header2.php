@@ -100,7 +100,7 @@
                                                 <div class="breadcrumbs">
                                                     <a class="breadcrumbs_item home" href="<?php echo site_url();?>">Inicio</a><span class="breadcrumbs_delimiter"></span>
                                                   <span
-                                                    class="breadcrumbs_item current">Contacténos</span>
+                                                    class="breadcrumbs_item current"><?php echo $text;?></span>
                                                 </div>
                                               </div>
                                             </div>

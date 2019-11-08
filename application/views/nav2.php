@@ -8,6 +8,17 @@
     </li>
     <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
       <a href="<?php echo site_url().'service';?>"><span>Servicios</span></a>
+      <ul>
+        <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
+            <a href="<?php echo site_url().'fund';?>"><span>Fondo de Inversión</span></a>
+        </li>
+        <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
+            <a href="<?php echo site_url().'course';?>"><span>Cursos & Asesoramiento</span></a>
+        </li>
+        <li id="menu-item-254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-208">
+            <a href="<?php echo site_url().'club';?>"><span>Club Privado</span></a>
+        </li>
+      </ul>
     </li>
     <li id="menu-item-207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-238">
         <a href="<?php echo site_url().'contact';?>"><span>Contáctenos</span></a>
