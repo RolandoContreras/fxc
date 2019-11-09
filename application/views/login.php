@@ -5,7 +5,7 @@
         <base href="<?php echo site_url();?>"/>
         <meta charset="utf-8">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
-        <meta name="description" content="Ganhe dinheiro no mercado multinível digital e financeiro, conheça a 18K Ronaldinho, uma empresa digital com produtos que aumentarão sua saúde física e financeira! #VEMPRATRIBO, a tribo lendária do R10! Clique no link e saiba mais.">
+        <meta name="description" content="Multiplica tu dinero en el mercado financiero con nosotros BCA CAPITAL, una empresa financiera que te ayudará a aumentar tus finanzas, Clic en el siguiente enlace">
         <meta name="author" content="Ingresar Oficina Virtual">
         <meta name="keyword" content="bca capital, bca">
         <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -46,7 +46,9 @@
             <div class="all-wrapper menu-side">
         <div class="auth-box-w">
             <div class="logo-w">
-                <a href="<?php echo site_url();?>"><img src="https://18kworld.com/img/logo.png" style="max-width: 250px; filter: brightness(20%);"></a>
+                <a href="<?php echo site_url();?>">
+                    <img src="<?php echo site_url().'static/page_front/images/logo/logo-black.png';?>" style="max-width: 350px;">
+                </a>
             </div>
             <h4 class="auth-header">
                 OFICINA VIRTUAL

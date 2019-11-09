@@ -46,14 +46,16 @@
             <div class="all-wrapper menu-side">
         <div class="auth-box-w">
             <div class="logo-w">
-                <img src="https://18kworld.com/img/logo.png" style="max-width: 250px; filter: brightness(20%);">
+                <a href="<?php echo site_url();?>">
+                    <img src="<?php echo site_url().'static/page_front/images/logo/logo-black.png';?>" style="max-width: 350px;">
+                </a>
             </div>
             <h4 class="auth-header">
                 Recuperar Contraseña
             </h4>
             <form class="form" action="javascript:void(0);">
                 <div class="form-group">
-                    <label for="">Email</label>
+                    <label for="">Ingrese Usuario</label>
                     <input type="text" class="form-control" id="code" name="code" placeholder="Usuario" autofocus="">
                     <div class="pre-icon os-icon os-icon-user-male-circle"></div>
                 </div>
@@ -76,8 +78,8 @@
                     </div>
                 </div>  
                 <div class="buttons-w">
-                    <button onclick="login();" class="btn btn-primary btn-lg btn-block">Iniciar Sesión</button>
-                    <a href="<?php echo site_url().'forgot';?>" style="width: 100%; display: block; text-align: center;" class="link">¿Olvido su contraseña?</a>
+                    <button onclick="login();" class="btn btn-primary btn-lg btn-block">Recuperar Contraseña</button>
+                    <a href="<?php echo site_url().'login';?>" style="width: 100%; display: block; text-align: center;" class="link">Iniciar Sesión</a>
                     <div style="margin-top:20px;">
                         <style>
                             .langselector img {

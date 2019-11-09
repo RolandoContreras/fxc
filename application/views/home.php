@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US" class="no-js scheme_default">
+<html lang="es" class="no-js scheme_default">
 <!--http://corporate.rhodos.axiomthemes.com-->
 <!--START HEAD-->
 <?php $this->load->view("head");?>
@@ -252,7 +252,7 @@
               data-id="c610ff8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;,&quot;_animation_delay&quot;:300,&quot;_animation_mobile&quot;:&quot;none&quot;}"
               data-widget_type="trx_sc_button.default">
               <div class="elementor-widget-container">
-                <a href="http://corporate.rhodos.axiomthemes.com/solutions/" id="trx_sc_button_1730074961" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
+                  <a href="<?php echo site_url().'service';?>" id="trx_sc_button_1730074961" class="sc_button sc_button_default sc_button_size_normal sc_button_icon_left">
                     <span class="sc_button_text"><span class="sc_button_title">Más Servicios</span></span>
                 </a>
               </div>
@@ -374,7 +374,7 @@
             <div class="elementor-element elementor-element-5ccbc6a elementor-widget elementor-widget-image" data-id="5ccbc6a" data-element_type="widget" data-widget_type="image.default">
               <div class="elementor-widget-container">
                 <div class="elementor-image">
-                    <img width="495" height="534" src="<?php echo site_url().'static/page_front/images/asesor.jpg';?>" class="attachment-full size-full" alt="" srcset="<?php echo site_url().'static/page_front/images/asesor.jpg';?> 495w, <?php echo site_url().'static/page_front/images/asesor-278x300.jpg';?> 278w, <?php echo site_url().'static/page_front/images/asesor-370x399.jpg';?> 370w, <?php echo site_url().'static/page_front/images/asesor-390x421.jpg';?> 390w" sizes="(max-width: 495px) 100vw, 495px" /> </div>
+                    <img width="495" height="534" src="<?php echo site_url().'static/page_front/images/asesor.jpg';?>" class="attachment-full size-full" alt="Asesor financiero" srcset="<?php echo site_url().'static/page_front/images/asesor.jpg';?> 495w, <?php echo site_url().'static/page_front/images/asesor-278x300.jpg';?> 278w, <?php echo site_url().'static/page_front/images/asesor-370x399.jpg';?> 370w, <?php echo site_url().'static/page_front/images/asesor-390x421.jpg';?> 390w" sizes="(max-width: 495px) 100vw, 495px" /> </div>
               </div>
             </div>
             <div class="elementor-element elementor-element-4e8f368 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-spacer" data-id="4e8f368" data-element_type="widget" data-widget_type="spacer.default">
@@ -484,10 +484,10 @@
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">04</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="<?php echo site_url().'investment';?>">Múltiples opciones de inversión en BCA</a>
+                                    <a href="#">Múltiples opciones de inversión en BCA</a>
                                 </h6>
                           </div>
-                            <a class="sc_services_item_link" href="<?php echo site_url().'investment';?>"></a>
+                            <a class="sc_services_item_link" href="#"></a>
                         </div>
                       </div>
                     </div>

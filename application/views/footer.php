@@ -37,7 +37,8 @@
                     <div class="sc_layouts_item elementor-element elementor-element-2da7145 elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="2da7145"
                       data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                       <div class="elementor-widget-container">
-                        <a href="#" id="trx_sc_layouts_logo_573357616" class="sc_layouts_logo sc_layouts_logo_default"><img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
+                          <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_573357616" class="sc_layouts_logo sc_layouts_logo_default">
+                              <img class="logo_image" src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="Logo BCA CAPITAl"></a>
                       </div>
                     </div>
                     <div class="sc_layouts_item elementor-element elementor-element-9ef6420 sc_layouts_hide_on_wide sc_layouts_hide_on_desktop sc_layouts_hide_on_notebook sc_layouts_hide_on_tablet elementor-widget elementor-widget-divider"  data-id="9ef6420" data-element_type="widget" data-widget_type="divider.default">

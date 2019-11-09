@@ -9329,7 +9329,7 @@ body.expand_content .sc_recent_news_style_news-announce .post_size_small,
 /* Row Type Compact */
 .sc_layouts_row_type_compact .custom-logo-link img,
 .sc_layouts_row_type_compact .sc_layouts_logo img {
-  max-height: 1.6em; }
+  max-height: 2.6em; }
 
 .sc_layouts_row_type_compact .search_wrap .search_submit:before {
   font-size: 24px; }

@@ -14,7 +14,7 @@
                       data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                       <div class="elementor-widget-container">
                           <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_1213054179" class="sc_layouts_logo sc_layouts_logo_default"> 
-                            <img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="logo empire" width="117" height="23"></a>
+                              <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="logo bca capital" width="150"></a>
                       </div>
                     </div>
                   </div>
@@ -45,8 +45,8 @@
                     <div class="sc_layouts_item elementor-element elementor-element-e5cbffa elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="e5cbffa"
                       data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                       <div class="elementor-widget-container">
-                        <a href="#" id="trx_sc_layouts_logo_807356314" class="sc_layouts_logo sc_layouts_logo_default">
-                            <img class="logo_image" src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
+                        <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_807356314" class="sc_layouts_logo sc_layouts_logo_default">
+                            <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="Logo BCA CAPITAL"></a>
                       </div>
                     </div>
                   </div>

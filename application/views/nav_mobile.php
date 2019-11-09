@@ -2,7 +2,7 @@
   <div class="menu_mobile_inner">
     <a class="menu_mobile_close icon-cancel"></a>
     <a class="sc_layouts_logo" href="<?php echo site_url();?>">
-        <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-logo-1.png" srcset="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate-retina-logo-1.png 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"> </a>
+        <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="Logo BCA CAPITAL" width="117" height="23"> </a>
             <nav class="menu_mobile_nav_area">
                   <ul id="menu_mobile" class=" menu_mobile_nav">
                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-293 current_page_item menu-item-321">
