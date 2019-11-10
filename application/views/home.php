@@ -37,12 +37,12 @@
             <rs-slides>
                 <rs-slide data-key="rs-2" data-title="Slide" data-thumb="<?php echo site_url().'static/page_front/images/slide-1x100.jpg';?>" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
                   <img src="<?php echo site_url().'static/page_front/images/slide-1.jpg';?>" title="Inicio" data-bg="p:left center;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
-                <a id="slider-2-slide-2-layer-4" class="rs-layer trx-addons-playbutton" href="#popup_video" target="_self" data-type="button"
+<!--                <a id="slider-2-slide-2-layer-4" class="rs-layer trx-addons-playbutton" href="#popup_video" target="_self" data-type="button"
                   data-color="#000000" data-xy="x:30px;y:c;yo:-160px;" data-text="s:18;l:75;ls:-4px;a:center;" data-dim="w:75px;h:75px;" data-rsp_bd="off" data-border="bor:75px,75px,75px,75px;"
                   data-frame_0="sX:0.8;sY:0.8;tp:600;" data-frame_1="tp:600;e:Linear.easeNone;st:1020;sR:1020;" data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7680;"
                   data-frame_hover="c:#ed6240;bgc:#fff;boc:transparent;bor:75px,75px,75px,75px;oX:50;oY:50;sp:0;" style="z-index:5;background-color:#ffffff;font-family:Barlow;cursor:pointer;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">
                     <span class="sc_icon_type_ icon-play"></span>
-                </a>
+                </a>-->
                 <rs-layer id="slider-2-slide-2-layer-6" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:31px;y:c;yo:-12px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:870;sp:600;sR:870;"
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7530;" style="z-index:6;font-family:Barlow;">Soluciones para <br>rentabilizar tu dinero</rs-layer>
