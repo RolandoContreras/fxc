@@ -12,15 +12,9 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/fxc/application/views/footer.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/header2.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/home.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/config/autoload.php</file>
             <file>file:/C:/wamp64/www/fxc/application/views/about.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav2.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/faq.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/controllers/faq.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav_mobile.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/views/course.php</file>
         </group>
     </open-files>
 </project-private>

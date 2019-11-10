@@ -17,7 +17,7 @@
                                       <div class="sc_layouts_item elementor-element elementor-element-c4992ed elementor-widget elementor-widget-trx_sc_layouts_logo" data-id="c4992ed" data-element_type="widget" data-widget_type="trx_sc_layouts_logo.default">
                                         <div class="elementor-widget-container">
                                             <a href="<?php echo site_url();?>" id="trx_sc_layouts_logo_653443971" class="sc_layouts_logo sc_layouts_logo_default">
-                                                <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="Rhodos - Creative Corporate Wordpress Theme" width="117" height="23"></a>
+                                                <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" srcset="<?php echo site_url().'static/page_front/images/logo/logo.png';?> 2x" alt="Logo BCA CAPITAL" width="117" height="23"></a>
                                         </div>
                                       </div>
                                     </div>
@@ -59,7 +59,8 @@
                                     <div class="elementor-widget-wrap">
                                       <div class="sc_layouts_item elementor-element elementor-element-c4f3977 elementor-widget elementor-widget-trx_sc_layouts_menu" data-id="c4f3977" data-element_type="widget" data-widget_type="trx_sc_layouts_menu.default">
                                         <div class="elementor-widget-container">
-                                          <div id="trx_sc_layouts_menu_1023852927" class="sc_layouts_iconed_text sc_layouts_menu_mobile_button sc_layouts_menu_mobile_button_burger without_menu"><a class="sc_layouts_item_link sc_layouts_iconed_text_link" href="#"><span class="sc_layouts_item_icon sc_layouts_iconed_text_icon trx_addons_icon-menu"></span></a></div>
+                                          <div id="trx_sc_layouts_menu_1023852927" class="sc_layouts_iconed_text sc_layouts_menu_mobile_button sc_layouts_menu_mobile_button_burger without_menu">
+                                              <a class="sc_layouts_item_link sc_layouts_iconed_text_link" href="#"><span class="sc_layouts_item_icon sc_layouts_iconed_text_icon trx_addons_icon-menu"></span></a></div>
                                         </div>
                                       </div>
                                     </div>

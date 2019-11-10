@@ -35,10 +35,8 @@
     <rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="background:transparent;padding:0;">
         <rs-module id="rev_slider_2_1" style="display:none;" data-version="6.0.8">
             <rs-slides>
-              <rs-slide data-key="rs-2" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-1-copyright-100x50.jpg"
-                data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-1-copyright.jpg" title="Home" data-bg="p:left center;" data-panzoom="ss:100;se:106;"
-                  class="rev-slidebg" data-no-retina>
+                <rs-slide data-key="rs-2" data-title="Slide" data-thumb="<?php echo site_url().'static/page_front/images/slide-1x100.jpg';?>" data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
+                  <img src="<?php echo site_url().'static/page_front/images/slide-1.jpg';?>" title="Inicio" data-bg="p:left center;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <a id="slider-2-slide-2-layer-4" class="rs-layer trx-addons-playbutton" href="#popup_video" target="_self" data-type="button"
                   data-color="#000000" data-xy="x:30px;y:c;yo:-160px;" data-text="s:18;l:75;ls:-4px;a:center;" data-dim="w:75px;h:75px;" data-rsp_bd="off" data-border="bor:75px,75px,75px,75px;"
                   data-frame_0="sX:0.8;sY:0.8;tp:600;" data-frame_1="tp:600;e:Linear.easeNone;st:1020;sR:1020;" data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7680;"
@@ -55,9 +53,9 @@
                   data-text="s:15;l:23;ls:0px;fw:600;a:inherit;" data-rsp_bd="off" data-padding="t:18;r:50;b:18;l:50;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:1710;sR:1710;"
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:6990;" data-frame_hover="bgc:#5db469;boc:transparent;bor:0px,0px,0px,0px;bos:none;bow:0px,0px,0px,0px;oX:50;oY:50;sp:0;"
                   style="z-index:8;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Mantente en contacto</a></rs-slide>
-              <rs-slide data-key="rs-3" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-2-copyright-100x50.jpg"
+              <rs-slide data-key="rs-3" data-title="Slide" data-thumb="<?php echo site_url().'static/page_front/images/slide-2x100.jpg';?>"
                 data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-2-copyright.jpg" title="Home" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
+                  <img src="<?php echo site_url().'static/page_front/images/slide-2.jpg';?>" title="Inicio" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <rs-layer id="slider-2-slide-3-layer-1" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:c;yo:-106px;"
                   data-text="s:71;l:71;ls:-3px;fw:700;a:center;" data-frame_0="y:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:500;sp:600;sR:500;" data-frame_999="o:0;tp:600;st:w;sR:7900;"
                   style="z-index:5;font-family:Barlow;">Múltiples formas para alcanzar <br>la libertad financiera</rs-layer>
@@ -70,9 +68,9 @@
                   data-frame_999="o:0;tp:600;e:Power3.easeOut;st:w;sR:7380;" data-frame_hover="bgc:#5db469;boc:transparent;bor:0px,0px,0px,0px;bos:none;bow:0px,0px,0px,0px;oX:50;oY:50;sp:0;"
                   style="z-index:7;background-color:#6dc579;font-family:Barlow;outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;">Nosotros</a>    
               </rs-slide>
-              <rs-slide data-key="rs-4" data-title="Slide" data-thumb="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-3-copyright-100x50.jpg"
+              <rs-slide data-key="rs-4" data-title="Slide" data-thumb="<?php echo site_url().'static/page_front/images/slide-3x100.jpg';?>"
                 data-anim="ei:d;eo:d;s:600;r:0;t:fade;sl:d;">
-                  <img src="//corporate.rhodos.axiomthemes.com/wp-content/uploads/2018/10/corporate_slide-3-copyright.jpg" title="Home" data-bg="p:center right;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
+                  <img src="<?php echo site_url().'static/page_front/images/slide-3.jpg';?>" title="Inicio" data-bg="p:center right;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <rs-layer id="slider-2-slide-4-layer-1" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:30px;y:c;yo:-111px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:680;sp:600;sR:680;"
                   data-frame_999="o:0;tp:600;st:w;sR:7720;" style="z-index:5;font-family:Barlow;"> Únete a la mejor <br/> empresa de inversiones</rs-layer>

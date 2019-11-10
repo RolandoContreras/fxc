@@ -21,16 +21,13 @@
                 <div data-elementor-type="post" data-elementor-id="285" class="elementor elementor-285 elementor-bc-flex-widget" data-elementor-settings="[]">
                   <div class="elementor-inner">
                     <div class="elementor-section-wrap">
-                      <section class="elementor-element elementor-element-f5bde26 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section"
-                        data-id="f5bde26" data-element_type="section">
+                      <section class="elementor-element elementor-element-f5bde26 elementor-section-boxed elementor-section-height-default elementor-section-height-default elementor-section elementor-top-section" data-id="f5bde26" data-element_type="section">
                         <div class="elementor-container elementor-column-gap-extended">
                           <div class="elementor-row">
-                            <div class="elementor-element elementor-element-ca296aa sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column"
-                              data-id="ca296aa" data-element_type="column">
+                            <div class="elementor-element elementor-element-ca296aa sc_inner_width_none sc_layouts_column_icons_position_left elementor-column elementor-col-100 elementor-top-column" data-id="ca296aa" data-element_type="column">
                               <div class="elementor-column-wrap elementor-element-populated">
                                 <div class="elementor-widget-wrap">
-                                  <div class="elementor-element elementor-element-6d39bd7 sc_height_huge elementor-widget elementor-widget-spacer" data-id="6d39bd7"
-                                    data-element_type="widget" data-widget_type="spacer.default">
+                                  <div class="elementor-element elementor-element-6d39bd7 sc_height_huge elementor-widget elementor-widget-spacer" data-id="6d39bd7" data-element_type="widget" data-widget_type="spacer.default">
                                     <div class="elementor-widget-container">
                                       <div class="elementor-spacer">
                                         <div class="elementor-spacer-inner"></div>
@@ -73,7 +70,7 @@
                                       <div class="elementor-widget-container">
                                         <div class="elementor-text-editor elementor-clearfix">
                                           <p>BCA Capital se crea con el único objetivo de ayudar a ciento de miles de personas a encontrar unas nuevas forma de alcanzar la libertad financiera.  El ing. Rolando Contreras (CEO) experto en informática y expositor a nivel internacional durante la búsqueda de éxito trabajó para muchas compañías, creo empresas en distintos rubros en las cuales tuvo mucho éxito, y ahora crea BCA CAPITAL para ayudar y asesorar a nuestros inversionistas a acortar el camino del aprendizaje del éxito.</p>
-                                          <p>En esta corporación tendremos un abanico de empresa en donde cada uno de ustedes podrán hacer sus inversiones, nuestro objetivo es ayudarlo y asesorarlo a usted para que puedan tomar la mejor decisión y juntamente (compañía y socios) alcanzar nuestras metas.</p>
+                                          <p>En esta corporación tendremos un abanico de empresas en donde cada uno de ustedes podrán hacer sus inversiones, nuestro objetivo es ayudarlo y asesorarlo a usted para que puedan tomar la mejor decisión y juntamente (compañía y socios) alcanzar nuestras metas.</p>
                                         </div>
                                       </div>
                                     </div>

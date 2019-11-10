@@ -71,7 +71,7 @@
               </div>
               <div class="post_content post_content_single entry-content" itemprop="mainEntityOfPage">
                 <p>Queremos que nuestros socios multipliquen sus inversiones pero a la vez puedan ellos mismo aprender y tener todos los conocimientos de los mercados bursátiles y se conviertan en los mejores traders y operadores de la región juntamente con nosotros.</p>
-                <p>Nuestros conocimientos están basado en más de 10 años experiencia trabajando en el rubro de finanzas (mercado bursatil). Empresas como X-Trader Brokers, Golden Capital, xDirect, Blue trading entre otras empresas reconocidas en Latinoamérica y Europa avalan nuestra experiencia.</p>
+                <p>Nuestros conocimientos están basado en más de 10 años experiencia trabajando en el rubro de finanzas (mercado bursátil). Empresas como X-Trader Brokers, Golden Capital, xDirect, Blue trading entre otras empresas reconocidas en Latinoamérica y Europa avalan nuestra experiencia.</p>
                 <p>En BCA CAPITAL tendrán distintos módulos y cursos que te ayudarán a convertirte en un trader profesional de la mano de los mejores.</p>
                 <blockquote>
                   <p>La educación y el conocimiento es un arma muy importante en nuestros tiempos y es algo que no se toma a la ligera por esa misma razón debes de prepárate con los traders más reconocidos.</p>
