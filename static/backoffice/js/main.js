@@ -1,45 +1,854 @@
-(function($){"use strict";try{var ctx=document.getElementById("widgetChart1");if(ctx){ctx.height=130;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June','July'],type:'line',datasets:[{data:[78,81,80,45,34,12,40],label:'Dataset',backgroundColor:'rgba(255,255,255,.1)',borderColor:'rgba(255,255,255,.55)',},]},options:{maintainAspectRatio:true,legend:{display:false},layout:{padding:{left:0,right:0,top:0,bottom:0}},responsive:true,scales:{xAxes:[{gridLines:{color:'transparent',zeroLineColor:'transparent'},ticks:{fontSize:2,fontColor:'transparent'}}],yAxes:[{display:false,ticks:{display:false,}}]},title:{display:false,},elements:{line:{borderWidth:0},point:{radius:0,hitRadius:10,hoverRadius:4}}}});}
-var ctx=document.getElementById("widgetChart2");if(ctx){ctx.height=130;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June'],type:'line',datasets:[{data:[1,18,9,17,34,22],label:'Dataset',backgroundColor:'transparent',borderColor:'rgba(255,255,255,.55)',},]},options:{maintainAspectRatio:false,legend:{display:false},responsive:true,tooltips:{mode:'index',titleFontSize:12,titleFontColor:'#000',bodyFontColor:'#000',backgroundColor:'#fff',titleFontFamily:'Montserrat',bodyFontFamily:'Montserrat',cornerRadius:3,intersect:false,},scales:{xAxes:[{gridLines:{color:'transparent',zeroLineColor:'transparent'},ticks:{fontSize:2,fontColor:'transparent'}}],yAxes:[{display:false,ticks:{display:false,}}]},title:{display:false,},elements:{line:{tension:0.00001,borderWidth:1},point:{radius:4,hitRadius:10,hoverRadius:4}}}});}
-var ctx=document.getElementById("widgetChart3");if(ctx){ctx.height=130;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June'],type:'line',datasets:[{data:[65,59,84,84,51,55],label:'Dataset',backgroundColor:'transparent',borderColor:'rgba(255,255,255,.55)',},]},options:{maintainAspectRatio:false,legend:{display:false},responsive:true,tooltips:{mode:'index',titleFontSize:12,titleFontColor:'#000',bodyFontColor:'#000',backgroundColor:'#fff',titleFontFamily:'Montserrat',bodyFontFamily:'Montserrat',cornerRadius:3,intersect:false,},scales:{xAxes:[{gridLines:{color:'transparent',zeroLineColor:'transparent'},ticks:{fontSize:2,fontColor:'transparent'}}],yAxes:[{display:false,ticks:{display:false,}}]},title:{display:false,},elements:{line:{borderWidth:1},point:{radius:4,hitRadius:10,hoverRadius:4}}}});}
-var ctx=document.getElementById("widgetChart4");if(ctx){ctx.height=115;var myChart=new Chart(ctx,{type:'bar',data:{labels:['January','February','March','April','May','June','July','August','September','October','November','December'],datasets:[{label:"My First dataset",data:[78,81,80,65,58,75,60,75,65,60,60,75],borderColor:"transparent",borderWidth:"0",backgroundColor:"rgba(255,255,255,.3)"}]},options:{maintainAspectRatio:true,legend:{display:false},scales:{xAxes:[{display:false,categoryPercentage:1,barPercentage:0.65}],yAxes:[{display:false}]}}});}
-const brandProduct='rgba(0,181,233,0.8)'
-const brandService='rgba(0,173,95,0.8)'
-var elements=10
-var data1=[52,60,55,50,65,80,57,70,105,115]
-var data2=[102,70,80,100,56,53,80,75,65,90]
-var ctx=document.getElementById("recent-rep-chart");if(ctx){ctx.height=250;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June','July','August','September',''],datasets:[{label:'My First dataset',backgroundColor:brandService,borderColor:'transparent',pointHoverBackgroundColor:'#fff',borderWidth:0,data:data1},{label:'My Second dataset',backgroundColor:brandProduct,borderColor:'transparent',pointHoverBackgroundColor:'#fff',borderWidth:0,data:data2}]},options:{maintainAspectRatio:true,legend:{display:false},responsive:true,scales:{xAxes:[{gridLines:{drawOnChartArea:true,color:'#f2f2f2'},ticks:{fontFamily:"Poppins",fontSize:12}}],yAxes:[{ticks:{beginAtZero:true,maxTicksLimit:5,stepSize:50,max:150,fontFamily:"Poppins",fontSize:12},gridLines:{display:true,color:'#f2f2f2'}}]},elements:{point:{radius:0,hitRadius:10,hoverRadius:4,hoverBorderWidth:3}}}});}
-var ctx=document.getElementById("percent-chart");if(ctx){ctx.height=280;var myChart=new Chart(ctx,{type:'doughnut',data:{datasets:[{label:"My First dataset",data:[60,40],backgroundColor:['#00b5e9','#fa4251'],hoverBackgroundColor:['#00b5e9','#fa4251'],borderWidth:[0,0],hoverBorderColor:['transparent','transparent']}],labels:['Products','Services']},options:{maintainAspectRatio:false,responsive:true,cutoutPercentage:55,animation:{animateScale:true,animateRotate:true},legend:{display:false},tooltips:{titleFontFamily:"Poppins",xPadding:15,yPadding:10,caretPadding:0,bodyFontSize:16}}});}}catch(error){console.log(error);}
-try{const bd_brandProduct2='rgba(0,181,233,0.9)'
-const bd_brandService2='rgba(0,173,95,0.9)'
-const brandProduct2='rgba(0,181,233,0.2)'
-const brandService2='rgba(0,173,95,0.2)'
-var data3=[52,60,55,50,65,80,57,70,105,115]
-var data4=[102,70,80,100,56,53,80,75,65,90]
-var ctx=document.getElementById("recent-rep2-chart");if(ctx){ctx.height=230;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June','July','August','September',''],datasets:[{label:'My First dataset',backgroundColor:brandService2,borderColor:bd_brandService2,pointHoverBackgroundColor:'#fff',borderWidth:0,data:data3},{label:'My Second dataset',backgroundColor:brandProduct2,borderColor:bd_brandProduct2,pointHoverBackgroundColor:'#fff',borderWidth:0,data:data4}]},options:{maintainAspectRatio:true,legend:{display:false},responsive:true,scales:{xAxes:[{gridLines:{drawOnChartArea:true,color:'#f2f2f2'},ticks:{fontFamily:"Poppins",fontSize:12}}],yAxes:[{ticks:{beginAtZero:true,maxTicksLimit:5,stepSize:50,max:150,fontFamily:"Poppins",fontSize:12},gridLines:{display:true,color:'#f2f2f2'}}]},elements:{point:{radius:0,hitRadius:10,hoverRadius:4,hoverBorderWidth:3},line:{tension:0}}}});}}catch(error){console.log(error);}
-try{const bd_brandProduct3='rgba(0,181,233,0.9)';const bd_brandService3='rgba(0,173,95,0.9)';const brandProduct3='transparent';const brandService3='transparent';var data5=[52,60,55,50,65,80,57,115];var data6=[102,70,80,100,56,53,80,90];var ctx=document.getElementById("recent-rep3-chart");if(ctx){ctx.height=230;var myChart=new Chart(ctx,{type:'line',data:{labels:['January','February','March','April','May','June','July',''],datasets:[{label:'My First dataset',backgroundColor:brandService3,borderColor:bd_brandService3,pointHoverBackgroundColor:'#fff',borderWidth:0,data:data5,pointBackgroundColor:bd_brandService3},{label:'My Second dataset',backgroundColor:brandProduct3,borderColor:bd_brandProduct3,pointHoverBackgroundColor:'#fff',borderWidth:0,data:data6,pointBackgroundColor:bd_brandProduct3}]},options:{maintainAspectRatio:false,legend:{display:false},responsive:true,scales:{xAxes:[{gridLines:{drawOnChartArea:true,color:'#f2f2f2'},ticks:{fontFamily:"Poppins",fontSize:12}}],yAxes:[{ticks:{beginAtZero:true,maxTicksLimit:5,stepSize:50,max:150,fontFamily:"Poppins",fontSize:12},gridLines:{display:false,color:'#f2f2f2'}}]},elements:{point:{radius:3,hoverRadius:4,hoverBorderWidth:3,backgroundColor:'#333'}}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("widgetChart5");if(ctx){ctx.height=220;var myChart=new Chart(ctx,{type:'bar',data:{labels:['January','February','March','April','May','June','July','August','September','October','November','December'],datasets:[{label:"My First dataset",data:[78,81,80,64,65,80,70,75,67,85,66,68],borderColor:"transparent",borderWidth:"0",backgroundColor:"#ccc",}]},options:{maintainAspectRatio:true,legend:{display:false},scales:{xAxes:[{display:false,categoryPercentage:1,barPercentage:0.65}],yAxes:[{display:false}]}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("percent-chart2");if(ctx){ctx.height=209;var myChart=new Chart(ctx,{type:'doughnut',data:{datasets:[{label:"My First dataset",data:[60,40],backgroundColor:['#00b5e9','#fa4251'],hoverBackgroundColor:['#00b5e9','#fa4251'],borderWidth:[0,0],hoverBorderColor:['transparent','transparent']}],labels:['Products','Services']},options:{maintainAspectRatio:false,responsive:true,cutoutPercentage:87,animation:{animateScale:true,animateRotate:true},legend:{display:false,position:'bottom',labels:{fontSize:14,fontFamily:"Poppins,sans-serif"}},tooltips:{titleFontFamily:"Poppins",xPadding:15,yPadding:10,caretPadding:0,bodyFontSize:16,}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("sales-chart");if(ctx){ctx.height=150;var myChart=new Chart(ctx,{type:'line',data:{labels:["2010","2011","2012","2013","2014","2015","2016"],type:'line',defaultFontFamily:'Poppins',datasets:[{label:"Foods",data:[0,30,10,120,50,63,10],backgroundColor:'transparent',borderColor:'rgba(220,53,69,0.75)',borderWidth:3,pointStyle:'circle',pointRadius:5,pointBorderColor:'transparent',pointBackgroundColor:'rgba(220,53,69,0.75)',},{label:"Electronics",data:[0,50,40,80,40,79,120],backgroundColor:'transparent',borderColor:'rgba(40,167,69,0.75)',borderWidth:3,pointStyle:'circle',pointRadius:5,pointBorderColor:'transparent',pointBackgroundColor:'rgba(40,167,69,0.75)',}]},options:{responsive:true,tooltips:{mode:'index',titleFontSize:12,titleFontColor:'#000',bodyFontColor:'#000',backgroundColor:'#fff',titleFontFamily:'Poppins',bodyFontFamily:'Poppins',cornerRadius:3,intersect:false,},legend:{display:false,labels:{usePointStyle:true,fontFamily:'Poppins',},},scales:{xAxes:[{display:true,gridLines:{display:false,drawBorder:false},scaleLabel:{display:false,labelString:'Month'},ticks:{fontFamily:"Poppins"}}],yAxes:[{display:true,gridLines:{display:false,drawBorder:false},scaleLabel:{display:true,labelString:'Value',fontFamily:"Poppins"},ticks:{fontFamily:"Poppins"}}]},title:{display:false,text:'Normal Legend'}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("team-chart");if(ctx){ctx.height=150;var myChart=new Chart(ctx,{type:'line',data:{labels:["2010","2011","2012","2013","2014","2015","2016"],type:'line',defaultFontFamily:'Poppins',datasets:[{data:[0,7,3,5,2,10,7],label:"Expense",backgroundColor:'rgba(0,103,255,.15)',borderColor:'rgba(0,103,255,0.5)',borderWidth:3.5,pointStyle:'circle',pointRadius:5,pointBorderColor:'transparent',pointBackgroundColor:'rgba(0,103,255,0.5)',},]},options:{responsive:true,tooltips:{mode:'index',titleFontSize:12,titleFontColor:'#000',bodyFontColor:'#000',backgroundColor:'#fff',titleFontFamily:'Poppins',bodyFontFamily:'Poppins',cornerRadius:3,intersect:false,},legend:{display:false,position:'top',labels:{usePointStyle:true,fontFamily:'Poppins',},},scales:{xAxes:[{display:true,gridLines:{display:false,drawBorder:false},scaleLabel:{display:false,labelString:'Month'},ticks:{fontFamily:"Poppins"}}],yAxes:[{display:true,gridLines:{display:false,drawBorder:false},scaleLabel:{display:true,labelString:'Value',fontFamily:"Poppins"},ticks:{fontFamily:"Poppins"}}]},title:{display:false,}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("barChart");if(ctx){ctx.height=200;var myChart=new Chart(ctx,{type:'bar',defaultFontFamily:'Poppins',data:{labels:["January","February","March","April","May","June","July"],datasets:[{label:"My First dataset",data:[65,59,80,81,56,55,40],borderColor:"rgba(0, 123, 255, 0.9)",borderWidth:"0",backgroundColor:"rgba(0, 123, 255, 0.5)",fontFamily:"Poppins"},{label:"My Second dataset",data:[28,48,40,19,86,27,90],borderColor:"rgba(0,0,0,0.09)",borderWidth:"0",backgroundColor:"rgba(0,0,0,0.07)",fontFamily:"Poppins"}]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},scales:{xAxes:[{ticks:{fontFamily:"Poppins"}}],yAxes:[{ticks:{beginAtZero:true,fontFamily:"Poppins"}}]}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("radarChart");if(ctx){ctx.height=200;var myChart=new Chart(ctx,{type:'radar',data:{labels:[["Eating","Dinner"],["Drinking","Water"],"Sleeping",["Designing","Graphics"],"Coding","Cycling","Running"],defaultFontFamily:'Poppins',datasets:[{label:"My First dataset",data:[65,59,66,45,56,55,40],borderColor:"rgba(0, 123, 255, 0.6)",borderWidth:"1",backgroundColor:"rgba(0, 123, 255, 0.4)"},{label:"My Second dataset",data:[28,12,40,19,63,27,87],borderColor:"rgba(0, 123, 255, 0.7",borderWidth:"1",backgroundColor:"rgba(0, 123, 255, 0.5)"}]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},scale:{ticks:{beginAtZero:true,fontFamily:"Poppins"}}}});}}catch(error){console.log(error)}
-try{var ctx=document.getElementById("lineChart");if(ctx){ctx.height=150;var myChart=new Chart(ctx,{type:'line',data:{labels:["January","February","March","April","May","June","July"],defaultFontFamily:"Poppins",datasets:[{label:"My First dataset",borderColor:"rgba(0,0,0,.09)",borderWidth:"1",backgroundColor:"rgba(0,0,0,.07)",data:[22,44,67,43,76,45,12]},{label:"My Second dataset",borderColor:"rgba(0, 123, 255, 0.9)",borderWidth:"1",backgroundColor:"rgba(0, 123, 255, 0.5)",pointHighlightStroke:"rgba(26,179,148,1)",data:[16,32,18,26,42,33,44]}]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},responsive:true,tooltips:{mode:'index',intersect:false},hover:{mode:'nearest',intersect:true},scales:{xAxes:[{ticks:{fontFamily:"Poppins"}}],yAxes:[{ticks:{beginAtZero:true,fontFamily:"Poppins"}}]}}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("doughutChart");if(ctx){ctx.height=150;var myChart=new Chart(ctx,{type:'doughnut',data:{datasets:[{data:[45,25,20,10],backgroundColor:["rgba(0, 123, 255,0.9)","rgba(0, 123, 255,0.7)","rgba(0, 123, 255,0.5)","rgba(0,0,0,0.07)"],hoverBackgroundColor:["rgba(0, 123, 255,0.9)","rgba(0, 123, 255,0.7)","rgba(0, 123, 255,0.5)","rgba(0,0,0,0.07)"]}],labels:["Green","Green","Green","Green"]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},responsive:true}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("pieChart");if(ctx){ctx.height=200;var myChart=new Chart(ctx,{type:'pie',data:{datasets:[{data:[45,25,20,10],backgroundColor:["rgba(0, 123, 255,0.9)","rgba(0, 123, 255,0.7)","rgba(0, 123, 255,0.5)","rgba(0,0,0,0.07)"],hoverBackgroundColor:["rgba(0, 123, 255,0.9)","rgba(0, 123, 255,0.7)","rgba(0, 123, 255,0.5)","rgba(0,0,0,0.07)"]}],labels:["Green","Green","Green"]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},responsive:true}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("polarChart");if(ctx){ctx.height=200;var myChart=new Chart(ctx,{type:'polarArea',data:{datasets:[{data:[15,18,9,6,19],backgroundColor:["rgba(0, 123, 255,0.9)","rgba(0, 123, 255,0.8)","rgba(0, 123, 255,0.7)","rgba(0,0,0,0.2)","rgba(0, 123, 255,0.5)"]}],labels:["Green","Green","Green","Green"]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},responsive:true}});}}catch(error){console.log(error);}
-try{var ctx=document.getElementById("singelBarChart");if(ctx){ctx.height=150;var myChart=new Chart(ctx,{type:'bar',data:{labels:["Sun","Mon","Tu","Wed","Th","Fri","Sat"],datasets:[{label:"My First dataset",data:[40,55,75,81,56,55,40],borderColor:"rgba(0, 123, 255, 0.9)",borderWidth:"0",backgroundColor:"rgba(0, 123, 255, 0.5)"}]},options:{legend:{position:'top',labels:{fontFamily:'Poppins'}},scales:{xAxes:[{ticks:{fontFamily:"Poppins"}}],yAxes:[{ticks:{beginAtZero:true,fontFamily:"Poppins"}}]}}});}}catch(error){console.log(error);}})(jQuery);(function($){"use strict";$(".animsition").animsition({inClass:'fade-in',outClass:'fade-out',inDuration:900,outDuration:900,linkElement:'a:not([target="_blank"]):not([href^="#"]):not([class^="chosen-single"])',loading:true,loadingParentElement:'html',loadingClass:'page-loader',loadingInner:'<div class="page-loader__spin"></div>',timeout:false,timeoutCountdown:5000,onLoadEvent:true,browser:['animation-duration','-webkit-animation-duration'],overlay:false,overlayClass:'animsition-overlay-slide',overlayParentElement:'html',transition:function(url){window.location.href=url;}});})(jQuery);(function($){"use strict";try{var vmap=$('#vmap');if(vmap[0]){vmap.vectorMap({map:'world_en',backgroundColor:null,color:'#ffffff',hoverOpacity:0.7,selectedColor:'#1de9b6',enableZoom:true,showTooltip:true,values:sample_data,scaleColors:['#1de9b6','#03a9f5'],normalizeFunction:'polynomial'});}}catch(error){console.log(error);}
-try{var vmap1=$('#vmap1');if(vmap1[0]){vmap1.vectorMap({map:'europe_en',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',enableZoom:true,showTooltip:true});}}catch(error){console.log(error);}
-try{var vmap2=$('#vmap2');if(vmap2[0]){vmap2.vectorMap({map:'usa_en',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',enableZoom:true,showTooltip:true,selectedColor:null,hoverColor:null,colors:{mo:'#001BFF',fl:'#001BFF',or:'#001BFF'},onRegionClick:function(event,code,region){event.preventDefault();}});}}catch(error){console.log(error);}
-try{var vmap3=$('#vmap3');if(vmap3[0]){vmap3.vectorMap({map:'germany_en',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',onRegionClick:function(element,code,region){var message='You clicked "'+region+'" which has the code: '+code.toUpperCase();alert(message);}});}}catch(error){console.log(error);}
-try{var vmap4=$('#vmap4');if(vmap4[0]){vmap4.vectorMap({map:'france_fr',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',enableZoom:true,showTooltip:true});}}catch(error){console.log(error);}
-try{var vmap5=$('#vmap5');if(vmap5[0]){vmap5.vectorMap({map:'russia_en',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',hoverOpacity:0.7,selectedColor:'#999999',enableZoom:true,showTooltip:true,scaleColors:['#C8EEFF','#006491'],normalizeFunction:'polynomial'});}}catch(error){console.log(error);}
-try{var vmap6=$('#vmap6');if(vmap6[0]){vmap6.vectorMap({map:'brazil_br',color:'#007BFF',borderColor:'#fff',backgroundColor:'#fff',onRegionClick:function(element,code,region){var message='You clicked "'+region+'" which has the code: '+code.toUpperCase();alert(message);}});}}catch(error){console.log(error);}})(jQuery);(function($){"use strict";try{var progressbarSimple=$('.js-progressbar-simple');progressbarSimple.each(function(){var that=$(this);var executed=false;$(window).on('load',function(){that.waypoint(function(){if(!executed){executed=true;that.progressbar({update:function(current_percentage,$this){$this.find('.js-value').html(current_percentage+'%');}});}},{offset:'bottom-in-view'});});});}catch(err){console.log(err);}})(jQuery);(function($){"use strict";try{var jscr1=$('.js-scrollbar1');if(jscr1[0]){const ps1=new PerfectScrollbar('.js-scrollbar1');}
-var jscr2=$('.js-scrollbar2');if(jscr2[0]){const ps2=new PerfectScrollbar('.js-scrollbar2');}}catch(error){console.log(error);}})(jQuery);(function($){"use strict";try{$(".js-select2").each(function(){$(this).select2({minimumResultsForSearch:20,dropdownParent:$(this).next('.dropDownSelect2')});});}catch(error){console.log(error);}})(jQuery);(function($){"use strict";try{var menu=$('.js-item-menu');var sub_menu_is_showed=-1;for(var i=0;i<menu.length;i++){$(menu[i]).on('click',function(e){e.preventDefault();$('.js-right-sidebar').removeClass("show-sidebar");if(jQuery.inArray(this,menu)==sub_menu_is_showed){$(this).toggleClass('show-dropdown');sub_menu_is_showed=-1;}
-else{for(var i=0;i<menu.length;i++){$(menu[i]).removeClass("show-dropdown");}
-$(this).toggleClass('show-dropdown');sub_menu_is_showed=jQuery.inArray(this,menu);}});}
-$(".js-item-menu, .js-dropdown").click(function(event){event.stopPropagation();});$("body,html").on("click",function(){for(var i=0;i<menu.length;i++){menu[i].classList.remove("show-dropdown");}
-sub_menu_is_showed=-1;});}catch(error){console.log(error);}
-var wW=$(window).width();var right_sidebar=$('.js-right-sidebar');var sidebar_btn=$('.js-sidebar-btn');sidebar_btn.on('click',function(e){e.preventDefault();for(var i=0;i<menu.length;i++){menu[i].classList.remove("show-dropdown");}
-sub_menu_is_showed=-1;right_sidebar.toggleClass("show-sidebar");});$(".js-right-sidebar, .js-sidebar-btn").click(function(event){event.stopPropagation();});$("body,html").on("click",function(){right_sidebar.removeClass("show-sidebar");});try{var arrow=$('.js-arrow');arrow.each(function(){var that=$(this);that.on('click',function(e){e.preventDefault();that.find(".arrow").toggleClass("up");that.toggleClass("open");that.parent().find('.js-sub-list').slideToggle("250");});});}catch(error){console.log(error);}
-try{$('.hamburger').on('click',function(){$(this).toggleClass('is-active');$('.navbar-mobile').slideToggle('500');});$('.navbar-mobile__list li.has-dropdown > a').on('click',function(){var dropdown=$(this).siblings('ul.navbar-mobile__dropdown');$(this).toggleClass('active');$(dropdown).slideToggle('500');return false;});}catch(error){console.log(error);}})(jQuery);(function($){"use strict";try{var list_load=$('.js-list-load');if(list_load[0]){list_load.each(function(){var that=$(this);that.find('.js-load-item').hide();var load_btn=that.find('.js-load-btn');load_btn.on('click',function(e){$(this).text("Loading...").delay(1500).queue(function(next){$(this).hide();that.find(".js-load-item").fadeToggle("slow",'swing');});e.preventDefault();});})}}catch(error){console.log(error);}})(jQuery);(function($){"use strict";try{$('[data-toggle="tooltip"]').tooltip();}catch(error){console.log(error);}
-try{var inbox_wrap=$('.js-inbox');var message=$('.au-message__item');message.each(function(){var that=$(this);that.on('click',function(){$(this).parent().parent().parent().toggleClass('show-chat-box');});});}catch(error){console.log(error);}})(jQuery);
+'use strict';
+
+/*
+
+Main javascript functions to init most of the elements
+
+#1. CHAT APP
+#2. CALENDAR INIT
+#3. FORM VALIDATION
+#4. DATE RANGE PICKER
+#5. DATATABLES
+#6. EDITABLE TABLES
+#7. FORM STEPS FUNCTIONALITY
+#8. SELECT 2 ACTIVATION
+#9. CKEDITOR ACTIVATION
+#10. CHARTJS CHARTS http://www.chartjs.org/
+#11. MENU RELATED STUFF
+#12. CONTENT SIDE PANEL TOGGLER
+#13. EMAIL APP
+#14. FULL CHAT APP
+#15. CRM PIPELINE
+#16. OUR OWN CUSTOM DROPDOWNS 
+#17. BOOTSTRAP RELATED JS ACTIVATIONS
+#18. TODO Application
+#19. Fancy Selector
+#20. SUPPORT SERVICE
+#21. Onboarding Screens Modal
+#22. Colors Toggler
+#23. Auto Suggest Search
+#24. Element Actions
+
+*/
+
+// ------------------------------------
+// HELPER FUNCTIONS TO TEST FOR SPECIFIC DISPLAY SIZE (RESPONSIVE HELPERS)
+// ------------------------------------
+
+function is_display_type(display_type) {
+    return $('.display-type').css('content') == display_type || $('.display-type').css('content') == '"' + display_type + '"';
+}
+
+function not_display_type(display_type) {
+    return $('.display-type').css('content') != display_type && $('.display-type').css('content') != '"' + display_type + '"';
+}
+
+// Initiate on click and on hover sub menu activation logic
+function os_init_sub_menus() {
+
+    // INIT MENU TO ACTIVATE ON HOVER
+    var menu_timer;
+    $('.menu-activated-on-hover').on('mouseenter', 'ul.main-menu > li.has-sub-menu', function () {
+        var $elem = $(this);
+        clearTimeout(menu_timer);
+        $elem.closest('ul').addClass('has-active').find('> li').removeClass('active');
+        $elem.addClass('active');
+    });
+
+    $('.menu-activated-on-hover').on('mouseleave', 'ul.main-menu > li.has-sub-menu', function () {
+        var $elem = $(this);
+        menu_timer = setTimeout(function () {
+            $elem.removeClass('active').closest('ul').removeClass('has-active');
+        }, 30);
+    });
+
+    // INIT MENU TO ACTIVATE ON CLICK
+    $('.menu-activated-on-click').on('click', 'li.has-sub-menu > a', function (event) {
+        var $elem = $(this).closest('li');
+        if ($elem.hasClass('active')) {
+            $elem.removeClass('active');
+        } else {
+            $elem.closest('ul').find('li.active').removeClass('active');
+            $elem.addClass('active');
+        }
+        return false;
+    });
+}
+
+$(function () {
+
+    // #1. CHAT APP
+
+    $('.floated-chat-btn, .floated-chat-w .chat-close').on('click', function () {
+        $('.floated-chat-w').toggleClass('active');
+        return false;
+    });
+
+    $('.message-input').on('keypress', function (e) {
+        if (e.which == 13) {
+            $('.chat-messages').append('<div class="message self"><div class="message-content">' + $(this).val() + '</div></div>');
+            $(this).val('');
+            var $messages_w = $('.floated-chat-w .chat-messages');
+            $messages_w.scrollTop($messages_w.prop("scrollHeight"));
+            $messages_w.perfectScrollbar('update');
+            return false;
+        }
+    });
+
+    $('.floated-chat-w .chat-messages').perfectScrollbar();
+
+    // #2. CALENDAR INIT
+
+    if ($("#fullCalendar").length) {
+        var calendar, d, date, m, y;
+
+        date = new Date();
+
+        d = date.getDate();
+
+        m = date.getMonth();
+
+        y = date.getFullYear();
+
+        calendar = $("#fullCalendar").fullCalendar({
+            header: {
+                left: "prev,next today",
+                center: "title",
+                right: "month,agendaWeek,agendaDay"
+            },
+            selectable: true,
+            selectHelper: true,
+            select: function select(start, end, allDay) {
+                var title;
+                title = prompt("Event Title:");
+                if (title) {
+                    calendar.fullCalendar("renderEvent", {
+                        title: title,
+                        start: start,
+                        end: end,
+                        allDay: allDay
+                    }, true);
+                }
+                return calendar.fullCalendar("unselect");
+            },
+            editable: true,
+            events: [{
+                title: "Long Event",
+                start: new Date(y, m, 3, 12, 0),
+                end: new Date(y, m, 7, 14, 0)
+            }, {
+                title: "Lunch",
+                start: new Date(y, m, d, 12, 0),
+                end: new Date(y, m, d + 2, 14, 0),
+                allDay: false
+            }, {
+                title: "Click for Google",
+                start: new Date(y, m, 28),
+                end: new Date(y, m, 29),
+                url: "http://google.com/"
+            }]
+        });
+    }
+
+    // #3. FORM VALIDATION
+
+    if ($('#formValidate').length) {
+        $('#formValidate').validator();
+    }
+
+    // #4. DATE RANGE PICKER
+
+    $('input.single-daterange').daterangepicker({"singleDatePicker": true});
+    $('input.multi-daterange').daterangepicker({"startDate": "03/28/2017", "endDate": "04/06/2017"});
+
+    // #5. DATATABLES
+
+    if ($('#formValidate').length) {
+        $('#formValidate').validator();
+    }
+    if ($('#dataTable1').length) {
+        $('#dataTable1').DataTable({buttons: ['copy', 'excel', 'pdf']});
+    }
+    // #6. EDITABLE TABLES
+
+    if ($('#editableTable').length) {
+        $('#editableTable').editableTableWidget();
+    }
+
+    // #7. FORM STEPS FUNCTIONALITY
+
+    $('.step-trigger-btn').on('click', function () {
+        var btn_href = $(this).attr('href');
+        $('.step-trigger[href="' + btn_href + '"]').click();
+        return false;
+    });
+
+    // FORM STEP CLICK
+    $('.step-trigger').on('click', function () {
+        var prev_trigger = $(this).prev('.step-trigger');
+        if (prev_trigger.length && !prev_trigger.hasClass('active') && !prev_trigger.hasClass('complete')) return false;
+        var content_id = $(this).attr('href');
+        $(this).closest('.step-triggers').find('.step-trigger').removeClass('active');
+        $(this).prev('.step-trigger').addClass('complete');
+        $(this).addClass('active');
+        $('.step-content').removeClass('active');
+        $('.step-content' + content_id).addClass('active');
+        return false;
+    });
+    // END STEPS FUNCTIONALITY
+
+
+    // #8. SELECT 2 ACTIVATION
+
+    if ($('.select2').length) {
+        $('.select2').select2();
+    }
+
+    // #9. CKEDITOR ACTIVATION
+
+    if ($('#ckeditor1').length) {
+        CKEDITOR.replace('ckeditor1');
+    }
+
+    // #10. CHARTJS CHARTS http://www.chartjs.org/
+
+    if (typeof Chart !== 'undefined') {
+
+        var fontFamily = '"Proxima Nova W01", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif';
+        // set defaults
+        Chart.defaults.global.defaultFontFamily = fontFamily;
+        Chart.defaults.global.tooltips.titleFontSize = 14;
+        Chart.defaults.global.tooltips.titleMarginBottom = 4;
+        Chart.defaults.global.tooltips.displayColors = false;
+        Chart.defaults.global.tooltips.bodyFontSize = 12;
+        Chart.defaults.global.tooltips.xPadding = 10;
+        Chart.defaults.global.tooltips.yPadding = 8;
+
+        // init lite line chart if element exists
+
+        if ($("#liteLineChart").length) {
+            var liteLineChart = $("#liteLineChart");
+
+            var liteLineGradient = liteLineChart[0].getContext('2d').createLinearGradient(0, 0, 0, 200);
+            liteLineGradient.addColorStop(0, 'rgba(30,22,170,0.08)');
+            liteLineGradient.addColorStop(1, 'rgba(30,22,170,0)');
+
+            var chartData = [13, 28, 19, 24, 43, 49];
+
+            if (liteLineChart.data('chart-data')) chartData = liteLineChart.data('chart-data').split(',');
+
+            // line chart data
+            var liteLineData = {
+                labels: ["January 1", "January 5", "January 10", "January 15", "January 20", "January 25"],
+                datasets: [{
+                    label: "Sold",
+                    fill: true,
+                    lineTension: 0.4,
+                    backgroundColor: liteLineGradient,
+                    borderColor: "#8f1cad",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "#fff",
+                    pointBackgroundColor: "#2a2f37",
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 6,
+                    pointHoverBackgroundColor: "#FC2055",
+                    pointHoverBorderColor: "#fff",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 4,
+                    pointHitRadius: 5,
+                    data: chartData,
+                    spanGaps: false
+                }]
+            };
+
+            // line chart init
+            var myLiteLineChart = new Chart(liteLineChart, {
+                type: 'line',
+                data: liteLineData,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: false,
+                            ticks: {
+                                fontSize: '11',
+                                fontColor: '#969da5'
+                            },
+                            gridLines: {
+                                color: 'rgba(0,0,0,0.0)',
+                                zeroLineColor: 'rgba(0,0,0,0.0)'
+                            }
+                        }],
+                        yAxes: [{
+                            display: false,
+                            ticks: {
+                                beginAtZero: true,
+                                max: 55
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        // init lite line chart V2 if element exists
+
+        if ($("#liteLineChartV2").length) {
+            var liteLineChartV2 = $("#liteLineChartV2");
+
+            var liteLineGradientV2 = liteLineChartV2[0].getContext('2d').createLinearGradient(0, 0, 0, 100);
+            liteLineGradientV2.addColorStop(0, 'rgba(40,97,245,0.1)');
+            liteLineGradientV2.addColorStop(1, 'rgba(40,97,245,0)');
+
+            var chartDataV2 = [13, 28, 19, 24, 43, 49, 40, 35, 42, 46];
+
+            if (liteLineChartV2.data('chart-data')) chartDataV2 = liteLineChartV2.data('chart-data').split(',');
+
+            // line chart data
+            var liteLineDataV2 = {
+                labels: ["1", "3", "6", "9", "12", "15", "18", "21", "24", "27"],
+                datasets: [{
+                    label: "Balance",
+                    fill: true,
+                    lineTension: 0.35,
+                    backgroundColor: liteLineGradientV2,
+                    borderColor: "#2861f5",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "#2861f5",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "#FC2055",
+                    pointHoverBorderColor: "#fff",
+                    pointHoverBorderWidth: 2,
+                    pointRadius: 3,
+                    pointHitRadius: 10,
+                    data: chartDataV2,
+                    spanGaps: false
+                }]
+            };
+
+            // line chart init
+            var myLiteLineChartV2 = new Chart(liteLineChartV2, {
+                type: 'line',
+                data: liteLineDataV2,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: '10',
+                                fontColor: '#969da5'
+                            },
+                            gridLines: {
+                                color: 'rgba(0,0,0,0.0)',
+                                zeroLineColor: 'rgba(0,0,0,0.0)'
+                            }
+                        }],
+                        yAxes: [{
+                            display: false,
+                            ticks: {
+                                beginAtZero: true,
+                                max: 55
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        // init lite line chart V2 if element exists
+
+        if ($("#liteLineChartV3").length) {
+            var liteLineChartV3 = $("#liteLineChartV3");
+
+            var liteLineGradientV3 = liteLineChartV3[0].getContext('2d').createLinearGradient(0, 0, 0, 70);
+            liteLineGradientV3.addColorStop(0, 'rgba(40,97,245,0.2)');
+            liteLineGradientV3.addColorStop(1, 'rgba(40,97,245,0)');
+
+            var chartDataV3 = [13, 28, 19, 24, 43, 49, 40, 35, 42, 46, 38];
+
+            if (liteLineChartV3.data('chart-data')) chartDataV3 = liteLineChartV3.data('chart-data').split(',');
+
+            // line chart data
+            var liteLineDataV3 = {
+                labels: ["", "FEB", "", "MAR", "", "APR", "", "MAY", "", "JUN", "", "JUL", ""],
+                datasets: [{
+                    label: "Balance",
+                    fill: true,
+                    lineTension: 0.15,
+                    backgroundColor: liteLineGradientV3,
+                    borderColor: "#2861f5",
+                    borderCapStyle: 'butt',
+                    borderDash: [],
+                    borderDashOffset: 0.0,
+                    borderJoinStyle: 'miter',
+                    pointBorderColor: "#2861f5",
+                    pointBackgroundColor: "#fff",
+                    pointBorderWidth: 2,
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "#FC2055",
+                    pointHoverBorderColor: "#fff",
+                    pointHoverBorderWidth: 0,
+                    pointRadius: 0,
+                    pointHitRadius: 10,
+                    data: chartDataV3,
+                    spanGaps: false
+                }]
+            };
+
+            // line chart init
+            var myLiteLineChartV3 = new Chart(liteLineChartV3, {
+                type: 'line',
+                data: liteLineDataV3,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                fontSize: '10',
+                                fontColor: '#969da5'
+                            },
+                            gridLines: {
+                                color: 'rgba(0,0,0,0.0)',
+                                zeroLineColor: 'rgba(0,0,0,0.0)'
+                            }
+                        }],
+                        yAxes: [{
+                            display: false,
+                            ticks: {
+                                beginAtZero: true,
+                                max: 55
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        
+
+    
+
+        // init pie chart if element exists
+        if ($("#pieChart1").length) {
+            var pieChart1 = $("#pieChart1");
+
+            // pie chart data
+            var pieData1 = {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+                datasets: [{
+                    data: [300, 50, 100, 30, 70],
+                    backgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    hoverBackgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    borderWidth: 0
+                }]
+            };
+
+            // -----------------
+            // init pie chart
+            // -----------------
+            new Chart(pieChart1, {
+                type: 'pie',
+                data: pieData1,
+                options: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 15,
+                            fontColor: '#3e4b5b'
+                        }
+                    },
+                    animation: {
+                        animateScale: true
+                    }
+                }
+            });
+        }
+
+        // -----------------
+        // init donut chart if element exists
+        // -----------------
+        if ($("#donutChart").length) {
+            var donutChart = $("#donutChart");
+
+            // donut chart data
+            var data = {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+                datasets: [{
+                    data: [300, 50, 100, 30, 70],
+                    backgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    hoverBackgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    borderWidth: 0
+                }]
+            };
+
+            // -----------------
+            // init donut chart
+            // -----------------
+            new Chart(donutChart, {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    animation: {
+                        animateScale: true
+                    },
+                    cutoutPercentage: 80
+                }
+            });
+        }
+
+        // -----------------
+        // init donut chart if element exists
+        // -----------------
+        if ($("#donutChart1").length) {
+            var donutChart1 = $("#donutChart1");
+
+            // donut chart data
+            var data1 = {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple"],
+                datasets: [{
+                    data: [300, 50, 100, 30, 70],
+                    backgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    hoverBackgroundColor: ["#5797fc", "#7e6fff", "#4ecc48", "#ffcc29", "#f37070"],
+                    borderWidth: 6,
+                    hoverBorderColor: 'transparent'
+                }]
+            };
+
+            // -----------------
+            // init donut chart
+            // -----------------
+            new Chart(donutChart1, {
+                type: 'doughnut',
+                data: data1,
+                options: {
+                    legend: {
+                        display: false
+                    },
+                    animation: {
+                        animateScale: true
+                    },
+                    cutoutPercentage: 80
+                }
+            });
+        }
+    }
+
+    // #11. MENU RELATED STUFF
+
+    // INIT MOBILE MENU TRIGGER BUTTON
+    $('.mobile-menu-trigger').on('click', function () {
+        $('.menu-mobile .menu-and-user').slideToggle(200, 'swing');
+        return false;
+    });
+
+    os_init_sub_menus();
+
+    // #12. CONTENT SIDE PANEL TOGGLER
+
+    $('.content-panel-toggler, .content-panel-close, .content-panel-open').on('click', function () {
+        $('.all-wrapper').toggleClass('content-panel-active');
+    });
+
+    // #13. EMAIL APP
+
+    $('.more-messages').on('click', function () {
+        $(this).hide();
+        $('.older-pack').slideDown(100);
+        $('.aec-full-message-w.show-pack').removeClass('show-pack');
+        return false;
+    });
+
+    $('.ae-list').perfectScrollbar({wheelPropagation: true});
+
+    $('.ae-list .ae-item').on('click', function () {
+        $('.ae-item.active').removeClass('active');
+        $(this).addClass('active');
+        return false;
+    });
+
+    // CKEDITOR ACTIVATION FOR MAIL REPLY
+    if (typeof CKEDITOR !== 'undefined') {
+        CKEDITOR.disableAutoInline = true;
+        if ($('#ckeditorEmail').length) {
+            CKEDITOR.config.uiColor = '#ffffff';
+            CKEDITOR.config.toolbar = [['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink', '-', 'About']];
+            CKEDITOR.config.height = 110;
+            CKEDITOR.replace('ckeditor1');
+        }
+    }
+
+    // EMAIL SIDEBAR MENU TOGGLER
+    $('.ae-side-menu-toggler').on('click', function () {
+        $('.app-email-w').toggleClass('compact-side-menu');
+    });
+
+    // EMAIL MOBILE SHOW MESSAGE
+    $('.ae-item').on('click', function () {
+        $('.app-email-w').addClass('forse-show-content');
+    });
+
+    if ($('.app-email-w').length) {
+        if (is_display_type('phone') || is_display_type('tablet')) {
+            $('.app-email-w').addClass('compact-side-menu');
+        }
+    }
+
+    // #14. FULL CHAT APP
+    function add_full_chat_message($input) {
+        $('.chat-content').append('<div class="chat-message self"><div class="chat-message-content-w"><div class="chat-message-content">' + $input.val() + '</div></div><div class="chat-message-date">1:23pm</div><div class="chat-message-avatar"><img alt="" src="img/avatar1.jpg"></div></div>');
+        $input.val('');
+        var $messages_w = $('.chat-content-w');
+        $messages_w.scrollTop($messages_w[0].scrollHeight);
+    }
+
+    $('.chat-btn a').on('click', function () {
+        add_full_chat_message($('.chat-input input'));
+        return false;
+    });
+    $('.chat-input input').on('keypress', function (e) {
+        if (e.which == 13) {
+            add_full_chat_message($(this));
+            return false;
+        }
+    });
+
+    // #15. CRM PIPELINE
+    if ($('.pipeline').length) {
+        // INIT DRAG AND DROP FOR PIPELINE ITEMS
+        var dragulaObj = dragula($('.pipeline-body').toArray(), {}).on('drag', function () {
+        }).on('drop', function (el) {
+        }).on('over', function (el, container) {
+            $(container).closest('.pipeline-body').addClass('over');
+        }).on('out', function (el, container, source) {
+
+            var new_pipeline_body = $(container).closest('.pipeline-body');
+            new_pipeline_body.removeClass('over');
+            var old_pipeline_body = $(source).closest('.pipeline-body');
+        });
+    }
+
+    // #16. OUR OWN CUSTOM DROPDOWNS
+    $('.os-dropdown-trigger').on('mouseenter', function () {
+        $(this).addClass('over');
+    });
+    $('.os-dropdown-trigger').on('mouseleave', function () {
+        $(this).removeClass('over');
+    });
+
+    // #17. BOOTSTRAP RELATED JS ACTIVATIONS
+
+    // - Activate tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    // - Activate popovers
+    $('[data-toggle="popover"]').popover();
+
+    // #18. TODO Application
+
+    // Tasks foldable trigger
+    $('.tasks-header-toggler').on('click', function () {
+        $(this).closest('.tasks-section').find('.tasks-list-w').slideToggle(100);
+        return false;
+    });
+
+    // Sidebar Sections foldable trigger
+    $('.todo-sidebar-section-toggle').on('click', function () {
+        $(this).closest('.todo-sidebar-section').find('.todo-sidebar-section-contents').slideToggle(100);
+        return false;
+    });
+
+    // Sidebar Sub Sections foldable trigger
+    $('.todo-sidebar-section-sub-section-toggler').on('click', function () {
+        $(this).closest('.todo-sidebar-section-sub-section').find('.todo-sidebar-section-sub-section-content').slideToggle(100);
+        return false;
+    });
+
+    // Drag init
+    if ($('.tasks-list').length) {
+        // INIT DRAG AND DROP FOR Todo Tasks
+        var dragulaTasksObj = dragula($('.tasks-list').toArray(), {
+            moves: function moves(el, container, handle) {
+                return handle.classList.contains('drag-handle');
+            }
+        }).on('drag', function () {
+        }).on('drop', function (el) {
+        }).on('over', function (el, container) {
+            $(container).closest('.tasks-list').addClass('over');
+        }).on('out', function (el, container, source) {
+
+            var new_pipeline_body = $(container).closest('.tasks-list');
+            new_pipeline_body.removeClass('over');
+            var old_pipeline_body = $(source).closest('.tasks-list');
+        });
+    }
+
+    // Task actions init
+
+    // Complete/Done
+    $('.task-btn-done').on('click', function () {
+        $(this).closest('.draggable-task').toggleClass('complete');
+        return false;
+    });
+
+    // Favorite/star
+    $('.task-btn-star').on('click', function () {
+        $(this).closest('.draggable-task').toggleClass('favorite');
+        return false;
+    });
+
+    // Delete
+    var timeoutDeleteTask;
+    $('.task-btn-delete').on('click', function () {
+        if (confirm('Are you sure you want to delete this task?')) {
+            var $task_to_remove = $(this).closest('.draggable-task');
+            $task_to_remove.addClass('pre-removed');
+            $task_to_remove.append('<a href="#" class="task-btn-undelete">Undo Delete</a>');
+            timeoutDeleteTask = setTimeout(function () {
+                $task_to_remove.slideUp(300, function () {
+                    $(this).remove();
+                });
+            }, 5000);
+        }
+        return false;
+    });
+
+    $('.tasks-list').on('click', '.task-btn-undelete', function () {
+        $(this).closest('.draggable-task').removeClass('pre-removed');
+        $(this).remove();
+        if (typeof timeoutDeleteTask !== 'undefined') {
+            clearTimeout(timeoutDeleteTask);
+        }
+        return false;
+    });
+
+    // #19. Fancy Selector
+    $('.fs-selector-trigger').on('click', function () {
+        $(this).closest('.fancy-selector-w').toggleClass('opened');
+    });
+
+    // #20. SUPPORT SERVICE
+
+    $('.close-ticket-info').on('click', function () {
+        $('.support-ticket-content-w').addClass('folded-info').removeClass('force-show-folded-info');
+        return false;
+    });
+
+    $('.show-ticket-info').on('click', function () {
+        $('.support-ticket-content-w').removeClass('folded-info').addClass('force-show-folded-info');
+        return false;
+    });
+
+    $('.support-index .support-tickets .support-ticket').on('click', function () {
+        $('.support-index').addClass('show-ticket-content');
+        return false;
+    });
+
+    $('.support-index .back-to-index').on('click', function () {
+        $('.support-index').removeClass('show-ticket-content');
+        return false;
+    });
+
+    // #21. Onboarding Screens Modal
+
+    $('.onboarding-modal.show-on-load').modal('show');
+    if ($('.onboarding-modal .onboarding-slider-w').length) {
+        $('.onboarding-modal .onboarding-slider-w').slick({
+            dots: true,
+            infinite: false,
+            adaptiveHeight: true,
+            slidesToShow: 1,
+            slidesToScroll: 1
+        });
+        $('.onboarding-modal').on('shown.bs.modal', function (e) {
+            $('.onboarding-modal .onboarding-slider-w').slick('setPosition');
+        });
+    }
+
+    // #22. Colors Toggler
+    $('.floated-colors-btn').on('click', function () {
+        if ($('body').hasClass('color-scheme-dark')) {
+            $(this).find('.os-toggler-w').removeClass('on');
+            localStorage.setItem('colorScheme', 'light');
+        } else {
+            $(this).find('.os-toggler-w').addClass('on');
+            localStorage.setItem('colorScheme', 'dark');
+        }
+        $('body').toggleClass('color-scheme-dark');
+        return false;
+    });
+
+    // #23. Autosuggest Search
+    $('.autosuggest-search-activator').on('click', function () {
+        var search_offset = $(this).offset();
+        // If input field is in the activator - show on top of it
+        if ($(this).find('input[type="text"]')) {
+            search_offset = $(this).find('input[type="text"]').offset();
+        }
+        var search_field_position_left = search_offset.left;
+        var search_field_position_top = search_offset.top;
+        $('.search-with-suggestions-w').css('left', search_field_position_left).css('top', search_field_position_top).addClass('over-search-field').fadeIn(300).find('.search-suggest-input').focus();
+        return false;
+    });
+
+    $('.search-suggest-input').on('keydown', function (e) {
+
+        // Close if ESC was pressed
+        if (e.which == 27) {
+            $('.search-with-suggestions-w').fadeOut();
+        }
+
+        // Backspace/Delete pressed
+        if (e.which == 46 || e.which == 8) {
+            // This is a test code, remove when in real life usage
+            $('.search-with-suggestions-w .ssg-item:last-child').show();
+            $('.search-with-suggestions-w .ssg-items.ssg-items-blocks').show();
+            $('.ssg-nothing-found').hide();
+        }
+
+        // Imitate item removal on search, test code
+        if (e.which != 27 && e.which != 8 && e.which != 46) {
+            // This is a test code, remove when in real life usage
+            $('.search-with-suggestions-w .ssg-item:last-child').hide();
+            $('.search-with-suggestions-w .ssg-items.ssg-items-blocks').hide();
+            $('.ssg-nothing-found').show();
+        }
+    });
+
+    $('.close-search-suggestions').on('click', function () {
+        $('.search-with-suggestions-w').fadeOut();
+        return false;
+    });
+
+    // #24. Element Actions
+    $('.element-action-fold').on('click', function () {
+        var $wrapper = $(this).closest('.element-wrapper');
+        $wrapper.find('.element-box-tp, .element-box').toggle(0);
+        var $icon = $(this).find('i');
+
+        if ($wrapper.hasClass('folded')) {
+            $icon.removeClass('os-icon-plus-circle').addClass('os-icon-minus-circle');
+            $wrapper.removeClass('folded');
+        } else {
+            $icon.removeClass('os-icon-minus-circle').addClass('os-icon-plus-circle');
+            $wrapper.addClass('folded');
+        }
+        return false;
+    });
+});
