@@ -184,7 +184,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <div class="g-recaptcha" data-sitekey="6Lc684YUAAAAAKbiFYJvMx83vmSSJHH8N03PXnKx"></div>
+                    <div class="g-recaptcha" data-sitekey="6LcW6sEUAAAAAAh3immabJ9S9rpvQFM2FDQsKTCL"></div>
                 </div>
                 <div class="form-group has-feedback" style="display: none;" id="captcha_messages">
                     <div class="alert alert-danger validation-errors">

@@ -234,7 +234,7 @@
                                           <div class="columns_wrap">
                                               <div class="column-1_1">
                                                 <div class="form-group has-feedback"><br/>
-                                                    <div class="g-recaptcha" data-sitekey="6Lc684YUAAAAAKbiFYJvMx83vmSSJHH8N03PXnKx"></div>
+                                                    <div class="g-recaptcha" data-sitekey="6LcW6sEUAAAAAAh3immabJ9S9rpvQFM2FDQsKTCL"></div>
                                                     <div id="captcha_messages" class="wpcf7-response-output wpcf7-display-none wpcf7-validation-errors" role="alert">Captcha no verificado</div><br/>
                                                 </div>
                                               </div>

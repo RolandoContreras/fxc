@@ -60,6 +60,11 @@ $route['backoffice'] = "b_home";
 $route['backoffice/profile'] = "b_profile";
 $route['backoffice/profile/update_password'] = "b_profile/update_password";
 
+$route['backoffice/plan'] = "b_plan";
+
+$route['backoffice/referred'] = "b_network";
+
+
 $route['backoffice/finance'] = "b_finance";
 
 
