@@ -13133,7 +13133,9 @@ body.menu-side-right .layout-w {
 }
 
 .menu-w .logo-w img {
-  width: 40px;
+  width: 150px;
+  padding: 5px;
+  margin-left: -20px;
   height: auto;
   display: inline-block;
   vertical-align: middle;
@@ -28960,4 +28962,5 @@ Contents:
   border-radius: 5px;
   background-color: #a1a1a1;
 }
+
 

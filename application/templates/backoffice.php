@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <title>Oficina Virtual - BCA CAPITAL</title>
   <meta charset="utf-8">
@@ -40,9 +41,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.1.0/jquery-confirm.min.css">
   <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/sweetalert.css';?>">
   <link href="<?php echo site_url().'static/backoffice/css/loading.css';?>" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo site_url().'static/backoffice/css/tree.css';?>">
+  <style>
+    .goog-tooltip { display: none !important; } .goog-tooltip:hover { display: none !important; } .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; } .goog-te-banner-frame.skiptranslate { display: none !important; } body { top: 0px !important; }
+  </style>
+  <style>
+    .layout-w .color-scheme-light .logo-w .logo > img { width: 200px; max-width: 100%; } .layout-w .color-scheme-dark .logo-w .logo > img { width: 200px; max-width: 100%; } #inputContecntCopy{ opacity: 0; position: absolute; top: 0; } #modal_url{ z-index: 99999;} *::first-letter { text-transform: uppercase; }
+  </style>
+  <style>
+    .img-responsive { margin: 0 auto; width: 50px; margin-bottom: 5px; } .popover { min-width: 300px; max-width: 500px; } .popover .popover-content { padding: 10px; } .popover .popover-title { padding: 10px; } .tree li a { color: #000; } @media screen and (max-width: 1024px) { .arvore { } } @media screen and (min-width: 1250px) { .arvore { margin: 0 auto; } } .tree li a { border: none; padding: 0; margin: 0; } .tree li a:hover, .tree li a:hover + ul li a { background: none; border: none; } /*Connector styles on hover*/ .tree li a:hover + ul li::after, .tree li a:hover + ul li::before, .tree li a:hover + ul::before, .tree li a:hover + ul ul::before { border-color: #6C7A89; } .tree .init:before { border: none; } @media (max-width: 767px) { .responsive-tree { display: none; } }
+  </style>
   <script type="text/javascript">
-        var site = '<?php echo site_url();?>';
-    </script>
+    var site = '<?php echo site_url();?>';
+  </script>
 </head>
 
 <body class="menu-position-side menu-side-left color-scheme-white full-screen with-content-panel">
@@ -139,7 +150,7 @@
           </ul>
         </div>
       </div>
-      <div class="menu-w selected-menu-color-bright menu-activated-on-hover menu-has-selected-link color-scheme-dark color-style-default sub-menu-color-bright menu-position-side menu-side-left menu-layout-compact sub-menu-style-over">
+            <div class="menu-w selected-menu-color-bright menu-activated-on-hover menu-has-selected-link color-scheme-dark color-style-default sub-menu-color-bright menu-position-side menu-side-left menu-layout-compact sub-menu-style-over">
         <div class="logo-w" style="padding: 4px 1rem 4px 1.7rem !important;"> <a class="logo" style="width: 100%;" align="center"> 
                 <img src="<?php echo site_url().'static/page_front/images/logo/logo.png';?>" style="max-width: 150px;"> 
             </a>          
@@ -239,10 +250,11 @@
           </li>
         </ul>
       </div>
+      <?php echo $body;?>
       <!-------------------- END - Main Menu -------------------->
-      <?php echo $body; ?>	
-    </div>
-    <script src="<?php echo site_url().'static/backoffice/js/jquery.min.js';?>"></script>
+   </div>
+  <!-- Start of 18kronaldinho Zendesk Widget script -->
+  <script src="<?php echo site_url().'static/backoffice/js/jquery.min.js';?>"></script>
     <script src="<?php echo site_url().'static/backoffice/js/popper.min.js';?>"></script>
     <script src="<?php echo site_url().'static/backoffice/js/moment.js';?>"></script>
     <script src="<?php echo site_url().'static/backoffice/js/Chart.min.js';?>"></script>
@@ -279,5 +291,12 @@
     <script src="<?php echo site_url().'static/backoffice/js/jquery.maskMoney.min.js';?>"></script>
     <script src="<?php echo site_url().'static/backoffice/js/sweetalert.min.js';?>"></script>
     <script src="<?php echo site_url().'static/backoffice/js/functions.js?id=569';?>"></script>
+  <script>
+    $(document).ready(function () { $('#crypto-toogle').click(function () { $('#crypto-panel').toggle('slide'); }); });
+  </script>
+  <script>
+    $(document).ready(function () { var lengths = $('.direito').map(function () { return $(this).find('li').length; }).get(); }); $(function () { $('[data-toggle="popover"]').popover({ html: true, trigger: 'manual', container: $(this).attr('id'), placement: "top", content: function () { $return = '<div class="hover-hovercard" data-placement="top"></div>'; } }).on("mouseenter", function () { var _this = this; $(this).popover("show"); $(this).siblings(".popover").on("mouseleave", function () { $(_this).popover('hide'); }); }).on("mouseleave", function () { var _this = this; $(_this).popover("hide"); }); })
+  </script>
 </body>
+
 </html>

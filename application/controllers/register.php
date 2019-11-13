@@ -84,7 +84,7 @@ class Register extends CI_Controller {
             //SET TIMEZONE AMERICA
             date_default_timezone_set('America/Lima');
             //get data
-            $username = $this->input->post("username");
+            $username = str_to_minuscula($this->input->post("username"));
             //VALIDATE USERNAME
             $result = $this->validate_username_register($username);
             

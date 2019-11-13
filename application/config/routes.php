@@ -63,6 +63,7 @@ $route['backoffice/profile/update_password'] = "b_profile/update_password";
 $route['backoffice/plan'] = "b_plan";
 
 $route['backoffice/referred'] = "b_network";
+$route['backoffice/unilevel'] = "b_network/unilevel";
 
 
 $route['backoffice/finance'] = "b_finance";
