@@ -270,4 +270,9 @@ function str_to_mayusculas($string){
     $str = strtoupper($string);
     return $str;
 }
+
+function str_to_first_capital($string){
+    $str = ucfirst($string);
+    return $str;
+}
 ?>

@@ -15,20 +15,10 @@ BITSHARE S.A.C
 * Fecha: 16/11/2016
 ****/
 
-class customer_model_atributos{	
+class unilevel_model_atributos{	
+    var $unilevel_id='';
     var $customer_id='';
-    var $kit_id='';
-    var $username='';
-    var $email='';
-    var $password='';
-    var $first_name='';
-    var $last_name='';
-    var $dni='';
-    var $address='';
-    var $btc_address='';
-    var $country='';
-    var $phone='';
-    var $active=''; 
+    var $parend_id='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -36,32 +26,21 @@ class customer_model_atributos{
     var $updated_by='';
 }
 
-class Customer_Model extends CI_Model{ 
+class Unilevel_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'customer';
-	$this->table_id = 'customer_id';
+        $this->table = 'unilevel';
+	$this->table_id = 'unilevel_id';
+        $this->unilevel_id='';
         $this->customer_id='';
-        $this->range_id='';
-        $this->kit_id='';
-        $this->username='';
-        $this->email='';
-        $this->password='';
-	$this->first_name='';
-        $this->last_name='';
-        $this->dni='';
-        $this->address='';
-        $this->btc_address='';
-        $this->country='';
-	$this->phone='';
-        $this->active='';
+        $this->parend_id='';
 	$this->status_value='';
-	$this->created_at='';
-	$this->created_by='';
-	$this->updated_at='';
-	$this->updated_by='';
-	$this->fields = new customer_model_atributos();
+        $this->created_at='';
+        $this->created_by='';
+        $this->updated_at='';
+        $this->updated_by='';
+	$this->fields = new unilevel_model_atributos();
     }   
     
     public function fields(){
@@ -147,14 +126,5 @@ class Customer_Model extends CI_Model{
         $dato = $query->row();
         return $dato;       
   }
-  
-   public function verificar_username($username,$password){        
-        $this->db->where('$username',$username);
-        $this->db->where('password', $password);
-        $this->db->from($this->table);
-        $query = $this->db->get();                     
-        return $query->row();        
-   }
-  
 } //FIN DEL MODELO EXTENDIDO
 ?>

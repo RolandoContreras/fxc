@@ -23,7 +23,6 @@ class Login extends CI_Controller {
             $pass = $this->input->post("pass");
             //SET PARAMETER
             $params = array("select" =>"customer.customer_id,
-                                        customer.code,
                                         customer.first_name,
                                         customer.username,
                                         customer.last_name,
@@ -36,7 +35,6 @@ class Login extends CI_Controller {
             if ($obj_customer_login > 0){
                     $obj_customer = $this->obj_customer->get_search_row($params);
                     $data_customer_session['customer_id'] = $obj_customer->customer_id;
-                    $data_customer_session['code'] = $obj_customer->code;
                     $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
                     $data_customer_session['username'] = $obj_customer->username;
                     $data_customer_session['email'] = $obj_customer->email;
