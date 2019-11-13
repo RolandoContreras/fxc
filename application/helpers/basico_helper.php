@@ -192,6 +192,12 @@ function formato_fecha_barras($fecha){
     return  $dia."/".$mes."/".$anio;
 }
 
+function formato_fecha_minutos($fecha){    
+    $hora=substr($fecha, 11, 2);
+    $minuto=substr($fecha, 14, 2);
+    return  $hora.":".$minuto;
+}
+
 function convert_formato_fecha_db($day,$month,$year){    
     return $year."/".$month."/".$day;
 }

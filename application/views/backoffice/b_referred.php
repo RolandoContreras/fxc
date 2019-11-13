@@ -8,24 +8,24 @@
   <div class="content-i">
     <div class="content-box">
       <div class="element-wrapper col-xl-10">
-        <h6 class="element-header"> Indicados Diretos </h6>
+        <h6 class="element-header"> Referidos Diretos </h6>
         <div class="col-12">
           <div class="row">
             <div class="col-3">
               <div class="row">
                 <div class="col-md-6">
                   <div class="profile-tile">
-                    <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/1.png"> </div>
-                      <div class="pt-user-name"> <b>3 Kits</b> <br> Passport </div>
+                    <a class="profile-tile-box">
+                        <div class="pt-avatar-w"> <img src="<?php echo site_url().'static/backoffice/images/plan/membership.png';?>"> </div>
+                      <div class="pt-user-name"> <b><?php echo $obj_total->total_membership;?> Kits</b> <br> Membersgip </div>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="profile-tile">
                     <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/2.png"> </div>
-                      <div class="pt-user-name"> <b>5 Kits</b> <br> Start </div>
+                      <div class="pt-avatar-w"> <img src="<?php echo site_url().'static/backoffice/images/plan/inicio.png';?>"> </div>
+                      <div class="pt-user-name"> <b><?php echo $obj_total->total_inicio;?> Kits</b> <br> Inicio </div>
                     </a>
                   </div>
                 </div>
@@ -36,16 +36,16 @@
                 <div class="col-md-6">
                   <div class="profile-tile">
                     <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/3.png"> </div>
-                      <div class="pt-user-name"> <b>2 Kits</b> <br> Start + </div>
+                      <div class="pt-avatar-w"> <img src="<?php echo site_url().'static/backoffice/images/plan/apertura.png';?>"> </div>
+                      <div class="pt-user-name"> <b><?php echo $obj_total->total_apertura;?> Kits</b> <br> Apertura </div>
                     </a>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="profile-tile">
                     <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/4.png"> </div>
-                      <div class="pt-user-name"> <b>0 Kits</b> <br> Professional </div>
+                      <div class="pt-avatar-w"> <img src="<?php echo site_url().'static/backoffice/images/plan/apertura_elite.png';?>"> </div>
+                      <div class="pt-user-name"> <b><?php echo $obj_total->total_elite;?> Kits</b> <br> Elite </div>
                     </a>
                   </div>
                 </div>
@@ -53,44 +53,17 @@
             </div>
             <div class="col-3">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                   <div class="profile-tile">
                     <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/5.png"> </div>
-                      <div class="pt-user-name"> <b>0 Kits</b> <br> Professional+ </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="profile-tile">
-                    <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/6.png"> </div>
-                      <div class="pt-user-name"> <b>0 Kits</b> <br> Premium </div>
+                      <div class="pt-avatar-w"> <img src="<?php echo site_url().'static/backoffice/images/plan/apertura_premium.png';?>"> </div>
+                      <div class="pt-user-name"> <b><?php echo $obj_total->total_premium;?> Kits</b> <br> Premium </div>
                     </a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-3">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="profile-tile">
-                    <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/7.png"> </div>
-                      <div class="pt-user-name"> <b>0 Kits</b> <br> Premium + </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="profile-tile">
-                    <a class="profile-tile-box" href="#">
-                      <div class="pt-avatar-w"> <img src="https://18kworld.com/img/avatar/8.png"> </div>
-                      <div class="pt-user-name"> <b>0 Kits</b> <br> Executive </div>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="element-box-tp">
@@ -98,194 +71,70 @@
             <table class="table table-padded table-condensed">
               <thead>
                 <tr>
-                  <th class="text-center"> # </th>
-                  <th class="text-center"> Nome e<br>Login </th>
-                  <th class="text-center"> Dados de<br>Contato </th>
-                  <th class="text-center"> Kit e<br>Cadastro </th>
-                  <th class="text-center"> Produtividade </th>
-                  <th class="text-center"> Data de<br>Cadastro </th>
-                  <th class="text-center"> Data de<br>Ativação </th>
-                  <th class="text-center"> Status </th>
-                  <th class="text-center"> Navegação </th>
+                  <th class="text-center"> Nombre y <br>Usuario </th>
+                  <th class="text-center"> Datos de<br>  Contacto</th>
+                  <th class="text-center"> Plan <br> </th>
+                  <th class="text-center"> Fecha de<br>Registro </th>
+                  <th class="text-center"> Fecha de<br>Activación </th>
+                  <th class="text-center"> Estado </th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">David pico bastilla</span> <br> <span><b>@Davipico1</b></span> </td>
-                  <td class="text-center"> 573215790754 <br> <span class="lighter">mariaalejandra.zequeda@gmail.com</span> </td>
-                  <td class="text-center"> <span>Start</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/09/02</span><br><span class="smaller lighter">15:09 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>03/09/2019</span><br> <span class="smaller lighter">00:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/96673" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Fresia Huamani Apumayta</span> <br> <span><b>@huamani1989</b></span> </td>
-                  <td class="text-center"> 51935184530 <br> <span class="lighter">apumaytafresia@gmail.com</span> </td>
-                  <td class="text-center"> <span>* Start</span> <br> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/08/21</span><br><span class="smaller lighter">11:07 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>21/08/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/88274" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Miguel Chumbipuma</span> <br> <span><b>@pumastar</b></span> </td>
-                  <td class="text-center"> 51985600099 <br> <span class="lighter">achumbipumatorres@gmail.com</span> </td>
-                  <td class="text-center"> <span>Start +</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/08/19</span><br><span class="smaller lighter">16:27 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>19/08/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/86819" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Veronica inhala rojas</span> <br> <span><b>@Veronicamillonaria</b></span> </td>
-                  <td class="text-center">
-                  51961735100 <br> <span class="lighter">verilu23@gmail.com</span> </td>
-                  <td class="text-center"> <span>Passport</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/08/17</span><br><span class="smaller lighter">22:12 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>17/08/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/85835" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">emanuel montes</span> <br> <span><b>@emet87</b></span> </td>
-                  <td class="text-center"> 51929621876 <br> <span class="lighter">emanuelmontes87@hotmail.com</span> </td>
-                  <td class="text-center"> <span>-</span> <br> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/08/15</span><br><span class="smaller lighter">12:09 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <a class="badge badge-danger">Inativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Sem lado </button>
-                    <div class="btn-group mb-2"> <button aria-expanded="false" aria-haspopup="true" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton3"
-                        type="button"> Sem lado </button>
-                      <div aria-labelledby="dropdownMenuButton3" class="dropdown-menu"> <a href="#" class="dropdown-item" onclick="loadUrlModal('Mudar direção','https://18kworld.com/bo/network/direction_preference/84215');"> Alterar Lado </a>                        </div>
-                    </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Sem lado </button>
-                    <div class="btn-group mb-2"> <button aria-expanded="false" aria-haspopup="true" class="btn btn-warning dropdown-toggle btn-sm" data-toggle="dropdown" id="dropdownMenuButton3"
-                        type="button"> Sem lado </button>
-                      <div aria-labelledby="dropdownMenuButton3" class="dropdown-menu"> <a href="#" class="dropdown-item" onclick="loadUrlModal('Mudar direção','https://18kworld.com/bo/network/direction_preference/84215');"> Alterar Lado </a>                        </div>
-                    </div> <a href="https://18kworld.com/bo/network/directs/84215" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a> </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Diego Adrian Santos</span> <br> <span><b>@businessclub1</b></span> </td>
-                  <td class="text-center"> 51935071970 <br> <span class="lighter">diego.adrian.santos20@gmail.com</span> </td>
-                  <td class="text-center"> <span>Start</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/08/04</span><br><span class="smaller lighter">20:45 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>04/08/2019</span><br> <span class="smaller lighter">00:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/76487" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Martin Jhonny Fredy Rivas Nunez</span> <br> <span><b>@martinrivas1</b></span> </td>
-                  <td class="text-center">
-                  51943999446 <br> <span class="lighter">studiorivas3@gmail.com</span> </td>
-                  <td class="text-center"> <span>Start +</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 150 </span> </td>
-                  <td class="text-center"> <span>2019/07/29</span><br><span class="smaller lighter">19:52 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>29/07/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Esquerdo </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/71713" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Yenolis Yendyz</span> <br> <span><b>@yendyz</b></span> </td>
-                  <td class="text-center"> 51999170218 <br> <span class="lighter">yendyz@gmail.com</span> </td>
-                  <td class="text-center"> <span>* Start</span> <br> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 90 </span> </td>
-                  <td class="text-center"> <span>2019/07/29</span><br><span class="smaller lighter">13:38 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>29/07/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/71404" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Rolando Contreras</span> <br> <span><b>@goldenteam4</b></span> </td>
-                  <td class="text-center"> 51929498649 <br> <span class="lighter">pastorolandoc@hotmail.com</span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/07/24</span><br><span class="smaller lighter">20:39 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <a class="badge badge-danger">Inativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Sem lado </button>
-                    <div class="btn-group mb-2"> <button aria-expanded="false" aria-haspopup="true" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" id="dropdownMenuButton3"
-                        type="button"> Sem lado </button>
-                      <div aria-labelledby="dropdownMenuButton3" class="dropdown-menu"> <a href="#" class="dropdown-item" onclick="loadUrlModal('Mudar direção','https://18kworld.com/bo/network/direction_preference/67954');"> Alterar Lado </a>                        </div>
-                    </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Sem lado </button>
-                    <div class="btn-group mb-2"> <button aria-expanded="false" aria-haspopup="true" class="btn btn-warning dropdown-toggle btn-sm" data-toggle="dropdown" id="dropdownMenuButton3"
-                        type="button"> Sem lado </button>
-                      <div aria-labelledby="dropdownMenuButton3" class="dropdown-menu"> <a href="#" class="dropdown-item" onclick="loadUrlModal('Mudar direção','https://18kworld.com/bo/network/direction_preference/67954');"> Alterar Lado </a>                        </div>
-                    </div> <a href="https://18kworld.com/bo/network/directs/67954" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a> </td>
-                </tr>
-                <tr>
-                  <td class="text-center"> </td>
-                  <td class="text-center"> <span class="smaller lighter">Rodney Blanco Pinedo</span> <br> <span><b>@Liderande</b></span> </td>
-                  <td class="text-center"> 51982202901 <br> <span class="lighter">yendorr886@gmail.com</span> </td>
-                  <td class="text-center"> <span>Passport</span> <br> <span class="smaller lighter"> DAM Pack </span> </td>
-                  <td class="text-center"> <span>-</span> <br> <span class="smaller lighter"> Pontos: 0 </span> </td>
-                  <td class="text-center"> <span>2019/07/19</span><br><span class="smaller lighter">23:53 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <span>20/07/2019</span><br> <span class="smaller lighter">21:00 <i class="far fa-clock"></i></span> </td>
-                  <td class="text-center"> <a class="badge badge-success">Ativo</a> </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> <a class="badge badge-danger">Inativo</a> </div>
-                  </td>
-                  <td class="row-actions"> <button class="mb-2 btn btn-warning btn-sm" style="cursor: default;"> Direito </button>
-                    <div class="btn-group mb-2"> </div> <a href="https://18kworld.com/bo/network/directs/63530" class="mb-2 btn btn-info btn-sm" style="color: #FFF"> Visualizar Rede</a>                    </td>
-                </tr>
+                  <?php 
+                  foreach ($obj_referidos as $value) { ?>
+                        <tr>
+                              <td class="text-center"> <span class="smaller lighter"><?php echo $value->first_name." ".$value->last_name?></span> <br> <span><b><?php echo "@".$value->username;?></b></span> </td>
+                              <td class="text-center"> <?php echo $value->phone;?> <br> <span class="lighter"><?php echo $value->email;?></span> </td>
+                              <td class="text-center"> <span>
+                                      <?php 
+                                      switch ($value->kit_id) {
+                                          case 1:
+                                                echo "Membership";    
+                                              break;
+                                          case 2:
+                                                echo "Inicio";    
+                                              break;
+                                          case 3:
+                                                echo "Apertura";    
+                                              break;
+                                          case 4:
+                                               echo "Elite"; 
+                                              break;
+                                          case 5:
+                                              echo "Premium";   
+                                              break;
+                                          default:
+                                              echo "-";   
+                                              break;
+                                      }
+                                      ?>
+                                  </span> <br> <span class="smaller lighter"> Actual </span> </td>
+                              <td class="text-center"> <span>  <?php echo formato_fecha_barras($value->created_at);?></span><br> <span class="smaller lighter"><?php echo formato_fecha_minutos($value->created_at);?> <i class="far fa-clock"></i></span> </td>
+                              <td class="text-center"> <span>  <?php echo $value->date_start==""?"-": formato_fecha_barras($value->date_start);?></span><br> <span class="smaller lighter"><?php echo formato_fecha_minutos($value->date_start);?> <i class="far fa-clock"></i></span> </td>
+                              <td class="row-actions"> 
+                                <div class="btn-group mb-2"> 
+                                    <?php 
+                                    if($value->active == 1){ ?>
+                                            <a class="badge badge-success">Activo</a>
+                                    <?php }else{ ?>
+                                            <a class="badge badge-danger">Inativo</a> 
+                                    <?php } ?>
+                                </div>
+                              </td>
+                        </tr>
+                  <?php } ?>
               </tbody>
             </table>
           </div>
         </div>
-        <div class="col-md-12" style="margin: 10px auto;">
+<!--        <div class="col-md-12" style="margin: 10px auto;">
           <ul class="pagination">
             <li class="page-item disabled"><span class="page-link">«</span></li>
             <li class="page-item active"><span class="page-link">1</span></li>
             <li class="page-item"><a class="page-link" href="https://18kworld.com/bo/network/directs/62208?page=2">2</a></li>
             <li class="page-item"><a class="page-link" href="https://18kworld.com/bo/network/directs/62208?page=2" rel="next">»</a></li>
           </ul>
-        </div>
+        </div>-->
       </div>
       <form method="post" id="formConfirmInvoice" action="" onsubmit="return sendWithValidation($(this));"> <input type="hidden" name="cofirm_invoice_id" id="cofirm_invoice_id" value="sss"> <input type="hidden" name="_token" value="VHHrXR8gvwphmQbkUhdNaQvjXNOYIYmGYF3DyXyk">        </form>
     </div>
