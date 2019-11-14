@@ -27,19 +27,35 @@
                     <div class="col-md-3">
                       <div class="element-box el-tablo">
                         <div class="label"> Plan Actual </div>
-                        <div class="value"> <img src="<?php echo site_url().'static/backoffice/images/plan/inicio.png';?>" alt="plan" width="80"/></div>
+                        <div class="value"> 
+                            <?php 
+                                if(isset($obj_customer->kit_img) == ""){
+                                    $var_img = "clear_position.png";
+                                }else{
+                                    $var_img = $obj_customer->kit_img;
+                                }
+                            ?>
+                            <img src='<?php echo site_url()."static/backoffice/images/plan/$var_img";?>' alt="plan" width="80"/>
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="element-box el-tablo">
                         <div class="label"> Rango Actual </div>
-                        <div class="value"> <img src="<?php echo site_url().'static/backoffice/images/rangos/sin_rango.png';?>" alt="rango" width="70"/></div>
+                            <?php 
+                                if(isset($obj_customer->img) == ""){
+                                    $var_range = "sin_rango.png";
+                                }else{
+                                    $var_range = $obj_customer->img;
+                                }
+                            ?>
+                        <div class="value"> <img src='<?php echo site_url()."static/backoffice/images/rangos/$var_range";?>' alt="rango" width="70"/></div>
                       </div>
                     </div>
                       <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
                         <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-users" style="font-size: 35px; color: #4a3116;"></i>
-                            <div class="pt-user-name"> Personas Directas<br> <b>0</b> </div>
+                            <div class="pt-user-name"> Personas Directas<br> <b><?php echo $obj_total_referidos->total_referred;?></b> </div>
                         </a>
                       </div>
                     </div>
@@ -60,7 +76,7 @@
                     <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
                         <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-map" style="font-size: 35px; color: #4a3116;"></i>
-                            <div class="pt-user-name"> PRÓXIMO RANGO<br> <b>STAR 1</b> </div>
+                            <div class="pt-user-name"> PRÓXIMO RANGO<br> <b><?php echo $obj_next_range->name;?></b> </div>
                         </a>
                       </div>
                     </div>
@@ -145,21 +161,27 @@
                       <div class="element-wrapper">
                         <div class="element-box">
                           <div class="text-center">
+                              <?php if(isset($obj_customer->img) == ""){
+                                            $var_next_range = "sin_rango.png";
+                                        }else{
+                                            $var_next_range = $obj_customer->img;
+                               }?>
+                              
                             <div class="d-block d-sm-none"> 
-                                <img class="img-responsive" src="<?php echo site_url().'static/backoffice/images/rangos/sin_rango.png';?>" style="max-width: 70px;"> 
+                                <img class="img-responsive" src='<?php echo site_url()."static/backoffice/images/rangos/$var_next_range";?>' style="max-width: 70px;"> 
                                 <img class="img-responsive" src="https://cdn.onlinewebfonts.com/svg/img_317292.png" style="max-width: 30px; margin: 0 20px; opacity: 0.2;"> 
-                                <img class="img-responsive" src="<?php echo site_url().'static/backoffice/images/rangos/1star.png';?>" style="max-width: 70px;">                          
+                                <img class="img-responsive" src='<?php echo site_url()."static/backoffice/images/rangos/$obj_next_range->img";?>' style="max-width: 70px;">                          
                             </div>
                             <div class="d-none d-sm-block"> 
-                                <img class="img-responsive" src="<?php echo site_url().'static/backoffice/images/rangos/sin_rango.png';?>" style="max-width: 90px;"> 
+                                <img class="img-responsive" src='<?php echo site_url()."static/backoffice/images/rangos/$var_next_range";?>' style="max-width: 90px;"> 
                                 <img class="img-responsive" src="https://cdn.onlinewebfonts.com/svg/img_317292.png" style="max-width: 60px; margin: 0 20px; opacity: 0.2;"> 
-                                <img class="img-responsive" src="<?php echo site_url().'static/backoffice/images/rangos/1star.png';?>" style="max-width: 90px;">                          
+                                <img class="img-responsive" src='<?php echo site_url()."static/backoffice/images/rangos/$obj_next_range->img";?>' style="max-width: 90px;">                          
                             </div>
                           </div>
                           <div class="os-progress-bar warning">
                             <div class="bar-labels">
                               <div class="bar-label-left"> 0% </div>
-                              <div class="bar-label-right"> <span class="info">0 / 3000</span> </div>
+                              <div class="bar-label-right"> <span class="info">0 / <?php echo format_number_miles($obj_next_range->point_grupal);?></span> </div>
                             </div>
                             <div class="bar-level-1" style="width: 100%">
                               <div class="bar-level-3" style="width: 0%"></div>
