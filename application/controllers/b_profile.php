@@ -18,13 +18,18 @@ class B_profile extends CI_Controller {
                                     customer.email,
                                     customer.first_name,
                                     customer.last_name,
+                                    customer.btc_address,
                                     customer.created_at,
                                     customer.date_start,
+                                    customer.address,
+                                    customer.phone,
                                     customer.dni,
                                     customer.active,
+                                    paises.nombre,
                                     kit.name as kit",
-                        "where" => "customer.customer_id = $customer_id and customer.status_value = 1",
-                        "join" => array('kit, customer.kit_id = kit.kit_id'),
+                        "where" => "customer.customer_id = $customer_id and customer.status_value = 1 and paises.id_idioma = 7",
+                        "join" => array('kit, customer.kit_id = kit.kit_id',
+                                        'paises, customer.country = paises.id'),
                         );
 
         $obj_customer = $this->obj_customer->get_search_row($params);
@@ -69,7 +74,25 @@ class B_profile extends CI_Controller {
                 }
                echo json_encode($data); 
             }
-        }
+    }
+    
+    public function update_wallet(){
+             if($this->input->is_ajax_request()){   
+                //SELECT ID FROM CUSTOMER
+               $wallet = trim($this->input->post('wallet'));
+               $customer_id = $_SESSION['customer']['customer_id'];
+               
+                    //UPDATE DATA EN CUSTOMER TABLE
+                    $data = array(
+                        'btc_address' => $wallet,
+                        'updated_by' => $customer_id,
+                        'updated_at' => date("Y-m-d H:i:s")
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+                    $data['status'] = "true";
+               echo json_encode($data); 
+            }
+    }
     
     public function get_session(){          
         if (isset($_SESSION['customer'])){

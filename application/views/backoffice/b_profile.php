@@ -44,10 +44,34 @@
                         <div class="label"> Fecha de Registro </div>
                       </div>
                     </div>
-                    <div class="col-sm-12 b-b">
+                    <div class="col-sm-6 b-b">
                       <div class="el-tablo centered padded-v">
                         <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->created_at!=""?formato_fecha_barras($obj_customer->created_at):"-";?> </div>
                         <div class="label"> Fecha de Activación </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->dni;?> </div>
+                        <div class="label"> DNI / Cedula </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->phone;?> </div>
+                        <div class="label"> Teléfono </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->nombre;?> </div>
+                        <div class="label"> País </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->address;?> </div>
+                        <div class="label"> Dirección </div>
                       </div>
                     </div>
                   </div>
@@ -78,44 +102,71 @@
                   </ul>
                   <div class="body" style="margin-top: 30px;">
                     <div id="show_wallet_div">
-                        <form class="form-horizontal" enctype="multipart/form-data" action="javascript:void(0);"> 
+                        <form class="form-horizontal" onsubmit="change_wallet();" enctype="multipart/form-data" action="javascript:void(0);"> 
                             <div class="form-group"> 
                                 <label class="control-label"> Su hash de recibimiento </label> 
-                                <input type="text" name="wallet" id="wallet" class="form-control">
-                              <p>* Verificar los datos de recibimiento debido a que es bajo su responzabilidad.</p>
+                                <input type="text" name="wallet" value="<?php echo $obj_customer->btc_address;?>" id="wallet" class="form-control">
+                              <p>* Verificar los datos de recibimiento debido es bajo su responzabilidad.</p>
                             </div>
-                                <div class="form-group">
-                                  <div class="col-lg-12" align="right"> 
-                                      <button class="mr-2 mb-2 btn btn-success" onclick="change_wallet();" style="margin-top: 30px;">Cambiar billetera de cobro <i class="os-icon os-icon-grid-18"></i></button>        
-                                  </div>
+                            <div class="form-group has-feedback" style="display: none;" id="wallet_error">
+                                <div class="alert alert-danger validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">Ingrese billetera valida</p>
                                 </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-lg-12" align="right"> 
+                                  <button class="mr-2 mb-2 btn btn-success" type="submit" style="margin-top: 30px;">Cambiar billetera de cobro <i class="os-icon os-icon-grid-18"></i></button>        
+                              </div>
+                            </div>
+                            <div class="form-group has-feedback" style="display: none;" id="wallet_success">
+                                <div class="alert alert-success validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">Billetera cambiada con éxito.</p>
+                                </div>
+                            </div>
                           </form>
                     </div> 
+                      
+                      
                       <div id="show_pass_div" style="display:none;">
-                          <form role="form" class="form-horizontal " onsubmit="" action="" method="post" enctype="multipart/form-data">
+                          <form class="form-horizontal" onsubmit="change_pass();" enctype="multipart/form-data" action="javascript:void(0);">
                             <div class="form-group">
                               <div class="col-lg-12"> 
                                   <label class="control-label">Contraseña Actual</label> 
-                                  <input type="password" name="current_password" id="current_password" class="form-control">        
+                                  <input type="password" name="pass" id="pass" class="form-control">        
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-lg-12"> 
                                   <label class="control-label">Nueva Contraseña</label> 
-                                  <input type="password" name="new_password" id="new_password" class="form-control"> 
+                                  <input type="password" name="new_pass" id="new_pass" class="form-control"> 
                               </div>
                             </div>
                             <div class="form-group">
                               <div class="col-lg-12"> 
                                   <label class="control-label">Confirme Nueva Contraseña</label> 
-                                  <input type="password" name="new_password_confirmation" id="new_password_confirmation" class="form-control"> 
+                                  <input type="password" name="new_pass_confirm" id="new_pass_confirm" class="form-control"> 
                               </div>
                             </div>
+                            <div class="form-group has-feedback" style="display: none;" id="pass_error">
+                                <div class="alert alert-danger validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">Ingrese una contraseña valida</p>
+                                </div>
+                            </div>  
+                            <div class="form-group has-feedback" style="display: none;" id="error_no_equal">
+                                <div class="alert alert-danger validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">Las contraseña no son iguales</p>
+                                </div>
+                            </div>  
                             <div class="form-group">
                               <div class="col-lg-12" align="right"> 
-                                  <button class="mr-2 mb-2 btn btn-success" onclick="change_pass();">Actualizar Contraseña</button> 
+                                  <button class="mr-2 mb-2 btn btn-success" type="submit">Actualizar Contraseña</button> 
                               </div>
                             </div>
+                            <div class="form-group has-feedback" style="display: none;" id="pas_success">
+                                <div class="alert alert-success validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">Contraseña cambiada con éxito.</p>
+                                </div>
+                            </div>  
                           </form>
                         </div> 
                   </div>
@@ -132,17 +183,20 @@
 <script>
 $(document).ready(function(){
   $("#show_wallet").click(function(){
+    $("#show_pass").removeClass( "active show" );
+    $("#show_wallet").addClass( "active show" );
     $("#show_pass_div").hide(1000);
     $("#show_wallet_div").show(1000);
   });
   
   $("#show_pass").click(function(){
+    $("#show_wallet").removeClass( "active show" );
+    $("#show_pass").addClass( "active show" );
     $("#show_wallet_div").hide(1000);
     $("#show_pass_div").show(1000);
   });
-  
 });
 </script>
-<script src='<?php echo site_url().'static/page_front/js/script/profile.js';?>'></script>
+<script src='<?php echo site_url().'static/backoffice/js/script/profile.js';?>'></script>
 
 

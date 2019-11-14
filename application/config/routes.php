@@ -59,6 +59,7 @@ $route['backoffice'] = "b_home";
 
 $route['backoffice/profile'] = "b_profile";
 $route['backoffice/profile/update_password'] = "b_profile/update_password";
+$route['backoffice/profile/update_wallet'] = "b_profile/update_wallet";
 
 $route['backoffice/plan'] = "b_plan";
 
