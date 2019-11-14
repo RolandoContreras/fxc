@@ -1,153 +1,148 @@
-<div class="main-content">
-  <div class="section__content section__content--p30">
-    <div class="container-fluid">
-      <div class="row">
-          <!--DATOS PERSONALES-->
-          <div class="col-lg-6">
-            <div class="card">
-                <div class="card-header"><strong>Datos</strong> Personales</div>
-                    <div class="card-body card-block">
-                        <form class="form-horizontal">
-                            <div class="row form-group">
-                              <div class="col col-md-3">
-                                  <label for="text-input" class=" form-control-label">Nombres</label>
-                              </div>
-                              <div class="col-12 col-md-9">
-                                  <input type="text" id="name" name="name" value="<?php echo $obj_customer->first_name;?>" class="input-sm form-control-sm form-control" disabled>
-                              </div>
-                            </div>
-                            <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Apellidos</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="last_name" name="last_name" value="<?php echo $obj_customer->last_name;?>" class="input-sm form-control-sm form-control" disabled>
-                            </div>
-                          </div>
-                            <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Email</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="email" name="email" value="<?php echo $obj_customer->email;?>" class="input-sm form-control-sm form-control" disabled>
-                            </div>
-                          </div>
-                            <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Cedula / DNI</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="dni" name="dni"value=" <?php echo $obj_customer->dni;?>" class="input-sm form-control-sm form-control" disabled>
-                            </div>
-                          </div>
-                        </form>
+<div class="content-w">
+  <ul class="breadcrumb">
+    <li class="breadcrumb-item"> <a href="<?php echo site_url().'backoffice';?>">Tablero</a> </li>
+  </ul>
+  <div class="content-i">
+    <div class="content-box">
+      <div class="container-fluid" style="margin-top: 30px;">
+        <div class="row clearfix">
+          <div class="col-xl-4 col-lg-4 col-md-5">
+            <div class="user-profile compact">
+                <div class="up-head-w" style="background-image:url('<?php echo site_url().'static/page_front/images/header_image.jpg';?>')">
+                <div class="up-main-info">
+                  <h2 class="up-header"> <?php echo $obj_customer->first_name." ".$obj_customer->last_name;?></h2>
+                  <h6 class="up-sub-header"> Email: <?php echo $obj_customer->email;?> <br> Usuario: <?php echo "@".$obj_customer->username;?> <br> Documento: <?php echo $obj_customer->dni;?></h6>
+                </div> 
+                </div>
+              <div class="up-controls">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="value-pair">
+                      <div class="label"> Estado: </div>
+                      <?php 
+                      if($obj_customer->active == "1"){ ?>
+                            <div class="value badge badge-pill badge-success"> Activo </div>
+                      <?php  }else{ ?>
+                          <div class="value badge badge-pill badge-danger"> Inactivo </div>
+                      <?php } ?>
                     </div>
-                </div>
-            </div>
-          <!--CONTRASEÑAS-->
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-header"><strong>Contraseña</strong></div>
-            <div class="card-body card-block">
-              <form action="javascript:void(0);">
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                    <input type="password" id="pass" name="pass" placeholder="Contraseña Actual" class="input-sm form-control-sm form-control"></div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                    <input type="password" id="new_pass" name="new_pass" placeholder="Nueva Contraseña" class="input-sm form-control-sm form-control"></div>
-                </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-asterisk"></i></div>
-                    <input type="password" id="new_pass_2" name="new_pass_2" placeholder="Confirme Nueva Contraseña" class="input-sm form-control-sm form-control">
                   </div>
                 </div>
-                <div class="form-group">
-                    <button onclick="alter_password();" class="btn btn-success btn-sm">Cambiar</button>
+              </div>
+              <div class="up-contents">
+                <div class="m-b">
+                  <div class="row m-b">
+                    <div class="col-sm-6 b-r b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->kit;?> </div>
+                        <div class="label"> Mi Plan </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 b-r b-b">
+                      <div class="el-tablo centered padded-v">
+                          <div class="value" style="font-size: 18px;"> <?php echo formato_fecha_barras($obj_customer->created_at);?> </div>
+                        <div class="label"> Fecha de Registro </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-12 b-b">
+                      <div class="el-tablo centered padded-v">
+                        <div class="value" style="font-size: 18px;"> <?php echo $obj_customer->created_at!=""?formato_fecha_barras($obj_customer->created_at):"-";?> </div>
+                        <div class="label"> Fecha de Activación </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div id="message_no_equal" class="sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
-                    <span class="badge badge-pill badge-danger">Fallo </span> Las contraseñas no coinciden
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-8 col-lg-8 col-md-7">
+            <div class="element-wrapper">
+              <div class="element-box">
+                <div class="element-info">
+                  <div class="element-info-with-icon">
+                    <div class="element-info-icon">
+                      <div class="os-icon os-icon-edit-1"></div>
+                    </div>
+                    <div class="element-info-text">
+                      <h5 class="element-inner-header"> Información Editable </h5>
+                      <div class="element-inner-desc"> Seleccione la categoría abajo para editar </div>
+                    </div>
+                  </div>
+                  <ul class="nav nav-tabs" style="padding: 20px;">
+                    <li class="nav-item" style="cursor: pointer;"> 
+                        <a id="show_wallet" class="nav-link active show" align="center">Billetera BTC</a> 
+                    </li>
+                    <li class="nav-item" style="cursor: pointer;"> 
+                        <a id="show_pass" class="nav-link" align="center">Contraseña</a>                      
+                    </li>
+                  </ul>
+                  <div class="body" style="margin-top: 30px;">
+                    <div id="show_wallet_div">
+                        <form class="form-horizontal" enctype="multipart/form-data" action="javascript:void(0);"> 
+                            <div class="form-group"> 
+                                <label class="control-label"> Su hash de recibimiento </label> 
+                                <input type="text" name="wallet" id="wallet" class="form-control">
+                              <p>* Verificar los datos de recibimiento debido a que es bajo su responzabilidad.</p>
+                            </div>
+                                <div class="form-group">
+                                  <div class="col-lg-12" align="right"> 
+                                      <button class="mr-2 mb-2 btn btn-success" onclick="change_wallet();" style="margin-top: 30px;">Cambiar billetera de cobro <i class="os-icon os-icon-grid-18"></i></button>        
+                                  </div>
+                                </div>
+                          </form>
+                    </div> 
+                      <div id="show_pass_div" style="display:none;">
+                          <form role="form" class="form-horizontal " onsubmit="" action="" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                              <div class="col-lg-12"> 
+                                  <label class="control-label">Contraseña Actual</label> 
+                                  <input type="password" name="current_password" id="current_password" class="form-control">        
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-lg-12"> 
+                                  <label class="control-label">Nueva Contraseña</label> 
+                                  <input type="password" name="new_password" id="new_password" class="form-control"> 
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-lg-12"> 
+                                  <label class="control-label">Confirme Nueva Contraseña</label> 
+                                  <input type="password" name="new_password_confirmation" id="new_password_confirmation" class="form-control"> 
+                              </div>
+                            </div>
+                            <div class="form-group">
+                              <div class="col-lg-12" align="right"> 
+                                  <button class="mr-2 mb-2 btn btn-success" onclick="change_pass();">Actualizar Contraseña</button> 
+                              </div>
+                            </div>
+                          </form>
+                        </div> 
+                  </div>
                 </div>
-                <div id="message_no_pass" class="sufee-alert alert with-close alert-danger alert-dismissible fade show" style="display: none">
-                    <span class="badge badge-pill badge-danger">Fallo </span> La contraseña actual no es correcta
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-                <div id="message_success" class="sufee-alert alert with-close alert-success alert-dismissible fade show" style="display: none">
-                    <span class="badge badge-pill badge-success">Éxito </span> Contraseña Cambiada
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
-        <!--DATOS BANCARIOS-->
-          <div class="col-lg-6">
-            <div class="card">
-              <div class="card-header"><strong>Datos</strong> Bancarios</div>
-                  <div class="card-body card-block">
-                    <form>
-                        <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Nombre del Banco</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="Ingrese Nombre" class="input-sm form-control-sm form-control ">
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class="input-sm form-control-label">Número de Cuenta</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="Ingrese Cuenta" class="input-sm form-control-sm form-control">
-                            </div>
-                        </div>
-                        <div class="row form-group">
-                            <div class="col col-md-3">
-                                <label for="text-input" class=" form-control-label">Código Interbancario</label>
-                            </div>
-                            <div class="col-12 col-md-9">
-                                <input type="text" id="text-input" name="text-input" placeholder="Ingrese CCI" class="input-sm form-control-sm form-control">
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-dot-circle-o"></i> Enviar</button>
-                </div>
-            </div>
-        </div>
-        <!--KYC-->
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-header"><strong>Verificación</strong> KYC</div>
-            <div class="card-body card-block">
-              <form class="form-horizontal">
-                <div class="row form-group">
-                  <div class="col col-md-3"><label for="hf-email" class=" form-control-label">DNI /Cedula (Foto)</label></div>
-                  <div class="col-12 col-md-9">
-                      <input type="file" id="file-input" name="file-input" disabled class="form-control-file">
-                  </div>
-                </div>
-                <div class="row form-group">
-                  <div class="col col-md-3"><label for="hf-password" class=" form-control-label">Recibo de Servicios</label></div>
-                  <div class="col-12 col-md-9">
-                    <input type="file" id="file-input" name="file-input" disabled class="form-control-file">
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="card-footer">
-                <button type="submit" class="btn btn-success btn-sm"> <i class="fa fa-dot-circle-o"></i> Submit</button></div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-</div>
-<script src="<?php echo site_url().'static/backoffice/js/script/profile.js';?>"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#show_wallet").click(function(){
+    $("#show_pass_div").hide(1000);
+    $("#show_wallet_div").show(1000);
+  });
+  
+  $("#show_pass").click(function(){
+    $("#show_wallet_div").hide(1000);
+    $("#show_pass_div").show(1000);
+  });
+  
+});
+</script>
+<script src='<?php echo site_url().'static/page_front/js/script/profile.js';?>'></script>
+
+

@@ -1,4 +1,4 @@
-function alter_password(){
+function change_pass(){
     var pass = document.getElementById("pass").value;
     var new_pass = document.getElementById("new_pass").value;
     var new_pass_2 = document.getElementById("new_pass_2").value;
@@ -39,6 +39,47 @@ function alter_password(){
                 
                 } 
 }   
+
+function change_wallet(){
+    var wallet = document.getElementById("wallet").value;
+    //VERIFY DATA RECAPTCHA
+        
+            if(pass == ""){
+                document.getElementById("message_no_pass").style.display = "block";
+                $("#pass").focus();
+            }else if(new_pass == ""){
+                document.getElementById("message_no_pass").style.display = "block";
+                $("#new_pass").focus();
+            }else if(new_pass_2 == ""){
+                document.getElementById("message_no_pass").style.display = "block";
+                $("#new_pass_2").focus();
+            }else{
+                if(new_pass == new_pass_2){
+                    $.ajax({
+                       type: "post",
+                       url: site+"backoffice/profile/update_password",
+                       dataType: "json",
+                       data: {pass : pass,
+                              new_pass : new_pass,
+                              new_pass_2 : new_pass_2},
+                       success:function(data){          
+                           if(data.status == "true"){
+                               document.getElementById("message_no_pass").style.display = "none";
+                               document.getElementById("message_no_equal").style.display = "none";
+                               document.getElementById("message_success").style.display = "block";
+                           }else{
+                               document.getElementById("message_no_pass").style.display = "block";
+                           }
+                       }         
+                     });
+                    }else {
+                        document.getElementById("message_no_equal").style.display = "block";
+                        $("#new_pass").focus();
+                    }
+                
+                } 
+} 
+
 
 function validar_email( email ){
     var regex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;

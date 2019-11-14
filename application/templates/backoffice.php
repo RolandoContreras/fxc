@@ -191,21 +191,21 @@
               <div class="icon-w"> <i class="os-icon os-icon-checkmark"></i> </div> <span>Planes</span> </a>
           </li>
           <li class="has-sub-menu">
-            <a href="">
+            <a href="#">
               <div class="icon-w"> <i class="os-icon os-icon-bar-chart-up"></i> </div> <span>Finanzas</span> </a>
             <div class="sub-menu-w">
               <div class="sub-menu-header"> Finanzas </div>
               <div class="sub-menu-icon"> <i class="fa fa-search-dollar"></i> </div>
               <div class="sub-menu-i">
                 <ul class="sub-menu">
-                  <li> <a href="<?php echo site_url().'backoffice/history';?>">Historial</a> </li>
-                  <li> <a href="<?php echo site_url().'backoffice/invoice';?>">Facturas</a> </li>
+                  <li> <a href="#">Historial</a> </li>
+                  <li> <a href="#">Facturas</a> </li>
                 </ul>
               </div>
             </div>
           </li>
           <li>
-            <a href="<?php echo site_url().'backoffice/pay';?>">
+            <a href="#">
               <div class="icon-w">
                 <div class="os-icon os-icon-wallet-loaded"></div>
               </div> <span>Cobros</span> </a>
@@ -225,19 +225,19 @@
             </div>
           </li>
           <li>
-            <a href="<?php echo site_url().'backoffice/range';?>">
+            <a href="#">
               <div class="icon-w">
                 <div class="os-icon os-icon-map"></div>
               </div> <span>Plan Carrera</span> </a>
           </li>
           <li>
-            <a href="<?php echo site_url().'backoffice/files';?>" class="" style="padding-top: 4px; padding-bottom: 4px;">
+            <a href="#" class="" style="padding-top: 4px; padding-bottom: 4px;">
               <div class="icon-w">
                 <div class="os-icon os-icon-download"></div>
               </div> <span>Materiales</span> </a>
           </li>
           <li>
-            <a href="<?php echo site_url().'backoffice/support';?>">
+            <a href="#">
               <div class="icon-w">
                 <div class="os-icon os-icon-phone"></div>
               </div> <span>Soporte</span> </a>

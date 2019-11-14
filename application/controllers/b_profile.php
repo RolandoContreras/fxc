@@ -14,16 +14,21 @@ class B_profile extends CI_Controller {
         $customer_id = $_SESSION['customer']['customer_id'];
         //GET DATA PRICE CRIPTOCURRENCY
         $params = array(
-                        "select" =>"username,
-                                    email,
-                                    first_name,
-                                    last_name,
-                                    dni,
-                                    active",
-                        "where" => "customer_id = $customer_id and status_value = 1",
+                        "select" =>"customer.username,
+                                    customer.email,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.created_at,
+                                    customer.date_start,
+                                    customer.dni,
+                                    customer.active,
+                                    kit.name as kit",
+                        "where" => "customer.customer_id = $customer_id and customer.status_value = 1",
+                        "join" => array('kit, customer.kit_id = kit.kit_id'),
                         );
 
         $obj_customer = $this->obj_customer->get_search_row($params);
+        
         //GET PRICE CURRENCY
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_profile");
