@@ -1,25 +1,17 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class B_finance extends CI_Controller {
+class B_files extends CI_Controller {
      function __construct() {
         parent::__construct();
-//        $this->load->model("customer_model","obj_customer");
-//        $this->load->model("currency_model","obj_currency");
-//        $this->load->model("messages_model","obj_messages");
-//        $this->load->model("sell_model","obj_sell");
-//        $this->load->model("news_model","obj_news");
     }
 
     public function index()
     {
         //GET SESION ACTUALY
         $this->get_session();
-        /// VISTA
+        //GET CUSTOMER_ID
         $customer_id = $_SESSION['customer']['customer_id'];
-
-        //GET PRICE CURRENCY
-        
-        $this->tmp_backoffice->render("backoffice/b_history");
+        $this->tmp_backoffice->render("backoffice/b_files");
     }
     
     public function get_session(){          
@@ -34,6 +26,3 @@ class B_finance extends CI_Controller {
         }
     }
 }
-
-
-    

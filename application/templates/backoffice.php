@@ -54,8 +54,18 @@
   <script type="text/javascript">
     var site = '<?php echo site_url();?>';
   </script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = 'a38afe7d888e2f6aee2b1c4df7553d92f790f730';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
 </head>
-
 <body class="menu-position-side menu-side-left color-scheme-white full-screen with-content-panel">
   <div class="all-wrapper with-side-panel solid-bg-all">
     <div class="layout-w">
@@ -110,7 +120,7 @@
               <div class="sub-menu-w">
                 <div class="sub-menu-i">
                   <ul class="sub-menu">
-                    <li> <a href="<?php echo site_url().'backoffice/finance';?>">Historial</a> </li>
+                    <li> <a href="<?php echo site_url().'backoffice/history';?>">Historial</a> </li>
                     <li> <a href="<?php echo site_url().'backoffice/invoice';?>">Facturas</a> </li>
                   </ul>
                 </div>
@@ -123,7 +133,7 @@
                 </div> <span>Cobros</span> </a>
             </li>
             <li>
-              <a href="<?php echo site_url().'backoffice/range';?>">
+              <a href="<?php echo site_url().'backoffice/carrera';?>">
                 <div class="icon-w"> 
                     <i class="os-icon os-icon-map"></i> 
                 </div> <span>Plan Carrera</span> 
@@ -134,12 +144,6 @@
                 <div class="icon-w">
                   <div class="os-icon os-icon-download"></div>
                 </div> <span>Materiales</span> </a>
-            </li>
-            <li>
-              <a href="<?php echo site_url().'backoffice/support';?>">
-                <div class="icon-w">
-                  <div class="os-icon os-icon-phone"></div>
-                </div> <span>Soporte</span> </a>
             </li>
             <li>
               <a href="<?php echo site_url().'logout';?>">
@@ -198,7 +202,7 @@
               <div class="sub-menu-icon"> <i class="fa fa-search-dollar"></i> </div>
               <div class="sub-menu-i">
                 <ul class="sub-menu">
-                  <li> <a href="#">Historial</a> </li>
+                  <li> <a href="<?php echo site_url().'backoffice/history';?>">Historial</a> </li>
                   <li> <a href="#">Facturas</a> </li>
                 </ul>
               </div>
@@ -225,22 +229,16 @@
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="<?php echo site_url().'backoffice/carrera';?>">
               <div class="icon-w">
                 <div class="os-icon os-icon-map"></div>
               </div> <span>Plan Carrera</span> </a>
           </li>
           <li>
-            <a href="#" class="" style="padding-top: 4px; padding-bottom: 4px;">
+            <a href="<?php echo site_url().'backoffice/files';?>" class="" style="padding-top: 4px; padding-bottom: 4px;">
               <div class="icon-w">
                 <div class="os-icon os-icon-download"></div>
               </div> <span>Materiales</span> </a>
-          </li>
-          <li>
-            <a href="#">
-              <div class="icon-w">
-                <div class="os-icon os-icon-phone"></div>
-              </div> <span>Soporte</span> </a>
           </li>
           <li>
             <a href="<?php echo site_url().'login/logout';?>">

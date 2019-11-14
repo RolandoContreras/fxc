@@ -67,7 +67,11 @@ $route['backoffice/referred'] = "b_network";
 $route['backoffice/unilevel'] = "b_network/unilevel";
 
 
-$route['backoffice/finance'] = "b_finance";
+$route['backoffice/history'] = "b_finance";
+
+$route['backoffice/files'] = "b_files";
+
+$route['backoffice/carrera'] = "b_carrera";
 
 
 $route['dashboard'] = "dashboard";
