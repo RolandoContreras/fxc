@@ -16,7 +16,6 @@ class B_finance extends CI_Controller {
         /// VISTA
         $customer_id = $_SESSION['customer']['customer_id'];
         
-        
         //GET PLAN INFORMATION
         $params = array("select" =>"sum(amount) as total_maching,
                                     (SELECT sum(amount) FROM commissions WHERE customer_id = $customer_id and bonus_id = 1 and status_value = 1) as total_direct,

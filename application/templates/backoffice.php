@@ -108,7 +108,7 @@ window.smartsupp||(function(d) {
               <div class="sub-menu-w">
                 <div class="sub-menu-i">
                   <ul class="sub-menu">
-                    <li> <a href="<?php echo site_url().'backoffice/referrel';?>">Referidos Directos</a> </li>
+                    <li> <a href="<?php echo site_url().'backoffice/referred';?>">Referidos Directos</a> </li>
                     <li> <a href="<?php echo site_url().'backoffice/unilevel';?>">Arbol Unilevel</a> </li>
                   </ul>
                 </div>
@@ -140,13 +140,13 @@ window.smartsupp||(function(d) {
               </a>
             </li>
             <li>
-              <a href="" class="" style="padding-top: 4px; padding-bottom: 4px;">
+              <a href="<?php echo site_url().'backoffice/files';?>" class="" style="padding-top: 4px; padding-bottom: 4px;">
                 <div class="icon-w">
                   <div class="os-icon os-icon-download"></div>
                 </div> <span>Materiales</span> </a>
             </li>
             <li>
-              <a href="<?php echo site_url().'logout';?>">
+              <a href="<?php echo site_url().'login/logout';?>">
                 <div class="icon-w">
                   <div class="os-icon os-icon-signs-11"></div>
                 </div> <span>Salir</span> </a>
@@ -209,7 +209,7 @@ window.smartsupp||(function(d) {
             </div>
           </li>
           <li>
-            <a href="#">
+            <a href="<?php echo site_url().'backoffice/pay';?>">
               <div class="icon-w">
                 <div class="os-icon os-icon-wallet-loaded"></div>
               </div> <span>Cobros</span> </a>

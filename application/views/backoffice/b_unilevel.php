@@ -103,7 +103,7 @@
                                                 default:$range = "-";break;
                                         }?>
                                                 <li>
-                                                    <a href="#">
+                                                    <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value->customer_id);?>">
                                                         <div id="level-1" data-html="true" data-toggle="popover" data-content="&lt;b&gt;Usuario:&lt;/b&gt; <?php echo $value->username;?> &lt;br&gt; &lt;b&gt;Nombre:&lt;/b&gt; <?php echo $value->first_name." ".$value->last_name;?> &lt;br&gt; &lt;b&gt;Plan:&lt;/b&gt; <?php echo $kit;?>  &lt;/b&gt; &lt;br&gt; &lt;b&gt;Rango:&lt;/b&gt; <?php echo $range;?> &lt;/b&gt; &lt;br&gt; &lt;b&gt;">
                                                         <img src="<?php echo site_url()."static/backoffice/images/plan/$img";?>" class="img-responsive"> </div>
                                                     </a>
@@ -136,7 +136,7 @@
                                                                 }?>
                                                                 <?php if($value->customer_id == $value3->parend_id){ ?>
                                                                     <li>
-                                                                          <a href="#">
+                                                                          <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value3->customer_id);?>">
                                                                             <div id="level-2" data-html="true" data-toggle="popover" data-content="&lt;b&gt;Usuario:&lt;/b&gt; <?php echo $value3->username;?> &lt;br&gt; &lt;b&gt;Nombre:&lt;/b&gt; <?php echo $value3->first_name." ".$value3->last_name;?> &lt;br&gt; &lt;b&gt;Plan:&lt;/b&gt; <?php echo $kit;?>  &lt;/b&gt; &lt;br&gt; &lt;b&gt;Rango:&lt;/b&gt; <?php echo $range;?> &lt;/b&gt; &lt;br&gt; &lt;b&gt;">
                                                                             <img src="<?php echo site_url()."static/backoffice/images/plan/$img";?>" class="img-responsive"> </div>
                                                                           </a>
@@ -168,7 +168,7 @@
                                                                                             }?>
                                                                                             <?php if($value3->customer_id == $value4->parend_id){ ?>
                                                                                                     <li>
-                                                                                                          <a href="#">
+                                                                                                          <a href="<?php echo site_url().'backoffice/unilevel/'.encrypt($value4->customer_id);?>">
                                                                                                             <div id="level-3" data-html="true" data-toggle="popover" data-content="&lt;b&gt;Usuario:&lt;/b&gt; <?php echo $value4->username;?> &lt;br&gt; &lt;b&gt;Nombre:&lt;/b&gt; <?php echo $value4->first_name." ".$value4->last_name;?> &lt;br&gt; &lt;b&gt;Plan:&lt;/b&gt; <?php echo $kit;?>  &lt;/b&gt; &lt;br&gt; &lt;b&gt;Rango:&lt;/b&gt; <?php echo $range;?> &lt;/b&gt; &lt;br&gt; &lt;b&gt;">
                                                                                                             <img src="<?php echo site_url()."static/backoffice/images/plan/$img";?>" class="img-responsive"> </div>
                                                                                                           </a>

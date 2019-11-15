@@ -65,7 +65,7 @@ $route['backoffice/plan'] = "b_plan";
 
 $route['backoffice/referred'] = "b_network";
 $route['backoffice/unilevel'] = "b_network/unilevel";
-
+$route['backoffice/unilevel/([0-9a-z_A-Z-=+/]+)'] = "b_network/unilevel/unilevel/$1";
 
 $route['backoffice/history'] = "b_finance";
 $route['backoffice/invoice'] = "b_finance/invoice";
@@ -73,6 +73,8 @@ $route['backoffice/invoice'] = "b_finance/invoice";
 $route['backoffice/files'] = "b_files";
 
 $route['backoffice/carrera'] = "b_carrera";
+
+$route['backoffice/pay'] = "b_pay";
 
 
 $route['dashboard'] = "dashboard";

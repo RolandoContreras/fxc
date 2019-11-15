@@ -13,6 +13,7 @@ class B_network extends CI_Controller {
         $this->get_session();
         //GET CUSTOMER ACTUALLY
         $customer_id = $_SESSION['customer']['customer_id'];
+        
         //GET REFERIDOS INFORMATION
         $params = array(
                         "select" =>"customer.customer_id,
@@ -54,6 +55,16 @@ class B_network extends CI_Controller {
         $this->get_session();
         //GET CUSTOMER ACTUALLY
         $customer_id = $_SESSION['customer']['customer_id'];
+        
+        //GET DATA URL
+        $url = explode("/",uri_string());
+        
+        if(isset($url[2])){
+            $customer_id = decrypt($url[2]);
+        }else{
+            $customer_id = $_SESSION['customer']['customer_id'];
+        }    
+        
         
         //GET CUSTOMER PRINCIPAL
         $params = array(
