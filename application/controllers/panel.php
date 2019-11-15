@@ -13,8 +13,7 @@ class Panel extends CI_Controller{
 
          //GET PENDING ROWS
         $params = array("select" =>"count(*) as pending_comments,
-                                    (select count(*) from pay where active = 1) as pending_pay,
-                                    (select count(*) from support where active = 1) as pending_support",
+                                    (select count(*) from pay where active = 1) as pending_pay",
                         "where" => "active = 1");
         $obj_pending = $this->obj_comments->get_search_row($params);
         
@@ -35,7 +34,6 @@ class Panel extends CI_Controller{
                                     (select count(*) from customer) as total_customer, 
                                     (select count(*) from category) as total_category,
                                     (select count(*) from kit) as total_kit,
-                                    (select count(*) from support) as total_messages_support,
                                     (select count(*) from commissions) as total_commissions,
                                     (select count(*) from users) as total_users,
                                     (select count(*) from bonus) as total_bonus,

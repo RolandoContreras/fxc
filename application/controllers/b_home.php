@@ -6,10 +6,6 @@ class B_home extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("unilevel_model","obj_unilevel");
         $this->load->model("ranges_model","obj_ranges");
-//        $this->load->model("currency_model","obj_currency");
-//        $this->load->model("messages_model","obj_messages");
-//        $this->load->model("sell_model","obj_sell");
-//        $this->load->model("news_model","obj_news");
     }
 
     public function index()
