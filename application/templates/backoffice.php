@@ -203,7 +203,7 @@ window.smartsupp||(function(d) {
               <div class="sub-menu-i">
                 <ul class="sub-menu">
                   <li> <a href="<?php echo site_url().'backoffice/history';?>">Historial</a> </li>
-                  <li> <a href="#">Facturas</a> </li>
+                  <li> <a href="<?php echo site_url().'backoffice/invoice';?>">Facturas</a> </li>
                 </ul>
               </div>
             </div>

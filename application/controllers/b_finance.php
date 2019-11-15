@@ -5,6 +5,7 @@ class B_finance extends CI_Controller {
         parent::__construct();
           $this->load->model("customer_model","obj_customer");
           $this->load->model("commissions_model","obj_commissions");
+          $this->load->model("invoices_model","obj_invoices");
 
     }
 
@@ -49,6 +50,33 @@ class B_finance extends CI_Controller {
         $this->tmp_backoffice->render("backoffice/b_history");
     }
     
+    public function invoice(){
+        //GET SESION ACTUALY
+        $this->get_session();
+        /// VISTA
+        $customer_id = $_SESSION['customer']['customer_id'];
+        
+        //GET DATA COMISION
+        //TYPE 1 -  PLAN
+        //TYPE 2 -  MENSUALY
+                $params = array(
+                        "select" =>"invoices.invoice_id,
+                                    invoices.date,
+                                    kit.price,
+                                    kit.name,
+                                    invoices.active",
+                "join" => array( 'kit, invoices.kit_id = kit.kit_id'),
+                "where" => "invoices.customer_id = $customer_id and invoices.type = 1 and invoices.status_value = 1",
+                "order" => "invoices.invoice_id ASC");
+           //GET DATA FROM CUSTOMER
+        $obj_invoices = $this->obj_invoices->search($params);
+
+        //GET PRICE CURRENCY
+        $this->tmp_backoffice->set("obj_invoices",$obj_invoices);
+        $this->tmp_backoffice->render("backoffice/b_invoice");
+    }
+
+
     public function get_session(){          
         if (isset($_SESSION['customer'])){
             if($_SESSION['customer']['logged_customer']=="TRUE" && $_SESSION['customer']['status']=='1'){               
@@ -60,6 +88,8 @@ class B_finance extends CI_Controller {
             redirect(site_url().'home');
         }
     }
+    
+    
 }
 
 

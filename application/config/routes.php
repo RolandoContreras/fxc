@@ -68,6 +68,7 @@ $route['backoffice/unilevel'] = "b_network/unilevel";
 
 
 $route['backoffice/history'] = "b_finance";
+$route['backoffice/invoice'] = "b_finance/invoice";
 
 $route['backoffice/files'] = "b_files";
 
