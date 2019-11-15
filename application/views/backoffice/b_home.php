@@ -1,3 +1,4 @@
+<script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js'; ?>"></script>
 <div class="content-w">
         <div class="top-bar color-scheme-dark"> </div>
         <ul class="breadcrumb">
@@ -92,46 +93,38 @@
                     <div class="col-md-6">
                       <div class="element-box el-tablo">
                         <div class="table-responsive">
-                      <table class="table table-lightborder">
-                        <thead>
-                          <tr>
-                            <th class="text-center"> Bônus </th>
-                            <th class="text-center"> Esquerda </th>
-                            <th class="text-center"> Qualificado </th>
-                            <th class="text-center"> Direita </th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="user-with-avatar"> 
-                                  <img alt="" src="https://18kworld.com/img/avatar1.jpg"><span class="d-none d-xl-inline-block">Bônus Binário</span> 
-                              </div>
-                            </td>
-                            <td class="text-center">
-                              <div class="status-pill green" data-title="Qualificado" data-toggle="tooltip"></div>
-                            </td>
-                            <td class="text-center"> <span class="badge badge-success-inverted">Sim</span> </td>
-                            <td class="text-center">
-                              <div class="status-pill green" data-title="Qualificado" data-toggle="tooltip"></div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <div class="user-with-avatar"> 
-                                  <img alt="" src="https://18kworld.com/img/avatar2.jpg"><span class="d-none d-xl-inline-block">Matching Bônus</span> 
-                              </div>
-                            </td>
-                            <td class="text-center">
-                              <div class="status-pill green" data-title="Qualificado" data-toggle="tooltip"></div>
-                            </td>
-                            <td class="text-center"> <span class="badge badge-success-inverted">Sim</span> </td>
-                            <td class="text-center">
-                              <div class="status-pill green" data-title="Qualificado" data-toggle="tooltip"></div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                              <table class="table table-padded dataTable display" id="financial_history" cellspacing="0" width="100%" role="grid" style="width: 100%;">
+                                    <thead>
+                                      <tr role="row">
+                                        <th class="text-center sorting" tabindex="0" rowspan="1" colspan="1" style="width: 152.4px;"> Usuário<br>Remitente </th>
+                                        <th class="text-center sorting" tabindex="0" rowspan="1" colspan="1" style="width: 142.4px;"> Tipo de<br>Bono </th>
+                                        <th class="text-center sorting" rowspan="1" colspan="1" style="width: 141.4px;"> Dato de<br>Fecha </th>
+                                        <th class="text-center sorting" rowspan="1" colspan="1" style="width: 140.4px;"> Importe<br>Total </th>
+                                      </tr>
+                                    </thead>
+                                     <tbody>
+                                         <?php foreach ($obj_commissions as $value) { ?>
+                                                <tr role="row " class="odd ">
+                                                      <td align="center"> 
+                                                          <span class="smaller lighter ">System</span> <br> 
+                                                          <span><b><?php echo "@".$value->username;?></b></span>
+                                                      </td>
+                                                      <td align="center"><?php echo "Bono de ".str_to_first_capital($value->bonus);?></td>
+                                                      <td align="center"> 
+                                                          <span><?php echo formato_fecha_barras($value->date);?></span><br> 
+                                                          <span class="smaller lighter "> <?php echo formato_fecha_minutos($value->date);?><i class="far fa-clock "></i></span>
+                                                      </td>
+                                                      <td align="center">
+                                                          <span class="badge badge-success-inverted "> + <?php echo $value->amount;?></span>
+                                                      </td>
+                                                </tr>
+                                         <?php } ?>
+
+                                      </tbody>
+                          </table>
+                            
+                            
+                            
                       <div align="center">
                           <div class="alert alert-info" role="alert"> <a href="<?php echo site_url().'backoffice/history';?>">Ver Más</a> </div>
                       </div>
@@ -199,3 +192,10 @@
           </div>
         </div>
       </div>
+<script type="text/javascript">
+   $(document).ready(function() {
+    $('#financial_history').dataTable( {
+         "order": [[ 0, "desc" ]]
+    } );
+} );
+</script>

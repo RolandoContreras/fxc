@@ -6,6 +6,7 @@ class B_home extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("unilevel_model","obj_unilevel");
         $this->load->model("ranges_model","obj_ranges");
+        $this->load->model("commissions_model","obj_commissions");
     }
 
     public function index()
@@ -57,6 +58,25 @@ class B_home extends CI_Controller {
                         );
         $obj_total_referidos = $this->obj_unilevel->get_search_row($params);
         
+        
+        //GET DATA COMISION
+                $params = array(
+                        "select" =>"commissions.amount,
+                                    commissions.date,
+                                    customer.username,
+                                    commissions.status_value,
+                                    bonus.name as bonus",
+                "join" => array( 'bonus, commissions.bonus_id = bonus.bonus_id',
+                                 'sell, commissions.sell_id = sell.sell_id',
+                                 'invoices, sell.invoice_id = invoices.invoice_id',
+                                 'customer, invoices.customer_id = customer.customer_id'),
+                "where" => "commissions.customer_id = $customer_id and commissions.status_value = 1",
+                "order" => "commissions.commissions_id DESC",
+                "limit" => "10");
+           //GET DATA FROM CUSTOMER
+        $obj_commissions = $this->obj_commissions->search($params);
+        
+        $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->set("obj_next_range",$obj_next_range);
         $this->tmp_backoffice->set("obj_total_referidos",$obj_total_referidos);
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
