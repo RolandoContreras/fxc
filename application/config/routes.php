@@ -70,6 +70,7 @@ $route['backoffice/unilevel/([0-9a-z_A-Z-=+/]+)'] = "b_network/unilevel/unilevel
 
 $route['backoffice/history'] = "b_finance";
 $route['backoffice/invoice'] = "b_finance/invoice";
+$route['backoffice/invoice/upload'] = "b_finance/upload";
 
 $route['backoffice/files'] = "b_files";
 

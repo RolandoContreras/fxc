@@ -74,7 +74,43 @@ class B_finance extends CI_Controller {
         $this->tmp_backoffice->set("obj_invoices",$obj_invoices);
         $this->tmp_backoffice->render("backoffice/b_invoice");
     }
+    
+    public function upload(){
+        //GET SESION ACTUALY
+        $this->get_session();
+        $customer_id = $_SESSION['customer']['customer_id'];
+         
+        //VERIFI ONLY 1 ROW 
+            if(isset($_FILES["image_file"]["name"]))
+            {
+            $config['upload_path']          = './static/backoffice/invoice/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $config['max_size']             = 1000;
+            $this->load->library('upload', $config);
+                if ( ! $this->upload->do_upload('image_file'))
+                {
+                     $error = array('error' => $this->upload->display_errors());
+                      echo '<div class="alert alert-danger">'.$error['error'].'</div>';
+                }
+                else
+                {
+                    $data = array('upload_data' => $this->upload->data());
 
+                        $img = $_FILES["image_file"]["name"];
+                    // INSERT ON TABLE activation_message
+                        //UPDATE DATA EN CUSTOMER TABLE
+                        $data = array(
+                            'img' => $img,
+                            'active' => 1,
+                            'updated_by' => $customer_id,
+                            'updated_at' => date("Y-m-d H:i:s")
+                        ); 
+                        $this->obj_invoices->update($customer_id,$data);
+                        $data['status'] = "true";
+                    echo '<div class="alert alert-success" style="text-align: center">Enviado Exitosamente</div>';
+                }
+            }
+        }
 
     public function get_session(){          
         if (isset($_SESSION['customer'])){
