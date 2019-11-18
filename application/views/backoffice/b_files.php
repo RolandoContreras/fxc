@@ -15,9 +15,9 @@
               <div class="element-box p-2">
                 <div class="card">
                   <div class="body pad-materiais" align="center"> 
-                      <img class="img-fluid img-thumbnail" src="<?php echo site_url().'static/backoffice/files/card_presentacion.jpg';?>">
+                      <img class="img-fluid img-thumbnail" src="<?php echo site_url().'static/backoffice/images/presentacion.jpg';?>">
                     <p class="titulo-materiais">[ES] Presentación de negocios</p> 
-                    <a href="javascript:void(0);" class="btn btn-primary btn-sm btn round btn-simple"> Hacer Descarga </a> 
+                    <a href="<?php echo site_url().'static/backoffice/files/bca-capital-presentacion.pdf';?>" target="_blank" class="btn btn-primary btn-sm btn round btn-simple"> Hacer Descarga </a> 
                   </div>
                 </div>
               </div>
