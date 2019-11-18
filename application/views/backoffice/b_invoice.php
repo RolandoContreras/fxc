@@ -57,7 +57,7 @@
                                           <?php }elseif($value->active == "2"){ ?>
                                                 <a class="badge badge-success-inverted text_status">Pagado</a>
                                           <?php }else{ ?>
-                                                <a href="#modal_1" rel="modal:open">
+                                                <a href="#modal_<?php echo $value->invoice_id;?>" rel="modal:open">
                                                       <button  class="mr-2 mb-2 btn btn-warning"> Subir Imagen</button>
                                                   </a> 
                                           <?php } ?>
@@ -81,6 +81,7 @@
                                 <div class="form-group"><br>
                                     <label>Seleccionar Imagen del envio</label>
                                     <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
+                                    <input type="text" value="<?php echo $value->invoice_id;?>" name="invoice_id" id="invoice_id" style="display:none">
                                 </div>
                                 <hr>
                                 <div class="form-group text-right">

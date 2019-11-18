@@ -79,6 +79,7 @@ class B_finance extends CI_Controller {
         //GET SESION ACTUALY
         $this->get_session();
         $customer_id = $_SESSION['customer']['customer_id'];
+        $invoice_id = $_POST['invoice_id'];
          
         //VERIFI ONLY 1 ROW 
             if(isset($_FILES["image_file"]["name"]))
@@ -105,7 +106,7 @@ class B_finance extends CI_Controller {
                             'updated_by' => $customer_id,
                             'updated_at' => date("Y-m-d H:i:s")
                         ); 
-                        $this->obj_invoices->update($customer_id,$data);
+                        $this->obj_invoices->update($invoice_id,$data);
                         $data['status'] = "true";
                     echo '<div class="alert alert-success" style="text-align: center">Enviado Exitosamente</div>';
                 }
