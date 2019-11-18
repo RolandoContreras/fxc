@@ -23,6 +23,7 @@
 |
 */
 //$config['base_url'] = 'http://cevolutionweb.com';
+//$config['base_url'] = 'https://mibcacapital.com/';
 $config['base_url'] = 'http://localhost/fxc';
 
 
