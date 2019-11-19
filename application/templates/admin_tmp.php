@@ -114,7 +114,7 @@
                                             <li><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/correos";?>"><i class="icon-large icon-th"></i>Correos Masivos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/kit";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
+                                            <li><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>

@@ -86,11 +86,9 @@ class D_customer extends CI_Controller{
         }else{
             $date_start = $this->input->post('date_start');
         }
-        //financiada
-        
         $financy =  $this->input->post('financy');
-        //kit_id
-        $kit=  $this->input->post('kit');
+        $kit =  $this->input->post('kit');
+        $range =  $this->input->post('rango');
         
         //GET CUSTOMER_ID
         $customer_id = $this->input->post("customer_id");
@@ -100,6 +98,7 @@ class D_customer extends CI_Controller{
                 'username' => $this->input->post('username'),
                 'password' => $this->input->post('password'),
                 'financy' => $financy,
+                'range_id' => $range,
                 'email' => $this->input->post('email'),
                 'dni' => $this->input->post('dni'),  
                 'date_start' => $date_start,  

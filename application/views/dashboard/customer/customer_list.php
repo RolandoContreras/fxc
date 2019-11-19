@@ -36,11 +36,11 @@
                         <tbody>
                             <tr>
                             <?php foreach ($obj_customer as $value): ?>
-                                <td align="center"><b><?php echo $value->customer_id;?></b></td>
-                                <td align="center"><b><?php echo $value->username;?></b></td>
+                                <td align="center"><?php echo $value->customer_id;?></td>
+                                <td align="center" style="color:#fff;" class="label-info"><?php echo $value->username;?></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td align="center"><?php echo $value->email;?></td>
-                                <td align="center"><?php echo str_to_mayusculas($value->kit);?></td>
+                                <td align="center" style="color:#fff;" class="label-success"><?php echo str_to_first_capital($value->kit);?></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
                                         $valor = "Inactivo";

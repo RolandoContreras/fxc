@@ -33,18 +33,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($obj_franchise as $value): ?>
+                            <?php foreach ($obj_kit as $value): ?>
                                 <tr>
-                            <th><?php echo $value->franchise_id;?></th>
+                            <th><?php echo $value->kit_id;?></th>
                             <td align="center"><?php echo strtoupper($value->name);?></td>
                             <td align="center" class="label-info" style="color:#FFF;"><?php echo format_number_dolar($value->price);?></td>
                             <td align="center" class="label-success" style="color:#FFF;"><?php echo format_number_miles($value->point);?></td>
-                            <td><img width="100" src="<?php echo site_url()."static/backoffice/images/$value->img";?>" alt="<?php echo $value->name;?>"/></td>
+                            <td><img width="100" src="<?php echo site_url()."static/backoffice/images/plan/$value->img";?>" alt="<?php echo $value->name;?>"/></td>
                             <td>
                             <textarea class="form-control" name="description" id="" placeholder="Descripción" style="height: 200px;width: 100% !important" placeholder="Message body"><?php echo $value->description;?></textarea>
                             </td>
                             <td align="center">
-                                <?php if ($value->status_value == 0) {
+                                <?php if ($value->active == 0) {
                                     $valor = "No Activo";
                                     $stilo = "label label-important";
                                 }else{
@@ -57,7 +57,7 @@
                             <td align="center">
                                 <div class="operation">
                                         <div class="btn-group">
-                                           <button class="btn btn-small" onclick="edit_franchise('<?php echo $value->franchise_id;?>');"><i class="fa fa-edit"></i> Editar</button>
+                                           <button class="btn btn-small" onclick="edit_franchise('<?php echo $value->kit_id;?>');"><i class="fa fa-edit"></i> Editar</button>
                                         </div>
                                 </div>
                             </td>
@@ -78,4 +78,4 @@
     } );
 } );
 </script>
-<script src="<?php echo site_url();?>static/cms/js/franchise.js"></script>
+<script src="<?php echo site_url();?>static/cms/js/kit.js"></script>
