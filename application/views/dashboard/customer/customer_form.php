@@ -111,7 +111,7 @@
               <input type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
               <br><br>
               <strong>Fecha de Activación:</strong><br>
-              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="Fecha de Activación" value="<?php echo formato_fecha_barras($obj_customer->date_start);?>">
+              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="YYYY/mm/dd" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
               <br><br>
               <div class="inner">
                 <strong>Financiada:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

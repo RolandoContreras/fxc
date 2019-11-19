@@ -220,7 +220,7 @@ function formato_fecha_db($fecha){
     $mes=substr($fecha, 0, 2);
     $dia=substr($fecha, 3, 2);
     $anio=substr($fecha, 6, 4); 
-    return $anio."/".$mes."/".$dia;
+    return $anio."-".$mes."-".$dia;
 }
 
 function formato_fecha_datepicker_ano_mes_dia($fecha){   

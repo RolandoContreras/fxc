@@ -23,9 +23,8 @@ class D_customer extends CI_Controller{
                                     customer.active,
                                     kit.name as kit,
                                     customer.status_value",
+                        "where" =>"customer.status_value = 1",
                         "join" => array('kit, kit.kit_id = customer.kit_id'),
-                        "group" => "customer.customer_id"
-               
                );
            //GET DATA FROM CUSTOMER
            $obj_customer= $this->obj_customer->search($params);
@@ -81,8 +80,14 @@ class D_customer extends CI_Controller{
     public function validate(){
         
         //fecha inicio de pago
-        $date_start = formato_fecha_db($this->input->post('date_start'));
+        $date_start = $this->input->post('date_start');
+        if($date_start == ""){
+           $date_start = null; 
+        }else{
+            $date_start = $this->input->post('date_start');
+        }
         //financiada
+        
         $financy =  $this->input->post('financy');
         //kit_id
         $kit=  $this->input->post('kit');

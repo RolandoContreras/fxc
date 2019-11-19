@@ -105,6 +105,8 @@ class Register extends CI_Controller {
                 $data = array(
                         'first_name' => $name,
                         'last_name' => $last_name,
+                        'kit_id' => 0,
+                        'range_id' => 0,
                         'username' => $username,
                         'email' => $email,
                         'password' => $pass,
@@ -112,7 +114,6 @@ class Register extends CI_Controller {
                         'phone' => $phone,
                         'dni' => $dni,
                         'country' => $country,
-                        'date_start' => date("Y-m-d H:i:s"),
                         'active' => 0,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),

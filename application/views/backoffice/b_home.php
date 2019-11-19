@@ -29,28 +29,14 @@
                       <div class="element-box el-tablo">
                         <div class="label"> Plan Actual </div>
                         <div class="value"> 
-                            <?php 
-                                if(isset($obj_customer->kit_img) == ""){
-                                    $var_img = "clear_position.png";
-                                }else{
-                                    $var_img = $obj_customer->kit_img;
-                                }
-                            ?>
-                            <img src='<?php echo site_url()."static/backoffice/images/plan/$var_img";?>' alt="plan" width="80"/>
+                            <img src='<?php echo site_url()."static/backoffice/images/plan/$obj_customer->kit_img";?>' alt="plan" width="80"/>
                         </div>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="element-box el-tablo">
                         <div class="label"> Rango Actual </div>
-                            <?php 
-                                if(isset($obj_customer->img) == ""){
-                                    $var_range = "sin_rango.png";
-                                }else{
-                                    $var_range = $obj_customer->img;
-                                }
-                            ?>
-                        <div class="value"> <img src='<?php echo site_url()."static/backoffice/images/rangos/$var_range";?>' alt="rango" width="70"/></div>
+                        <div class="value"> <img src='<?php echo site_url()."static/backoffice/images/rangos/$obj_customer->img";?>' alt="rango" width="70"/></div>
                       </div>
                     </div>
                       <div class="col-md-3 d-none d-sm-block">
