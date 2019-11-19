@@ -117,7 +117,6 @@
                                             <li><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
                                             <li><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/soporte";?>"><i class="icon-large icon-th"></i>Soporte</a></li>
                                             <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
                                             <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
                                             <?php } ?>
@@ -126,7 +125,7 @@
                                     </div>
                             </div>
                             <?php 
-                            if($_SESSION['usercms']['privilage'] == 3){ ?>
+                            if($_SESSION['usercms']['privilage'] == 2){ ?>
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
@@ -156,25 +155,7 @@
                                         </div>
                                     </div>
                             </div>
-                        
-    
-                            <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#recargas">
-                                        Recargas
-                                        </a>
-                                    </div>
-                                    <div id="recargas" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/recargas";?>"><i class="icon-large icon-th"></i>Recargas de Saldo</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
                             <?php } ?>
-                            
-                        
                             <div class="accordion-group">
                                 <div class="accordion-heading">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#reportes">
@@ -200,31 +181,6 @@
                                     </div>
                                 </div>
                             </div>
-                        
-                        <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#report">
-                                    Reportes
-                                    </a>
-                                </div>
-                                <div id="report" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                            <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes_comision";?>"><i class="icon-large icon-th"></i>Total Comisiones</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo site_url()."dashboard/reporte_comision_x_asociado";?>"><i class="icon-large icon-th"></i>Comisión x Asociado</a>
-                                            </li>
-                                            <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes_asociados";?>"><i class="icon-large icon-th"></i>Asociados</a>
-                                            </li>
-                                        </ul>                                     
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
                     </div>
             </div>
             <!-- sidebar 

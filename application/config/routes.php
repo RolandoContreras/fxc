@@ -144,9 +144,6 @@ $route['dashboard/activaciones/active_financy'] = "d_activate/active_financy";
 $route['dashboard/activaciones/active'] = "d_activate/active";
 $route['dashboard/activaciones/update_confirmation'] = "d_activate/update_confirmation";
 
-$route['dashboard/soporte'] = "d_messages/soporte";
-$route['dashboard/soporte/update'] = "d_messages/update";
-
 $route['dashboard/pagos'] = "d_pays";
 $route['dashboard/pagos_details/([0-9]+)'] = "d_pays/details/$1";
 $route['dashboard/pagos/pagado'] = "d_pays/pagado";
