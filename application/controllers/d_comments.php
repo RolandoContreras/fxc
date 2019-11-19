@@ -15,6 +15,7 @@ class D_comments extends CI_Controller{
                                     comments.name,
                                     comments.comment,
                                     comments.email,
+                                    comments.active,
                                     comments.status_value,
                                     comments.date_comment",
                          "order" => "date_comment ASC"
@@ -44,7 +45,7 @@ class D_comments extends CI_Controller{
               
                 if(count($comment_id) > 0){
                     $data = array(
-                        'status_value' => 1,
+                        'active' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -61,7 +62,7 @@ class D_comments extends CI_Controller{
                 $comment_id = $this->input->post("comment_id");
                 if(count($comment_id) > 0){
                     $data = array(
-                        'status_value' => 0,
+                        'active' => 1,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 

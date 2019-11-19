@@ -3,12 +3,27 @@
 <!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
     <head>
         <meta charset="utf-8">
-        <title>CMS - 3T</title>
+        <title>Dashboard - BCA CAPITAL</title>
         <base href="<?php echo site_url();?>">
-        <link rel="shortcut icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
-        <link rel="icon" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>" type="image/x-icon">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo site_url().'static/page_front/images/favicon/favicon.png';?>">
+        <!--START FAVICON-->
+        <link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-57x57.png';?>">
+        <link rel="apple-touch-icon" sizes="60x60" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-60x60.png';?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-72x72.png';?>">
+        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-76x76.png';?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-114x114.png';?>">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-120x120.png';?>">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-144x144.png';?>">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-152x152.png';?>">
+        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-180x180.png';?>">
+        <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo site_url().'static/page_front/images/logo/favico/android-icon-192x192.png';?>">
+        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-32x32.png';?>">
+        <link rel="icon" type="image/png" sizes="96x96" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-96x96.png';?>">
+        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-16x16.png';?>">
+        <link rel="manifest" href="<?php echo site_url().'static/page_front/images/logo/favico/manifest.json';?>">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/logo/favico/ms-icon-144x144.png';?>">
+        <meta name="theme-color" content="#ffffff">
+      <!--END FAVICON-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
         <meta name="author" content="">
@@ -58,7 +73,7 @@
         <div class="navbar-inner">
             <div class="container-fluid">
                 <a class="brand" href="<?php echo site_url();?>dashboard/panel">
-                    <img src="<?php echo site_url().'static/page_front/images/logo/logo_small.png'?>" alt="logo" width="50"></a>
+                    <img src="<?php echo site_url().'static/page_front/images/logo/logo.png'?>" alt="logo" width="230"></a>
                 <div class="btn-toolbar pull-right">                        
                 <!-- /btn-group -->
                     <div class="btn-group">

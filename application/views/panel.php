@@ -30,10 +30,6 @@
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
 										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/soporte';?>"><b><?php echo $obj_total->total_messages_support;?></b><i class="fa fa-question"></i> Soporte</a></td>
-                                                                                        <td><a href="<?php echo site_url().'dashboard/soporte';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_support;?></b><i class="fa fa-question"></i> Por Solucionar</a></td>
-										</tr>
 										<tr>
 											<td><a href="<?php echo site_url()."dashboard/comisiones";?>"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
 										</tr>

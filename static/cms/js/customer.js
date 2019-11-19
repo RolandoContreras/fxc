@@ -39,8 +39,8 @@ function no_active(customer_id){
         }
     ]);
 }
-function edit_customer(product_id){    
-     var url = 'dashboard/clientes/load/'+product_id;
+function edit_customer(customer_id){    
+     var url = 'dashboard/clientes/load/'+customer_id;
      location.href = site+url;   
 }
 function cancelar_customer(){
