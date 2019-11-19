@@ -23,37 +23,42 @@
                    <table id="table" class="display" cellspacing="0" width="100%">
                         <thead>
                             <tr>
+                                <th>ID</th>
                                 <th>USUARIO</th>
                                 <th>CLIENTE</th>
                                 <th>PAQUETE</th>
-                                <th>FECHA DE CREACIÓN</th>
+                                <th>FECHA</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <?php foreach ($obj_customer as $value): ?>
-                                <td align="center"><b><?php echo $value->username;?></b></td>
+                            <?php foreach ($obj_invoices as $value): ?>
+                                <td align="center"><?php echo $value->invoice_id;?></td>
+                                <td align="center" style="color:#fff;" class="label-info"><b><?php echo "@".$value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
-                                <td align="center"><?php echo $value->franchise;?></td>
-                                <td align="center"><?php echo formato_fecha($value->created_at);?></td>
+                                <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
+                                <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center">
-                                    <?php if ($value->active == 0) {
-                                        $valor = "Inactivo";
-                                        $stilo = "label label-important";
-                                    }else{
-                                        $valor = "Activo";
+                                    <?php if ($value->active == 1) {
+                                        $valor = "Esperando Activación";
+                                        $stilo = "label label-info";
+                                    }elseif($value->active == 2){
+                                        $valor = "Procesado";
                                         $stilo = "label label-success";
-                                    } ?>
+                                    }else{
+                                        $valor = "Cancelado";
+                                        $stilo = "label label-important";
+                                    }?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
                                 </td>
                             
                                 <td>
                                     <div class="operation">
                                         <div class="btn-group">
-                                                    <button class="btn btn-small" onclick="active('<?php echo $value->customer_id;?>','<?php echo $value->point;?>','<?php echo $value->parents_id;?>','<?php echo $value->position;?>','<?php echo $value->identificador;?>');">Activar</button>
-                                                    <button class="btn btn-small" onclick="active_financiada('<?php echo $value->customer_id;?>');">Financiada</button>
+                                                    <button class="btn btn-small" onclick="active('<?php echo $value->invoice_id;?>');">Activar</button>
+                                                    <button class="btn btn-small" onclick="active_financiada('<?php echo $value->invoice_id;?>','<?php echo $value->customer_id;?>','<?php echo $value->kit_id;?>');">Financiada</button>
                                         </div>
                                     </div>
                                 </td>

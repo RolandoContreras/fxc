@@ -18,7 +18,9 @@ BITSHARE S.A.C
 class bonus_model_atributos{	
     var $bonus_id='';
     var $name='';
+    var $level='';
     var $percent='';
+    var $active='';
     var $status_value='';
     var $created_at='';
     var $created_by='';
@@ -34,7 +36,9 @@ class Bonus_Model extends CI_Model{
 	$this->table_id = 'bonus_id';
         $this->bonus_id='';
         $this->name='';
+        $this->level='';
         $this->percent='';
+        $this->active='';
 	$this->status_value='';
         $this->created_at='';
         $this->created_by='';

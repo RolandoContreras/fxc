@@ -1,4 +1,4 @@
-function active_financiada(customer_id){
+function active_financiada(invoice_id,customer_id,kit_id){
     bootbox.dialog("Confirma que desea activar como financiada?", [        
         { "label" : "Cancelar"},
         {
@@ -9,7 +9,9 @@ function active_financiada(customer_id){
                type: "post",
                url: site+"dashboard/activaciones/active_financy",
                dataType: "json",
-               data: {customer_id : customer_id},
+               data: {invoice_id : invoice_id,
+                      customer_id : customer_id,
+                      kit_id : kit_id},
                success:function(data){                             
                location.reload();
                }         
