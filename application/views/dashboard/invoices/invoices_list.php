@@ -26,8 +26,8 @@
                                 <th>ID</th>
                                 <th>USUARIO</th>
                                 <th>CLIENTE</th>
-                                <th>PAQUETE</th>
                                 <th>IMAGEN</th>
+                                <th>PAQUETE</th>
                                 <th>FECHA</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -101,7 +101,7 @@
   transition: 0.3s;
 }
 
-#myImg:hover {opacity: 1;}
+#myImg:hover {opacity: 0;}
 /* Caption of Modal Image */
 /* Add Animation */
 @-webkit-keyframes zoom {
