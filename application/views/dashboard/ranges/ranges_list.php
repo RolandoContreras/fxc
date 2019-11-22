@@ -35,7 +35,7 @@
                                 <tr>
                             <th><?php echo $value->range_id;?></th>
                             <td align="center"><?php echo strtoupper($value->name);?></td>
-                            <td align="center" class="label-info" style="color:#FFF;"><?php echo $value->point_personal;?></td>
+                            <td align="center" class="label-info" style="color:#FFF;"><?php echo format_number_miles($value->point_personal);?></td>
                             <td align="center" class="label-success" style="color:#FFF;"><?php echo format_number_miles($value->point_grupal);?></td>
                             <td><img width="100" src="<?php echo site_url()."static/backoffice/images/rangos/$value->img";?>" alt="<?php echo $value->name;?>"/></td>
                             <td align="center">

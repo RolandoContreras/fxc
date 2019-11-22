@@ -63,15 +63,35 @@ class D_ranges extends CI_Controller{
         //GET CUSTOMER_ID
         $range_id = $this->input->post("range_id");
         $name =  $this->input->post('name');
+        $img = $this->input->post("img2");
         $point_personal =  $this->input->post('point_personal');
         $point_grupal =  $this->input->post('point_grupal');
         $active =  $this->input->post('active');
+        
+        
+        if(isset($_FILES["image_file"]["name"])){
+                $config['upload_path']          = './static/backoffice/images/rangos';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 1000;
+                $this->load->library('upload', $config);
+                    if ( ! $this->upload->do_upload('image_file')){
+                         $error = array('error' => $this->upload->display_errors());
+                          echo '<div class="alert alert-danger">'.$error['error'].'</div>';
+                    }else{
+                        $data = array('upload_data' => $this->upload->data());
+                    }
+                $img = $_FILES["image_file"]["name"];        
+                 if($img == ""){
+                     $img = $this->input->post("img2");
+                 }   
+            }
         
         //UPDATE DATA
         $data = array(
                 'name' => $name,
                 'point_personal' => $point_personal,
                 'point_grupal' => $point_grupal,
+                'img' => $img,
                 'active' => $active,
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']

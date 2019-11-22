@@ -26,6 +26,16 @@
               <strong>Puntos Grupales:</strong><br>   
               <input type="text" id="point_grupal" name="point_grupal" value="<?php echo isset($obj_ranges->point_grupal)?$obj_ranges->point_grupal:0;?>" class="input-xlarge-fluid" placeholder="Puntos">
               <br><br>
+              <?php 
+              if(isset($obj_ranges->range_id)){ ?>
+              <img src='<?php echo site_url()."static/backoffice/images/rangos/$obj_ranges->img";?>' width="100" />
+              <input type="hidden" name="img2" id="img2" value="<?php echo isset($obj_ranges)?$obj_ranges->img:"";?>">
+              <br><br>
+              <?php } ?>
+              
+              <strong>Imagen:</strong><br>   
+              <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
+              <br><br>
               <br><br>
               <div class="well nomargin" style="width: 200px;">
                   <div class="inner">

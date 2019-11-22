@@ -34,7 +34,8 @@ class Ranges_Model extends CI_Model{
     public function __construct() {
         parent::__construct();  
         $this->table = 'ranges';
-	$this->range_id = 'range_id';
+	$this->table_id = 'range_id';
+        $this->range_id='';
         $this->name='';
         $this->point_personal='';
         $this->point_grupal='';
