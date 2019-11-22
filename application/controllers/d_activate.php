@@ -69,12 +69,12 @@ class D_activate extends CI_Controller{
                     $this->obj_customer->update($customer_id,$data);
                     
                  //UPDATE TABLE INVOICE ACTIVE = 2 (PROCESADO)    
-                    $data = array(
+                    $data_invoice = array(
                         'active' => 2,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
-                    $this->obj_invoices->update($customer_id,$data);   
+                    $this->obj_invoices->update($invoice_id,$data_invoice);   
                 }
                 echo json_encode($data); 
                 exit();
@@ -90,7 +90,36 @@ class D_activate extends CI_Controller{
                 $point = $this->input->post("point");
                 $parents_id = $this->input->post("parents_id");
                 $side = $this->input->post("position");
-                $identificador = $this->input->post("identificador");
+                
+                //SELECT CUSTOMER_ID
+                $invoice_id = $this->input->post("invoice_id");
+                $customer_id = $this->input->post("customer_id");
+                $kit_id = $this->input->post("kit_id");
+                //GET DATA TODAY
+                $today = date('Y-m-j');
+                
+                if(count($invoice_id) > 0){
+                //UPDATE TABLE CUSTOMER ACTIVE = 1    
+                    $data = array(
+                        'active' => 1,
+                        'kit_id' => $kit_id,
+                        'date_start' => $today,
+                        'financy' => 1,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_customer->update($customer_id,$data);
+                    
+                 //UPDATE TABLE INVOICE ACTIVE = 2 (PROCESADO)    
+                    $data_invoice = array(
+                        'active' => 2,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_invoices->update($invoice_id,$data_invoice);   
+                }
+                
+                
                 //GET SPONSOR ACTIVE
                     $params = array(
                         "select" =>"active,
@@ -108,8 +137,6 @@ class D_activate extends CI_Controller{
                 if($active > 0){
                     //GET BONUS SPONSOR
                     $amount = $this->pay_directo($customer_id,$point,$parents_id);
-                    //SEND MESSAGE CONFIRMATION BONUS SPONSOR
-                    $this->message_bonus_sponsor($amount,$parents_id,$customer_id);
                     //SET CALIFICATION
                     if($binary != 1){
                         $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);

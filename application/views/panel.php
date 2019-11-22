@@ -20,7 +20,7 @@
 									</thead><!-- table heading -->
 									<tbody>
 										<tr>
-                                                                                        <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Asociados</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Clientes</a></td>
 										</tr>
 										<tr>
 											<td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
@@ -30,6 +30,10 @@
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
 											<td><a href="<?php echo site_url().'dashboard/cobros';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
 										</tr>
+                                                                                <tr>
+											<td><a href="<?php echo site_url().'dashboard/facturas';?>"><b><?php echo $obj_total->total_invoices;?></b><i class="fa fa-check-circle"></i> Facturas</a></td>
+                                                                                        <td><a href="<?php echo site_url().'dashboard/facturas';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_invoices;?></b><i class="fa fa-check-circle"></i> Por Pagar</a></td>
+										</tr>
 										<tr>
 											<td><a href="<?php echo site_url()."dashboard/comisiones";?>"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
 										</tr>
@@ -38,6 +42,9 @@
 										</tr>
                                                                                 <tr>
 											<td><a href="<?php echo site_url().'dashboard/categorias';?>"><b><?php echo $obj_total->total_category;?></b><i class="fa fa-tags"></i> Categorías</a></td>
+										</tr>
+                                                                                <tr>
+											<td><a href="<?php echo site_url().'dashboard/membresias';?>"><b><?php echo $obj_total->total_kit;?></b><i class="fa fa-paper-plane"></i> Membresías</a></td>
 										</tr>
                                                                                 <tr>
 											<td><a href="<?php echo site_url().'dashboard/rangos';?>"><b><?php echo $obj_total->total_ranges;?></b><i class="fa fa-level-up"></i> Rangos</a></td>
@@ -133,14 +140,20 @@
                                         <div class="span10" style="margin-left:auto;">
                                             <div class="comment_content">
                                                 <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
-                                                    <p><a href="#" class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?></p>
                                                     <p>
-                                                            <a class="btn btn-mini btn-primary" href="#">Reply</a> <a class="btn btn-mini btn-danger" href="#">Delete</a> <a class="btn btn-mini btn-warning" href="#">Mark as Spam</a> 
+                                                        <a class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?><br/>
+                                                        <a class="pending">Estado : <b><?php echo $obj_last_comment->active == 0? "Contestado":"No Contestado";?></b></a>
+                                                    </p>
+                                                    <p>
+                                                        <?php 
+                                                        if($obj_last_comment->active == 1){ ?>
+                                                            <a class="btn btn-mini btn-success" onclick="change_state('<?php echo $obj_last_comment->comment_id;?>');">Marcar Contestado</a> 
+                                                        <?php } ?>
+                                                        <a class="btn btn-mini btn-primary" href="<?php echo site_url("dashboard/comentarios");?>">Ver más</a>
                                                     </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
                                 </div>
                             <?php }else{ ?>
                                     <div class="row-fluid">

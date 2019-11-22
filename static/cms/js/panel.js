@@ -49,3 +49,23 @@ function message_public(){
         }
     ]);
 }
+function change_state(comment_id){
+     bootbox.dialog("Confirma que desea marcar como contestado?", [        
+        { "label" : "Cancelar"},
+        {
+            "label" : "Confirmar",
+            "class" : "btn-success",
+            "callback": function() {
+               $.ajax({
+                   type: "post",
+                   url: site+"dashboard/panel/cambiar_status",
+                   dataType: "json",
+                   data: {comment_id : comment_id},
+                   success:function(data){                             
+                   location.reload();
+                   }         
+           });
+            }
+        }
+    ]);
+}

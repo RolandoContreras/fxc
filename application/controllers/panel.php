@@ -13,7 +13,8 @@ class Panel extends CI_Controller{
 
          //GET PENDING ROWS
         $params = array("select" =>"count(*) as pending_comments,
-                                    (select count(*) from pay where active = 1) as pending_pay",
+                                    (select count(*) from pay where active = 1) as pending_pay,
+                                    (select count(*) from invoices where active = 1) as pending_invoices",
                         "where" => "active = 1");
         $obj_pending = $this->obj_comments->get_search_row($params);
         
@@ -23,6 +24,7 @@ class Panel extends CI_Controller{
                                     name,
                                     comment,
                                     email,
+                                    active,
                                     status_value,
                                     date_comment",
                          "order" => "date_comment DESC"
@@ -34,6 +36,7 @@ class Panel extends CI_Controller{
                                     (select count(*) from customer) as total_customer, 
                                     (select count(*) from category) as total_category,
                                     (select count(*) from kit) as total_kit,
+                                    (select count(*) from invoices) as total_invoices,
                                     (select count(*) from commissions) as total_commissions,
                                     (select count(*) from users) as total_users,
                                     (select count(*) from bonus) as total_bonus,
@@ -127,6 +130,23 @@ class Panel extends CI_Controller{
                     }
                 }
                 
+    } 
+    
+    public function cambiar_status(){
+        if($this->input->is_ajax_request()){   
+              $comment_id = $this->input->post("comment_id");
+              
+                if(count($comment_id) > 0){
+                    $data = array(
+                        'active' => 0,
+                        'updated_at' => date("Y-m-d H:i:s"),
+                        'updated_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $this->obj_comments->update($comment_id,$data);
+                }
+                echo json_encode($data);            
+        exit();
+        }
     } 
      
     public function mensaje(){

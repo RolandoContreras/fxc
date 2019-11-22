@@ -82,6 +82,7 @@ $route['backoffice/pay'] = "b_pay";
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
 $route['dashboard/panel/guardar_btc'] = "panel/guardar_btc";
+$route['dashboard/panel/cambiar_status'] = "panel/cambiar_status";
 $route['dashboard/panel/masive_messages'] = "panel/masive_messages";
 
 $route['dashboard/comisiones'] = "d_comission";
@@ -97,6 +98,10 @@ $route['dashboard/noticias/validate'] = "d_news/validate";
 $route['dashboard/bonos'] = "d_bonus"; 
 $route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
 $route['dashboard/bonos/validate'] = "d_bonus/validate";
+
+$route['dashboard/facturas'] = "d_invoices"; 
+$route['dashboard/facturas/load/([0-9]+)'] = "d_invoices/load/$1";
+$route['dashboard/facturas/validate'] = "d_invoices/validate";
 
 $route['dashboard/correos'] = "d_messages_masive"; 
 
