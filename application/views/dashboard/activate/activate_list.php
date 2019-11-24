@@ -27,6 +27,7 @@
                                 <th>USUARIO</th>
                                 <th>CLIENTE</th>
                                 <th>IMAGEN</th>
+                                <th>FINANCIADA</th>
                                 <th>PAQUETE</th>
                                 <th>PRECIO</th>
                                 <th>FECHA</th>
@@ -48,6 +49,16 @@
                                         echo "---";
                                     }
                                     ?>
+                                </td>
+                                <td align="center">
+                                    <?php if ($value->financy == 1) {
+                                        $valor = "Si";
+                                        $stilo = "label label-info";
+                                    }else{
+                                        $valor = "No";
+                                        $stilo = "label";
+                                    }?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
                                 </td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
                                 <td align="center" style="color:#fff;" class="label-important"><?php echo format_number_dolar($value->price);?></td>
@@ -72,10 +83,10 @@
                                 <td>
                                     <div class="operation">
                                         <div class="btn-group">
-                                            <?php // if ($value->active == 1) { ?>
+                                            <?php if ($value->active == 1) { ?>
                                                     <button class="btn btn-small" onclick="active('<?php echo $value->invoice_id;?>','<?php echo $value->customer_id;?>','<?php echo $value->kit_id;?>','<?php echo $value->price;?>');">Activar</button>
                                                     <button class="btn btn-small" onclick="active_financiada('<?php echo $value->invoice_id;?>','<?php echo $value->customer_id;?>','<?php echo $value->kit_id;?>');">Financiada</button>
-                                            <?php // } ?>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </td>

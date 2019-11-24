@@ -20,6 +20,7 @@ class D_activate extends CI_Controller{
                         "select" =>"invoices.invoice_id,
                                     invoices.date,
                                     invoices.img,
+                                    invoices.financy,
                                     customer.customer_id,
                                     customer.username,
                                     customer.first_name,

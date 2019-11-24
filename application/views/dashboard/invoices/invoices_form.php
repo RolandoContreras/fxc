@@ -85,6 +85,19 @@
                 <br><br>
                 <div class="well nomargin" style="width: 200px;">
                 <div class="inner">
+                    <strong>Financiada:</strong>
+                    <select name="financy" id="financy">
+                                <option value="">[ Seleccionar ]</option>
+                                <option value="1" <?php if(isset($obj_invoices)){
+                                    if($obj_invoices->financy == 1){ echo "selected";}
+                                }else{echo "";} ?>>Si</option>
+                                <option value="0" <?php if(isset($obj_invoices)){
+                                    if($obj_invoices->financy == 0){ echo "selected";}
+                                }else{echo "";} ?>>No</option>
+                    </select>
+                </div>
+                <br/>
+                <div class="inner">
                 <strong>Activo o Pagado:</strong>
                     <select name="active" id="active">
                                 <option value="">[ Seleccionar ]</option>
@@ -99,6 +112,7 @@
                                 }else{echo "";} ?>>Cancelado</option>
                     </select>
                 </div>
+                
                 </div>
                 <br><br>
                 <div class="subnav nobg">

@@ -26,6 +26,7 @@
                                 <th>ID</th>
                                 <th>USUARIO</th>
                                 <th>CLIENTE</th>
+                                <th>FINANCIADA</th>
                                 <th>IMAGEN</th>
                                 <th>PAQUETE</th>
                                 <th>FECHA</th>
@@ -39,6 +40,16 @@
                                 <td align="center"><?php echo $value->invoice_id;?></td>
                                 <td align="center" style="color:#fff;" class="label-info"><b><?php echo "@".$value->username;?></b></td>
                                 <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td align="center">
+                                    <?php if ($value->financy == 1) {
+                                        $valor = "Si";
+                                        $stilo = "label label-info";
+                                    }else{
+                                        $valor = "No";
+                                        $stilo = "label";
+                                    }?>
+                                    <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
+                                </td>
                                 <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
                                 <td align="center">
                                     <?php 
