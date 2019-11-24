@@ -7,8 +7,10 @@ class D_activate extends CI_Controller{
         $this->load->model("customer_model","obj_customer");
         $this->load->model("commissions_model","obj_commissions");
         $this->load->model("invoices_model","obj_invoices");
+        $this->load->model("unilevel_model","obj_unilevel");
         $this->load->model("kit_model","obj_kit");
-//        $this->load->model("bonus_model","obj_bonus");
+        $this->load->model("sell_model","obj_sell");
+        $this->load->model("bonus_model","obj_bonus");
     }   
                 
     public function index(){  
@@ -71,7 +73,7 @@ class D_activate extends CI_Controller{
                     
                  //UPDATE TABLE INVOICE ACTIVE = 2 (PROCESADO)    
                     $data_invoice = array(
-                        'active' => 2,
+                        'active' => 1,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -87,17 +89,52 @@ class D_activate extends CI_Controller{
         if($this->input->is_ajax_request()){  
                 date_default_timezone_set('America/Lima');
                 //SELECT CUSTOMER_ID
-                $customer_id = $this->input->post("customer_id");
-                $point = $this->input->post("point");
-                $parents_id = $this->input->post("parents_id");
-                $side = $this->input->post("position");
-                
-                //SELECT CUSTOMER_ID
                 $invoice_id = $this->input->post("invoice_id");
                 $customer_id = $this->input->post("customer_id");
                 $kit_id = $this->input->post("kit_id");
+                $price = $this->input->post("price");
                 //GET DATA TODAY
                 $today = date('Y-m-j');
+                if($kit_id > 1){
+                    //insert data on sell table
+                    $data = array(
+                        'invoice_id' => $invoice_id,
+                        'date' => date("Y-m-d H:i:s"),
+                        'active' => 1,
+                        'status_value' => 1,
+                        'created_at' => date("Y-m-d H:i:s"),
+                        'created_by' => $_SESSION['usercms']['user_id'],
+                    ); 
+                    $sell_id = $this->obj_sell->insert($data);
+                    
+                    //GET DATA PARENT
+                    $params = array(
+                            "select" =>"parend_id",
+                            "where" => "customer_id = $customer_id"
+                    );
+                    //GET DATA FROM BONUS
+                    $obj_unilevel = $this->obj_unilevel->get_search_row($params);
+                    $parend_id = $obj_unilevel->parend_id;
+                    
+                    //GET DATA CUSTOMER
+                    $params = array(
+                            "select" =>"active",
+                            "where" => "customer_id = $parend_id"
+                    );
+                    //GET DATA FROM BONUS
+                    $obj_customer = $this->obj_customer->get_search_row($params);
+                    $active = $obj_customer->active;
+                    
+                    //INSERT AMOUNT ON COMMISION TABLE    
+                    $this->pay_directo($customer_id,$price,$parend_id,$sell_id,$active);
+                    //INSERT AMOUNT ON COMMISION TABLE    
+                    $this->pay_unilevel($customer_id,$price,$parend_id,$sell_id,$active);
+                    
+                    echo "hola";
+                    die();
+                    
+                }
+                
                 
                 if(count($invoice_id) > 0){
                 //UPDATE TABLE CUSTOMER ACTIVE = 1    
@@ -119,110 +156,120 @@ class D_activate extends CI_Controller{
                     ); 
                     $this->obj_invoices->update($invoice_id,$data_invoice);   
                 }
-                
-                
-                //GET SPONSOR ACTIVE
-                    $params = array(
-                        "select" =>"active,
-                                    binaries,
-                                    point_calification_left,
-                                    point_calification_rigth",
-                        "where" => "customer_id = $parents_id and customer.status_value = 1"
-                    );
-                $obj_customer= $this->obj_customer->get_search_row($params);
-                $active = $obj_customer->active;
-                $binary = $obj_customer->binaries;
-                $point_calification_left = $obj_customer->point_calification_left;
-                $point_calification_rigth = $obj_customer->point_calification_rigth;
-                
-                if($active > 0){
-                    //GET BONUS SPONSOR
-                    $amount = $this->pay_directo($customer_id,$point,$parents_id);
-                    //SET CALIFICATION
-                    if($binary != 1){
-                        $result = $this->calification($parents_id,$side,$point_calification_left,$point_calification_rigth,$point);
-                        //PAY BINARY
-                        $this->pay_binario($result,$identificador,$point);
-                     }else{
-                        //PAY BINARY
-                        $result = 0;
-                        $this->pay_binario($result,$identificador,$point);
-                     }
-                }else{
-                    //GET AMOUNT BONUS SPONSOR
-                    $amount = $this->lost_pay_directo($customer_id,$point,$parents_id);
-                    //SEND MESSAGE CONFIRMATION BONUS SPONSOR
-                    $this->message_bonus_sponsor_lost($amount,$parents_id,$customer_id);
-                    $result = 0;
-                    $this->pay_binario($result,$identificador,$point);
-                }
-                
-                //SELECT TODAY
-                $today = date('Y-m-j');
-                $team_builder = date("Y-m-d", strtotime("+30 days"));
-                //UPDATE TABLE CUSTOMER ACTIVE = 1
-                    $data = array(
-                        'active' => 1,
-                        'team_builder_active' => 1,
-                        'team_builder' => $team_builder,
-                        'date_start' => $today,
-                        'updated_at' => date("Y-m-d H:i:s"),
-                        'updated_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_customer->update($customer_id,$data);
                     
-                    
-                //VERIFY TEAM BUILDER
-                $this->get_team_builder($parents_id,$today);  
-                //SEND MESSAGE CONFIRMATION ACTIVE
-                $this->message_active($customer_id);
                 echo json_encode($data); 
                 exit();
             }
     }
  
-    public function pay_directo($customer_id,$point,$parents_id){
+    public function pay_directo($customer_id,$price,$parend_id,$sell_id,$active){
         
                 //GET PERCENT FROM BONUS
                 $params = array(
                         "select" =>"percent",
-                        "where" => "bonus_id = 1 and status_value = 1"
+                        "where" => "bonus_id = 1 and active = 1"
                );
                 //GET DATA FROM BONUS
                 $obj_bonus= $this->obj_bonus->get_search_row($params);
                 $percet = $obj_bonus->percent;
+                //CALCULE % AMOUNT
+                $amount = ($price  * $percet) / 100;
                 
-                //CALCULE AMOUNT
-                $amount = ($point  * $percet) / 100;
-                
-                //INSERT COMMISSION TABLE
+                //INSERT SELL TABLE
                 if(count($customer_id) > 0){
-                    $data = array(
-                        'customer_id' => $parents_id,
-                        'bonus_id' => 1,
-                        'name' => "Bono de Patrocinio",
-                        'amount' => $amount,
-                        'status_value' => 1,
-                        'date' => date("Y-m-d H:i:s"),
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_commissions->insert($data);
-                    
-                    //POINT ON POINT TABLE
-                    $data = array(
-                        'customer_id' => $parents_id,
-                        'bonus_id' => 1,
-                        'point' => $point,
-                        'status_value' => 1,
-                        'date' => date("Y-m-d H:i:s"),
-                        'created_at' => date("Y-m-d H:i:s"),
-                        'created_by' => $_SESSION['usercms']['user_id'],
-                    ); 
-                    $this->obj_points->insert($data);
-                    return $amount;
+                    if($active == 1){
+                        //INSERT COMMISSION TABLE
+                        $data = array(
+                            'sell_id' => $sell_id,
+                            'customer_id' => $parend_id,
+                            'bonus_id' => 1,
+                            'amount' => $amount,
+                            'active' => 1,
+                            'status_value' => 1,
+                            'date' => date("Y-m-d H:i:s"),
+                            'created_at' => date("Y-m-d H:i:s"),
+                            'created_by' => $_SESSION['usercms']['user_id'],
+                        ); 
+                        $this->obj_commissions->insert($data);
+                    }
                 }
         }
+        
+    public function pay_unilevel($customer_id,$price,$parend_id,$sell_id,$active){
+            
+                //GET PERCENT FROM BONUS UNILEVEL
+                $params = array(
+                        "select" =>"percent",
+                        "where" => "bonus_id = 2 and active = 1"
+                );
+                $obj_bonus= $this->obj_bonus->get_search_row($params);
+                $percet = $obj_bonus->percent;
+                
+                
+                //CALCULE % AMOUNT
+                $amount = ($price  * $percet) / 100;
+                
+                //insert table 10 level
+                if(count($customer_id) > 0){
+                    //VERIFY IF ACTIVE
+                    if($active == 1){
+                        $data = array(
+                            'sell_id' => $sell_id,
+                            'customer_id' => $parend_id,
+                            'bonus_id' => 2,
+                            'amount' => $amount,
+                            'active' => 1,
+                            'status_value' => 1,
+                            'date' => date("Y-m-d H:i:s"),
+                            'created_at' => date("Y-m-d H:i:s"),
+                            'created_by' => $_SESSION['usercms']['user_id'],
+                        ); 
+                        $this->obj_commissions->insert($data);
+                    }
+                    
+                    for ($x = 1; $x <= 9; $x++) {
+                        //GET DATA PARENT
+                        if($parend_id != ""){
+                            $params = array(
+                                    "select" =>"parend_id",
+                                    "where" => "customer_id = $parend_id"
+                            );
+                            //GET DATA FROM BONUS
+                            $obj_unilevel = $this->obj_unilevel->get_search_row($params);
+
+                            if(count($obj_unilevel) > 0){
+                                $parend_id = $obj_unilevel->parend_id;
+                                    $params = array(
+                                                    "select" =>"active",
+                                                    "where" => "customer_id = $parend_id"
+                                                    );
+                                    //GET DATA FROM customer
+                                    $obj_customer = $this->obj_customer->get_search_row($params);
+                                    $active = $obj_customer->active;
+
+                                        if($active == 1){
+                                            //INSERT COMMISSION TABLE
+                                                $data = array(
+                                                    'sell_id' => $sell_id,
+                                                    'customer_id' => $parend_id,
+                                                    'bonus_id' => 2,
+                                                    'amount' => $amount,
+                                                    'active' => 1,
+                                                    'status_value' => 1,
+                                                    'date' => date("Y-m-d H:i:s"),
+                                                    'created_at' => date("Y-m-d H:i:s"),
+                                                    'created_by' => $_SESSION['usercms']['user_id'],
+                                                ); 
+                                                $this->obj_commissions->insert($data);
+                                        }
+                                }else{
+                                    exit();
+                                }
+                        }    
+                    }
+                }
+        }    
+        
         
     public function get_session(){          
         if (isset($_SESSION['usercms'])){

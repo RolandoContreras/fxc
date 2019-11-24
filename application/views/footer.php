@@ -123,7 +123,7 @@
                           <aside id="trx_widget_socials_224207210_widget" class="widget widget_socials">
                             <h5 class="widget_title">Sociales</h5>
                             <div class="socials_wrap sc_align_left">
-                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                              <a target="_blank" href="https://www.facebook.com/bcacapital" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
                                   <span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
                               </a>
                               <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">

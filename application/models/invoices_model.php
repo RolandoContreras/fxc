@@ -19,6 +19,7 @@ class invoices_model_atributos{
     var $invoice_id='';
     var $customer_id='';
     var $kit_id='';
+    var $financy='';
     var $subject='';
     var $type='';
     var $date='';
@@ -39,6 +40,7 @@ class Invoices_Model extends CI_Model{
         $this->invoice_id='';
         $this->customer_id='';
         $this->kit_id='';
+        $this->financy='';
         $this->subject='';
         $this->type='';
         $this->date='';

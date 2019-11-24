@@ -88,14 +88,14 @@
                 <strong>Activo o Pagado:</strong>
                     <select name="active" id="active">
                                 <option value="">[ Seleccionar ]</option>
+                                <option value="0" <?php if(isset($obj_invoices)){
+                                    if($obj_invoices->active == 0){ echo "selected";}
+                                }else{echo "";} ?>>Esperando Activación</option>
                                 <option value="1" <?php if(isset($obj_invoices)){
                                     if($obj_invoices->active == 1){ echo "selected";}
-                                }else{echo "";} ?>>Esperando Activación</option>
+                                }else{echo "";} ?>>Procesado</option>
                                 <option value="2" <?php if(isset($obj_invoices)){
                                     if($obj_invoices->active == 2){ echo "selected";}
-                                }else{echo "";} ?>>Procesado</option>
-                                <option value="3" <?php if(isset($obj_invoices)){
-                                    if($obj_invoices->active == 3){ echo "selected";}
                                 }else{echo "";} ?>>Cancelado</option>
                     </select>
                 </div>

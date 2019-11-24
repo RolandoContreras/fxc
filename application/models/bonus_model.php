@@ -15,19 +15,6 @@ BITSHARE S.A.C
 * Fecha: 16/11/2016
 ****/
 
-class bonus_model_atributos{	
-    var $bonus_id='';
-    var $name='';
-    var $level='';
-    var $percent='';
-    var $active='';
-    var $status_value='';
-    var $created_at='';
-    var $created_by='';
-    var $updated_at='';
-    var $updated_by='';
-}
-
 class Bonus_Model extends CI_Model{ 
 
     public function __construct() {
@@ -44,11 +31,7 @@ class Bonus_Model extends CI_Model{
         $this->created_by='';
         $this->updated_at='';
         $this->updated_by='';
-	$this->fields = new bonus_model_atributos();
     }   
-    
-    public function fields(){
-    }
     
     public function insert($data){
       $this->db->insert($this->table, $data);
