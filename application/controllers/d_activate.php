@@ -174,7 +174,6 @@ class D_activate extends CI_Controller{
                 $amount = ($price  * $percet) / 100;
                 
                 //INSERT SELL TABLE
-                if(count($customer_id) > 0){
                     if($active == 1){
                         //INSERT COMMISSION TABLE
                         $data = array(
@@ -190,7 +189,6 @@ class D_activate extends CI_Controller{
                         ); 
                         $this->obj_commissions->insert($data);
                     }
-                }
         }
         
     public function pay_unilevel_maching($customer_id,$price,$parend_id,$sell_id,$active){
@@ -225,6 +223,9 @@ class D_activate extends CI_Controller{
                             'created_by' => $_SESSION['usercms']['user_id'],
                         ); 
                         $this->obj_commissions->insert($data); 
+                        $no_insert =  0;
+                    }else{
+                        $no_insert =  1;
                     }
                     
                     for ($x = 1; $x <= 9; $x++) {
@@ -240,6 +241,7 @@ class D_activate extends CI_Controller{
 
                             if(count($obj_unilevel) > 0){
                                 $parend_id = $obj_unilevel->parend_id;
+                                
                                     $params = array(
                                                     "select" =>"active",
                                                     "where" => "customer_id = $parend_id"
@@ -247,7 +249,7 @@ class D_activate extends CI_Controller{
                                     //GET DATA FROM customer
                                     $obj_customer = $this->obj_customer->get_search_row($params);
                                     $active = $obj_customer->active;
-
+                                    
                                         if($active == 1){
                                             //INSERT COMMISSION TABLE
                                                 $data = array(
@@ -263,18 +265,23 @@ class D_activate extends CI_Controller{
                                                 ); 
                                                 $this->obj_commissions->insert($data);
                                                 
-                                                $data_maching = array(
-                                                    'sell_id' => $sell_id,
-                                                    'customer_id' => $parend_id,
-                                                    'bonus_id' => 3,
-                                                    'amount' => $amount_maching,
-                                                    'active' => 1,
-                                                    'status_value' => 1,
-                                                    'date' => date("Y-m-d H:i:s"),
-                                                    'created_at' => date("Y-m-d H:i:s"),
-                                                    'created_by' => $_SESSION['usercms']['user_id'],
-                                                ); 
-                                                $this->obj_commissions->insert($data_maching);
+                                                if($no_insert == 0){
+                                                    $data_maching = array(
+                                                                        'sell_id' => $sell_id,
+                                                                        'customer_id' => $parend_id,
+                                                                        'bonus_id' => 3,
+                                                                        'amount' => $amount_maching,
+                                                                        'active' => 1,
+                                                                        'status_value' => 1,
+                                                                        'date' => date("Y-m-d H:i:s"),
+                                                                        'created_at' => date("Y-m-d H:i:s"),
+                                                                        'created_by' => $_SESSION['usercms']['user_id'],
+                                                                        ); 
+                                                    $this->obj_commissions->insert($data_maching);
+                                                }
+                                                $no_insert = 0;
+                                        }else{
+                                            $no_insert = 1;
                                         }
                                 }
                         }
@@ -297,19 +304,21 @@ class D_activate extends CI_Controller{
                                     $obj_customer = $this->obj_customer->get_search_row($params);
                                     $active = $obj_customer->active;
                                         if($active == 1){
-                                            //INSERT COMMISSION TABLE MACHING
-                                                $data_maching = array(
-                                                    'sell_id' => $sell_id,
-                                                    'customer_id' => $parend_id,
-                                                    'bonus_id' => 3,
-                                                    'amount' => $amount_maching,
-                                                    'active' => 1,
-                                                    'status_value' => 1,
-                                                    'date' => date("Y-m-d H:i:s"),
-                                                    'created_at' => date("Y-m-d H:i:s"),
-                                                    'created_by' => $_SESSION['usercms']['user_id'],
-                                                ); 
-                                                $this->obj_commissions->insert($data_maching);
+                                            if($no_insert == 0){
+                                                //INSERT COMMISSION TABLE MACHING
+                                                    $data_maching = array(
+                                                        'sell_id' => $sell_id,
+                                                        'customer_id' => $parend_id,
+                                                        'bonus_id' => 3,
+                                                        'amount' => $amount_maching,
+                                                        'active' => 1,
+                                                        'status_value' => 1,
+                                                        'date' => date("Y-m-d H:i:s"),
+                                                        'created_at' => date("Y-m-d H:i:s"),
+                                                        'created_by' => $_SESSION['usercms']['user_id'],
+                                                    ); 
+                                                    $this->obj_commissions->insert($data_maching);
+                                            }
                                         }
                                 }
                     }
