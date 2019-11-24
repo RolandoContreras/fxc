@@ -59,7 +59,7 @@
                                           <?php }else{ ?>
                                                 <a href="#modal_<?php echo $value->invoice_id;?>" rel="modal:open">
                                                       <button  class="mr-2 mb-2 btn btn-warning"> Subir Imagen</button>
-                                                  </a> 
+                                                  </a>
                                           <?php } ?>
                                       </td>
                                 </tr>

@@ -51,19 +51,21 @@
                                 </td>
                                 <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
                                 <td align="center">
-                                    <?php if ($value->active == 0) {
+                                    <?php if ($value->active == 1) {
                                         $valor = "Esperando Activación";
                                         $stilo = "label label-info";
-                                    }elseif($value->active == 1){
+                                    }elseif($value->active == 2){
                                         $valor = "Procesado";
                                         $stilo = "label label-success";
+                                    }elseif($value->active == 0){
+                                        $valor = "Sin Acción";
+                                        $stilo = "label";
                                     }else{
                                         $valor = "Cancelado";
                                         $stilo = "label label-important";
                                     }?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor;?></span>
                                 </td>
-                            
                                 <td>
                                     <div class="operation">
                                         <div class="btn-group">

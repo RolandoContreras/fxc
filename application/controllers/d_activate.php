@@ -73,7 +73,8 @@ class D_activate extends CI_Controller{
                     
                  //UPDATE TABLE INVOICE ACTIVE = 2 (PROCESADO)    
                     $data_invoice = array(
-                        'active' => 1,
+                        'active' => 2,
+                        'financy' => 1,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -95,8 +96,8 @@ class D_activate extends CI_Controller{
                 $price = $this->input->post("price");
                 //GET DATA TODAY
                 $today = date('Y-m-j');
-                if($kit_id > 1){
-                    //insert data on sell table
+                
+                //insert data on sell table
                     $data = array(
                         'invoice_id' => $invoice_id,
                         'date' => date("Y-m-d H:i:s"),
@@ -106,6 +107,8 @@ class D_activate extends CI_Controller{
                         'created_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $sell_id = $this->obj_sell->insert($data);
+                    
+                if($kit_id > 1){
                     
                     //GET DATA PARENT
                     $params = array(
@@ -128,21 +131,15 @@ class D_activate extends CI_Controller{
                     //INSERT AMOUNT ON COMMISION TABLE    
                     $this->pay_directo($customer_id,$price,$parend_id,$sell_id,$active);
                     //INSERT AMOUNT ON COMMISION TABLE    
-                    $this->pay_unilevel($customer_id,$price,$parend_id,$sell_id,$active);
-                    
-                    echo "hola";
-                    die();
-                    
+                    $this->pay_unilevel_maching($customer_id,$price,$parend_id,$sell_id,$active);
                 }
                 
-                
-                if(count($invoice_id) > 0){
                 //UPDATE TABLE CUSTOMER ACTIVE = 1    
                     $data = array(
                         'active' => 1,
                         'kit_id' => $kit_id,
                         'date_start' => $today,
-                        'financy' => 1,
+                        'financy' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
@@ -151,11 +148,12 @@ class D_activate extends CI_Controller{
                  //UPDATE TABLE INVOICE ACTIVE = 2 (PROCESADO)    
                     $data_invoice = array(
                         'active' => 2,
+                        'financy' => 0,
                         'updated_at' => date("Y-m-d H:i:s"),
                         'updated_by' => $_SESSION['usercms']['user_id'],
                     ); 
                     $this->obj_invoices->update($invoice_id,$data_invoice);   
-                }
+                
                     
                 echo json_encode($data); 
                 exit();
@@ -195,19 +193,21 @@ class D_activate extends CI_Controller{
                 }
         }
         
-    public function pay_unilevel($customer_id,$price,$parend_id,$sell_id,$active){
+    public function pay_unilevel_maching($customer_id,$price,$parend_id,$sell_id,$active){
             
                 //GET PERCENT FROM BONUS UNILEVEL
                 $params = array(
-                        "select" =>"percent",
+                        "select" =>"percent,
+                                    (select percent from bonus where bonus_id = 3) as percent_maching",
                         "where" => "bonus_id = 2 and active = 1"
                 );
                 $obj_bonus= $this->obj_bonus->get_search_row($params);
                 $percet = $obj_bonus->percent;
-                
+                $percent_maching = $obj_bonus->percent_maching;
                 
                 //CALCULE % AMOUNT
                 $amount = ($price  * $percet) / 100;
+                $amount_maching = ($amount  * $percet) / 100;
                 
                 //insert table 10 level
                 if(count($customer_id) > 0){
@@ -224,7 +224,7 @@ class D_activate extends CI_Controller{
                             'created_at' => date("Y-m-d H:i:s"),
                             'created_by' => $_SESSION['usercms']['user_id'],
                         ); 
-                        $this->obj_commissions->insert($data);
+                        $this->obj_commissions->insert($data); 
                     }
                     
                     for ($x = 1; $x <= 9; $x++) {
@@ -234,6 +234,7 @@ class D_activate extends CI_Controller{
                                     "select" =>"parend_id",
                                     "where" => "customer_id = $parend_id"
                             );
+                            
                             //GET DATA FROM BONUS
                             $obj_unilevel = $this->obj_unilevel->get_search_row($params);
 
@@ -261,11 +262,56 @@ class D_activate extends CI_Controller{
                                                     'created_by' => $_SESSION['usercms']['user_id'],
                                                 ); 
                                                 $this->obj_commissions->insert($data);
+                                                
+                                                $data_maching = array(
+                                                    'sell_id' => $sell_id,
+                                                    'customer_id' => $parend_id,
+                                                    'bonus_id' => 3,
+                                                    'amount' => $amount_maching,
+                                                    'active' => 1,
+                                                    'status_value' => 1,
+                                                    'date' => date("Y-m-d H:i:s"),
+                                                    'created_at' => date("Y-m-d H:i:s"),
+                                                    'created_by' => $_SESSION['usercms']['user_id'],
+                                                ); 
+                                                $this->obj_commissions->insert($data_maching);
                                         }
-                                }else{
-                                    exit();
                                 }
-                        }    
+                        }
+                    }
+                    if($parend_id != ""){
+                        //GET LAST PAREND
+                        $params = array(
+                                    "select" =>"parend_id",
+                                    "where" => "customer_id = $parend_id"
+                            );
+                        $obj_unilevel = $this->obj_unilevel->get_search_row($params);
+                            //GET DATA FROM BONUS
+                            if(count($obj_unilevel) > 0){
+                                $parend_id = $obj_unilevel->parend_id;
+                                    $params = array(
+                                                    "select" =>"active",
+                                                    "where" => "customer_id = $parend_id"
+                                                    );
+                                    //GET DATA FROM customer
+                                    $obj_customer = $this->obj_customer->get_search_row($params);
+                                    $active = $obj_customer->active;
+                                        if($active == 1){
+                                            //INSERT COMMISSION TABLE MACHING
+                                                $data_maching = array(
+                                                    'sell_id' => $sell_id,
+                                                    'customer_id' => $parend_id,
+                                                    'bonus_id' => 3,
+                                                    'amount' => $amount_maching,
+                                                    'active' => 1,
+                                                    'status_value' => 1,
+                                                    'date' => date("Y-m-d H:i:s"),
+                                                    'created_at' => date("Y-m-d H:i:s"),
+                                                    'created_by' => $_SESSION['usercms']['user_id'],
+                                                ); 
+                                                $this->obj_commissions->insert($data_maching);
+                                        }
+                                }
                     }
                 }
         }    
