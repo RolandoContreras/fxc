@@ -47,7 +47,7 @@
       <div class="navbar-brand header-logo">
           <a href="<?php echo site_url().'course';?>" class="b-brand">
           <div class="b-bg">
-              <img src="<?php echo site_url().'static/page_front/images/logo/icono-negro.png';?>" alt="Logo"/>
+              <img src="<?php echo site_url().'static/page_front/images/logo/icono-negro.png';?>" alt="Logo" width="35"/>
           </div>
               <span class="b-title">BCA CAPITAL</span>
           </a>

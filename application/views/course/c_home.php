@@ -76,6 +76,70 @@
                             </div>
                           </div>
                         </div>  
+                          
+                        <div class="col-lg-4 col-sm-6">
+                          <div class="thumbnail mb-4">
+                            <div class="thumb">
+                              <div class="embed-responsive embed-responsive-4by3 hei-300"> 
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/EaP9ac00nJM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  
+                              </div>
+                            </div>
+                            <div class="card Design-sprint theme-bg2">
+                                <div class="card-header borderless">
+                                    <h5 class="text-white">¿Qué son los mercados financieros?</h5> 
+                                    <span class="d-block text-white mt-2">Lección 4 - Modúlo1</span> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>    
+                          
+                        <div class="col-lg-4 col-sm-6">
+                          <div class="thumbnail mb-4">
+                            <div class="thumb">
+                              <div class="embed-responsive embed-responsive-4by3 hei-300"> 
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/JdEaneOBk2g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                            <div class="card Design-sprint theme-bg2">
+                                <div class="card-header borderless">
+                                    <h5 class="text-white">¿Qué mueve los mercados financieros?</h5> 
+                                    <span class="d-block text-white mt-2">Lección 2 - Modúlo1</span> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>  
+                        
+                        <div class="col-lg-4 col-sm-6">
+                          <div class="thumbnail mb-4">
+                            <div class="thumb">
+                              <div class="embed-responsive embed-responsive-4by3 hei-300"> 
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/MNrWq9Oz3eo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                            <div class="card Design-sprint theme-bg2">
+                                <div class="card-header borderless">
+                                    <h5 class="text-white">Derivados financieros</h5> 
+                                    <span class="d-block text-white mt-2">Lección 3 - Modúlo1</span> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6">
+                          <div class="thumbnail mb-4">
+                            <div class="thumb">
+                              <div class="embed-responsive embed-responsive-4by3 hei-300"> 
+                                  <iframe width="560" height="315" src="https://www.youtube.com/embed/hd7CC0M2kEc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              </div>
+                            </div>
+                            <div class="card Design-sprint theme-bg2">
+                                <div class="card-header borderless">
+                                    <h5 class="text-white">Conceptos y terminologías</h5> 
+                                    <span class="d-block text-white mt-2">Lección 4 - Modúlo1</span> 
+                                </div>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
