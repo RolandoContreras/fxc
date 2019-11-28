@@ -26,6 +26,7 @@ class Login extends CI_Controller {
                                         customer.first_name,
                                         customer.username,
                                         customer.last_name,
+                                        customer.kit_id,
                                         customer.email,
                                         customer.active,
                                         customer.status_value",
@@ -38,6 +39,7 @@ class Login extends CI_Controller {
                     $data_customer_session['name'] = $obj_customer->first_name.' '.$obj_customer->last_name;
                     $data_customer_session['username'] = $obj_customer->username;
                     $data_customer_session['email'] = $obj_customer->email;
+                    $data_customer_session['kit_id'] = $obj_customer->kit_id;
                     $data_customer_session['active'] = $obj_customer->active;
                     $data_customer_session['logged_customer'] = "TRUE";
                     $data_customer_session['status'] = $obj_customer->status_value;

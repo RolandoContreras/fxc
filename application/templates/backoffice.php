@@ -80,14 +80,18 @@ window.smartsupp||(function(d) {
         </div>
         <div class="menu-and-user">
           <ul class="main-menu" style="background: #4a3116;">
-            <li>
-              <a href="<?php echo site_url().'course';?>" target="_blank">
-                <div class="access-dam" align="center" style="background: #00000052; border-radius: 3px; color: #d3a40a; font-weight: 600; padding: 15px;"> 
-                  <img src="<?php echo site_url().'static/backoffice/images/icono.png';?>" class="animated infinite pulse delay-2s" style="max-width: 30%;"> 
-                  <span>Plataforma de Cursos</span>                
-              </div>
-              </a>
-            </li>
+            <?php 
+            $active = $_SESSION['customer']['active'];
+            if($active == 1){ ?>
+                <li>
+                  <a href="<?php echo site_url().'course';?>" target="_blank">
+                    <div class="access-dam" align="center" style="background: #00000052; border-radius: 3px; color: #d3a40a; font-weight: 600; padding: 15px;"> 
+                      <img src="<?php echo site_url().'static/backoffice/images/icono.png';?>" class="animated infinite pulse delay-2s" style="max-width: 30%;"> 
+                      <span>Plataforma de Cursos</span>                
+                  </div>
+                  </a>
+                </li>
+            <?php } ?>  
             <li>
               <a href="<?php echo site_url().'backoffice';?>" class="active" style="margin-top:30px;">
                 <div class="icon-w">
@@ -171,14 +175,18 @@ window.smartsupp||(function(d) {
           </div>
         </div>
         <ul class="main-menu">
-          <li>
-            <a href="<?php echo site_url().'course';?>" target="_blank">
-              <div class="access-dam" align="center" style="background: #00000052; border-radius: 3px; color: #d3a40a; font-weight: 600; padding: 15px;"> 
-                  <img src="<?php echo site_url().'static/backoffice/images/icono.png';?>" class="animated infinite pulse delay-2s" style="max-width: 30%;"> 
-                  <span>Plataforma de Cursos</span>                
-              </div>
-            </a>
-          </li>
+            <?php 
+            $active = $_SESSION['customer']['active'];
+            if($active == 1){ ?>
+                <li>
+                    <a href="<?php echo site_url().'course';?>" target="_blank">
+                      <div class="access-dam" align="center" style="background: #00000052; border-radius: 3px; color: #d3a40a; font-weight: 600; padding: 15px;"> 
+                          <img src="<?php echo site_url().'static/backoffice/images/icono.png';?>" class="animated infinite pulse delay-2s" style="max-width: 30%;"> 
+                          <span>Plataforma de Cursos</span>                
+                      </div>
+                    </a>
+                 </li>
+            <?php } ?>
           <li class="sub-header"> <span>Menú</span> </li>
           <li>
             <a href="<?php echo site_url().'backoffice';?>" class="active">

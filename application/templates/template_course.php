@@ -63,6 +63,9 @@
                   <span class="pcoded-mtext">Dashboard</span>
               </a>
         </li>
+        <?php $kid_id = $_SESSION['customer']['kit_id'];
+            if($kid_id >= 2){ ?>
+        
         <li class="nav-item pcoded-hasmenu">
             <a href="#!" class="">
                 <span class="pcoded-micon">
@@ -73,21 +76,33 @@
             <ul class="pcoded-submenu">
                 <li class="pcoded-hasmenu"><a href="#!" class="">Inversiones y Forex</a>
                   <ul class="pcoded-submenu">
-                    <li class=""><a href="#" class="">Básico</a></li>
-                    <li class=""><a href="#" class="">Intermedio</a></li>
-                    <li class=""><a href="#" class="">Avanzado</a></li>
+                    <li><a href="<?php echo site_url().'course/forex/basic';?>" class="">Básico</a></li>
+                    <?php  if($kid_id > 2){ ?>
+                                <li><a href="<?php echo site_url().'course/forex/intermediate';?>" class="">Intermedio</a></li>
+                                    <?php  if($kid_id > 3){ ?>
+                                            <li><a href="<?php echo site_url().'course/forex/advancing';?>" class="">Avanzado</a></li>
+                                    <?php } ?>
+                    <?php } ?>
                   </ul>
                 </li>
                 <li class="pcoded-hasmenu"><a href="#!" class="">Marketing</a>
                   <ul class="pcoded-submenu">
-                    <li class=""><a href="#" class="">Básico</a></li>
-                    <li class=""><a href="#" class="">Intermedio</a></li>
-                    <li class=""><a href="#" class="">Avanzado</a></li>
+                    <li><a href="<?php echo site_url().'course/mkt/basic';?>" class="">Básico</a></li>
+                    <?php  if($kid_id > 2){ ?>
+                                <li><a href="<?php echo site_url().'course/mkt/intermediate';?>" class="">Intermedio</a></li>
+                                    <?php  if($kid_id > 3){ ?>
+                                            <li><a href="<?php echo site_url().'course/mkt/advancing';?>" class="">Avanzado</a></li>
+                                    <?php } ?>
+                    <?php } ?>
                   </ul>
                 </li>
-                <li class=""><a href="#" class="">Sistemas</a></li>
+                <?php $kid_id = $_SESSION['customer']['kit_id'];
+                    if($kid_id >= 3){ ?>
+                        <li class=""><a href="#" class="">Sistemas</a></li>
+                <?php } ?>
             </ul>
         </li>
+        <?php } ?>
         <li class="nav-item">
             <a href="#" class="nav-link">
                 <span class="pcoded-micon">
@@ -128,14 +143,14 @@
             <div class="dropdown-menu dropdown-menu-right profile-notification">
               <div class="pro-head">
                   <img src="<?php echo site_url().'static/backoffice/images/avatar.png';?>" class="img-radius" alt="User-Profile-Image">
-                  <span>John Doe</span>
+                  <span><?php echo $_SESSION['customer']['name'];?></span>
               </div>
               <ul class="pro-body">
                 <li>
                     <a href="javascript:void(0);" class="dropdown-item"><i data-feather="user-plus"></i> Perfil</a>
                 </li>
                 <li>
-                    <a href="" class="dropdown-item"><i data-feather="power"></i> Salir</a>
+                    <a href="<?php echo site_url().'login/logout';?>" class="dropdown-item"><i data-feather="power"></i> Salir</a>
                 </li>
               </ul>
             </div>
