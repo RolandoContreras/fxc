@@ -12,15 +12,11 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/fxc/application/config/autoload.php</file>
-            <file>file:/C:/wamp64/www/fxc/static/course/plugins/datta-icon.css</file>
             <file>file:/C:/wamp64/www/fxc/application/views/course/c_home.php</file>
-            <file>file:/C:/wamp64/www/fxc/static/course/js/pcoded.min.js</file>
             <file>file:/C:/wamp64/www/fxc/application/templates/template_course.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/templates/backoffice.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/head.php</file>
-            <file>file:/C:/wamp64/www/fxc/static/course/css/style.css</file>
-            <file>file:/C:/wamp64/www/fxc/application/libraries/tmp_course.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/controllers/c_home.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/models/videos_model.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/models/category_model.php</file>
         </group>
     </open-files>
 </project-private>

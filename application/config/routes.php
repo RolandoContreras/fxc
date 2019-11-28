@@ -97,6 +97,11 @@ $route['dashboard/noticias/load'] = "d_news/load";
 $route['dashboard/noticias/load/([0-9]+)'] = "d_news/load/$1";
 $route['dashboard/noticias/validate'] = "d_news/validate";
 
+$route['dashboard/videos'] = "d_videos";
+$route['dashboard/videos/load'] = "d_videos/load";
+$route['dashboard/videos/load/([0-9]+)'] = "d_videos/load/$1";
+$route['dashboard/videos/validate'] = "d_videos/validate";
+
 $route['dashboard/bonos'] = "d_bonus"; 
 $route['dashboard/bonos/load/([0-9]+)'] = "d_bonus/load/$1";
 $route['dashboard/bonos/validate'] = "d_bonus/validate";
