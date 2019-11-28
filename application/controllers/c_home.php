@@ -6,9 +6,6 @@ class C_home extends CI_Controller {
         $this->load->model("customer_model","obj_customer");
         $this->load->model("videos_model","obj_videos");
         $this->load->model("category_model","obj_category");
-        
-        
-        
     }
 
     public function index()
@@ -20,8 +17,7 @@ class C_home extends CI_Controller {
         
         //GET DATA FOREX VIDEOS
         $params = array(
-                        "select" =>"author,
-                                    name,
+                        "select" =>"name,
                                     summary,
                                     video,
                                     date",
@@ -33,8 +29,7 @@ class C_home extends CI_Controller {
         
         //GET DATA MARKETING VIDEOS
         $params = array(
-                        "select" =>"author,
-                                    name,
+                        "select" =>"name,
                                     summary,
                                     video,
                                     date",
