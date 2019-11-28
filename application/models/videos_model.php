@@ -1,7 +1,7 @@
 <?php if ( ! defined("BASEPATH")) exit("No direct script access allowed"); 
 /*****
 * Generator Class MC v.1.55
-* WAVELINE S.A.C.
+BITSHARE S.A.C
 * Proyecto
 * V. 1.0
 * Iniciado: 29/09/2015
@@ -12,34 +12,52 @@
 * @EXTIENDE EL MODELO
 * Descripcion: se utilizara para nuevas funciones
 * Creador: Rolando Contreras H.
-* Fecha: 29/09/2015
+* Fecha: 16/11/2016
 ****/
 
-class regiones_model_atributos{	
-    var $id='';
-    var $id_pais='';
-    var $id_idioma='';
-    var $nombre='';
-    var $x='';
-    var $y='';
-    var $exacto='';
+class videos_model_atributos{	
+    var $video_id='';
+    var $category_id='';
+    var $author='';
+    var $name='';
+    var $summary='';
+    var $video='';
+    var $date='';
+    var $type_product='';
+    var $active='';
+    var $status_value='';
+    var $created_at='';
+    var $created_by='';
+    var $update_at='';
+    var $update_by='';
 }
 
-class Regiones_Model extends CI_Model{ 
+class Videos_Model extends CI_Model{ 
 
     public function __construct() {
         parent::__construct();  
-        $this->table = 'regiones';
-	$this->table_id = 'id';
-        $this->id='';
-        $this->id_pais='';
-	$this->id_idioma='';
-        $this->nombre='';
-        $this->x='';
-        $this->y='';
-        $this->exacto='';
-	$this->fields = new regiones_model_atributos();
+        $this->table = 'videos';
+	$this->table_id = 'video_id';
+        $this->video_id='';
+        $this->category_id='';
+        $this->author='';
+        $this->name='';
+        $this->summary='';
+        $this->video='';
+        $this->date='';
+        $this->type_product='';
+        $this->active='';
+	$this->status_value='';
+        $this->created_at='';
+        $this->created_by='';
+        $this->update_at='';
+        $this->update_by='';
+	$this->fields = new videos_model_atributos();
     }   
+    
+    public function fields(){
+    }
+    
     public function insert($data){
       $this->db->insert($this->table, $data);
       return $this->db->insert_id();
