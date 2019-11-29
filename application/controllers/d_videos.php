@@ -17,6 +17,7 @@ class D_videos extends CI_Controller{
                                     videos.category_id,
                                     videos.name,
                                     videos.summary,
+                                    videos.img,
                                     videos.video,
                                     videos.module,
                                     videos.date,
@@ -80,16 +81,35 @@ class D_videos extends CI_Controller{
         $name = $this->input->post("name");
         $module =  $this->input->post('module');
         $type_product =  $this->input->post('type_product');
+        $img = $this->input->post("img2");
         $video =  $this->input->post('video');
         $summary =  $this->input->post('summary');
         $category =  $this->input->post('category');
         $active =  $this->input->post('active');
+        
+        if(isset($_FILES["image_file"]["name"])){
+                $config['upload_path']          = './static/course/img';
+                $config['allowed_types']        = 'gif|jpg|png';
+                $config['max_size']             = 1000;
+                $this->load->library('upload', $config);
+                    if ( ! $this->upload->do_upload('image_file')){
+                         $error = array('error' => $this->upload->display_errors());
+                          echo '<div class="alert alert-danger">'.$error['error'].'</div>';
+                    }else{
+                        $data = array('upload_data' => $this->upload->data());
+                    }
+                $img = $_FILES["image_file"]["name"];        
+                 if($img == ""){
+                     $img = $this->input->post("img2");
+                 }   
+            }
         
         if($video_id != ""){
              $data = array(
                 'name' => $name,
                 'module' => $module,
                 'type_product' => $type_product,
+                'img' => $img,
                 'video' => $video,
                 'summary' => $summary,
                 'category_id' => $category,
@@ -105,6 +125,7 @@ class D_videos extends CI_Controller{
                 'module' => $module,
                 'type_product' => $type_product,
                 'video' => $video,
+                'img' => $img,
                 'summary' => $summary,
                 'category_id' => $category,
                 'date' => date("Y-m-d H:i:s"),  

@@ -28,6 +28,7 @@
                                 <th>Título</th>
                                 <th>Categoría</th>
                                 <th>Modulo</th>
+                                <th>Imagen</th>
                                 <th>Video</th>
                                 <th>Tipo</th>
                                 <th>Activo</th>
@@ -53,6 +54,7 @@
                                 } ?>
                                 <span class="<?php echo $stilo;?>"><?php echo $valor;?></span>
                             </td>
+                            <td align="center"><img src='<?php echo site_url()."static/course/img/$value->img";?>' width="180"/></td>
                             <td align="center"><?php echo $value->video;?></td>
                             <td align="center" style="color:#fff;" class="label-info">
                                 <?php if ($value->type_product == 1) {

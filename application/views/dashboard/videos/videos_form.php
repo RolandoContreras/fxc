@@ -40,7 +40,16 @@
                       <input type="hidden" id="video_id" name="video_id" value="<?php echo isset($obj_videos->video_id)?$obj_videos->video_id:"";?>">
                       <br><br>
               <?php } ?>
+              <?php 
+              if(isset($obj_videos)){ ?>
+              <img src='<?php echo site_url()."static/course/img/$obj_videos->img";?>' width="100" />
+              <input type="hidden" name="img2" id="img2" value="<?php echo isset($obj_videos)?$obj_videos->img:"";?>">
+              <br><br>
+              <?php } ?>
               
+              <strong>Imagen:</strong><br>   
+              <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
+              <br><br>
               <strong>Título:</strong><br>
               <input type="text" id="name" name="name" value="<?php echo isset($obj_videos->name)?$obj_videos->name:"";?>" class="input-xlarge-fluid" placeholder="Titulo">
               <br><br>
