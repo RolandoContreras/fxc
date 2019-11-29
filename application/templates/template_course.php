@@ -104,7 +104,7 @@
         </li>
         <?php } ?>
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="<?php echo site_url().'course/document';?>" class="nav-link">
                 <span class="pcoded-micon">
                     <i data-feather="archive"></i>
                 </span>

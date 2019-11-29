@@ -102,6 +102,14 @@ class C_home extends CI_Controller {
         $this->tmp_course->render("course/c_all");
     }
     
+    public function document()
+    {
+        //GET SESION ACTUALY
+        $this->get_session();
+        //GET CUSTOMER_ID
+        $this->tmp_course->render("course/c_document");
+    }
+    
     public function get_session(){          
         if (isset($_SESSION['customer'])){
             if($_SESSION['customer']['logged_customer']=="TRUE" && $_SESSION['customer']['status']=='1'){               

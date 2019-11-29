@@ -14,9 +14,11 @@
         <group>
             <file>file:/C:/wamp64/www/fxc/application/views/course/c_home.php</file>
             <file>file:/C:/wamp64/www/fxc/application/templates/template_course.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/config/routes.php</file>
             <file>file:/C:/wamp64/www/fxc/application/controllers/c_home.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/models/videos_model.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/models/category_model.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/views/course/c_document.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/views/course/c_all.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/views/backoffice/b_files.php</file>
         </group>
     </open-files>
 </project-private>

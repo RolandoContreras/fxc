@@ -35,7 +35,7 @@
                                 </a>
                                 <div class="card Design-sprint theme-bg2">
                                     <div class="card-header borderless">
-                                        <span class="d-block text-white mt-2"><b><?php echo corta_texto(str_to_first_capital($value->name),16);?></b><br/><?php echo str_to_first_capital($value->summary);?></span> 
+                                        <span class="d-block text-white mt-2"><b><?php echo corta_texto(str_to_first_capital($value->name),14);?></b><br/><?php echo str_to_first_capital($value->summary);?></span> 
                                     </div>
                                 </div>
                             </div>
