@@ -61,6 +61,7 @@ $route['course'] = "c_home";
 $route['course/forex/([0-9a-z_-]+)'] = "c_home/all";
 $route['course/mkt/([0-9a-z_-]+)'] = "c_home/all";
 $route['course/document'] = "c_home/document";
+$route['course/profile'] = "c_home/profile";
 
 $route['backoffice/profile'] = "b_profile";
 $route['backoffice/profile/update_password'] = "b_profile/update_password";

@@ -19,7 +19,7 @@ class C_home extends CI_Controller {
             $limit = "3";
             $order = "video_id Asc";
         }else{
-            $limit = "9";
+            $limit = "12";
             $order = "video_id Desc";
         }
         
@@ -108,6 +108,52 @@ class C_home extends CI_Controller {
         $this->get_session();
         //GET CUSTOMER_ID
         $this->tmp_course->render("course/c_document");
+    }
+    
+    public function profile()
+    {
+        //GET SESION ACTUALY
+        $this->get_session();
+        //GET CUSTOMER_ID
+        $customer_id = $_SESSION['customer']['customer_id'];
+        //GET DATA PRICE CRIPTOCURRENCY
+        $params = array(
+                        "select" =>"customer.username,
+                                    customer.email,
+                                    customer.first_name,
+                                    customer.last_name,
+                                    customer.btc_address,
+                                    customer.created_at,
+                                    customer.date_start,
+                                    customer.address,
+                                    customer.phone,
+                                    customer.dni,
+                                    customer.active,
+                                    paises.nombre,
+                                    kit.kit_id,
+                                    kit.name as kit",
+                        "where" => "customer.customer_id = $customer_id and customer.status_value = 1 and paises.id_idioma = 7",
+                        "join" => array('kit, customer.kit_id = kit.kit_id',
+                                        'paises, customer.country = paises.id'),
+                        );
+
+        $obj_customer = $this->obj_customer->get_search_row($params);
+        
+        $kit = $obj_customer->kit_id;
+        
+        if($kit = 1){
+            $text_course = "Prueba";
+        }elseif($kit = 2){
+            $text_course = "Inversiones y Marketing - Módulo Basico";
+        }elseif($kit = 3){
+            $text_course = "Inversiones y Marketing - Módulo Intermedio";
+        }else{
+            $text_course = "Inversiones y Marketing - Módulo Avanzando";
+        }
+        
+        $this->tmp_course->set("text_course",$text_course);
+        $this->tmp_course->set("obj_customer",$obj_customer);
+        $this->tmp_course->render("course/c_profile");
     }
     
     public function get_session(){          

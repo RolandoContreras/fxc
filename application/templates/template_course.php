@@ -29,19 +29,11 @@
     <meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/logo/favico/ms-icon-144x144.png';?>">
     <meta name="theme-color" content="#ffffff">
   <!--END FAVICON-->
-  
-  <link rel="stylesheet" href="<?php echo site_url().'static/course/css/animate.min.css';?>">
-  <link rel="stylesheet" href="<?php echo site_url().'static/course/css/lightbox.min.css';?>">
   <link rel="stylesheet" href="<?php echo site_url().'static/course/css/style.css';?>">
   <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body class="layout-6" style="background-image: url('<?php echo site_url().'static/page_front/images/header_image.jpg';?>'); background-size: cover;">
-  <div class="loader-bg">
-    <div class="loader-track">
-      <div class="loader-fill"></div>
-    </div>
-  </div>
   <nav class="pcoded-navbar menu-light brand-lightblue menupos-static">
     <div class="navbar-wrapper">
       <div class="navbar-brand header-logo">
@@ -55,8 +47,40 @@
       <div class="navbar-content scroll-div">
         <ul class="nav pcoded-inner-navbar">
           <li class="nav-item pcoded-menu-caption"><label>Navegación</label></li>
+          <?php
+          $url = explode("/",uri_string());
+            if(isset($url[1])){
+                $nav = $url[1];
+            }else{
+                $nav = "";
+            }
+            $profile_syle = "";
+            $course_syle = "";
+            $document_syle = "";
+            $home_syle = "";
+            
+            switch ($nav) {
+                case "profile":
+                    $profile_syle = "active";
+                    break;
+                case "forex":
+                    $course_syle = "active";
+                    break;
+                case "mkt":
+                    $course_syle = "active";
+                    break;
+                case "document":
+                    $document_syle = "active";
+                    break;
+                default:
+                    $home_syle = "active";
+                    break;
+            }
+          ?>
+          
+          
           <li class="nav-item">
-              <a href="<?php echo site_url().'course';?>" class="nav-link">
+              <a href="<?php echo site_url().'course';?>" class="nav-link <?php echo $home_syle;?>">
                   <span class="pcoded-micon">
                        <i data-feather="home"></i>
                   </span>
@@ -67,7 +91,7 @@
             if($kid_id >= 2){ ?>
         
         <li class="nav-item pcoded-hasmenu">
-            <a href="#!" class="">
+            <a href="#!" class="<?php echo $course_syle;?>">
                 <span class="pcoded-micon">
                     <i data-feather="airplay"></i>
                 </span>
@@ -104,7 +128,7 @@
         </li>
         <?php } ?>
         <li class="nav-item">
-            <a href="<?php echo site_url().'course/document';?>" class="nav-link">
+            <a href="<?php echo site_url().'course/document';?>" class="nav-link <?php echo $document_syle;?>">
                 <span class="pcoded-micon">
                     <i data-feather="archive"></i>
                 </span>
@@ -147,7 +171,7 @@
               </div>
               <ul class="pro-body">
                 <li>
-                    <a href="javascript:void(0);" class="dropdown-item"><i data-feather="user-plus"></i> Perfil</a>
+                    <a href="<?php echo site_url().'course/profile';?>" class="dropdown-item"><i data-feather="user-plus"></i> Perfil</a>
                 </li>
                 <li>
                     <a href="<?php echo site_url().'login/logout';?>" class="dropdown-item"><i data-feather="power"></i> Salir</a>
@@ -170,7 +194,6 @@
   <script src="<?php echo site_url().'static/course/js/vendor-all.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/bootstrap.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/pcoded.min.js';?>"></script>
-  <script src="<?php echo site_url().'static/course/js/lightbox.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/ekko-lightbox.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/ac-lightbox.js';?>"></script>
   <script>
