@@ -27,6 +27,7 @@ class C_home extends CI_Controller {
         $params = array(
                         "select" =>"name,
                                     summary,
+                                    img,
                                     video,
                                     date",
                 "where" => "category_id = 1 and active = 1",
@@ -39,6 +40,7 @@ class C_home extends CI_Controller {
         $params = array(
                         "select" =>"name,
                                     summary,
+                                    img,
                                     video,
                                     date",
                 "where" => "category_id = 2 and active = 1",
@@ -87,6 +89,7 @@ class C_home extends CI_Controller {
         $params = array(
                 "select" =>"name,
                             summary,
+                            img,
                             video,
                             date",
         "where" => "category_id = $obj_category->category_id and module = $module_id and active = 1",

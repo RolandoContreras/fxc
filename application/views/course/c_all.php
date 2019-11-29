@@ -25,24 +25,19 @@
                     <div class="card-header">
                       <h5><?php echo $text_name;?></h5>
                     </div>
-                    <div class="card">
-                      <div class="row">
+                    <div class="card-block">
+                      <div class="row text-center">
                         <?php 
                         foreach ($obj_videos as $value) { ?>
-                            <div class="col-lg-4 col-sm-6">
-                              <div class="thumbnail mb-4">
-                                <div class="thumb">
-                                  <div class="embed-responsive embed-responsive-4by3 hei-300"> 
-                                      <iframe width="560" height="315" src="<?php echo $value->video;?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                  </div>
-                                </div>
+                            <div class="col-xl-2 col-lg-3 col-sm-4 col-xs-12">
+                                <a href="<?php echo $value->video;?>" data-toggle="lightbox" data-gallery="mixedgallery">
+                                    <img src="<?php echo site_url()."static/course/img/$value->img";?>" class="img-fluid m-b-10" alt="">
+                                </a>
                                 <div class="card Design-sprint theme-bg2">
                                     <div class="card-header borderless">
-                                        <h5 class="text-white"><?php echo str_to_mayusculas($value->name);?></h5> 
-                                        <span class="d-block text-white mt-2"><?php echo str_to_first_capital($value->summary);?></span> 
+                                        <span class="d-block text-white mt-2"><b><?php echo corta_texto(str_to_first_capital($value->name),16);?></b><br/><?php echo str_to_first_capital($value->summary);?></span> 
                                     </div>
                                 </div>
-                              </div>
                             </div>
                         <?php } ?>  
                     </div>

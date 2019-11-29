@@ -171,6 +171,8 @@
   <script src="<?php echo site_url().'static/course/js/bootstrap.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/pcoded.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/lightbox.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/ekko-lightbox.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/ac-lightbox.js';?>"></script>
   <script>
       feather.replace()
   </script>
