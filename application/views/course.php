@@ -103,23 +103,7 @@
     <div class="sidebar_inner">
       <aside id="trx_addons_widget_recent_posts-2" class="widget widget_recent_posts">
         <h5 class="widget_title">Servicios</h5>
-        <article class="post_item with_thumb">
-              <div class="post_thumb">
-                <a href="<?php echo site_url().'course';?>">
-                    <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/investx90.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Cursos de Forex e Inversiones" srcset="<?php echo site_url().'static/page_front/images/investx90.jpg';?> 90w, <?php echo site_url().'static/page_front/images/investx400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/investx150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/investx370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
-                </a>
-              </div>
-              <div class="post_content">
-                    <h6 class="post_title">
-                        <a href="<?php echo site_url().'fund';?>">Fondo de inversión &#038; Economistas especializados</a>
-                    </h6>
-                    <div class="post_info">
-                        <span class="post_info_item post_categories">
-                            <a href="<?php echo site_url().'fund';?>" title="Ir a la información">Ir al servicio</a>
-                        </span>
-                  </div>
-              </div>
-        </article>
+        
         <article class="post_item with_thumb">
           <div class="post_thumb">
             <a href="<?php echo site_url().'club';?>">
@@ -139,21 +123,39 @@
         </article>
         <article class="post_item with_thumb">
           <div class="post_thumb">
-            <a href="#">
-                <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/multi-invest.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Multiples inversiones" srcset="<?php echo site_url().'static/page_front/images/multi-invest.jpg';?> 90w, <?php echo site_url().'static/page_front/images/multi-invest-400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/multi-invest-150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/multi-invest-370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
+            <a href="<?php echo site_url().'course_marketing';?>">
+                <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/marketing.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Multiples inversiones" srcset="<?php echo site_url().'static/page_front/images/marketing.jpg';?> 90w, <?php echo site_url().'static/page_front/images/marketing-400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/marketing-150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/marketing-370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
             </a>
           </div>
           <div class="post_content">
                 <h6 class="post_title">
-                    <a href="#">Múltiples opciones de inversión en BCA CAPITAL</a>
+                    <a href="<?php echo site_url().'course_marketing';?>">Cursos de Marketing &#038; Sistemas de prospección</a>
                 </h6>
                 <div class="post_info">
                     <span class="post_info_item post_categories">
-                        <a href="#" title="Ir a la información">Ir al servicio</a>
+                        <a href="<?php echo site_url().'course_marketing';?>" title="Ir a la información">Ir al servicio</a>
                     </span>
               </div>
           </div>
       </article>
+        <article class="post_item with_thumb">
+              <div class="post_thumb">
+                <a href="<?php echo site_url().'course';?>">
+                    <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/investx90.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Cursos de Forex e Inversiones" srcset="<?php echo site_url().'static/page_front/images/investx90.jpg';?> 90w, <?php echo site_url().'static/page_front/images/investx400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/investx150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/investx370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
+                </a>
+              </div>
+              <div class="post_content">
+                    <h6 class="post_title">
+                        <a href="<?php echo site_url().'fund';?>">Ganancias &#038; asesoramiento en inversiones</a>
+                    </h6>
+                    <div class="post_info">
+                        <span class="post_info_item post_categories">
+                            <a href="<?php echo site_url().'fund';?>" title="Ir a la información">Ir al servicio</a>
+                        </span>
+                  </div>
+              </div>
+        </article>
+        
   </aside>
   </div>
   </div>

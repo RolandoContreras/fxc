@@ -28,8 +28,11 @@ class Service extends CI_Controller {
                 case "fund":
                     $this->load->view('fund_invest');
                     break;
-                case "course":
+                case "course_inversiones":
                     $this->load->view('course');    
+                    break;
+                case "course_marketing":
+                    $this->load->view('course_marketing');
                     break;
                 case "club":
                     $this->load->view('club');    

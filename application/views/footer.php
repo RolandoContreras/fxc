@@ -126,10 +126,10 @@
                               <a target="_blank" href="https://www.facebook.com/bcacapital" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
                                   <span class="social_icon social_icon_facebook"><span class="icon-facebook"></span></span>
                               </a>
-                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                              <a target="_blank" href="https://www.instagram.com/bcacapitaloficial" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
                                   <span class="social_icon social_icon_instagramm"><span class="icon-instagramm"></span></span>
                               </a>
-                              <a target="_blank" href="" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
+                              <a target="_blank" href="https://www.youtube.com/channel/UC3BcH2wePq59h9ABBm3y3-g" class="social_item social_item_style_icons sc_icon_type_icons social_item_type_icons">
                                   <span class="social_icon social_icon_twitter"><span class="icon-youtube"></span></span>
                               </a>
                             </div>

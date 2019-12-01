@@ -47,9 +47,10 @@ $route['forget'] = 'forget';
 
 $route['service'] = 'service';
 $route['fund'] = 'service';
-$route['course'] = 'service';
 $route['club'] = 'service';
+$route['course_inversiones'] = 'service';
 $route['investment'] = 'service';
+$route['course_marketing'] = 'service';
 
 $route['register/([0-9a-z_-]+)'] = "register/index/$1";
 $route['register/validate_username'] = "register/validate_username";

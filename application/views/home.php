@@ -61,7 +61,7 @@
                   style="z-index:5;font-family:Barlow;">Múltiples formas para alcanzar <br>la libertad financiera</rs-layer>
                 <rs-layer id="slider-2-slide-3-layer-5" class="trx-addons-crp-description-center" data-type="text"
                   data-color="#d3d7d9" data-rsp_ch="on" data-xy="x:c;y:c;yo:29px;" data-text="s:20;l:28;ls:0px;a:center;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:840;sp:600;sR:840;"
-                  data-frame_999="o:0;tp:600;st:w;sR:7560;" style="z-index:6;font-family:Hind;">Con el asesoramiento de nuestros profesional top en el rubro de finanzas<br/> te ayudaremos a que cumpas tus sueños rápidamente.</rs-layer>
+                  data-frame_999="o:0;tp:600;st:w;sR:7560;" style="z-index:6;font-family:Hind;">Con el asesoramiento de nuestros profesional top en el rubro de finanzas y marketing<br/> te ayudaremos a que cumpas tus sueños rápidamente.</rs-layer>
                   <a id="slider-2-slide-3-layer-3"
                     class="rs-layer trx-addons-crp-button-wide rev-btn" href="<?php echo site_url().'about';?>" target="_self" data-type="button" data-color="rgba(255,255,255,1)" data-xy="x:c;y:c;yo:126px;"
                   data-text="s:15;l:23;ls:0px;fw:500;a:center;" data-rsp_bd="off" data-padding="t:18;r:62;b:18;l:62;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power2.easeOut;st:1320;sR:1320;"
@@ -73,7 +73,7 @@
                   <img src="<?php echo site_url().'static/page_front/images/slide-3.jpg';?>" title="Inicio" data-bg="p:center right;" data-panzoom="ss:100;se:106;" class="rev-slidebg" data-no-retina>
                 <rs-layer id="slider-2-slide-4-layer-1" class="trx-addons-crp-title" data-type="text" data-color="#ffffff" data-rsp_ch="on"
                   data-xy="x:30px;y:c;yo:-111px;" data-text="s:71;l:71;ls:-3px;fw:700;a:inherit;" data-frame_0="x:-50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:680;sp:600;sR:680;"
-                  data-frame_999="o:0;tp:600;st:w;sR:7720;" style="z-index:5;font-family:Barlow;"> Únete a la mejor <br/> empresa de inversiones</rs-layer>
+                  data-frame_999="o:0;tp:600;st:w;sR:7720;" style="z-index:5;font-family:Barlow;"> Únete a la mejor <br/> empresa de inversiones y educación</rs-layer>
                 <rs-layer id="slider-2-slide-4-layer-3" class="trx-addons-crp-description" data-type="text"
                   data-color="#d3d7d9" data-rsp_ch="on" data-xy="x:30px;y:c;yo:21px;" data-text="s:20;l:28;ls:0px;a:inherit;" data-frame_0="y:50px;tp:600;" data-frame_1="tp:600;e:Power3.easeOut;st:930;sp:800;sR:930;"
                   data-frame_999="o:0;tp:600;st:w;sR:7270;" style="z-index:6;font-family:Hind;">Muchos inversionistas buscan empresas fiables en donde puedan depositar su tiempo<br/> conocimiento y sobre todo su dinero. Hoy en día nosotros somos la mejor opción del mercado.</rs-layer>
@@ -210,28 +210,28 @@
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-004-bulb"><span class="sc_icon_type_ icon-004-bulb"></span></div>
                         <h4 class="sc_icons_item_title"><span>Asesoramiento</span></h4>
-                        <div class="sc_icons_item_description"><span>Tenemos un staff de profesionales en finanzas y emprendimiento.</span></div>
+                        <div class="sc_icons_item_description"><span>Tenemos un staff de profesionales en finanzas. marketing y emprendimiento.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-003-target-arrow"><span class="sc_icon_type_ icon-003-target-arrow"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Enseñanza</span></h4>
-                        <div class="sc_icons_item_description"><span>Aprenderás de nuestros profesionales toda la información de los mercados de inversiones.</span></div>
+                        <h4 class="sc_icons_item_title"><span>Enseñanzas</span></h4>
+                        <div class="sc_icons_item_description"><span>Aprenderás de nuestros profesionales toda la información de los mercados de inversiones y posicionamiento de marca.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-006-chess"><span class="sc_icon_type_ icon-006-chess"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Administración de Fondos</span></h4>
-                        <div class="sc_icons_item_description"><span>Nuestros traders profesionales te ayudaran a rentabilizar tu inversión hasta un 8% mensual.</span></div>
+                        <h4 class="sc_icons_item_title"><span>Inversiones</span></h4>
+                        <div class="sc_icons_item_description"><span>Nuestros traders profesionales te ayudarán a rentabilizar tu inversión obteniendo una rentabilidad mensual.</span></div>
                       </div>
                     </div>
                     <div class="trx_addons_column-1_4">
                       <div class="sc_icons_item">
                         <div class="sc_icons_icon sc_icon_type_ icon-030-target-cross"><span class="sc_icon_type_ icon-030-target-cross"></span></div>
-                        <h4 class="sc_icons_item_title"><span>Inversiones</span></h4>
-                        <div class="sc_icons_item_description"><span>Tendrás una cartera de empresa en crecimiento filtradas con BCA para invertir.</span><span></span></div>
+                        <h4 class="sc_icons_item_title"><span>Viajes</span></h4>
+                        <div class="sc_icons_item_description"><span>Con nuestra empresa tendrás el beneficio de tener descuentos en hoteles, resorts, cruceros y mucho más.</span><span></span></div>
                       </div>
                     </div>
                   </div>
@@ -303,7 +303,7 @@
               <div class="elementor-widget-container">
                 <div id="trx_sc_title_906100002" class="sc_title sc_title_default">
                   <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_default">Acerca de Nosotros</h6>
-                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Somos expertos en<br/> asesoramiento e inversiones</h1>
+                  <h1 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_default sc_item_title_tag">Somos expertos en<br/> Inversiones y Marketing</h1>
                 </div>
               </div>
             </div>
@@ -337,7 +337,7 @@
                           <div class="elementor-widget-container">
                             <div id="trx_sc_title_1641294767" class="sc_title sc_title_decoration">
                               <h6 class="sc_item_subtitle sc_title_subtitle sc_align_none sc_item_title_style_decoration">¿Qué hacemos?</h6>
-                              <h3 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_decoration sc_item_title_tag">Cartera de<br> Inversiones</h3>
+                              <h3 class="sc_item_title sc_title_title sc_align_none sc_item_title_style_decoration sc_item_title_tag">Cursos especializados<br> e Inversiones</h3>
                             </div>
                           </div>
                         </div>
@@ -396,11 +396,11 @@
             <div class="elementor-element elementor-element-05c4ac1 elementor-widget elementor-widget-text-editor" data-id="05c4ac1" data-element_type="widget" data-widget_type="text-editor.default">
               <div class="elementor-widget-container">
                 <div class="elementor-text-editor elementor-clearfix">
-                  <p>Si usted está buscando nuevas ideas para generar dinero, quiere asociarse a una empresa confiable y ser asesorado por los mejores financistas del medio, entonces es posible que necesite nuestra ayuda. ¡Le ayudaremos a tener un abanico de posibilidad para alcanzar sus objetivos y siempre de la ayuda de BCA Capital!</p>
+                  <p>Si usted está buscando nuevas ideas para generar dinero, quiere asociarse a una empresa confiable y ser asesorado por los mejores financistas y marketeros del medio, entonces es posible que necesite nuestra ayuda. ¡De la mano con nosotros tendrá un abanico de posibilidad para alcanzar sus objetivos y metas!</p>
                   <ul class="trx_addons_list_success">
-                    <li>Múltiples ideas de inversión</li>
-                    <li>Asesoramiento de profesionales</li>
-                    <li>Inversiones seguras y rentables</li>
+                    <li>Asesoramiento y educación</li>
+                    <li>Inversiones rentables y confiables</li>
+                    <li>Múltiples ideas para multiplicar su dinero</li>
                   </ul>
                 </div>
               </div>
@@ -444,7 +444,7 @@
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">01</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="<?php echo site_url().'fund';?>">Fondo de inversión &#038; Economistas especializados</a>
+                                    <a href="<?php echo site_url().'fund';?>">Inversiones &#038; Economistas especializados</a>
                                 </h6>
                           </div>
                           <a class="sc_services_item_link" href="<?php echo site_url().'fund';?>"></a>
@@ -457,7 +457,7 @@
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">02</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="<?php echo site_url().'course';?>">Cursos &#038; Asesoramiento en el mercado secundario</a>
+                                    <a href="<?php echo site_url().'course';?>">Cursos en el mercado secundario</a>
                                 </h6>
                           </div>
                           <a class="sc_services_item_link" href="<?php echo site_url().'course';?>"></a>
@@ -482,10 +482,10 @@
                           <div class="sc_services_item_header_inner">
                               <span class="sc_services_item_number">04</span>
                                 <h6 class="sc_services_item_title">
-                                    <a href="#">Múltiples opciones de inversión en BCA</a>
+                                    <a href="#">Cursos de marketing y sistemas de prospección</a>
                                 </h6>
                           </div>
-                            <a class="sc_services_item_link" href="#"></a>
+                            <a class="sc_services_item_link" href="<?php echo site_url().'course_marketing';?>"></a>
                         </div>
                       </div>
                     </div>

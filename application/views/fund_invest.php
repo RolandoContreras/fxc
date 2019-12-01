@@ -31,7 +31,7 @@
                             <div id="trx_sc_layouts_title_171490811" class="sc_layouts_title sc_align_center with_content without_image without_tint">
                               <div class="sc_layouts_title_content">
                                 <div class="sc_layouts_title_title">
-                                  <h1 class="sc_layouts_title_caption">Fondo de inversión &#038;<br/> Economistas especializados</h1>
+                                  <h1 class="sc_layouts_title_caption">Ganancias en inversión &#038;<br/> Economistas especializados</h1>
                                 </div>
                               </div>
                             </div>
@@ -98,13 +98,13 @@
         <h5 class="widget_title">Servicios</h5>
         <article class="post_item with_thumb">
               <div class="post_thumb">
-                <a href="<?php echo site_url().'course';?>">
+                <a href="<?php echo site_url().'course_inversiones';?>">
                     <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/course.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Cursos de Forex e Inversiones" srcset="<?php echo site_url().'static/page_front/images/course.jpg';?> 90w, <?php echo site_url().'static/page_front/images/course-400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/course-150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/course-370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
                 </a>
               </div>
               <div class="post_content">
                     <h6 class="post_title">
-                        <a href="<?php echo site_url().'course';?>">Cursos &#038; Asesoramiento en el mercado secundario</a>
+                        <a href="<?php echo site_url().'course_inversiones';?>">Cursos &#038; Asesoramiento en el mercado secundario</a>
                     </h6>
                     <div class="post_info">
                         <span class="post_info_item post_categories">
@@ -132,17 +132,17 @@
         </article>
         <article class="post_item with_thumb">
           <div class="post_thumb">
-            <a href="#">
-                <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/multi-invest.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Multiples inversiones" srcset="<?php echo site_url().'static/page_front/images/multi-invest.jpg';?> 90w, <?php echo site_url().'static/page_front/images/multi-invest-400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/multi-invest-150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/multi-invest-370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
+            <a href="<?php echo site_url().'course_marketing';?>">
+                <img width="90" height="90" src="<?php echo site_url().'static/page_front/images/marketing.jpg';?>" class="attachment-rhodos-thumb-tiny size-rhodos-thumb-tiny wp-post-image" alt="Multiples inversiones" srcset="<?php echo site_url().'static/page_front/images/marketing.jpg';?> 90w, <?php echo site_url().'static/page_front/images/marketing-400.jpg';?> 400w, <?php echo site_url().'static/page_front/images/marketing-150.jpg';?> 150w, <?php echo site_url().'static/page_front/images/marketing-370.jpg';?> 370w" sizes="(max-width: 90px) 100vw, 90px" />
             </a>
           </div>
           <div class="post_content">
                 <h6 class="post_title">
-                    <a href="#">Múltiples opciones de inversión en BCA CAPITAL</a>
+                    <a href="<?php echo site_url().'course_marketing';?>">Cursos de Marketing &#038; Sistemas de prospección</a>
                 </h6>
                 <div class="post_info">
                     <span class="post_info_item post_categories">
-                        <a href="#" title="Ir a la información">Ir al servicio</a>
+                        <a href="<?php echo site_url().'course_marketing';?>" title="Ir a la información">Ir al servicio</a>
                     </span>
               </div>
           </div>
