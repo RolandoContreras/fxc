@@ -13,7 +13,7 @@ class D_category extends CI_Controller{
             $params = array(
                         "select" =>"category_id,
                                     name,
-                                    description,
+                                    slug,
                                     active",
                 "where" => "status_value = 1",
             );
@@ -68,7 +68,7 @@ class D_category extends CI_Controller{
             //PARAM DATA
             $data = array(
                'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
+               'slug' => $this->input->post('slug'),
                'active' => $this->input->post('active'),
                'updated_at' => date("Y-m-d H:i:s"),
                'updated_by' => $_SESSION['usercms']['user_id']
@@ -79,7 +79,7 @@ class D_category extends CI_Controller{
             //PARAM DATA SAVE
             $data = array(
                'name' => $this->input->post('name'),
-               'description' => $this->input->post('description'),
+               'slug' => $this->input->post('slug'),
                'active' => $this->input->post('active'),
                'status_value' => 1,
                'created_at' => date("Y-m-d H:i:s"),

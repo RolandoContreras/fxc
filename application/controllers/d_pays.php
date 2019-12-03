@@ -17,15 +17,14 @@ class D_pays extends CI_Controller{
                         "select" =>"pay.pay_id,
                                     pay.date,
                                     pay.amount,
-                                    pay.obs,
-                                    pay.status_value,
+                                    pay.descount,
+                                    pay.amount_total,
+                                    pay.active,
                                     customer.customer_id,
                                     customer.first_name,
                                     customer.username,
                                     customer.btc_address,
-                                    customer.last_name,
-                                    customer.email,
-                                    customer.dni",
+                                    customer.last_name",
                         "join" => array('customer, pay.customer_id = customer.customer_id'),
                         "order" => "pay.pay_id DESC"
                );
@@ -43,35 +42,6 @@ class D_pays extends CI_Controller{
             $this->tmp_mastercms->set('seccion',$seccion);
             $this->tmp_mastercms->set("obj_pay",$obj_pay);
             $this->tmp_mastercms->render("dashboard/pagos/pagos_list");
-    }
-    
-    public function details($pay_id){  
-        
-           $this->get_session();
-           $params = array(
-                        "select" =>"commissions.commissions_id,
-                                    commissions.name, 
-                                    commissions.amount,
-                                    commissions.date,
-                                    commissions.status_value",
-                        "where" => "pay_commission.pay_id = $pay_id",
-                        "join" => array('commissions, pay_commission.commissions_id = commissions.commissions_id'),
-                        "order" => "commissions.date ASC"
-                        );
-           //GET DATA FROM CUSTOMER
-           $obj_pay_commission= $this->obj_pay_commission->search($params);
-           
-           /// PAGINADO
-            $modulos ='cobros'; 
-            $seccion = 'Lista';        
-            $link_modulo =  site_url().'dashboard/pagos'; 
-            
-            /// VISTA
-            $this->tmp_mastercms->set('link_modulo',$link_modulo);
-            $this->tmp_mastercms->set('modulos',$modulos);
-            $this->tmp_mastercms->set('seccion',$seccion);
-            $this->tmp_mastercms->set("obj_pay_commission",$obj_pay_commission);
-            $this->tmp_mastercms->render("dashboard/pagos/pagos_details");
     }
     
     public function pagado(){

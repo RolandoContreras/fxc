@@ -14,9 +14,11 @@
                 <!--GET CUSTOMER ID-->
               <input type="hidden" name="category_id" id="category_id" value="<?php echo isset($obj_category)?$obj_category->category_id:"";?>">
               <br><br>
+              <strong>Nombre:</strong><br>
               <input type="text" id="name" name="name" value="<?php echo isset($obj_category->name)?$obj_category->name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
               <br><br>
-              <textarea class="input-large" id="description" name="description" rows="5" style="width:97%;height:180px;" placeholder="Descripción"><?php echo isset($obj_category->description)?$obj_category->description:"";?></textarea>
+              <strong>Slug:</strong><br>
+              <input type="text" id="slug" name="slug" value="<?php echo isset($obj_category->slug)?$obj_category->slug:"";?>" class="input-xlarge-fluid" placeholder="Slug">
               <br><br>
                     <div class="well nomargin">
                         <div class="inner">

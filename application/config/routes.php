@@ -84,7 +84,8 @@ $route['backoffice/files'] = "b_files";
 $route['backoffice/carrera'] = "b_carrera";
 
 $route['backoffice/pay'] = "b_pay";
-
+$route['backoffice/pay/validate_amount'] = "b_pay/validate_amount";
+$route['backoffice/pay/make_pay'] = "b_pay/make_pay";
 
 $route['dashboard'] = "dashboard";
 $route['dashboard/panel'] = "panel";
@@ -162,8 +163,8 @@ $route['dashboard/activaciones/active'] = "d_activate/active";
 $route['dashboard/activaciones/update_confirmation'] = "d_activate/update_confirmation";
 
 $route['dashboard/pagos'] = "d_pays";
-$route['dashboard/pagos_details/([0-9]+)'] = "d_pays/details/$1";
 $route['dashboard/pagos/pagado'] = "d_pays/pagado";
+$route['dashboard/pagos/load/([0-9]+)'] = "d_pays/load/$1";
 $route['dashboard/pagos/devolver'] = "d_pays/devolver";
 $route['dashboard/pagos/load/([0-9]+)'] = "d_pays/load/$1";
 $route['dashboard/pagos/validate_customer'] = "d_pays/validate_customer";

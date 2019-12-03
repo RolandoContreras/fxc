@@ -1,5 +1,5 @@
-function ver_detalle(pay_id){
-        var url= 'dashboard/cobros_details/'+pay_id;
+function edit_pay(pay_id){
+        var url= 'dashboard/pagos/load/'+pay_id;
 	location.href = site+url;
 }
         
@@ -12,7 +12,7 @@ function pagado(pay_id,first_name,username,amount,email){
             "callback": function() {
            $.ajax({
                type: "post",
-               url: site+"dashboard/cobros/pagado",
+               url: site+"dashboard/pagos/pagado",
                dataType: "json",
                data: {pay_id : pay_id,
                       first_name:first_name,
@@ -37,7 +37,7 @@ function devolver(pay_id,first_name,username,amount,email){
             "callback": function() {
            $.ajax({
                type: "post",
-               url: site+"dashboard/cobros/devolver",
+               url: site+"dashboard/pagos/devolver",
                dataType: "json",
                data: {pay_id : pay_id,
                       first_name:first_name,

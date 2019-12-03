@@ -194,6 +194,7 @@ window.smartsupp||(function(d) {
                 <div class="os-icon os-icon-menu"></div>
               </div> <span>Tablero</span> </a>
           </li>
+          <li class="sub-header"> <span>Información</span> </li>
           <li>
             <a href="<?php echo site_url().'backoffice/profile';?>">
               <div class="icon-w"> <i class="os-icon os-icon-user-male-circle"></i> </div> <span>Datos Personales</span> </a>
@@ -202,6 +203,7 @@ window.smartsupp||(function(d) {
             <a href="<?php echo site_url().'backoffice/plan';?>" class="active">
               <div class="icon-w"> <i class="os-icon os-icon-checkmark"></i> </div> <span>Planes</span> </a>
           </li>
+          <li class="sub-header"> <span>Finanzas</span> </li>
           <li class="has-sub-menu">
             <a href="#">
               <div class="icon-w"> <i class="os-icon os-icon-bar-chart-up"></i> </div> <span>Finanzas</span> </a>
@@ -222,6 +224,7 @@ window.smartsupp||(function(d) {
                 <div class="os-icon os-icon-wallet-loaded"></div>
               </div> <span>Cobros</span> </a>
           </li>
+          <li class="sub-header"> <span>Red</span> </li>
           <li class="has-sub-menu">
             <a href="">
               <div class="icon-w"> <i class="os-icon os-icon-hierarchy-structure-2"></i> </div> <span>Mi Red</span> </a>
@@ -242,6 +245,7 @@ window.smartsupp||(function(d) {
                 <div class="os-icon os-icon-map"></div>
               </div> <span>Plan Carrera</span> </a>
           </li>
+          <li class="sub-header"> <span>Documentos</span> </li>
           <li>
             <a href="<?php echo site_url().'backoffice/files';?>" class="" style="padding-top: 4px; padding-bottom: 4px;">
               <div class="icon-w">

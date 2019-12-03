@@ -9,7 +9,7 @@
       <div class="element-wrapper">
         <h6 class="element-header">¿Dudas sobre el retiro? <small>Consulte las reglas de retiro.</small> </h6>
         <div class="element-box">
-          <div class="alert alert-warning" role="alert"> <strong>Reglas de Retiro </strong><br> 
+          <div class="alert alert-success" role="alert"> <strong>Reglas de Retiro </strong><br> 
                 Las solicitudes de retiro se realizan solamente días hábiles (lunes a viernes).<br>
                 El importe mínimo de retiro es de $10.
                 Los pagos se procesan en 24 horas hábiles
@@ -24,14 +24,14 @@
                   <div class="row">
                     <div class="col-md-6">
                       <div class="element-box el-tablo">
-                        <div class="label"> Total Ganado </div>
-                        <div class="value"> US$ 0,00 </div>
+                        <div class="label"> GANANCIA TOTAL </div>
+                        <div class="value"> US$ <?php echo $total_comisiones!=""?$total_comisiones:"0.00";?> </div>
                       </div>
                     </div>
                     <div class="col-md-6">
                       <div class="element-box el-tablo">
-                        <div class="label"> Total Dispobible </div>
-                        <div class="value"> US$ 0,00 </div>
+                        <div class="label"> GANANCIA DISPONIBLE </div>
+                        <div class="value"> US$ <?php echo $total_disponible!=""?$total_disponible:"0.00";?> </div>
                       </div>
                     </div>
                   </div>
@@ -56,7 +56,7 @@
                     </div>
                   </div>
                   <div class="body"  style="margin-top: 30px;">
-                        <form class="form-horizontal" onsubmit="change_wallet();" enctype="multipart/form-data" action="javascript:void(0);"> 
+                        <form class="form-horizontal" onsubmit="make_pay();" enctype="multipart/form-data" action="javascript:void(0);"> 
                             <div class="form-group"> 
                                 <div class="col-lg-12" align="left"> 
                                     <label class="control-label"> <b>SALDO DISPONIBLE: </b>  </label> 
@@ -66,40 +66,55 @@
                                 <div class="col-lg-12" align="left"> 
                                     <label class="control-label"> Importe: </label> 
                                 </div>
-                                <input type="text" name="wallet" id="wallet" class="form-control">
+                                <input type="text" name="amount" onkeyup="this.value=Numtext(this.value)" onblur="validate_amount(this.value);" id="amount" class="form-control">
+                                <input type="hidden" name="total_disponible" id="total_disponible" value="<?php echo $total_disponible;?>">
+                                
                             </div>
                             <div class="form-group has-feedback"  id="wallet_error">
                                 <div class="col-lg-12" align="left"> 
                                     <label class="control-label"> Tax:   </label> 
                                 </div>
-                                <input type="text" name="wallet" disabled="" value="" id="wallet" class="form-control">
+                                <input type="text" name="tax" id="tax" result disabled="" class="form-control">
                             </div>
                             <div class="form-group has-feedback"  id="wallet_error">
                                 <div class="col-lg-12" align="left"> 
                                     <label class="control-label"> Total a Recibir:   </label> 
                                 </div>
-                                <input type="text" name="wallet" disabled="" id="wallet" class="form-control">
+                                <input type="text" name="result" id="result" disabled="" class="form-control">
                             </div>
                             <div class="form-group has-feedback"  id="wallet_error">
                                 <div class="col-lg-12" align="left"> 
                                     <label class="control-label"> Billetera de Bitcoin:</label> 
                                 </div>
-                                <input type="text" name="wallet" disabled="" id="wallet" class="form-control">
-                                <p>* Verificar los datos de recibimiento debido es bajo su responzabilidad.</p>
+                                <input type="text" name="wallet" disabled="" value="<?php echo $wallet;?>" id="wallet" class="form-control">
+                                <p>* Verificar los datos de recibimiento recuerde que es bajo su responzabilidad.</p>
                             </div>
-                            <div class="form-group has-feedback"  id="wallet_error" style="display: none;">
-                                <div class="alert alert-danger validation-errors">
-                                    <p class="user_login_id" style="text-align: center;">Ingrese billetera valida</p>
+                            <?php
+                            if($wallet == null){
+                                $disable = "disabled"; ?>
+                            <div class="element-box">
+                              <div class="alert alert-warning" role="alert"> <strong>Necesita vincular su billetera </strong><br> 
+                                    Para solicitar un retiro primero debe vincular su billetera de bitcoin<br> dar clic en el siguiente enlace para poder hacerlo:
+                                    <a href="<?php echo site_url().'backoffice/profile';?>">Clic Aquí</a>
                                 </div>
                             </div>
+                            <?php }else{
+                                $disable = "";
+                            }
+                            ?>
                             <div class="form-group">
                               <div class="col-lg-12" align="right"> 
-                                  <button class="mr-2 mb-2 btn btn-success" type="submit" style="margin-top: 30px;">Realizar Retiro <i class="os-icon os-icon-grid-18"></i></button>        
+                                  <button class="mr-2 mb-2 btn btn-success" <?php echo $disable;?> type="submit" style="margin-top: 30px;">Realizar Retiro <i class="os-icon os-icon-grid-18"></i></button>        
                               </div>
                             </div>
-                            <div class="form-group has-feedback" style="display: none;" id="wallet_success">
+                            <div class="form-group has-feedback" style="display: none;" id="pay_alert">
+                                <div class="alert alert-danger validation-errors">
+                                    <p class="user_login_id" style="text-align: center;">El importe es invalido.</p>
+                                </div>
+                            </div>
+                            <div class="form-group has-feedback" style="display: none;" id="pay_success">
                                 <div class="alert alert-success validation-errors">
-                                    <p class="user_login_id" style="text-align: center;">Billetera cambiada con éxito.</p>
+                                    <p class="user_login_id" style="text-align: center;">Solicitud de retiro con éxito.</p>
                                 </div>
                             </div>
                           </form>
@@ -179,9 +194,6 @@ $(document).ready(function(){
   $("#show_pay").click(function(){
     $("#show_pay_div").show(1000);
   });
-  
-//  $("#show_pay").click(function(){
-//    $("#show_pay_div").hide(1000);
-//  });
 });
 </script>
+<script src='<?php echo site_url().'static/backoffice/js/script/pay.js';?>'></script>

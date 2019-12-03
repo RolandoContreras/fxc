@@ -27,18 +27,18 @@
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Estado</th>
-                                <th>Acción</th>
+                                <th>NOMBRE</th>
+                                <th>SLUG</th>
+                                <th>ESTADO</th>
+                                <th>ACCIÓN</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                             <?php foreach ($obj_category as $value): ?>
                                 <td align="center"><b><?php echo $value->category_id;?></b></td>
-                                <td align="center"><?php echo $value->name;?></td>
-                                <td align="center"><?php echo $value->description;?></td>
+                                <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
+                                <td align="center" style="color:#fff;" class="label-info"><?php echo $value->slug;?></td>
                                 <td align="center">
                                     <?php if ($value->active == 0) {
                                         $valor = "Inactivo";

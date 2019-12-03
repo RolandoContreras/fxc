@@ -16,13 +16,13 @@
                     <div class="col-md-3">
                       <div class="element-box el-tablo">
                         <div class="label"> Ganancia Total </div>
-                        <div class="value"> US$ 0,00 </div>
+                        <div class="value"> US$ <?php echo $obj_total_commissions->total_comissions!=""?$obj_total_commissions->total_comissions:"0.00";?> </div>
                       </div>
                     </div>
                     <div class="col-md-3">
                       <div class="element-box el-tablo">
-                        <div class="label"> Ganancia Dispobible </div>
-                        <div class="value"> US$ 0,00 </div>
+                        <div class="label"> Ganancia DISPONIBLE </div>
+                        <div class="value"> US$ <?php echo $obj_total_commissions->total_disponible!=""?$obj_total_commissions->total_disponible:"0.00";?> </div>
                       </div>
                     </div>
                     <div class="col-md-3">
@@ -41,28 +41,28 @@
                     </div>
                       <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
-                        <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-users" style="font-size: 35px; color: #4a3116;"></i>
+                          <a class="profile-tile-box" href="<?php echo site_url().'backoffice/referred';?>" style="width: 100%;"> <i class="os-icon os-icon-users" style="font-size: 35px; color: #4a3116;"></i>
                             <div class="pt-user-name"> Personas Directas<br> <b><?php echo $obj_total_referidos->total_referred;?></b> </div>
                         </a>
                       </div>
                     </div>
                     <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
-                        <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-hierarchy-structure-2" style="font-size: 35px; color: #4a3116;"></i>
-                          <div class="pt-user-name"> Personas en el Equipo <br><b>0</b> </div>
+                        <a class="profile-tile-box" href="<?php echo site_url().'backoffice/unilevel';?>" style="width: 100%;"> <i class="os-icon os-icon-hierarchy-structure-2" style="font-size: 35px; color: #4a3116;"></i>
+                          <div class="pt-user-name"> Personas en el Equipo <br><b><?php echo $obj_total_referidos->total_register;?></b> </div>
                         </a>
                       </div>
                     </div>
                     <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
-                        <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-bar-chart-stats-up" style="font-size: 35px; color: #4a3116;"></i>
-                            <div class="pt-user-name"> Ganancia Último Mes<br> <b>$0</b></div>
+                        <a class="profile-tile-box" href="<?php echo site_url().'backoffice/history';?>" style="width: 100%;"> <i class="os-icon os-icon-bar-chart-stats-up" style="font-size: 35px; color: #4a3116;"></i>
+                            <div class="pt-user-name"> Ganancia Último Mes<br> <b><?php echo format_number_dolar($obj_total_commissions->commission_by_date);?></b></div>
                         </a>
                       </div>
                     </div>
                     <div class="col-md-3 d-none d-sm-block">
                       <div class="profile-tile">
-                        <a class="profile-tile-box" href="#" style="width: 100%;"> <i class="os-icon os-icon-map" style="font-size: 35px; color: #4a3116;"></i>
+                        <a class="profile-tile-box" href="<?php echo site_url().'backoffice/carrera';?>" style="width: 100%;"> <i class="os-icon os-icon-map" style="font-size: 35px; color: #4a3116;"></i>
                             <div class="pt-user-name"> PRÓXIMO RANGO<br> <b><?php echo $obj_next_range->name;?></b> </div>
                         </a>
                       </div>

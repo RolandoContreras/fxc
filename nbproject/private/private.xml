@@ -12,17 +12,8 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp64/www/fxc/application/views/footer.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/controllers/service.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/home.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/config/routes.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav2.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/club.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/fund_invest.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/course.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/course_marketing.php</file>
-            <file>file:/C:/wamp64/www/fxc/application/views/nav_mobile.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/views/backoffice/b_home.php</file>
+            <file>file:/C:/wamp64/www/fxc/application/controllers/b_home.php</file>
         </group>
     </open-files>
 </project-private>

@@ -10,10 +10,10 @@ function register(){
     var address = document.getElementById("address").value;
     var country = document.getElementById("country").value;
     //GET DATA RECAPTCHA
-    var response = grecaptcha.getResponse();
-        if(response.length == 0){
-        document.getElementById("captcha_messages").style.display = "block";
-    }else{
+//    var response = grecaptcha.getResponse();
+//        if(response.length == 0){
+//        document.getElementById("captcha_messages").style.display = "block";
+//    }else{
         //validate
         if(name == ""){
             document.getElementById("message_name").style.display = "block";
@@ -76,7 +76,7 @@ function register(){
                 $("#email").focus();
             }
         }
-    }
+//    }
 }
 
 function validar_email( email ){

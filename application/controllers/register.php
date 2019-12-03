@@ -120,11 +120,20 @@ class Register extends CI_Controller {
                     );
                     $customer_id = $this->obj_customer->insert($data);
                     
-                    
+                //GET IDENT    
+                $param_customer = array(
+                            "select" => "ident",
+                            "where" => "customer_id = $parent_id");
+               $customer = $this->obj_unilevel->get_search_row($param_customer);    
+               $ident =  $customer->ident;
+               //CRETE NEW IDENT 
+               $new_ident = $ident.",$parent_id";
+               
                 //CREATE UNILEVEL
                 $data_invoice = array(
                         'customer_id' => $customer_id,
                         'parend_id' => $parent_id,
+                        'ident' => $new_ident,
                         'status_value' => 1,
                         'created_at' => date("Y-m-d H:i:s"),
                     );
@@ -141,9 +150,150 @@ class Register extends CI_Controller {
             $data_customer_session['status'] = 1;
             $_SESSION['customer'] = $data_customer_session; 
             $data['status'] = "success";
+//            $this->message($username, $pass, $name);
             echo json_encode($data);
             }
 	}
+        
+        public function message($username,$pass, $name){    
+                 $img = site_url().'static/page_front/';           
+                $mensaje = wordwrap("<html>
+                    
+                            <div bgcolor='#E9E9E9' style='background:#fff;margin:0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'>
+  <table style='background-color:#fff;border-collapse:collapse;margin:0;padding:0' width='100%' height='100%' cellspacing='0' cellpadding='0' border='0'
+    align='center'>
+    <tbody>
+      <tr>
+        <td valign='top' align='center'>
+          <table style='border-collapse:collapse;margin:0;padding:0;max-width:600px' width='100%' height='100%' cellspacing='0' cellpadding='0' border='0' align='center'>
+            <tbody>
+              <tr>
+                <td style='padding:39px 30px 31px;display:block;background:#fafafa'> <img src='https://ci6.googleusercontent.com/proxy/H9Pvr9hFRVPkeAyKBTaCMoMo9kKEggjDuyZDyAU6Labjd1iCY1bUx6RkVI-cOYjeetKKGx8uHI6JxiZdl-VpDPuO9LytkZuvJm_D3jWkW3DoLLsuFgcd4-PtbYNFzSW34iPOdzqslE8=s0-d-e1-ft#https://s3.amazonaws.com/cpanel-resources/assets/hostinger_cobranded_email_header.png'
+                    alt='partner-logo' style='display:inline-block;padding-right:12px' class='CToWUd' height='35'> </td>
+              </tr>
+              <tr>
+                <td style='padding:0 30px;display:block;background:#fafafa'>
+                  <p style='padding:32px 32px 0;color:#333333;background:#fff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;line-height:14px;margin:0;font-size:14px;border-radius:5px 5px 0 0'
+                    align='left'>Hi principal,</p>
+                </td>
+              </tr>
+              <tr>
+                <td style='padding:0 30px;display:block;background:#fafafa'>
+                  <table style='width:100%;border-collapse:collapse;padding:0' width='100%' height='100%' cellspacing='0' cellpadding='0' border='0' align='center'>
+                    <tbody>
+                      <tr>
+                        <td style='padding:0;background-color:#fff;border-radius:0 0 5px 5px;padding:32px'>
+                          <p style='margin:0;padding-bottom:20px;color:#333333;line-height:22px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'>
+                          Your professional email address for <a href='http://mibcacapital.com' target='_blank' data-saferedirecturl='https://www.google.com/url?q=http://mibcacapital.com&amp;source=gmail&amp;ust=1575431368630000&amp;usg=AFQjCNE2bxZM6aRU9Ckhj6hvz9ZXHzwzyA'>mibcacapital.com</a>                            is successfully set up. Please find below the login credentials for your email. </p>
+                          <p style='margin:0 0 24px;padding:16px;border-radius:5px;padding-bottom:20px;background:#f7f7f7;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'>
+                          <span style='display:block;padding-bottom:8px'><span style='width:101px;display:inline-block'>Email address: </span><strong><a href='mailto:principal@mibcacapital.com' target='_blank'>principal@mibcacapital.com</a></strong></span>
+                            <span style='display:block'><span style='width:101px;display:inline-block'>Password: </span><strong>@principal</strong></span>
+                          </p> <a href='https://flockmail.hostinger.com?email_account=principal@mibcacapital.com&amp;imap_host=imap-internal.flockmail.com&amp;return_url=&amp;clearSession=true'
+                            style='background:#2d6ced;color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px;display:inline-block;padding:12px 17px;text-decoration:none;border-radius:5px'
+                            target='_blank' data-saferedirecturl='https://www.google.com/url?q=https://flockmail.hostinger.com?email_account%3Dprincipal@mibcacapital.com%26imap_host%3Dimap-internal.flockmail.com%26return_url%3D%26clearSession%3Dtrue&amp;source=gmail&amp;ust=1575431368631000&amp;usg=AFQjCNG7LT-8yshRv-lcF7E67rA5yDb28g'>Login to webmail</a>                          </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style='padding:30px 30px 0;display:block;background:#fafafa'>
+                  <table style='width:100%;border-collapse:collapse;padding:0' width='100%' height='100%' cellspacing='0' cellpadding='0' border='0' align='center'>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table style='display:inline-block;min-width:48%;max-width:100%;width:calc((400px - 100%)*400);border-collapse:collapse;padding:0'
+                            cellspacing='0' cellpadding='0' border='0'>
+                            <tbody>
+                              <tr>
+                                <td style='padding:0 0px 30px 30px'>
+                                  <p style='padding-bottom:16px;margin:0;line-height:20px;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'>Instantly access email on<br>your desktop app</p> <a href='https://s3.amazonaws.com/cpanel-resources/static/download-page/index.html?launch_desktop=true&amp;via_email=true'
+                                    style='display:inline-block;border:1px solid #2d6ced;color:#2d6ced;padding:8px 10px;border-radius:5px;text-decoration:none;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'
+                                    target='_blank' data-saferedirecturl='https://www.google.com/url?q=https://s3.amazonaws.com/cpanel-resources/static/download-page/index.html?launch_desktop%3Dtrue%26via_email%3Dtrue&amp;source=gmail&amp;ust=1575431368631000&amp;usg=AFQjCNGqFXZoRfPhDoMxlnMGqfZ7EWetbQ'><strong>Download now</strong></a>                                  </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <table style='display:inline-block;min-width:48%;max-width:100%;width:calc((400px - 100%)*400);border-collapse:collapse;padding:0'
+                            cellspacing='0' cellpadding='0' border='0'>
+                            <tbody>
+                              <tr>
+                                <td> <img src='https://ci6.googleusercontent.com/proxy/lsrsUjsYgI7VsDBdAyErZhGyhjtjTayVZUeDb18EtHk6JBzO75RAU-FttBnhdoniBPWcgJsxH47oRaMAioX9-dJeZA=s0-d-e1-ft#https://static.flock.co/flockmail/desktop@2x.png'
+                                    alt='desktop' style='width:100%' class='CToWUd a6T' tabindex='0'>
+                                  <div class='a6S' dir='ltr' style='opacity: 0.01; left: 1283.17px; top: 813px;'>
+                                    <div id=':z3' class='T-I J-J5-Ji aQv T-I-ax7 L3 a5q' title='Descargar' role='button' tabindex='0' aria-label='Descargar el archivo adjunto'
+                                      data-tooltip-class='a1V'>
+                                      <div class='aSK J-J5-Ji aYr'></div>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style='display:block;text-align:center;padding:30px 30px 0'>
+                          <hr style='margin:0;border:0;height:1px;background-color:#dedede'> </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+                <td style='padding:45px 30px 0;display:block;background:#fafafa'>
+                  <table style='width:100%;border-collapse:collapse;padding:0;text-align:center' width='100%' height='100%' cellspacing='0' cellpadding='0'
+                    border='0' align='center'>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <table style='display:inline-block;min-width:48%;max-width:100%;width:calc((400px - 100%)*400);border-collapse:collapse;padding:0'
+                            cellspacing='0' cellpadding='0' border='0'>
+                            <tbody>
+                              <tr>
+                                <td style='padding:0 0 30px 19px;box-sizing:border-box;text-align:left'>
+                                  <p style='padding-bottom:16px;margin:0;line-height:20px;color:#333333;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:14px'>Access email on the go with<br>our iOS and Android Apps</p>
+                                  <a href='https://itunes.apple.com/in/app/flock-mail/id1435996267?mt=8'
+                                    style='display:inline-block;width:108px;padding:0 8px 10px 0' target='_blank' data-saferedirecturl='https://www.google.com/url?q=https://itunes.apple.com/in/app/flock-mail/id1435996267?mt%3D8&amp;source=gmail&amp;ust=1575431368631000&amp;usg=AFQjCNHkpRcFsVRAV-MsZqej9zfLB56H_w'><img src='https://ci4.googleusercontent.com/proxy/873y_S020yjr_If8Y32-vllzmtAlxcAqBkykxnNJhweBD0Sy9KDUiK_Ch9qhRCUiOnfby7VqCsXmudlmbPiGlcMmjWUj=s0-d-e1-ft#https://static.flock.co/flockmail/app-store@2x.png'
+                                      alt='app-store' class='CToWUd' width='100%'></a>
+                                  <a href='https://play.google.com/store/apps/details?id=com.flockmail'
+                                    style='display:inline-block;width:108px;padding:0px' target='_blank' data-saferedirecturl='https://www.google.com/url?q=https://play.google.com/store/apps/details?id%3Dcom.flockmail&amp;source=gmail&amp;ust=1575431368631000&amp;usg=AFQjCNF_QFSPl0XkeTefIwOA6-6G8cxIqg'><img src='https://ci4.googleusercontent.com/proxy/bNVfjDzSF4iQZyW6hPlQudCOpNJjjxfZX64xLNhXJJkGpED5tgDU3UzdIOmUblGgHi1-dwndooMHRdN6je9Zr3GJb_yICJI=s0-d-e1-ft#https://static.flock.co/flockmail/google-play@2x.png'
+                                      alt='google-play' class='CToWUd' width='100%'></a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        
+                </td>
+              </tr>
+              <tr>
+                <td style='padding:30px 30px 0;display:block;background:#fafafa'>
+                  <table style='width:100%;border-collapse:collapse;padding:0;text-align:center' width='100%' height='100%' cellspacing='0' cellpadding='0'
+                    border='0' align='center'>
+                    <tbody>
+                      <tr>
+                        <td style='max-width:290px;display:inline-block;padding:0 19px 30px;box-sizing:border-box;text-align:left'>
+                          <p style='margin:0;text-align:center;line-height:20px;color:#888888;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto','Oxygen','Ubuntu','Cantarell','Fira Sans','Droid Sans','Helvetica Neue',sans-serif;font-size:12px'>
+                          visit us at <a href='https://www.flockmail.com/mail' style='color:#2d6ced;text-decoration:none' target='_blank' data-saferedirecturl='https://www.google.com/url?q=https://www.flockmail.com/mail&amp;source=gmail&amp;ust=1575431368631000&amp;usg=AFQjCNFn66V--kkAWV7Wp45KkTGVpHUh3g'>www.flockmail.com/mail</a>                            </p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table><img src='https://ci6.googleusercontent.com/proxy/osUVNtIhJR1xPfbB8pzIPxcQHRd4CwTRfmMaO9kSTjyvjTyTvcCPOgL-j246mIg_kR-9vnBV-TO8hvCjWinRlSC2PrYa8eA-Ajy7CY5ol2Uas-BvzDHf15pmzJdvJLmxSYfMyMfLiycEcUwLvU3ESjPH_pWX6DK0KkA-vzQ0VNAZ_RSR12Yd2spQIh_IxtpUKx3Dj575Kqj5JiViZn08MFnpM1R66sF_daadI8_ewWiTLCRYXQtZNDy2pur7_YVmjcjRg5Hcj8uNFabCGS3fwDgmr47MR8kR7IPf0o_i4Rc995KXIqsqo3Hkl8_41mByK1gllJ6v3CUmGYXb2boRpfxKU7r5d8Z6I57vfbl43PbiMpG5rYArgVEsuTIRYsSJdjpIjcBUr7MUcjTeTkv6wA=s0-d-e1-ft#http://sg-links.flock.com/wf/open?upn=vYOFcFcRTc0-2FH00KMdzDBdvchXJqbAPxV0O0fJ8UGk6birMlCgjlCuDcjwQbQ9XQekPpVqVI3x1u6N-2F-2FkJqwgpj3UuQiqhPZ1hbtJmqT1d17KCPVz41J2yto3aTUCZLnCqeT3yggRGi3bqfKOOXJIOJijvdRHEfxjwIfO3TZ5teMn0YL5yCM2Sr0GhAMJPz-2FN4EmcybHUKPhKTRNJg51Ec7p7A9hEDt49tvabdboUb8-3D'
+    alt='' style='height:1px!important;width:1px!important;border-width:0!important;margin-top:0!important;margin-bottom:0!important;margin-right:0!important;margin-left:0!important;padding-top:0!important;padding-bottom:0!important;padding-right:0!important;padding-left:0!important'
+    class='CToWUd' width='1' height='1' border='0'></div>
+                            .</html>", 70, "\n", true);
+                    $titulo = "Bienvenido - [BCA CAPITAL]";
+                    $headers = "MIME-Version: 1.0\r\n"; 
+                    $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
+                    $headers .= "From: BCA CAPITAL <contacto@mibcacapital.com>\r\n";
+                    $bool = mail("$obj_email",$titulo,$mensaje,$headers);
+                    
+    }
         
         public function crear_registro() {
             

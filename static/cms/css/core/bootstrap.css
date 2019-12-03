@@ -4557,6 +4557,12 @@ a.badge:hover {
   background-color: #3a87ad;
 }
 
+.label-extra,
+.badge-extra {
+  background-color: #ccc;
+}
+
+
 .label-info[href],
 .badge-info[href] {
   background-color: #2d6987;

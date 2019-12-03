@@ -53,12 +53,11 @@ class B_home extends CI_Controller {
         
         //GET TOTAL REFERRED
         $params = array(
-                        "select" =>"count(*) as total_referred",
+                        "select" =>"count(*) as total_referred,
+                                    (select count(*) FROM unilevel WHERE ident like '%$customer_id%') as total_register",
                         "where" => "unilevel.parend_id = $customer_id and unilevel.status_value = 1"
                         );
         $obj_total_referidos = $this->obj_unilevel->get_search_row($params);
-        
-        
         //GET DATA COMISION
                 $params = array(
                         "select" =>"commissions.amount,
@@ -70,12 +69,29 @@ class B_home extends CI_Controller {
                                  'sell, commissions.sell_id = sell.sell_id',
                                  'invoices, sell.invoice_id = invoices.invoice_id',
                                  'customer, invoices.customer_id = customer.customer_id'),
-                "where" => "commissions.customer_id = $customer_id and commissions.status_value = 1",
+                "where" => "commissions.customer_id = $customer_id and commissions.active = 1",
                 "order" => "commissions.commissions_id DESC",
                 "limit" => "10");
            //GET DATA FROM CUSTOMER
         $obj_commissions = $this->obj_commissions->search($params);
         
+        
+        //GET MONTH AND YEAR
+        $month = date('m');
+        $year = date('Y');
+        $first_day = first_month_day($month, $year);
+        $last_day = last_month_day($month, $year);
+        
+        //GET TOTAL COMMISION
+        $params = array(
+                "select" =>"sum(amount) as total_comissions,
+                            (select sum(amount) FROM commissions WHERE customer_id = $customer_id AND active = 1 AND date BETWEEN '$first_day' AND '$last_day') as commission_by_date,
+                            (select sum(amount) FROM commissions WHERE customer_id = $customer_id AND status_value = 1) as total_disponible",
+        "where" => "customer_id = $customer_id and active = 1");
+           //GET DATA FROM CUSTOMER
+        $obj_total_commissions = $this->obj_commissions->get_search_row($params);
+        
+        $this->tmp_backoffice->set("obj_total_commissions",$obj_total_commissions);
         $this->tmp_backoffice->set("obj_commissions",$obj_commissions);
         $this->tmp_backoffice->set("obj_next_range",$obj_next_range);
         $this->tmp_backoffice->set("obj_total_referidos",$obj_total_referidos);
