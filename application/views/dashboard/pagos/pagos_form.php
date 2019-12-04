@@ -1,5 +1,3 @@
-<link href="<?php echo site_url();?>static/cms/css/uploadimg.css" rel="stylesheet" />
-<script src="<?php echo site_url();?>static/cms/js/core/bootstrap-fileupload.js"></script>
 <script src="static/cms/js/cobros.js"></script>
 <form id="customer-form" name="cobros-form" enctype="multipart/form-data" method="post" action="<?php echo site_url()."dashboard/pagos/validate";?>">
 <div id="main_content" class="span7">
@@ -18,7 +16,7 @@
               <input type="hidden" id="pay_id" name="pay_id" value="<?php echo isset($obj_pays->pay_id)?$obj_pays->pay_id:"";?>">
               <br><br>
               <strong>ID Cliente:</strong><br>
-              <input type="text" id="customer_id" onblur="validate_customer(this.value);" name="customer_id" value="<?php echo isset($obj_pays->customer_id)?$obj_pays->customer_id:"";?>" class="input-xlarge-fluid" placeholder="Cliente">
+              <input type="text" id="customer_id" name="customer_id" value="<?php echo isset($obj_pays->customer_id)?$obj_pays->customer_id:"";?>" class="input-xlarge-fluid" placeholder="Cliente" disabled="">
               <br><br>
               <strong>Usuario:</strong><br>
               <input type="text" id="username" name="username" value="<?php echo isset($obj_pays->username)?$obj_pays->username:"";?>" class="input-xlarge-fluid" disabled="">
@@ -26,22 +24,25 @@
               <strong>Nombre:</strong><br>              
               <input type="text" id="name" name="name" value="<?php echo isset($obj_pays->first_name)?$obj_pays->first_name." ".$obj_pays->last_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre" disabled="">
               <br><br>
-              <strong>Monto:</strong><br>   
+              <strong>Importe:</strong><br>   
               <input type="text" id="amount" name="amount" value="<?php echo isset($obj_pays->amount)?$obj_pays->amount:0;?>" class="input-xlarge-fluid">
               <br><br>
-              <strong>Fecha:</strong><br>              
-              <input type="text" id="date" name="date" value="<?php echo isset($obj_pays->date)?formato_fecha_barras($obj_pays->date):"";?>" class="input-xlarge-fluid">
+              <strong>Descuento 5%:</strong><br>   
+              <input type="text" id="descount" name="descount" value="<?php echo isset($obj_pays->descount)?$obj_pays->descount:0;?>" class="input-xlarge-fluid">
               <br><br>
-              <strong>Observaciones:</strong><br>              
-              <textarea class="form-control" name="obs" id="obs" style="height: 200px;width: 100% !important"><?php echo ($obj_pays->obs != "") ? $obj_pays->obs : "";?></textarea>
+              <strong>Total:</strong><br>   
+              <input type="text" id="amount_total" name="amount_total" value="<?php echo isset($obj_pays->amount_total)?$obj_pays->amount_total:0;?>" class="input-xlarge-fluid">
+              <br><br>
+              <strong>Fecha:</strong><br>              
+              <input type="text" id="date" name="date" value="<?php echo isset($obj_pays->date)?formato_fecha_db_time($obj_pays->date):"";?>" class="input-xlarge-fluid">
               <br><br>
               <div class="well nomargin" style="width: 200px;">
                   <div class="inner">
                   <strong>Estado:</strong>
-                  <select name="status_value" id="status_value">
-                         <option value="2" <?php if($obj_pays->status_value == 2){ echo "selected";}?>>Cancelado</option>
-                         <option value="3" <?php if($obj_pays->status_value == 3){ echo "selected";}?>>Es espera de procesar</option>
-                         <option value="4" <?php if($obj_pays->status_value == 4){ echo "selected";}?>>Pagado</option>
+                  <select name="active" id="active">
+                         <option value="1" <?php if($obj_pays->active == 1){ echo "selected";}?>>Es espera</option>
+                         <option value="2" <?php if($obj_pays->active == 2){ echo "selected";}?>>Pagado</option>
+                         <option value="3" <?php if($obj_pays->active == 3){ echo "selected";}?>>Cancelado</option>
                   </select>
                   </div>
               </div>

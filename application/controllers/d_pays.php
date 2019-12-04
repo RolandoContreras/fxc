@@ -45,82 +45,18 @@ class D_pays extends CI_Controller{
     }
     
     public function pagado(){
-        
         if($this->input->is_ajax_request()){  
             ///GET PAY_ID
             $pay_id = $this->input->post("pay_id");
-            //GET DATA FROM EMAIL
-            $first_name = $this->input->post("first_name");
-            $username = $this->input->post("username");
-            $amount = $this->input->post("amount");
-            $email = $this->input->post("email");
-            
             //UPDATE FILES PAY
             $data_pay = array(
-                        'status_value' => 4,
+                        'active' => 2,
                         'updated_by' =>  $_SESSION['usercms']['user_id'],
                         'updated_at' => date("Y-m-d H:i:s")
                     ); 
             $this->obj_pay->update($pay_id,$data_pay);
-                    
-            //SELECT ALL FILE WHERE PAY_ID = $pay_id
-            $params = array(
-                        "select" =>"pay_commission_id,commissions_id",
-                        "where" => "pay_id = $pay_id"
-               );
-           //GET DATA FROM CUSTOMER
-           $obj_pay_commission= $this->obj_pay_commission->search($params);
-            
-           foreach ($obj_pay_commission as $value) {
-               $data_pay_comission = array(
-                        'status_value' => 4,
-                        'updated_by' =>  $_SESSION['usercms']['user_id'],
-                        'updated_at' => date("Y-m-d H:i:s")
-                    ); 
-                    $this->obj_pay_commission->update($value->pay_commission_id,$data_pay_comission);
-                    
-                $data_comission = array(
-                        'status_value' => 4,
-                        'updated_by' =>  $_SESSION['usercms']['user_id'],
-                        'updated_at' => date("Y-m-d H:i:s")
-                    ); 
-                    $this->obj_commission->update($value->commissions_id,$data_comission);    
-           }  
-           
-         // Envio de Correo de confirmacion de pago
-               $mail = '<html> 
-                            <head> 
-                               <title>Cobro Procesado</title> 
-                            </head> 
-                            <body> 
-                            <h2>Pedido de cobro procesado</h2> 
-                            <p>     
-                            Saludos '.$first_name.' la petición de cobro del usuario: '.$username.' por la cantidad: '.$amount.', fue procesada exitósamente. <br>Gracias por su confianza. 
-                            </p> 
-                            <br>
-                            <br>
-                            <br>
-                            3T Club: Travel - Training - Trade <br>
-                            <i>https://my3t.club</i></p> 
-                            </body> 
-                            </html> 
-                            '; 
-
-                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap($mail, 70, "\r\n");
-                //Titulo
-                $titulo = "PEDIDO DE COBRO PROCESADO";
-                //cabecera
-                $headers = "MIME-Version: 1.0\r\n"; 
-                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                //dirección del remitente 
-                $headers .= "From: 3T Club: Travel - Training - Trade < noreplay@my3t.club >\r\n";
-                //Enviamos el mensaje a tu_dirección_email 
-                
-                $bool = mail("$email",$titulo,$mensaje,$headers);
-
-                $data['message'] = "true";
-                echo json_encode($data); 
+            $data['message'] = "true";
+            echo json_encode($data); 
             exit();
         }
     }
@@ -129,77 +65,32 @@ class D_pays extends CI_Controller{
         if($this->input->is_ajax_request()){  
             ///GET PAY_ID
             $pay_id = $this->input->post("pay_id");
-            //GET DATA FROM EMAIL
-            $first_name = $this->input->post("first_name");
-            $username = $this->input->post("username");
-            $amount = $this->input->post("amount");
-            $email = $this->input->post("email");
             
             //UPDATE FILES PAY
             $data_pay = array(
-                        'status_value' => 2,
+                        'active' => 3,
                         'updated_by' =>  $_SESSION['usercms']['user_id'],
                         'updated_at' => date("Y-m-d H:i:s")
                     ); 
             $this->obj_pay->update($pay_id,$data_pay);
-                    
-            //SELECT ALL FILE WHERE PAY_ID = $pay_id
-            $params = array(
-                        "select" =>"pay_commission_id,commissions_id",
-                        "where" => "pay_id = $pay_id"
-               );
-           //GET DATA FROM CUSTOMER
-           $obj_pay_commission= $this->obj_pay_commission->search($params);
             
-           foreach ($obj_pay_commission as $value) {
-               $data_pay_comission = array(
-                        'status_value' => 2,
-                        'updated_by' =>  $_SESSION['usercms']['user_id'],
-                        'updated_at' => date("Y-m-d H:i:s")
-                    ); 
-                    $this->obj_pay_commission->update($value->pay_commission_id,$data_pay_comission);
-                    
-                $data_comission = array(
-                        'status_value' => 2,
-                        'updated_by' =>  $_SESSION['usercms']['user_id'],
-                        'updated_at' => date("Y-m-d H:i:s")
-                    ); 
-                    $this->obj_commission->update($value->commissions_id,$data_comission);    
-           }
-           // Envio de Correo de confirmacion de pago
-                $mail = '<html> 
-                            <head> 
-                               <title>Pedido de cobro cancelado</title> 
-                            </head> 
-                            <body> 
-                            <h2>Pedido de Cobro Cancelado</h2> 
-                            <p>     
-                            Saludos '.$first_name.' la petición de cobro del usuario: <b>'.$username.'</b> por la cantidad: $'.$amount.', fue  cancelada. 
-                            <br>Comunicarse con soporte. Gracias por su confianza. 
-                            </p> 
-                            <br>
-                            <br>
-                            <br>
-                            3T Club: Travel - Training - Trade<br>
-                            <i>https://my3t.club</i></p> 
-                            </body> 
-                            </html> 
-                            '; 
-
-                // Si cualquier línea es más larga de 70 caracteres, se debería usar wordwrap()
-                $mensaje = wordwrap($mail, 70, "\r\n");
-                //Titulo
-                $titulo = "Pedido de cobro cancelado";
-                //cabecera
-                $headers = "MIME-Version: 1.0\r\n"; 
-                $headers .= "Content-type: text/html; charset=iso-8859-1\r\n"; 
-                //dirección del remitente 
-                $headers .= "From: 3T Club: Travel - Training - Trade < noreplay@my3t.club >\r\n";
-                //Enviamos el mensaje a tu_dirección_email 
-                $bool = mail("$email",$titulo,$mensaje,$headers);
-           
-                    $data['message'] = "true";
-                    echo json_encode($data); 
+            //SELECT COMISSION
+            $params = array(
+                        "select" =>"commissions_id",
+                         "where" => "pay_id = $pay_id",
+            ); 
+            $obj_pays  = $this->obj_pay_commission->get_search_row($params); 
+            $commissions_id = $obj_pays->commissions_id;
+            //UPDATE DATE
+            $data = array(
+                    'amount' => 0,
+                    'updated_at' => date("Y-m-d H:i:s"),
+                    'updated_by' => $_SESSION['usercms']['user_id']
+            );          
+            $this->obj_commission->update($commissions_id, $data);
+            
+            $data['message'] = "true";
+            echo json_encode($data); 
             exit();
         }
     }
@@ -209,13 +100,14 @@ class D_pays extends CI_Controller{
             $params = array(
                         "select" =>"pay.pay_id,
                                     pay.amount,
+                                    pay.descount,
+                                    pay.amount_total,
                                     pay.date,
-                                    pay.obs,
+                                    pay.active,
                                     pay.customer_id,
                                     customer.first_name,
                                     customer.last_name,
-                                    customer.username,
-                                    pay.status_value",
+                                    customer.username",
                          "where" => "pay_id = $pay_id",
                          "join" => array('customer, pay.customer_id = customer.customer_id'),
             ); 
@@ -232,53 +124,44 @@ class D_pays extends CI_Controller{
             $this->tmp_mastercms->render("dashboard/pagos/pagos_form");    
     }
     
-    public function validate_customer() {
-            if ($this->input->is_ajax_request()) {
-                //SELECT ID FROM CUSTOMER
-            $customer_id = $this->input->post('customer_id');
-            $param = array(
-                "select" => "customer_id,
-                             username,
-                             first_name,
-                             last_name",
-                "where" => "customer_id = $customer_id");
-            $obj_customer = $this->obj_customer->get_search_row($param);
-            
-            if (count($obj_customer) > 0) {
-                $data['message'] = "true";
-                $data['username'] = $obj_customer->username;
-                $data['name'] = $obj_customer->first_name." ".$obj_customer->last_name;
-                $data['print'] = '<div class="alert alert-success" style="text-align: center">Usuario Encontrado.</div>';
-            } else {
-                $data['message'] = "false";
-                $data['print'] = '<div class="alert alert-danger" style="text-align: center">Usuario no Existe.</div>';
-            }
-            echo json_encode($data);
-            }
-        }
-        
     public function validate(){
         
         $pay_id =  $this->input->post('pay_id');
-        $customer_id =  $this->input->post('customer_id');
         $amount =  $this->input->post('amount');
-        $obs =  $this->input->post('obs');
-        $date = formato_fecha_db_mes_dia_ano($this->input->post('date'));
-        $status_value =  $this->input->post('status_value');
+        $descount =  $this->input->post('descount');
+        $amount_total =  $this->input->post('amount_total');
+        $date = $this->input->post('date');
+        $active =  $this->input->post('active');
         
-        //UPDATE DATA
+        //UPDATE DATA PAY
         $data = array(
-                'customer_id' => $customer_id,
                 'amount' => $amount,
-                'obs' => $obs,
+                'descount' => $descount,
+                'amount_total' => $amount_total,
                 'date' => $date,
-                'status_value' => $status_value,  
+                'active' => $active,  
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
-        
             $this->obj_pay->update($pay_id, $data);
+            
+            //SELECT COMISSION
+            $params = array(
+                        "select" =>"commissions_id",
+                         "where" => "pay_id = $pay_id",
+            ); 
+            $obj_pays  = $this->obj_pay_commission->get_search_row($params); 
+            $commissions_id = $obj_pays->commissions_id;
+            
+            //UPDATE DATA PAY COMISSION
+            $data = array(
+                    'amount' => -$amount,
+                    'updated_at' => date("Y-m-d H:i:s"),
+                    'updated_by' => $_SESSION['usercms']['user_id']
+            );          
+            //SAVE DATA IN TABLE    
+            $this->obj_commission->update($commissions_id, $data);
         redirect(site_url()."dashboard/pagos");
     }
 

@@ -3,7 +3,7 @@ function edit_pay(pay_id){
 	location.href = site+url;
 }
         
-function pagado(pay_id,first_name,username,amount,email){
+function pagado(pay_id){
     bootbox.dialog("Confirma que desea marcar como pagado?", [        
         { "label" : "Cancelar"},
         {
@@ -14,11 +14,7 @@ function pagado(pay_id,first_name,username,amount,email){
                type: "post",
                url: site+"dashboard/pagos/pagado",
                dataType: "json",
-               data: {pay_id : pay_id,
-                      first_name:first_name,
-                      username:username,
-                      amount:amount,
-                      email:email},
+               data: {pay_id : pay_id},
                success:function(data){                             
                location.reload();
                }         
@@ -28,7 +24,7 @@ function pagado(pay_id,first_name,username,amount,email){
     ]);
 }
 
-function devolver(pay_id,first_name,username,amount,email){
+function devolver(pay_id){
     bootbox.dialog("Confirma que desea marcar como devuelto?", [        
         { "label" : "Cancelar"},
         {
@@ -39,11 +35,8 @@ function devolver(pay_id,first_name,username,amount,email){
                type: "post",
                url: site+"dashboard/pagos/devolver",
                dataType: "json",
-               data: {pay_id : pay_id,
-                      first_name:first_name,
-                      username:username,
-                      amount:amount,
-                      email:email},
+               data: {pay_id : pay_id
+                      },
                success:function(data){                             
                location.reload();
                }         
@@ -51,4 +44,8 @@ function devolver(pay_id,first_name,username,amount,email){
            }
         }
     ]);
+}
+function cancel_pay(){
+        var url= 'dashboard/pagos';
+	location.href = site+url;
 }

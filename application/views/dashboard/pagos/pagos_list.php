@@ -54,7 +54,7 @@
                                         $valor = "Es espera";
                                         $stilo = "label label-success";
                                     }elseif($value->active == 3){
-                                        $valor = "Pagado";
+                                        $valor = "Cancelado";
                                         $stilo = "label label-important";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
