@@ -11,6 +11,7 @@ class D_activate extends CI_Controller{
         $this->load->model("kit_model","obj_kit");
         $this->load->model("sell_model","obj_sell");
         $this->load->model("bonus_model","obj_bonus");
+        $this->load->model("points_model","obj_points");
     }   
                 
     public function index(){  
@@ -97,7 +98,6 @@ class D_activate extends CI_Controller{
                 $price = $this->input->post("price");
                 //GET DATA TODAY
                 $today = date('Y-m-j');
-                
                 //insert data on sell table
                     $data = array(
                         'invoice_id' => $invoice_id,
@@ -133,6 +133,8 @@ class D_activate extends CI_Controller{
                     $this->pay_directo($customer_id,$price,$parend_id,$sell_id,$active);
                     //INSERT AMOUNT ON COMMISION TABLE    
                     $this->pay_unilevel_maching($customer_id,$price,$parend_id,$sell_id,$active);
+                    //INSERT AMOUNT ON COMMISION TABLE    
+                    $this->add_points($customer_id,$price);
                 }
                 
                 //UPDATE TABLE CUSTOMER ACTIVE = 1    
@@ -326,6 +328,29 @@ class D_activate extends CI_Controller{
                 }
         }    
         
+    public function add_points($customer_id,$price){
+        
+                //GET PERCENT FROM BONUS
+                $params = array(
+                        "select" =>"ident",
+                        "where" => "customer_id = $customer_id"
+               );
+               $obj_unilevel = $this->obj_unilevel->get_search_row($params);
+               $ident = $obj_unilevel->ident;
+               $iden_id = explode(",", $ident);
+               $date = date("Y-m-d H:i:s");
+               
+               foreach ($iden_id as $key => $value) {
+                   $data = array(
+                      'customer_id' => $value ,
+                      'point' => $price ,
+                      'date' => $date,
+                      'active' => 1,
+                      'status_value' => 1
+                   );
+                   $this->obj_points->insert($data);
+               }
+        }    
         
     public function get_session(){          
         if (isset($_SESSION['usercms'])){
