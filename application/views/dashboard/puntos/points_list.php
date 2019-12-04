@@ -26,7 +26,7 @@
                                 <th>CODIGO</th>
                                 <th>FECHA</th>
                                 <th>USUARIO</th>
-                                <th>BONO</th>
+                                <th>NOMBRE</th>
                                 <th>PUNTOS</th>
                                 <th>ESTADO</th> 
                                 <th>ACCIONES</th>
@@ -36,17 +36,17 @@
                             <tr>
                             <?php foreach ($obj_points as $value): ?>
                                 <td align="center"><?php echo $value->point_id;?></td>
-                                <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td align="center" class="label-info" style="color:#fff;"><?php echo $value->username;?></td>
-                                <td align="center"><?php echo convert_mayuscula($value->name);?></td>
+                                <td align="center" class="label-inverse" style="color:#fff;"><?php echo formato_fecha_barras($value->date);?></td>
+                                <td align="center"><b><?php echo "@".$value->username;?></b></td>
+                                <td align="center" class="label-info" style="color:#fff;"><?php echo $value->first_name." ".$value->last_name;?></td>
                                 <td class="label-success" style="color:#fff;" align="center"><b><?php echo $value->point;?></b></td>
                                 <td align="center">
-                                    <?php if ($value->status_value == 1) {
+                                    <?php if ($value->active == 1) {
                                         $valor = "Abonado";
                                         $stilo = "label label-success";
                                     }else{
                                         $valor = "No Abonado";
-                                        $stilo = "label label-success";
+                                        $stilo = "label label-important";
                                     } ?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
