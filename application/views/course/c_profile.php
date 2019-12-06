@@ -80,7 +80,7 @@
                           <div class="card-block visa">
                             <h6 class="f-w-600 text-white "> <?php echo $obj_customer->kit;?><span class="f-w-300 m-l-10"><?php echo $obj_customer->active == 1 ? "Activo":"Inactivo";?></span></h6>
                             <span class="text-white"><b>Fecha de Activación</b>&nbsp;&nbsp;<?php echo formato_fecha_barras($obj_customer->date_start);?></span>
-                            <h3 class="f-w-300 text-white m-t-25 m-b-0"><?php echo str_to_mayusculas($text_course);?></h3>
+                            <h3 class="f-w-300 text-white m-t-25 m-b-0"><?php echo str_to_first_capital($text_course);?></h3>
                             <span class="text-white">Cursos Disponibles</span>
                             <img class="img-fluid" src="<?php echo site_url().'static/page_front/images/visa-background.png';?>" alt="visa-background"></div>
                         </div>

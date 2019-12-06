@@ -140,12 +140,11 @@ class C_home extends CI_Controller {
         $obj_customer = $this->obj_customer->get_search_row($params);
         
         $kit = $obj_customer->kit_id;
-        
-        if($kit = 1){
+        if($kit == 1){
             $text_course = "Prueba";
-        }elseif($kit = 2){
+        }elseif($kit == 2){
             $text_course = "Inversiones y Marketing - Módulo Basico";
-        }elseif($kit = 3){
+        }elseif($kit == 3){
             $text_course = "Inversiones y Marketing - Módulo Intermedio";
         }else{
             $text_course = "Inversiones y Marketing - Módulo Avanzando";
