@@ -21,7 +21,7 @@
                   <ul class="row clearfix list-unstyled m-b-0 text-center">
                     <li class="col-lg-6 col-md-6 col-sm-12">
                       <div class="element-box el-tablo centered trend-in-corner smaller">
-                        <div class="display-5" style="font-size: 30px; font-weight: 700"> 0 </div>
+                        <div class="display-5" style="font-size: 30px; font-weight: 700"> <?php echo $obj_total_referidos;?> </div>
                         <div class="label"> Personas total en red* </div>
                       </div>
                     </li>

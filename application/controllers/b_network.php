@@ -163,8 +163,15 @@ class B_network extends CI_Controller {
                  
                  }
             }
-
+        //GET TOTAL REFERRED
+        $params = array(
+                        "select" =>"unilevel_id",
+                        "where" => "ident like '%$customer_id%'"
+                        );
+        $obj_total_referidos = $this->obj_unilevel->total_records($params);    
+        
         //GET PRICE CURRENCY
+        $this->tmp_backoffice->set("obj_total_referidos",$obj_total_referidos);
         $this->tmp_backoffice->set("obj_customer",$obj_customer);
         $this->tmp_backoffice->render("backoffice/b_unilevel");
     }

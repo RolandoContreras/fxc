@@ -43,15 +43,27 @@
                                   <img src='<?php echo site_url()."static/backoffice/images/rangos/$value->img";?>' width="150"> 
                               </div>
                             </div>
-                              
-                              
                             <?php 
-                                 //get % 
-                            $number = 0;
-                            $percent = ($number / $value->point_grupal)*100;
-                            $percent = number_format($percent, 2);
+                            $max_grupal = $value->point_grupal * 0.6;
+                            $max_personal = $value->point_grupal * 0.4;
                             
-                            $rest = $value->point_grupal - $number;
+                            if($point_grupal > $max_grupal){
+                                $grupal =  $max_grupal;
+                            }else{
+                                $grupal =  $point_grupal;
+                            }
+                            
+                            if($point_personal > $max_personal){
+                                $personal =  $max_personal;
+                            }else{
+                                $personal =  $point_personal;
+                            }
+                            
+                            $total_points =  $personal + $grupal;
+                            
+                            $percent = ($total_points / $value->point_grupal)*100;
+                            $percent = number_format($percent, 2);
+                            $rest = $value->point_grupal - $total_points;
                                  
                             if($percent == 100){ ?>
                                  <div class="col-md-8">
