@@ -5,6 +5,9 @@ class Panel extends CI_Controller{
         parent::__construct();    
         $this->load->model("comments_model","obj_comments");
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("unilevel_model","obj_unilevel");
+        $this->load->model("points_model","obj_points");
+        $this->load->model("ranges_model","obj_ranges");
     }
     
     public function index(){
@@ -55,6 +58,82 @@ class Panel extends CI_Controller{
         $this->tmp_mastercms->set('link_modulo',$link_modulo);
         $this->tmp_mastercms->set('seccion',$seccion);
         $this->tmp_mastercms->render('panel');
+     }
+    
+     public function cron_range(){
+         
+         //GET DATA CUSTOMER ACTIVE
+         $params = array(
+                        "select" =>"customer_id,
+                                    range_id",
+                        "where" => "active = 1 and status_value = 1",
+            );
+        $obj_customer = $this->obj_customer->search($params);
+        
+        foreach ($obj_customer as $value_pricipal) {
+            //GET DATA CUSTOMER REFERREL UNILEVEL
+             $params = array(
+                            "select" =>"customer_id",
+                            "where" => "parend_id = $value_pricipal->customer_id"
+                );
+            $obj_customer_unilevel = $this->obj_unilevel->search($params);
+            
+            if(count($obj_customer_unilevel) > 1){
+                foreach ($obj_customer_unilevel as $key => $value) {
+                    //GET DATA CUSTOMER REFERREL UNILEVEL
+                     $params = array(
+                                    "select" =>"sum(point) as total_point",
+                                    "where" => "customer_id = $value->customer_id"
+                        );
+                        $obj_points[$key] = $this->obj_points->get_search_row($params);
+                }
+                //GET MAX VALUE
+                $array = "";
+                $total_registros = count($obj_customer_unilevel);
+                for ($i = 0; $i <= $total_registros -1; $i++) {
+                       $point = $obj_points[$i]->total_point;
+                       $array .= $point.",";
+                }
+                
+                //DELETE LAST ,
+                $array = delete_last_caracter($array);
+                $array = explode(",", $array);
+                //ORDER ARRAY MAX TO MIN
+                arsort($array);
+                $cuenta = 0;
+                foreach ($array as $value) {
+                    $cuenta++;
+                    if($cuenta == 1){
+                        $max = $value;
+                    }elseif ($cuenta == 2) {
+                         $max_sec = $value;
+                    }
+                }
+                
+                if($max_sec != ""){
+                    //GET DATA RANGES
+                    $params = array(
+                                    "select" =>"range_id",
+                                    "where" => "point_grupal <= $max and point_personal <= $max_sec",
+                                    "order" => "range_id DESC"
+                            );
+                            $obj_ranges = $this->obj_ranges->get_search_row($params);
+                            $obj_ranges_id = $obj_ranges->range_id;
+                            //get ranges customer actually
+                            $range_customer_id = $value_pricipal->range_id;
+
+                        if($obj_ranges_id > $range_customer_id){
+                            //UPDATE DATA EN CUSTOMER TABLE
+                            $data = array(
+                                'range_id' => $obj_ranges_id
+                            ); 
+                            $this->obj_customer->update($value_pricipal->customer_id,$data);
+
+                        }
+                }
+            }
+        }
+         
      }
      
     public function masive_messages(){

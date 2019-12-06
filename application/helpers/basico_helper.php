@@ -55,6 +55,11 @@ function format_number_moneda_soles($number){
     return "S/.".$number;
 }
 
+function delete_last_caracter($string){
+    $new_string = substr($string, 0, -1);
+    return $new_string;
+}
+
 function format_number_dolar($number){
     $decimals ="2";
     $number = number_format($number, $decimals);
