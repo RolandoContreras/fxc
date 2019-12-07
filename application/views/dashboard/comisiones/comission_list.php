@@ -1,82 +1,110 @@
-<script src="static/cms/js/core/bootstrap-modal.js"></script>
-<script src="static/cms/js/core/bootbox.min.js"></script>
-<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
-<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
-<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
-
-<!-- main content -->
-<div id="main_content" class="span9">
-    <div class="row-fluid">
-        <div class="widget_container" style="width: 110%;">
-            <div class="well">
-                    <div class="navbar navbar-static navbar_as_heading">
-                            <div class="navbar-inner">
-                                    <div class="container" style="width: 110%;">
-                                            <a class="brand">LISTADO DE  COMISIONES</a>
-                                    </div>
-                            </div>
-                    </div>
-                
-             <!--<form>-->
-                <div class="well nomargin" style="width: 100%;">
-                    <!--- INCIO DE TABLA DE RE4GISTRO -->
-                   <table id="table" class="display" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>CODIGO</th>
-                                <th>FECHA</th>
-                                <th>USUARIO</th>
-                                <th>ASOCIADO</th>
-                                <th>BONO</th>
-                                <th>MONTO</th> 
-                                <th>ESTADO</th> 
-                                <th>ACCIONES</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <?php foreach ($obj_comission as $value): ?>
-                                <td align="center"><?php echo $value->commissions_id;?></td>
-                                <td align="center"><?php echo formato_fecha_barras($value->date);?></td>
-                                <td class="post_title" align="center"><b><?php echo $value->username;?></b></td>
-                                <td align="center"><?php echo $value->first_name." ".$value->last_name;?></td>
-                                <td align="center"><?php echo $value->bonus;?></td>
-                                <td align="center" class="label-success" style="color:#fff;"><b><?php echo $value->amount;?></b></td>
-                                <td align="center">
-                                    <?php if (($value->status_value == 1) || ($value->status_value == 2)) {
+<section class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Mantenimientos de Comisiones</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="<?php echo site_url().'dashboard/';?>">Panel</a></li>
+                  <li class="breadcrumb-item"><a>Comisiones</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Listado de Comisiones</h5>
+                  </div>
+                  <div class="card-block">
+                    <div class="table-responsive">
+                      <div id="zero-configuration_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <table id="zero-configuration" class="display table nowrap table-striped table-hover dataTable" style="width: 100%;" role="grid" aria-describedby="zero-configuration_info">
+                              <thead>
+                                <tr role="row">
+                                  <th class="sorting_asc" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 267px;" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending">ID</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 392px;"
+                                    aria-label="Position: activate to sort column ascending">Fecha</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 197px;"
+                                    aria-label="Office: activate to sort column ascending">Usuario</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Age: activate to sort column ascending">Asociado</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Age: activate to sort column ascending">Bono</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Age: activate to sort column ascending">Importe</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Age: activate to sort column ascending">Estado</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Start date: activate to sort column ascending">Acciones</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                   <?php foreach ($obj_comission as $value): ?>
+                                <tr>
+                                <th><?php echo $value->commissions_id;?></th>
+                                <th><?php echo formato_fecha_barras($value->date);?></th>
+                                <td><?php echo "@".$value->username;?></td>
+                                <td><?php echo $value->first_name." ".$value->last_name;?></td>
+                                <td><?php echo str_to_first_capital($value->bonus);?></td>
+                                <td><?php echo $value->amount;?></td>
+                                <td>
+                                    <?php if (($value->active == 1) || ($value->active == 2)) {
                                         $valor = "Abonado";
-                                        $stilo = "label label-default";
-                                    }elseif($value->status_value == 3){
-                                        $valor = "Espera de procesar";
-                                        $stilo = "label label-warning";
-                                    }elseif($value->status_value == 4){
-                                        $valor = "Pagado";
                                         $stilo = "label label-success";
+                                    }else{
+                                        $valor = "No Abonado";
+                                        $stilo = "label label-danger";
                                     }?>
                                     <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
                                 </td>
                                 <td>
                                     <div class="operation">
-                                        <div class="btn-group">
-                                                <button class="btn btn-small" onclick="edit_comissions('<?php echo $value->commissions_id;?>');"><i class="fa fa-edit"></i> Editar</button>
-                                          </div>
+                                            <div class="btn-group">
+                                               <button class="btn btn-secondary" type="button" onclick="edit_comissions('<?php echo $value->commissions_id;?>');"><span><i data-feather="edit"></i> Editar</span></button>
+                                            </div>
                                     </div>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th rowspan="1" colspan="1">ID</th>
+                                  <th rowspan="1" colspan="1">Fecha</th>
+                                  <th rowspan="1" colspan="1">Usuario</th>
+                                  <th rowspan="1" colspan="1">Cliente</th>
+                                  <th rowspan="1" colspan="1">Bono</th>
+                                  <th rowspan="1" colspan="1">Importe</th>
+                                  <th rowspan="1" colspan="1">Estado</th>
+                                  <th rowspan="1" colspan="1">Acciones</th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+              </div>
             </div>
-           <!--</form>-->         
+          </div>
         </div>
-    </div>
-</div><!-- main content -->
-</div>
-<script type="text/javascript">
-   $(document).ready(function() {
-    $('#table').dataTable( {
-         "order": [[ 0, "desc" ]]
-    } );
-} );
-</script>
-<script src="static/cms/js/comission.js"></script>
+</section>
+<script src="<?php echo site_url();?>static/cms/js/comission.js"></script>

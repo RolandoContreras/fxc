@@ -17,7 +17,7 @@ class D_comission extends CI_Controller{
                                     customer.last_name,
                                     bonus.name as bonus,
                                     commissions.amount,
-                                    commissions.status_value,
+                                    commissions.active,
                                     commissions.date",
                         "join" => array('customer, customer.customer_id = commissions.customer_id',
                                         'bonus, bonus.bonus_id = commissions.bonus_id'),
@@ -52,7 +52,7 @@ class D_comission extends CI_Controller{
                                     commissions.date,
                                     commissions.amount,
                                     commissions.bonus_id,
-                                    commissions.status_value,
+                                    commissions.active,
                                     customer.first_name,
                                     customer.last_name,
                                     customer.username,",
@@ -77,20 +77,18 @@ class D_comission extends CI_Controller{
     public function validate(){
         
         $commissions_id =  $this->input->post('commissions_id');
-        $customer_id =  $this->input->post('customer_id');
         $amount =  $this->input->post('amount');
         $bonus_id =  $this->input->post('bonus_id');
         $date = formato_fecha_db_mes_dia_ano($this->input->post('date'));
-        $status_value =  $this->input->post('status_value');
+        $active =  $this->input->post('active');
         
         //UPDATE DATA
         $data = array(
                 'commissions_id' => $commissions_id,
-                'customer_id' => $customer_id,
                 'amount' => $amount,
                 'bonus_id' => $bonus_id,
                 'date' => $date,
-                'status_value' => $status_value,  
+                'active' => $active,  
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
                 );          

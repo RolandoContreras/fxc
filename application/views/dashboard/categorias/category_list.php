@@ -66,7 +66,7 @@
                                 <td>
                                     <div class="operation">
                                             <div class="btn-group">
-                                               <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="key-act-button" type="button" onclick="edit_category('<?php echo $value->category_id;?>');"><span>Editar</span></button>
+                                               <button class="btn btn-secondary" type="button" onclick="edit_category('<?php echo $value->category_id;?>');"><span><span class="pcoded-micon"><i data-feather="edit"></i></span> Editar</span></button>
                                             </div>
                                     </div>
                                 </td>

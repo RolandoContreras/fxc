@@ -96,7 +96,6 @@ class D_invoices extends CI_Controller{
         $date =  $this->input->post('date');
         $active =  $this->input->post('active');
         $financy =  $this->input->post('financy');
-        
                
             if(isset($_FILES["image_file"]["name"])){
                 $config['upload_path']          = './static/backoffice/invoice';
@@ -114,7 +113,6 @@ class D_invoices extends CI_Controller{
                      $img = $this->input->post("img2");
                  }   
             }
-        
         //UPDATE DATA
         $data = array(
                 'kit_id' => $kit_id,

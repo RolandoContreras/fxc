@@ -31,12 +31,15 @@
     <meta name="theme-color" content="#ffffff">
   <!--END FAVICON-->
   <link rel="stylesheet" href="<?php echo site_url().'static/course/css/style.css';?>">
-  <link rel="stylesheet" href="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/data-tables/css/datatables.min.css">
-  <link rel="stylesheet" href="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/animation/css/animate.min.css">
+  <link rel="stylesheet" href="<?php echo site_url().'static/cms/css/datatables.min.css';?>">
+  <link rel="stylesheet" href="<?php echo site_url().'static/cms/css/animate.min.css';?>">
   <script src="https://unpkg.com/feather-icons"></script>
   <script type="text/javascript">
     var site = '<?php echo site_url();?>';
   </script>
+  <script src="<?php echo site_url().'static/cms/js/core/bootbox.all.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/cms/js/core/jquery-1.11.1.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/cms/js/core/bootstrap.min.js';?>"></script>
 </head>
 
 <body class="layout-6" style="background-image: url('<?php echo site_url().'static/page_front/images/header_image.jpg';?>'); background-size: cover;">
@@ -202,15 +205,11 @@
   <?php echo $body;?>
   <!--[if lt IE 11]> <div class="ie-warning"> <h1>Warning!!</h1> <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website. </p> <div class="iew-container"> <ul class="iew-download"> <li> <a href="http://www.google.com/chrome/"> <img src="../assets/images/browser/chrome.png" alt="Chrome"> <div>Chrome</div> </a> </li> <li> <a href="https://www.mozilla.org/en-US/firefox/new/"> <img src="../assets/images/browser/firefox.png" alt="Firefox"> <div>Firefox</div> </a> </li> <li> <a href="http://www.opera.com"> <img src="../assets/images/browser/opera.png" alt="Opera"> <div>Opera</div> </a> </li> <li> <a href="https://www.apple.com/safari/"> <img src="../assets/images/browser/safari.png" alt="Safari"> <div>Safari</div> </a> </li> <li> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"> <img src="../assets/images/browser/ie.png" alt=""> <div>IE (11 & above)</div> </a> </li> </ul> </div> <p>Sorry for the inconvenience!</p> </div> <![endif]-->
   <script src="<?php echo site_url().'static/course/js/vendor-all.min.js';?>"></script>
-  <script src="<?php echo site_url().'static/course/js/bootstrap.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/pcoded.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/ekko-lightbox.min.js';?>"></script>
   <script src="<?php echo site_url().'static/course/js/ac-lightbox.js';?>"></script>
-  <script src="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/data-tables/js/datatables.min.js"></script>
-  <script src="http://html.codedthemes.com/datta-able/bootstrap/assets/js/pages/tbl-datatable-custom.js"></script>
-  
-  
-  
+  <script src="<?php echo site_url().'static/cms/js/datatables.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/cms/js/tbl-datatable-custom.js';?>"></script>
   <script>
       feather.replace()
   </script>

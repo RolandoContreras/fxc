@@ -1,11 +1,18 @@
 function change_state(comment_id){
-     bootbox.dialog("Confirma que desea marcar como leído en Comentario?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-               $.ajax({
+  bootbox.confirm({
+    message: "Confirma que desea marcarlo como contestado?",
+    buttons: {
+        confirm: {
+            label: 'Confirmar',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'Cerrar',
+            className: 'btn-danger'
+        }
+    },
+    callback: function () {
+         $.ajax({
                    type: "post",
                    url: site+"dashboard/comentarios/cambiar_status",
                    dataType: "json",
@@ -14,19 +21,24 @@ function change_state(comment_id){
                    location.reload();
                    }         
            });
-            }
-        }
-    ]);
+    }
+});
 }
-
 function change_state_no(comment_id){
-     bootbox.dialog("Confirma que desea no publicar el Comentario?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-               $.ajax({
+    bootbox.confirm({
+    message: "Confirma que desea marcarlo como no contestado?",
+    buttons: {
+        confirm: {
+            label: 'Confirmar',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'Cerrar',
+            className: 'btn-danger'
+        }
+    },
+    callback: function () {
+         $.ajax({
                    type: "post",
                    url: site+"dashboard/comentarios/cambiar_status_no",
                    dataType: "json",
@@ -35,7 +47,6 @@ function change_state_no(comment_id){
                    location.reload();
                    }         
            });
-            }
-        }
-    ]);
+    }
+});
 }
