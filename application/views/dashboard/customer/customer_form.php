@@ -1,48 +1,128 @@
-<link href="<?php echo site_url();?>static/cms/css/uploadimg.css" rel="stylesheet" />
-<script src="<?php echo site_url();?>static/cms/js/core/bootstrap-fileupload.js"></script>
-<script src="<?php echo site_url();?>static/cms/js/customer.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<!-- main content -->
-
-<form id="customer-form" name="customer-form" enctype="multipart/form-data" method="post" action="<?php echo site_url()."dashboard/clientes/validate";?>">
-<div id="main_content" class="span7">
-    <div class="row-fluid">
-        <div class="widget_container">
-            <div class="well">
-                <div class="navbar navbar-static navbar_as_heading">
-                        <div class="navbar-inner">
-                                <div class="container" style="width: auto;">
-                                        <a class="brand"></i> Formulario Clientes</a>
-                                </div>
-                        </div>
+<div class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Formulario de Clientes</h5>
                 </div>
-                <!--GET CUSTOMER ID-->
-                <input type="hidden" name="customer_id" id="customer_id" value="<?php echo isset($obj_customer)?$obj_customer->customer_id:"";?>">
-              
-                <div class="well nomargin" style="width: 600px;">
-                    <div class="inner">
-                    <strong>País:</strong>
-                        <select name="pais" id="pais">
-                        <option value="">[ Seleccionar ]</option>
-                            <?php foreach ($obj_paises as $value ): ?>
-                        <option value="<?php echo $value->id;?>"
-                            <?php 
-                                    if(isset($obj_customer->country)){
-                                            if($obj_customer->country==$value->id){
-                                                echo "selected";
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="<?php echo site_url().'dashboard/panel';?>">
+                          <span class="pcoded-micon"><i data-feather="home"></i></span>
+                          </a></li>
+                  <li class="breadcrumb-item"><a href="<?php echo site_url().'dashboard/videos';?>">Listado de Clientes</a></li>
+                  <li class="breadcrumb-item"><a href="#!">Cliente</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Datos</h5>
+                  </div>
+                  <div class="card-body">
+                    <form enctype="multipart/form-data" method="post" action="<?php echo site_url()."dashboard/clientes/validate";?>">
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                                  <div class="form-group">
+                                        <label>ID</label>
+                                        <input class="form-control" type="text" id="customer_id" name="customer_id" value="<?php echo isset($obj_customer->customer_id)?$obj_customer->customer_id:"";?>" class="input-xlarge-fluid" placeholder="ID" disabled="">
+                                        <input type="hidden" name="customer_id" id="customer_id" value="<?php echo isset($obj_customer)?$obj_customer->customer_id:"";?>">
+                                  </div>
+                            </div>
+                          <div class="form-group col-md-6">
+                              <div class="form-group">
+                                <label>Usuario</label>
+                                <input class="form-control" type="text" id="username" name="username" value="<?php echo isset($obj_customer->username)?$obj_customer->username:"";?>" class="input-xlarge-fluid" placeholder="Username">
+                              </div>
+                              <div class="form-group">
+                                  <label>Contraseña</label>
+                                  <input class="form-control" type="text" id="password" name="password" value="<?php echo isset($obj_customer->password)?$obj_customer->password:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
+                              </div>
+                              <div class="form-group">
+                                  <label>Nombres</label>
+                                  <input class="form-control" type="text" id="first_name" name="first_name" value="<?php echo isset($obj_customer->first_name)?$obj_customer->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
+                              </div>
+                                <div class="form-group">
+                                  <label>Apellidos</label>
+                                  <input class="form-control" type="text" id="last_name" name="last_name" value="<?php echo isset($obj_customer->last_name)?$obj_customer->last_name:"";?>" class="input-xlarge-fluid" placeholder="Apellidos">
+                              </div>
+                              
+                              <div class="form-group">
+                                <label for="exampleFormControlTextarea1">Dirección</label>
+                                <textarea class="form-control" name="address" id="address" rows="3"><?php echo isset($obj_customer->address)?$obj_customer->address:"";?></textarea>
+                            </div>
+                              <label for="inputState">Financiado</label>
+                                 <select name="financy" id="financy" class="form-control">
+                                    <option value="">[ Seleccionar ]</option>
+                                    <option value="1" <?php if(isset($obj_customer)){
+                                        if($obj_customer->financy == 1){ echo "selected";}
+                                    }else{echo "";} ?>>Si</option>
+                                    <option value="0" <?php if(isset($obj_customer)){
+                                        if($obj_customer->financy == 0){ echo "selected";}
+                                    }else{echo "";} ?>>No</option>
+                                </select>
+                          </div>
+                            
+                          <div class="form-group col-md-6">
+                              <div class="form-group">
+                                    <label>E-mail</label>
+                                    <input class="form-control" type="text" id="email" name="email" value="<?php echo isset($obj_customer->email)?$obj_customer->email:"";?>" class="input-xlarge-fluid" placeholder="Correo Electrónico">
+                              </div>
+                              <div class="form-group">
+                                    <label>DNI</label>
+                                    <input class="form-control" type="text" id="dni" name="dni" value="<?php echo isset($obj_customer->dni)?$obj_customer->dni:"";?>" class="input-xlarge-fluid" placeholder="DNI">
+                              </div>
+                              <div class="form-group">
+                                    <label>Telefono</label>
+                                    <input class="form-control" type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
+                              </div>
+                              <div class="form-group">
+                                  <label>BTC Wallet</label>
+                                  <input class="form-control" type="text" id="btc_address" name="btc_address" class="input-xlarge-fluid" placeholder="Direccion de BitCoin" value="<?php echo isset($obj_customer->btc_address)?$obj_customer->btc_address:"";?>">
+                              </div>
+                              <div class="form-group">
+                                    <label>Fecha de Activación</label>
+                                    <input class="form-control" type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="YYYY/mm/dd" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
+                              </div>
+                              <div class="form-group">
+                                    <label>Fecha de Creación</label>
+                                    <input class="form-control" type="text" id="created_at" name="created_at" class="input-small-fluid" placeholder="Fecha de Creación" value="<?php echo isset($obj_customer->created_at)?$obj_customer->created_at:"";?>" disabled="">
+                              </div>
+                              
+                          </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputState">Pais</label>
+                                <select name="pais" id="pais" class="form-control">
+                                <option value="">[ Seleccionar ]</option>
+                                    <?php foreach ($obj_paises as $value ): ?>
+                                <option value="<?php echo $value->id;?>"
+                                    <?php 
+                                            if(isset($obj_customer->country)){
+                                                    if($obj_customer->country==$value->id){
+                                                        echo "selected";
+                                                    }
+                                            }else{
+                                                      echo "";
                                             }
-                                    }else{
-                                              echo "";
-                                    }
 
-                            ?>><?php echo $value->nombre;?>
-                        </option>
-                            <?php endforeach; ?>
-                        </select>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp
-                    <strong>Paquete:</strong>
-                            <select name="kit" id="kit">
+                                    ?>><?php echo $value->nombre;?>
+                                </option>
+                                    <?php endforeach; ?>
+                                </select>
+                                <br/>
+                                <label for="inputState">Kit</label>
+                                <select name="kit" id="kit" class="form-control">
                                 <option value="">[ Seleccionar ]</option>
                                     <?php foreach ($obj_kit as $value ): ?>
                                 <option value="<?php echo $value->kit_id;?>"
@@ -59,120 +139,51 @@
                                 </option>
                                     <?php endforeach; ?>
                             </select>
-                    </div>
-                    <br/>
-                    <div class="inner">
-                        
-                        
-                        <strong>Rango:</strong>
-                            <select name="rango" id="rango">
-                            <option value="">[ Seleccionar ]</option>
-                                <?php foreach ($obj_ranges as $value ): ?>
-                            <option value="<?php echo $value->range_id;?>"
-                                <?php 
-                                        if(isset($obj_customer->range_id)){
-                                                if($obj_customer->range_id==$value->range_id){
-                                                    echo "selected";
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">Rango</label>
+                                    <select name="rango" id="rango" class="form-control">
+                                    <option value="">[ Seleccionar ]</option>
+                                        <?php foreach ($obj_ranges as $value ): ?>
+                                    <option value="<?php echo $value->range_id;?>"
+                                        <?php 
+                                                if(isset($obj_customer->range_id)){
+                                                        if($obj_customer->range_id==$value->range_id){
+                                                            echo "selected";
+                                                        }
+                                                }else{
+                                                          echo "";
                                                 }
-                                        }else{
-                                                  echo "";
-                                        }
 
-                                ?>><?php echo str_to_mayusculas($value->name);?>
-                            </option>
-                                <?php endforeach; ?>
-                            </select>
-                        
-                    </div>
-                </div>
-              <br><br>
-              <strong>ID:</strong><br>
-              <input type="text" id="customer_id" name="customer_id" value="<?php echo isset($obj_customer->customer_id)?$obj_customer->customer_id:"";?>" class="input-xlarge-fluid" placeholder="ID" disabled="">
-              <br><br>
-              <strong>Usuario:</strong><br>
-              <input type="text" id="username" name="username" value="<?php echo isset($obj_customer->username)?$obj_customer->username:"";?>" class="input-xlarge-fluid" placeholder="Username">
-              <br><br>
-              <strong>Contraseña:</strong><br>              
-              <input type="text" id="password" name="password" value="<?php echo isset($obj_customer->password)?$obj_customer->password:"";?>" class="input-xlarge-fluid" placeholder="Contraseña">
-              <br><br>
-              <strong>Nombres:</strong><br>   
-              <input type="text" id="first_name" name="first_name" value="<?php echo isset($obj_customer->first_name)?$obj_customer->first_name:"";?>" class="input-xlarge-fluid" placeholder="Nombre">
-              <br><br>
-              <strong>Apellidos:</strong><br>
-              <input type="text" id="last_name" name="last_name" value="<?php echo isset($obj_customer->last_name)?$obj_customer->last_name:"";?>" class="input-xlarge-fluid" placeholder="Apellidos">
-              <br><br>
-              <strong>Correo:</strong><br>
-              <input type="text" id="email" name="email" value="<?php echo isset($obj_customer->email)?$obj_customer->email:"";?>" class="input-xlarge-fluid" placeholder="Correo Electrónico">
-              <br><br>
-              <strong>DNI:</strong><br>
-              <input type="text" id="dni" name="dni" value="<?php echo isset($obj_customer->dni)?$obj_customer->dni:"";?>" class="input-xlarge-fluid" placeholder="DNI">
-              <br><br>
-              <strong>Telefono:</strong><br>
-              <input type="text" id="phone" name="phone" class="input-small-fluid" placeholder="Telefono" value="<?php echo isset($obj_customer->phone)?$obj_customer->phone:"";?>">
-              <br><br>
-              <strong>Fecha de Activación:</strong><br>
-              <input type="text" id="date_start" name="date_start" class="input-small-fluid" placeholder="YYYY/mm/dd" value="<?php echo isset($obj_customer->date_start)?$obj_customer->date_start:"";?>">
-              <br><br>
-              <div class="inner">
-                <strong>Financiada:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <select name="financy" id="financy">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->financy == 1){ echo "selected";}
-                                }else{echo "";} ?>>Si</option>
-                                <option value="0" <?php if(isset($obj_customer)){
-                                    if($obj_customer->financy == 0){ echo "selected";}
-                                }else{echo "";} ?>>No</option>
-                    </select>
-               </div>
-              <br><br>
-              <strong>Dirección:</strong><br>
-              <textarea name="address" id="address" placeholder="Dirección ..." style="width: 90%; height: 100px;"><?php echo isset($obj_customer->address)?$obj_customer->address:"";?></textarea>
-              <script type="text/javascript">CKEDITOR.replace("adress")</script> 
-              <br><br>
-              <strong>Dirección de BTC:</strong><br>
-              <input type="text" id="btc_address" name="btc_address" class="input-xlarge-fluid" placeholder="Direccion de BitCoin" value="<?php echo isset($obj_customer->btc_address)?$obj_customer->btc_address:"";?>">
-              <br><br>
-                <div class="well nomargin" style="width: 200px;">
-                <div class="inner">
-                <strong>Activo o Pagado:</strong>
-                    <select name="active" id="active">
-                                <option value="">[ Seleccionar ]</option>
-                                <option value="0" <?php if(isset($obj_customer)){
-                                    if($obj_customer->active == 0){ echo "selected";}
-                                }else{echo "";} ?>>Inactivo</option>
-                                <option value="1" <?php if(isset($obj_customer)){
-                                    if($obj_customer->active == 1){ echo "selected";}
-                                }else{echo "";} ?>>Activo</option>
-                    </select>
-                </div>
-                </div>
-                <br><br>
-                <strong>Fecha de Creación:</strong><br>
-                <input type="text" id="created_at" name="created_at" class="input-small-fluid" placeholder="Fecha de Creación" value="<?php echo isset($obj_customer->created_at)?$obj_customer->created_at:"";?>" disabled="">
-                <br><br>
-                <div class="well nomargin" style="width: 200px;">
-                  <div class="inner">
-                  <strong>Estado para el sistema:</strong>
-                      <select name="status_value" id="status_value">
-                                  <option value="">[ Seleccionar ]</option>
-                                  <option value="0" <?php if(isset($obj_customer)){
-                                      if($obj_customer->status_value == 0){ echo "selected";}
-                                  }else{echo "";} ?>>Inactivo</option>
-                                  <option value="1" <?php if(isset($obj_customer)){
-                                      if($obj_customer->status_value == 1){ echo "selected";}
-                                  }else{echo "";} ?>>Activo</option>
-                      </select>
-                  </div>
-                  </div>
-                <br><br>
-                <br><br>
-                <div class="subnav nobg">
-                    <button class="btn btn-danger btn-small pull-left" type="reset" onclick="cancelar_customer();">Cancelar</button>                    
-                    <button class="btn btn-primary btn-small pull-right"  type="submit">Guardar</button>
+                                        ?>><?php echo str_to_mayusculas($value->name);?>
+                                    </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                <br/>
+                                <label for="inputState">Estado</label>
+                                    <select name="active" id="active" class="form-control">
+                                     <option value="">[ Seleccionar ]</option>
+                                      <option value="1" <?php if(isset($obj_customer)){
+                                          if($obj_customer->active == 1){ echo "selected";}
+                                      }else{echo "";} ?>>Activo</option>
+                                      <option value="0" <?php if(isset($obj_kit)){
+                                          if($obj_customer->active == 0){ echo "selected";}
+                                      }else{echo "";} ?>>Inactivo</option>
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Guardar</button>
+                        <button class="btn btn-danger" type="reset" onclick="cancelar_customer();">Cancelar</button>                    
+                    </form>
                 </div>
             </div>
+               </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</div><!-- main content -->
-</form>
+  </div>
+</div>
+<script src="<?php echo site_url().'static/cms/js/customer.js'?>"></script>

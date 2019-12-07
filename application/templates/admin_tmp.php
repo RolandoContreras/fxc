@@ -1,209 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">	
-<!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:29 GMT -->
-    <head>
-        <meta charset="utf-8">
-        <title>Dashboard - BCA CAPITAL</title>
-        <base href="<?php echo site_url();?>">
-        <!--START FAVICON-->
-        <link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-57x57.png';?>">
-        <link rel="apple-touch-icon" sizes="60x60" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-60x60.png';?>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-72x72.png';?>">
-        <link rel="apple-touch-icon" sizes="76x76" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-76x76.png';?>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-114x114.png';?>">
-        <link rel="apple-touch-icon" sizes="120x120" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-120x120.png';?>">
-        <link rel="apple-touch-icon" sizes="144x144" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-144x144.png';?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-152x152.png';?>">
-        <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-180x180.png';?>">
-        <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo site_url().'static/page_front/images/logo/favico/android-icon-192x192.png';?>">
-        <link rel="icon" type="image/png" sizes="32x32" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-32x32.png';?>">
-        <link rel="icon" type="image/png" sizes="96x96" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-96x96.png';?>">
-        <link rel="icon" type="image/png" sizes="16x16" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-16x16.png';?>">
-        <link rel="manifest" href="<?php echo site_url().'static/page_front/images/logo/favico/manifest.json';?>">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/logo/favico/ms-icon-144x144.png';?>">
-        <meta name="theme-color" content="#ffffff">
-      <!--END FAVICON-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="robots" content="noindex, nofollow" />
-        <!-- CSS -->
-        <link href="static/cms/css/core/bootstrap.css" rel="stylesheet">	
-        <link href="static/cms/css/core/combine_fonts.css" rel="stylesheet">	
-        <link href="static/cms/css/core/buttons.css" rel="stylesheet">
-        <link href="static/cms/css/core/cms.css" rel="stylesheet">
-        <link href="static/cms/css/style.css" rel="stylesheet">
-        
-        <!-- color style -->
-        <link href="static/cms/css/core/dark.css" rel="stylesheet">
-        <link href="static/cms/css/core/bootstrap-responsive.css" rel="stylesheet">
-        <link href="static/cms/plugins/datepicker/css/datepicker.css" rel="stylesheet">
-        <link href="static/cms/plugins/plupload/js/jquery.plupload.queue/css/jquery.plupload.queue.css" rel="stylesheet">
-        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="plugins/html5.js"></script>
-        <![endif]-->
-        <script src="static/cms/js/core/jquery.js"></script>        
-        <script src="static/cms/plugins/wysiwyg/wysihtml5-0.3.0_rc3.min.js"></script>
-        <script src="static/cms/js/core/bootstrap.js"></script>	                    
+<html lang="es">
+<head>
+  <title>Dashboard - BCA CAPITAL</title>
+  <!--<base href="<?php echo site_url();?>">-->
+  <!--[if lt IE 10]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script><script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Multiplica tu dinero en el mercado financiero con nosotros. BCA CAPITAL una empresa financiera que te ayudará a aumentar tus finanzas, Clic en el siguiente enlace.">
+  <meta name="author" content="Cevolution Web">
+  <meta name="keyword" content="bca capital, bca, cursos, cursos de forex, cursos de marketing digital, bca networkmarketing">
+  <meta name="robots" content="Index, Follow">
+   <!--START FAVICON-->
+    <link rel="apple-touch-icon" sizes="57x57" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-57x57.png';?>">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-60x60.png';?>">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-72x72.png';?>">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-76x76.png';?>">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-114x114.png';?>">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-120x120.png';?>">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-144x144.png';?>">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-152x152.png';?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo site_url().'static/page_front/images/logo/favico/apple-icon-180x180.png';?>">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?php echo site_url().'static/page_front/images/logo/favico/android-icon-192x192.png';?>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-32x32.png';?>">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-96x96.png';?>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php echo site_url().'static/page_front/images/logo/favico/favicon-16x16.png';?>">
+    <link rel="manifest" href="<?php echo site_url().'static/page_front/images/logo/favico/manifest.json';?>">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<?php echo site_url().'static/page_front/images/logo/favico/ms-icon-144x144.png';?>">
+    <meta name="theme-color" content="#ffffff">
+  <!--END FAVICON-->
+  <link rel="stylesheet" href="<?php echo site_url().'static/course/css/style.css';?>">
+  <link rel="stylesheet" href="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/data-tables/css/datatables.min.css">
+  <link rel="stylesheet" href="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/animation/css/animate.min.css">
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script type="text/javascript">
+    var site = '<?php echo site_url();?>';
+  </script>
+</head>
 
-        <script src="static/cms/plugins/datepicker/js/bootstrap-datepicker.js"></script>
-        <script src="static/cms/plugins/wysiwyg/bootstrap-wysihtml5.js"></script>
-        <script type="text/javascript" src="static/cms/js/browserplus-min.js"></script>
-        <script type="text/javascript" src="static/cms/plugins/plupload/js/plupload.full.js"></script>
-        <script type="text/javascript" src="static/cms/plugins/plupload/js/jquery.plupload.queue/jquery.plupload.queue.js"></script>
-
-        <script src="static/cms/js/core/jquery.validate.min.js"></script>
-        <script src="static/cms/js/core/bootstrap-alert.js"></script>
-        
-        <script src="static/cms/js/demo.js"></script>
-        
-        <script src="static/cms/plugins/colorpicker/js/bootstrap-colorpicker.js"></script>
-        
-        
-        <script type="text/javascript">
-            var site = '<?php echo site_url();?>';
-        </script>
-        <script src="https://use.fontawesome.com/3aa4a6fd0b.js"></script>
-    </head>
-<body>
-<!-- top fixed navbar -->
-    <div id="header" class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-            <div class="container-fluid">
-                <a class="brand" href="<?php echo site_url();?>dashboard/panel">
-                    <img src="<?php echo site_url().'static/page_front/images/logo/logo.png'?>" alt="logo" width="230"></a>
-                <div class="btn-toolbar pull-right">                        
-                <!-- /btn-group -->
-                    <div class="btn-group">
-                        <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-                                <img class="image_icons" src="<?php echo site_url().'static/cms/png/user91.png';?>"> 
-                                <?php echo $_SESSION['usercms']['name'];?>
-                                <span class="caret"></span>
-                        </a>
-                        <ul class="dropdown-menu megamenu col2 ud">
-                                <ul>
-                                    <a href="<?php echo site_url().'dashboard/logout';?>"><img class="image_icons" src="<?php echo site_url().'static/cms/png/door9.png';?>"> Cerrar Session</a>
-                                </ul>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body class="layout-6" style="background-image: url('<?php echo site_url().'static/page_front/images/header_image.jpg';?>'); background-size: cover;">
+  <nav class="pcoded-navbar menu-light brand-lightblue menupos-static">
+    <div class="navbar-wrapper">
+      <div class="navbar-brand header-logo">
+          <a href="<?php echo site_url().'course';?>" class="b-brand">
+          <div class="b-bg">
+              <img src="<?php echo site_url().'static/page_front/images/logo/icono-negro.png';?>" alt="Logo" width="35"/>
+          </div>
+              <span class="b-title">BCA CAPITAL</span>
+          </a>
+          <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a></div>
+      <div class="navbar-content scroll-div">
+        <ul class="nav pcoded-inner-navbar">
+          <li class="nav-item pcoded-menu-caption"><label>Navegación</label></li>
+          <?php
+          $url = explode("/",uri_string());
+            if(isset($url[1])){
+                $nav = $url[1];
+            }else{
+                $nav = "";
+            }
+            $profile_syle = "";
+            $course_syle = "";
+            $document_syle = "";
+            $home_syle = "";
+            
+            switch ($nav) {
+                case "profile":
+                    $profile_syle = "active";
+                    break;
+                case "forex":
+                    $course_syle = "active";
+                    break;
+                case "mkt":
+                    $course_syle = "active";
+                    break;
+                case "document":
+                    $document_syle = "active";
+                    break;
+                default:
+                    $home_syle = "active";
+                    break;
+            }
+          ?>
+          <li class="nav-item">
+              <a href="<?php echo site_url().'dashboard/panel';?>" class="nav-link <?php echo $home_syle;?>">
+                  <span class="pcoded-micon">
+                       <i data-feather="home"></i>
+                  </span>
+                  <span class="pcoded-mtext">Panel</span>
+              </a>
+        </li>
+        <li class="nav-item pcoded-hasmenu">
+            <a href="#!" class="<?php echo $course_syle;?>">
+                <span class="pcoded-micon">
+                    <i data-feather="airplay"></i>
+                </span>
+                <span class="pcoded-mtext">Mantenimientos</span>
+            </a>
+            <ul class="pcoded-submenu">
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
+                <li class="pcoded-hasmenu"><a href="#"><i class="icon-large icon-th"></i>Correos Masivos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/facturas";?>"><i class="icon-large icon-th"></i>Facturas</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/videos";?>"><i class="icon-large icon-th"></i>Videos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
+                <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
+                <li class="pcoded-hasmenu" ><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
+                <?php } ?>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a href="<?php echo site_url()."dashboard/activaciones";?>" class="nav-link <?php echo $document_syle;?>">
+                <span class="pcoded-micon">
+                    <i data-feather="archive"></i>
+                </span>
+                <span class="pcoded-mtext">Activaciones</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="<?php echo site_url()."dashboard/pagos";?>" class="nav-link <?php echo $document_syle;?>">
+                <span class="pcoded-micon">
+                    <i data-feather="archive"></i>
+                </span>
+                <span class="pcoded-mtext">Pagos</span>
+            </a>
+        </li>
+        <li class="nav-item pcoded-hasmenu">
+            <a href="#!" class="<?php echo $course_syle;?>">
+                <span class="pcoded-micon">
+                    <i data-feather="airplay"></i>
+                </span>
+                <span class="pcoded-mtext">Reportes</span>
+            </a>
+            <ul class="pcoded-submenu">
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/videos";?>"><i class="icon-large icon-th"></i>Videos</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
+            </ul>
+        </li>
+    </ul>
     </div>
-<!-- top fixed navbar -->
-    <div class="container-fluid">
-        <div class="row-fluid">
-                <!-- sidebar -->
-            <div id="sidebar" class="span2">			
-                    <div class="accordion custom-acc" id="accordionSB">
-                            <div class="accordion-group fs">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#dashboardsb">
-                                        Mantenimientos  
-                                        </a>
-                                    </div>
-                                    <div id="dashboardsb" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                            <li><a href="<?php echo site_url()."dashboard/panel";?>"><i class="icon-large icon-th"></i>Panel</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/videos";?>"><i class="icon-large icon-th"></i>Videos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/bonos";?>"><i class="icon-large icon-th"></i>Bonos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/facturas";?>"><i class="icon-large icon-th"></i>Facturas</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/categorias";?>"><i class="icon-large icon-th"></i>Categórías</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/comentarios";?>"><i class="icon-large icon-th"></i>Comentarios</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
-                                            <li><a href="#"><i class="icon-large icon-th"></i>Correos Masivos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/clientes";?>"><i class="icon-large icon-th"></i>Clientes</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
-                                            <li><a href="#"><i class="icon-large icon-th"></i>Puntos</a></li>
-                                            <li><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>
-                                            <?php if($_SESSION['usercms']['privilage'] == 2){ ?>
-                                            <li><a href="<?php echo site_url()."dashboard/usuarios";?>"><i class="icon-large icon-th"></i>Usuarios</a></li>
-                                            <?php } ?>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                            <?php 
-                            if($_SESSION['usercms']['privilage'] == 2){ ?>
-                                <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#activaciones">
-                                        Activaciones
-                                        </a>
-                                    </div>
-                                    <div id="activaciones" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/activaciones";?>"><i class="icon-large icon-th"></i>Facturas</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                        <div class="accordion-group">
-                                    <div class="accordion-heading">
-                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#cobros">
-                                        Pagos
-                                        </a>
-                                    </div>
-                                    <div id="cobros" class="accordion-body collapse">
-                                      <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                             <li><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
-                                        </ul>
-                                        </div>
-                                    </div>
-                            </div>
-                            <?php } ?>
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSB" href="#reportes">
-                                    Reportes
-                                    </a>
-                                </div>
-                                <div id="reportes" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <ul class="nav nav-list">
-                                            <li>
-                                                <a href="<?php echo site_url()."dashboard/reportes/asociados";?>"><i class="icon-large icon-th"></i>Asociados</a>
-                                            </li>
-                                            <li>                                        
-                                                <a href="<?php echo site_url()."dashboard/reportes/cuentas";?>"><i class="icon-large icon-th"></i>Cuentas</a>
-                                            </li>
-                                            <li>                                        
-                                                <a href="<?php echo site_url()."dashboard/reportes/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a>
-                                            </li>
-                                            <li>                                        
-                                                <a><i class="icon-large icon-th"></i>Proyecciones</a>
-                                            </li>
-                                            </ul>                                     
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-            </div>
-            <!-- sidebar 
-
-            <!-- main content -->
-            <div id="main_content" class="span10">
-                <div class="widget_container">
-                    <div class="well nomargin">
-                        <ul class="breadcrumbs-custom in-well">
-                            <li><a href="<?php echo $link_modulo?>"><?php echo $modulos?></a></li>                            
-                            <li class="active"><?php echo $seccion;?></li>
-                        </ul>
-                    </div>
-                </div>                
-                <?php echo $body; ?>	
-            </div>
-            <!-- main content -->
-        </div>
     </div>
-
+  </nav>
+  <header class="navbar pcoded-header navbar-expand-lg navbar-light">
+    <div class="m-header"><a class="mobile-menu" id="mobile-collapse1" href="#!"><span></span></a>
+        <a href="<?php echo site_url().'course';?>" class="b-brand">
+        <div class="b-bg">
+            <img src="<?php echo site_url().'static/page_front/images/logo/icono-negro.png';?>" alt="Logo" width="35"/>
+        </div>
+            <span class="b-title">BCA CAPITAL</span></a>
+    </div>
+      <a class="mobile-menu" id="mobile-header" href="#!">
+          <i class="feather icon-more-horizontal"></i>
+      </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li>
+            <a href="#!" class="full-screen" onclick="javascript:toggleFullScreen()">
+                <i data-feather="maximize"></i>
+            </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li>
+          <div class="dropdown drp-user">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <i data-feather="settings"></i>
+              </a>
+            <div class="dropdown-menu dropdown-menu-right profile-notification">
+              <div class="pro-head">
+                  <img src="<?php echo site_url().'static/backoffice/images/avatar.png';?>" class="img-radius" alt="User-Profile-Image">
+                  <span><?php echo $_SESSION['customer']['name'];?></span>
+              </div>
+              <ul class="pro-body">
+                <li>
+                    <a href="<?php echo site_url().'course/profile';?>" class="dropdown-item"><i data-feather="user-plus"></i> Perfil</a>
+                </li>
+                <li>
+                    <a href="<?php echo site_url().'login/logout';?>" class="dropdown-item"><i data-feather="power"></i> Salir</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+  <?php echo $body;?>
+  <!--[if lt IE 11]> <div class="ie-warning"> <h1>Warning!!</h1> <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website. </p> <div class="iew-container"> <ul class="iew-download"> <li> <a href="http://www.google.com/chrome/"> <img src="../assets/images/browser/chrome.png" alt="Chrome"> <div>Chrome</div> </a> </li> <li> <a href="https://www.mozilla.org/en-US/firefox/new/"> <img src="../assets/images/browser/firefox.png" alt="Firefox"> <div>Firefox</div> </a> </li> <li> <a href="http://www.opera.com"> <img src="../assets/images/browser/opera.png" alt="Opera"> <div>Opera</div> </a> </li> <li> <a href="https://www.apple.com/safari/"> <img src="../assets/images/browser/safari.png" alt="Safari"> <div>Safari</div> </a> </li> <li> <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie"> <img src="../assets/images/browser/ie.png" alt=""> <div>IE (11 & above)</div> </a> </li> </ul> </div> <p>Sorry for the inconvenience!</p> </div> <![endif]-->
+  <script src="<?php echo site_url().'static/course/js/vendor-all.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/bootstrap.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/pcoded.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/ekko-lightbox.min.js';?>"></script>
+  <script src="<?php echo site_url().'static/course/js/ac-lightbox.js';?>"></script>
+  <script src="http://html.codedthemes.com/datta-able/bootstrap/assets/plugins/data-tables/js/datatables.min.js"></script>
+  <script src="http://html.codedthemes.com/datta-able/bootstrap/assets/js/pages/tbl-datatable-custom.js"></script>
+  
+  
+  
+  <script>
+      feather.replace()
+  </script>
 </body>
-<!-- Mirrored from wbpreview.com/previews/WB0LX21H9/ by HTTrack Website Copier/3.x [XR&CO'2010], Thu, 06 Sep 2012 04:37:36 GMT -->
+
 </html>

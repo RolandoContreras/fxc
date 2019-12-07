@@ -14,6 +14,7 @@ class D_bonus extends CI_Controller{
                             "select" =>"bonus_id,
                                         name,
                                         percent,
+                                        active,
                                         status_value",
                             );            
             //GET DATA COMMISSIONS
@@ -42,6 +43,7 @@ class D_bonus extends CI_Controller{
                          "where" => "bonus_id = $bonus_id",
             ); 
             $obj_bonus  = $this->obj_bonus->get_search_row($params); 
+                       
             //RENDER
             $this->tmp_mastercms->set("obj_bonus",$obj_bonus);
           }
@@ -62,14 +64,14 @@ class D_bonus extends CI_Controller{
         $bonus_id = $this->input->post("bonus_id");
         $name =  $this->input->post('name');
         $percent =  $this->input->post('percent');
-        $status_value =  $this->input->post('status_value');
+        $active =  $this->input->post('active');
         
         //UPDATE DATA
         $data = array(
                 'bonus_id' => $bonus_id,
                 'name' => $name,
                 'percent' => $percent,
-                'status_value' => $status_value,  
+                'active' => $active,  
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
                 );          

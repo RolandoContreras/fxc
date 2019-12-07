@@ -1,76 +1,100 @@
-<script src="static/cms/js/core/bootstrap-modal.js"></script>
-<script src="static/cms/js/core/bootbox.min.js"></script>
-<script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
-<script src="static/cms/js/core/jquery.dataTables.min.js"></script>
-<link href="static/cms/css/core/jquery.dataTables.css" rel="stylesheet"/>
-
-<!-- main content -->
-<div id="main_content" class="span9">
-    <div class="row-fluid">
-        <div class="widget_container" style="width: 110%;">
-            <div class="well">
-                    <div class="navbar navbar-static navbar_as_heading">
-                            <div class="navbar-inner">
-                                    <div class="container" style="width: 110%;">
-                                            <a class="brand">LISTADO DE CATEGORÍAS</a>
-                                            <button class="btn btn-small" onclick="new_category();"><i class="fa fa-plus-square"></i> Nuevo</button>
-                                    </div>
-                                
-                            </div>
-                        
-                    </div>
-                
-             <!--<form>-->
-                <div class="well nomargin" style="width: 100%;">
-                    <!--- INCIO DE TABLA DE RE4GISTRO -->
-                   <table id="table" class="display" cellspacing="0" width="100%">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>NOMBRE</th>
-                                <th>SLUG</th>
-                                <th>ESTADO</th>
-                                <th>ACCIÓN</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <?php foreach ($obj_category as $value): ?>
-                                <td align="center"><b><?php echo $value->category_id;?></b></td>
-                                <td align="center" style="color:#fff;" class="label-success"><?php echo $value->name;?></td>
-                                <td align="center" style="color:#fff;" class="label-info"><?php echo $value->slug;?></td>
-                                <td align="center">
+<section class="pcoded-main-container">
+  <div class="pcoded-wrapper">
+    <div class="pcoded-content">
+      <div class="pcoded-inner-content">
+        <div class="page-header">
+          <div class="page-block">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <div class="page-header-title">
+                  <h5 class="m-b-10">Mantenimientos de Bonos</h5>
+                </div>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="<?php echo site_url().'dashboard/';?>">Panel</a></li>
+                  <li class="breadcrumb-item"><a>Bonos</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-body">
+          <div class="page-wrapper">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h5>Listado de Bonos</h5>
+                  </div>
+                  <div class="card-block">
+                    <div class="table-responsive">
+                      <div id="zero-configuration_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                        <div class="row">
+                          <div class="col-sm-12">
+                            <table id="zero-configuration" class="display table nowrap table-striped table-hover dataTable" style="width: 100%;" role="grid"
+                              aria-describedby="zero-configuration_info">
+                              <thead>
+                                <tr role="row">
+                                  <th class="sorting_asc" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 267px;" aria-sort="ascending"
+                                    aria-label="Name: activate to sort column descending">ID</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 392px;"
+                                    aria-label="Position: activate to sort column ascending">Nombre</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 197px;"
+                                    aria-label="Office: activate to sort column ascending">Slug</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 100px;"
+                                    aria-label="Age: activate to sort column ascending">Estado</th>
+                                  <th class="sorting" tabindex="0" aria-controls="zero-configuration" rowspan="1" colspan="1" style="width: 188px;"
+                                    aria-label="Start date: activate to sort column ascending">Acciones</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                  
+                                   <?php foreach ($obj_category as $value): ?>
+                                <tr>
+                                <th><?php echo $value->category_id;?></th>
+                                <td><?php echo strtoupper($value->name);?></td>
+                                <td><?php echo $value->slug;?></td>
+                                <td>
                                     <?php if ($value->active == 0) {
-                                        $valor = "Inactivo";
-                                        $stilo = "label label-important";
+                                        $valor = "No Activo";
+                                        $stilo = "label label-danger";
                                     }else{
                                         $valor = "Activo";
                                         $stilo = "label label-success";
                                     } ?>
-                                    <span class="<?php echo $stilo ?>"><?php echo $valor; ?></span>
+                                    <span class="<?php echo $stilo;?>"><?php echo $valor;?></span>
                                 </td>
                                 <td>
                                     <div class="operation">
                                             <div class="btn-group">
-                                                <button class="btn btn-small" onclick="edit_category('<?php echo $value->category_id;?>');"><i class="fa fa-pencil-square-o"></i> Editar</button><button class="btn btn-small" onclick="delete_informative('<?php echo $value->category_id;?>');"><i class="fa fa-trash-o"></i> Eliminar</button>
-                                          </div>
+                                               <button class="btn btn-secondary buttons-copy buttons-html5" tabindex="0" aria-controls="key-act-button" type="button" onclick="edit_category('<?php echo $value->category_id;?>');"><span>Editar</span></button>
+                                            </div>
                                     </div>
                                 </td>
                             </tr>
                             <?php endforeach; ?>
-                        </tbody>
-                    </table>
+                              </tbody>
+                              <tfoot>
+                                <tr>
+                                  <th rowspan="1" colspan="1">ID</th>
+                                  <th rowspan="1" colspan="1">Nombre</th>
+                                  <th rowspan="1" colspan="1">Slug</th>
+                                  <th rowspan="1" colspan="1">Estado</th>
+                                  <th rowspan="1" colspan="1">Acciones</th>
+                                </tr>
+                              </tfoot>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                  </div>
+                </div>
+              </div>
             </div>
-           <!--</form>-->         
+          </div>
         </div>
-    </div>
-</div><!-- main content -->
-</div>
-<script type="text/javascript">
-   $(document).ready(function() {
-    $('#table').dataTable( {
-         "order": [[ 0, "asc" ]]
-    } );
-} );
-</script>
-<script src="static/cms/js/category.js"></script>
+</section>
+<script src="<?php echo site_url();?>static/cms/js/category.js"></script>

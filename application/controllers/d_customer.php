@@ -108,7 +108,6 @@ class D_customer extends CI_Controller{
                 'address' => $this->input->post('address'),
                 'btc_address' => $this->input->post('btc_address'),
                 'active' => $this->input->post('active'),
-                'status_value' => $this->input->post('status_value'),
                 'updated_at' => date("Y-m-d H:i:s"),
                 'updated_by' => $_SESSION['usercms']['user_id']
                 );          
