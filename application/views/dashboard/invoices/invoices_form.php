@@ -59,6 +59,9 @@
                                   <label for="inputState">Estado</label>
                                     <select name="active" id="active" class="form-control">
                                         <option value="">[ Seleccionar ]</option>
+                                        <option value="0" <?php if(isset($obj_invoices)){
+                                            if($obj_invoices->active == 0){ echo "selected";}
+                                        }else{echo "";} ?>>Sin Acción</option>
                                         <option value="1" <?php if(isset($obj_invoices)){
                                             if($obj_invoices->active == 1){ echo "selected";}
                                         }else{echo "";} ?>>Esperando Activación</option>
@@ -76,7 +79,7 @@
                               if(isset($obj_invoices->invoice_id)){ ?>
                                     <div class="form-group">
                                           <label>Imagen Actual</label><br/>
-                                          <img src='<?php echo site_url()."static/course/img/$obj_invoices->img";?>' width="100" />
+                                          <img src='<?php echo site_url()."static/backoffice/invoice/$obj_invoices->img";?>' width="100" />
                                           <input class="form-control" type="hidden" name="img2" id="img2" value="<?php echo isset($obj_invoices)?$obj_invoices->img:"";?>">
                                       </div>
                               <?php } ?>

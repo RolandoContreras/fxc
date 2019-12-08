@@ -1,4 +1,4 @@
-<script src="static/cms/js/core/bootstrap-modal.js"></script>
+script src="static/cms/js/core/bootstrap-modal.js"></script>
 <script src="static/cms/js/core/bootbox.min.js"></script>
 <script src="static/cms/js/core/jquery-1.11.1.min.js"></script>
 <script src="static/cms/js/core/jquery.dataTables.min.js"></script>

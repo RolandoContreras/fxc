@@ -110,7 +110,7 @@
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/comisiones";?>"><i class="icon-large icon-th"></i>Comisiones</a></li>
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/facturas";?>"><i class="icon-large icon-th"></i>Facturas</a></li>
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/videos";?>"><i class="icon-large icon-th"></i>Videos</a></li>
-                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Membresias</a></li>
+                <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/membresias";?>"><i class="icon-large icon-th"></i>Kit</a></li>
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/pagos";?>"><i class="icon-large icon-th"></i>Pagos</a></li>
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/puntos";?>"><i class="icon-large icon-th"></i>Puntos</a></li>
                 <li class="pcoded-hasmenu"><a href="<?php echo site_url()."dashboard/rangos";?>"><i class="icon-large icon-th"></i>Rangos</a></li>

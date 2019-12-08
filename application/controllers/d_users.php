@@ -37,14 +37,10 @@ class D_Users extends CI_Controller{
             $data = array(
                'first_name' => $this->input->post('first_name'),
                'last_name   ' => $this->input->post('last_name'),
-               'user_name' => $this->input->post('username'),
                'password' => $this->input->post('password'),
                'email' => $this->input->post('email'),
-               'phone' => $this->input->post('phone'),
                'privilage' => $this->input->post('privilage'),
-               'status_value' => $this->input->post('status_value'),
-               'created_at' => date("Y-m-d H:i:s"),
-               'created_by' => $_SESSION['usercms']['user_id'],
+               'active' => $this->input->post('active'),
                'updated_at' => date("Y-m-d H:i:s"),
                'updated_by' => $_SESSION['usercms']['user_id']
                 );          
@@ -55,16 +51,12 @@ class D_Users extends CI_Controller{
             $data = array(
                'first_name' => $this->input->post('first_name'),
                'last_name   ' => $this->input->post('last_name'),
-               'user_name' => $this->input->post('username'),
                'password' => $this->input->post('password'),
                'email' => $this->input->post('email'),
-               'phone' => $this->input->post('phone'),
                'privilage' => $this->input->post('privilage'),
-               'status_value' => $this->input->post('status_value'),
+               'active' => $this->input->post('active'),
                'created_at' => date("Y-m-d H:i:s"),
                'created_by' => $_SESSION['usercms']['user_id'],
-               'updated_at' => date("Y-m-d H:i:s"),
-               'updated_by' => $_SESSION['usercms']['user_id']
                 );          
             //SAVE DATA IN TABLE    
             $this->obj_users->insert($data);

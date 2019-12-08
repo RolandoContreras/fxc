@@ -1,8 +1,5 @@
 <script src="<?php echo site_url().'static/cms/js/core/bootbox.locales.min.js';?>"></script>
 <script src="<?php echo site_url().'static/cms/js/core/bootbox.min.js';?>"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
 <section class="pcoded-main-container">
   <div class="pcoded-wrapper">
     <div class="pcoded-content">

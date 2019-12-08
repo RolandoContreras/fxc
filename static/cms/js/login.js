@@ -13,7 +13,7 @@ $(".btn-primary").on("click",function(){
             if (data.message == "false"){                         
                 $("#mensaje").html();
                  var texto = "";
-                 texto = texto+'<div class="alert alert-error">';
+                 texto = texto+'<div class="alert alert-danger">';
                  texto = texto+'<button class="close" data-dismiss="alert" type="button">×</button>';
                  texto = texto+'<p>'+data.print+'</p>';
                  texto = texto+'</div>';                 
