@@ -63,31 +63,31 @@
             }else{
                 $nav = "";
             }
-            $profile_syle = "";
-            $course_syle = "";
-            $document_syle = "";
-            $home_syle = "";
+            $panel_syle = "";
+            $activaciones_syle = "";
+            $pagos_syle = "";
+            $mantenimiento_syle = "";
             
             switch ($nav) {
-                case "profile":
-                    $profile_syle = "active";
+                case "panel":
+                    $panel_syle = "active";
                     break;
-                case "forex":
-                    $course_syle = "active";
+                case "activaciones":
+                    $activaciones_syle = "active";
                     break;
-                case "mkt":
-                    $course_syle = "active";
+                case "activar_pagos":
+                    $pagos_syle = "active";
                     break;
                 case "document":
                     $document_syle = "active";
                     break;
                 default:
-                    $home_syle = "active";
+                    $mantenimiento_syle = "active";
                     break;
             }
           ?>
           <li class="nav-item">
-              <a href="<?php echo site_url().'dashboard/panel';?>" class="nav-link <?php echo $home_syle;?>">
+              <a href="<?php echo site_url().'dashboard/panel';?>" class="nav-link <?php echo $panel_syle;?>">
                   <span class="pcoded-micon">
                        <i data-feather="home"></i>
                   </span>
@@ -95,7 +95,7 @@
               </a>
         </li>
         <li class="nav-item pcoded-hasmenu">
-            <a href="#!" class="<?php echo $course_syle;?>">
+            <a href="#!" class="<?php echo $mantenimiento_syle;?>">
                 <span class="pcoded-micon">
                     <i data-feather="sliders"></i>
                 </span>
@@ -120,7 +120,7 @@
             </ul>
         </li>
         <li class="nav-item">
-            <a href="<?php echo site_url()."dashboard/activaciones";?>" class="nav-link <?php echo $document_syle;?>">
+            <a href="<?php echo site_url()."dashboard/activaciones";?>" class="nav-link <?php echo $activaciones_syle;?>">
                 <span class="pcoded-micon">
                     <i data-feather="check-circle"></i>
                 </span>
@@ -128,7 +128,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a href="<?php echo site_url()."dashboard/activar_pagos";?>" class="nav-link <?php echo $document_syle;?>">
+            <a href="<?php echo site_url()."dashboard/activar_pagos";?>" class="nav-link <?php echo $pagos_syle;?>">
                 <span class="pcoded-micon">
                     <i data-feather="dollar-sign"></i>
                 </span>
@@ -136,7 +136,7 @@
             </a>
         </li>
         <li class="nav-item pcoded-hasmenu">
-            <a href="#!" class="<?php echo $course_syle;?>">
+            <a href="#!" class="">
                 <span class="pcoded-micon">
                     <i data-feather="book-open"></i>
                 </span>

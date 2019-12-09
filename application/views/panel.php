@@ -7,11 +7,10 @@
             <div class="row align-items-center">
               <div class="col-md-12">
                 <div class="page-header-title">
-                  <h5 class="m-b-10">Dashboard</h5>
+                  <h5 class="m-b-10">Tablero</h5>
                 </div>
                 <ul class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html"><i class="feather icon-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#!">Analytics Dashboard</a></li>
+                  <li class="breadcrumb-item"><a>Panel General</a></li>
                 </ul>
               </div>
             </div>
@@ -23,40 +22,61 @@
               <div class="col-md-12 col-xl-4">
                 <div class="card user-card">
                   <div class="card-block">
-                    <h5 class="m-b-15">Register User</h5>
-                    <h4 class="f-w-300 mb-3">1205</h4><span class="text-muted"><label class="label theme-bg text-white f-12 f-w-400">20%</label>Monthly Increase</span></div>
+                    <h5 class="m-b-15">Pagos Realizados</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_pay;?></h4><span class="text-muted"><label class="label theme-bg text-white f-12 f-w-400"><?php echo $obj_pending->pending_pay;?></label> Pendientes</span></div>
                 </div>
               </div>
               <div class="col-md-6 col-xl-4">
                 <div class="card user-card">
                   <div class="card-block">
-                    <h5 class="f-w-400 m-b-15">Daily User</h5>
-                    <h4 class="f-w-300 mb-3">467</h4><span class="text-muted"><label class="label theme-bg text-white f-12 f-w-400">10%</label>Weekly Increase</span></div>
+                    <h5 class="f-w-400 m-b-15">Facturas</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_invoices;?></h4><span class="text-muted"><label class="label theme-bg text-white f-12 f-w-400"><?php echo $obj_pending->pending_invoices;?></label> Pendientes</span></div>
                 </div>
               </div>
               <div class="col-md-6 col-xl-4">
                 <div class="card user-card">
                   <div class="card-block">
-                    <h5 class="f-w-400 m-b-15">Premium User</h5>
-                    <h4 class="f-w-300 mb-3">346</h4><span class="text-muted"><label class="label theme-bg text-white f-12 f-w-400">50%</label>Yearly Increase</span></div>
+                    <h5 class="f-w-400 m-b-15">Bonos</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_bonus;?></h4><span class="text-muted">Total</span></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="card user-card">
+                  <div class="card-block">
+                    <h5 class="f-w-400 m-b-15">Categorías</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_category;?></h4><span class="text-muted">Total</span></div>
+                </div>
+              </div>
+             <div class="col-md-6 col-xl-4">
+                <div class="card user-card">
+                  <div class="card-block">
+                    <h5 class="f-w-400 m-b-15">Kits</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_kit;?></h4><span class="text-muted">Total</span></div>
+                </div>
+              </div>
+              <div class="col-md-6 col-xl-4">
+                <div class="card user-card">
+                  <div class="card-block">
+                    <h5 class="f-w-400 m-b-15">Rangos</h5>
+                    <h4 class="f-w-300 mb-3"><?php echo $obj_total->total_ranges;?></h4><span class="text-muted">Total</span></div>
                 </div>
               </div>
               <div class="col-md-6 col-xl-4">
                 <div class="card Active-visitor">
                   <div class="card-block text-center">
-                    <h5 class="mb-3">Active Visitor</h5><i class="fas fa-user-friends f-30 text-c-green"></i>
-                    <h2 class="f-w-300 mt-3">1,285</h2><span class="text-muted">Active Visit On Sites</span>
+                    <h5 class="mb-3">Clientes</h5><i class="fas fa-user-friends f-30 text-c-green"></i>
+                    <h2 class="f-w-300 mt-3"><?php echo format_number_miles($obj_total->total_customer);?></h2>
                     <div class="progress mt-4 m-b-40">
                       <div class="progress-bar progress-c-theme" role="progressbar" style="width: 75%; height:7px;" aria-valuenow="75" aria-valuemin="0"
                         aria-valuemax="100"></div>
                     </div>
                     <div class="row card-active">
                       <div class="col-md-4 col-6">
-                        <h4>52%</h4><span class="text-muted">Desktop</span></div>
+                        <h4>52%</h4><span class="text-muted">Pagados</span></div>
                       <div class="col-md-4 col-6">
-                        <h4>80%</h4><span class="text-muted">Mobile</span></div>
+                        <h4>80%</h4><span class="text-muted">Financiados</span></div>
                       <div class="col-md-4 col-12">
-                        <h4>68%</h4><span class="text-muted">Tablet</span></div>
+                        <h4>68%</h4><span class="text-muted">Posicionado</span></div>
                     </div>
                   </div>
                 </div>
@@ -92,11 +112,14 @@
                   </div>
                 </div>
               </div>
+                
+                
               <div class="col-md-12 col-xl-4">
                 <div class="card theme-bg visitor">
-                  <div class="card-block text-center"><img class="img-female" src="../assets/images/user/user-1.png" alt="visitor-user">
-                    <h5 class="text-white m-0">TOTAL VISITORS</h5>
-                    <h3 class="text-white m-t-20 f-w-300">235</h3><span class="text-white">20% More than last Month</span><img class="img-men" src="../assets/images/user/user-2.png" alt="visitor-user"></div>
+                  <div class="card-block text-center">
+                    <h5 class="text-white m-0">COMENTARIOS</h5>
+                    <h3 class="text-white m-t-20 f-w-300"><?php echo $obj_total->total_comments;?></h3>
+                    <span class="text-white"><?php echo $obj_pending->pending_comments;?> Pendientes</span></div>
                 </div>
                 <div class="card">
                   <div class="card-block">
@@ -316,209 +339,3 @@
   </div>
 </div>
 </div>
-
-
-<script src="static/cms/js/core/bootstrap-modal.js"></script>
-<script src="static/cms/js/core/bootbox.min.js"></script>
-<div class="row-fluid">
-    <div class="span6">
-                        <div class="widget_container">
-							<div class="well nomargin">
-								<div class="navbar navbar-static navbar_as_heading">
-									<div class="navbar-inner">
-										<div class="container" style="width: auto;">
-											<a class="brand">Vista Rápida</a>
-										</div>
-									</div>
-								</div>
-								<table id="quick_view" class="table">
-									<thead>
-										<tr>
-											<th>CMS</th>
-											<th>Acciones</th>
-										</tr>
-									</thead><!-- table heading -->
-									<tbody>
-										<tr>
-                                                                                        <td><a href="<?php echo site_url().'dashboard/clientes';?>"><b><?php echo $obj_total->total_customer;?></b><i class="fa fa-users"></i> Clientes</a></td>
-										</tr>
-										<tr>
-											<td><a href="<?php echo site_url().'dashboard/comentarios';?>"><b><?php echo $obj_total->total_comments;?></b><i class="fa fa-comments"></i> Comentarios</a></td>
-											<td><a href="<?php echo site_url().'dashboard/comentarios';?>" class="pending"><b class="cmd"><?php echo $obj_pending->pending_comments;?></b><i class="fa fa-comments"></i> Por Leer</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/cobros';?>"><b><?php echo $obj_total->total_pay;?></b><i class="fa fa-btc"></i> Pagos Realizados</a></td>
-											<td><a href="<?php echo site_url().'dashboard/cobros';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_pay;?></b><i class="fa fa-btc"></i> Por Pagar</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/facturas';?>"><b><?php echo $obj_total->total_invoices;?></b><i class="fa fa-check-circle"></i> Facturas</a></td>
-                                                                                        <td><a href="<?php echo site_url().'dashboard/facturas';?>" class="spam"><b class="cmd"><?php echo $obj_pending->pending_invoices;?></b><i class="fa fa-check-circle"></i> Por Pagar</a></td>
-										</tr>
-										<tr>
-											<td><a href="<?php echo site_url()."dashboard/comisiones";?>"><b><?php echo $obj_total->total_commissions;?></b><i class="fa fa-area-chart"></i> Comisiones</a></td>
-										</tr>
-										<tr>
-											<td><a href="<?php echo site_url().'dashboard/bonos';?>"><b><?php echo $obj_total->total_bonus;?></b><i class="fa fa-area-chart"></i> Bonos</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/categorias';?>"><b><?php echo $obj_total->total_category;?></b><i class="fa fa-tags"></i> Categorías</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/membresias';?>"><b><?php echo $obj_total->total_kit;?></b><i class="fa fa-paper-plane"></i> Membresías</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/rangos';?>"><b><?php echo $obj_total->total_ranges;?></b><i class="fa fa-level-up"></i> Rangos</a></td>
-										</tr>
-                                                                                <tr>
-											<td><a href="<?php echo site_url().'dashboard/usuarios';?>"><b><?php echo $obj_total->total_users;?></b><i class="fa fa-user-secret"></i> Usuarios</a></td>
-										</tr>
-                                                                                
-									</tbody>
-								</table>
-							</div>
-						</div>
-        
-        
-            <div id="quick_post" class="widget_container">
-                    <div class="well">
-                            <div class="navbar navbar-static navbar_as_heading">
-                                    <div class="navbar-inner">
-                                            <div class="container" style="width: auto;">
-                                                    <a class="brand">Mensaje Correo Masivo</a>
-                                            </div>
-                                    </div>
-                            </div>
-
-<!--                            <div class="btn-group" data-toggle="buttons-radio" style="margin-bottom:20px;">
-                                    <button class="btn btn-duadua active">Red</button>
-                                    <button class="btn btn-duadua">Page</button>
-                                    <button class="btn btn-duadua">Report</button>
-                                    <button class="btn btn-duadua">Event</button>
-                            </div>-->
-
-                            <form method="post" name="upload_form" id="upload_form" enctype="multipart/form-data">
-                            <fieldset>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <span class="add-on"><i class="icon-edit"></i></span>
-                                        <input class="input-large" size="16" type="text" id="title"  name="title" value="<?php echo isset($obj_last_masive->title)?$obj_last_masive->title:"";?>" style="width:88%;" placeholder="<?php echo replace_vocales_voculeshtml("Título");?>" />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="control-group">
-                            <div class="controls">
-                            <textarea class="input-large" id="message_content" name="message_content" rows="5" style="width:97%;height:180px;" placeholder="Contenido"><?php echo isset($obj_last_masive->content)?$obj_last_masive->content:"";?></textarea>
-                            </div>
-                            </div>
-                            <?php
-                            if(isset($obj_last_masive->img)){ ?>
-                            <div class="control-group">
-                                <div class="controls">
-                                    <div class="input-prepend">
-                                        <span class="add-on"><i class="icon-edit"></i></span>
-                                        <img id="message_content" name="message_content" src="<?php echo site_url()."static/cms/images/masive/$obj_last_masive->img"?>" alt="<?php echo isset($obj_last_masive->title)?$obj_last_masive->title:"";?>" width="100"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <?php } ?>
-                                
-                            <div class="control-group">
-                            <div class="controls">
-                            600x300:<br> 
-                            <input type="file" value="Upload Imagen de Envio" name="image_file" id="image_file">
-                            </div>
-                            </div>  
-                            <br/>
-                            <button type="submit" name="upload" id="upload" class="btn btn-primary"><i class="fa fa-send"></i> Publicar </button>
-                            <!--<a onclick="message_public();" class="btn btn-primary">Publicar</a>-->
-                            <div id="uploaded_image"></div>
-                            </fieldset>
-                            </form>
-                    </div>
-            </div>
-    </div>
-
-        <div class="span6">
-                <div id="quick_comment_view" class="widget_container">
-                        <div class="well">							
-                                <div class="navbar navbar-static navbar_as_heading">
-                                        <div class="navbar-inner">
-                                                <div class="container" style="width: auto;">
-                                                        <a class="brand">Último Comentario</a>
-                                                </div>
-                                        </div>
-                                </div>
-                            <?php 
-                            if(count($obj_last_comment) > 0){ ?>
-                                <div class="row-fluid">
-                                    <div class="comment_container span12" style="margin-left:auto;">
-                                        <div class="span2">
-                                            <img style="padding: 8px" src="<?php echo site_url('static/cms/images/email-icon.jpg');?>" alt="mensajes"/>
-                                        </div>
-                                        <div class="span10" style="margin-left:auto;">
-                                            <div class="comment_content">
-                                                <p class="meta"><span class="comment_date"><?php echo formato_fecha($obj_last_comment->date_comment);?></span> | <a href="#"><?php echo $obj_last_comment->email;?></a></p>
-                                                    <p>
-                                                        <a class="comment_author"><?php echo $obj_last_comment->name;?></a> : <?php echo $obj_last_comment->comment;?><br/>
-                                                        <a class="pending">Estado : <b><?php echo $obj_last_comment->active == 0? "Contestado":"No Contestado";?></b></a>
-                                                    </p>
-                                                    <p>
-                                                        <?php 
-                                                        if($obj_last_comment->active == 1){ ?>
-                                                            <a class="btn btn-mini btn-success" onclick="change_state('<?php echo $obj_last_comment->comment_id;?>');">Marcar Contestado</a> 
-                                                        <?php } ?>
-                                                        <a class="btn btn-mini btn-primary" href="<?php echo site_url("dashboard/comentarios");?>">Ver más</a>
-                                                    </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            <?php }else{ ?>
-                                    <div class="row-fluid">
-                                            <div class="comment_container span12" style="margin-left:auto;">
-                                                <div class="span10" style="margin-left:auto;">
-                                                    <div class="comment_content">
-                                                        <h4><b>NO HAY MENSAJES</b></h4>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        <a href="<?php echo site_url("dashboard/comentarios");?>" class="btn btn-duadua">Ver más</a>
-                                    </div>
-                            <?php }  ?>
-                        </div>
-                </div>
-        </div>
-</div>
-<script src="static/cms/js/panel.js"></script>
-<script src="static/cms/js/jobs.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-
-<script>
-$(document).ready(function(){
-    $("#upload_form").on('submit',function(e){
-        e.preventDefault();
-        if($('#image_file').val() == ''){
-            $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe seleccionar la imagen</div>  ');
-        }else{
-            if($('#message_content').val() == ''){
-                $("#uploaded_image").html('<div class="alert alert-danger" style="text-align: center">Debe llenar los campos</div>  ');
-            }else{
-                $.ajax({
-                url : "<?php echo site_url().'dashboard/panel/masive_messages'?>",
-                method: "POST",
-                data:new FormData(this),
-                contentType: false,
-                cache: false,
-                processData: false,
-                success:function(data){
-                    $("#uploaded_image").html(data);
-                }
-            });
-            }
-            
-        }
-    });
-});
-</script>
