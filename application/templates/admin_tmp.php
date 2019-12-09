@@ -97,7 +97,7 @@
         <li class="nav-item pcoded-hasmenu">
             <a href="#!" class="<?php echo $course_syle;?>">
                 <span class="pcoded-micon">
-                    <i data-feather="airplay"></i>
+                    <i data-feather="sliders"></i>
                 </span>
                 <span class="pcoded-mtext">Mantenimientos</span>
             </a>
@@ -122,15 +122,15 @@
         <li class="nav-item">
             <a href="<?php echo site_url()."dashboard/activaciones";?>" class="nav-link <?php echo $document_syle;?>">
                 <span class="pcoded-micon">
-                    <i data-feather="archive"></i>
+                    <i data-feather="check-circle"></i>
                 </span>
                 <span class="pcoded-mtext">Activaciones</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="<?php echo site_url()."dashboard/pagos";?>" class="nav-link <?php echo $document_syle;?>">
+            <a href="<?php echo site_url()."dashboard/activar_pagos";?>" class="nav-link <?php echo $document_syle;?>">
                 <span class="pcoded-micon">
-                    <i data-feather="archive"></i>
+                    <i data-feather="dollar-sign"></i>
                 </span>
                 <span class="pcoded-mtext">Pagos</span>
             </a>
@@ -138,7 +138,7 @@
         <li class="nav-item pcoded-hasmenu">
             <a href="#!" class="<?php echo $course_syle;?>">
                 <span class="pcoded-micon">
-                    <i data-feather="airplay"></i>
+                    <i data-feather="book-open"></i>
                 </span>
                 <span class="pcoded-mtext">Reportes</span>
             </a>

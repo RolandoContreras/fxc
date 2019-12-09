@@ -162,6 +162,12 @@ $route['dashboard/activaciones/active_financy'] = "d_activate/active_financy";
 $route['dashboard/activaciones/active'] = "d_activate/active";
 $route['dashboard/activaciones/update_confirmation'] = "d_activate/update_confirmation";
 
+
+$route['dashboard/activar_pagos'] = "d_active_pays";
+$route['dashboard/activar_pagos/pagado'] = "d_active_pays/pagado";
+$route['dashboard/activar_pagos/devolver'] = "d_active_pays/devolver";
+
+
 $route['dashboard/pagos'] = "d_pays";
 $route['dashboard/pagos/pagado'] = "d_pays/pagado";
 $route['dashboard/pagos/load/([0-9]+)'] = "d_pays/load/$1";

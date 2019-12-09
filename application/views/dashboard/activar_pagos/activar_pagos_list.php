@@ -9,7 +9,7 @@
             <div class="row align-items-center">
               <div class="col-md-12">
                 <div class="page-header-title">
-                  <h5 class="m-b-10">Mantenimientos de Pagos</h5>
+                  <h5 class="m-b-10">Activar Pagos</h5>
                 </div>
                 <ul class="breadcrumb">
                   <li class="breadcrumb-item"><a href="<?php echo site_url().'dashboard/';?>">Panel</a></li>
@@ -85,7 +85,8 @@
                                 <td align="center">
                                     <div class="operation">
                                             <div class="btn-group">
-                                                    <button class="btn btn-secondary" type="button" onclick="edit_pay('<?php echo $value->pay_id;?>');"><span class="pcoded-micon"><i data-feather="edit"></i></span>  Editar</button>
+                                                    <button class="btn btn-secondary" type="button" onclick="pagado('<?php echo $value->pay_id;?>');"><span class="pcoded-micon"><i data-feather="dollar-sign"></i></span> Pagado</button>
+                                                    <button class="btn btn-secondary" type="button" onclick="devolver('<?php echo $value->pay_id;?>');"><span class="pcoded-micon"><i data-feather="x-circle"></i></span> Devolver</button>
                                           </div>
                                     </div>
                                 </td>
@@ -121,4 +122,4 @@
           </div>
         </div>
 </section>
-<script src="<?php echo site_url();?>static/cms/js/cobros.js"></script>
+<script src="<?php echo site_url();?>static/cms/js/activar_pagos.js"></script>

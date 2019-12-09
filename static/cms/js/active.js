@@ -1,48 +1,59 @@
 function active_financiada(invoice_id,customer_id,kit_id){
-    bootbox.dialog("Confirma que desea activar como financiada?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-           $.ajax({
-               type: "post",
-               url: site+"dashboard/activaciones/active_financy",
-               dataType: "json",
-               data: {invoice_id : invoice_id,
-                      customer_id : customer_id,
-                      kit_id : kit_id},
-               success:function(data){                             
-               location.reload();
-               }         
-           });
-           }
+    bootbox.confirm({
+    message: "Confirma que desea activar como financiada?",
+    buttons: {
+        confirm: {
+            label: 'Confirmar',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'Cerrar',
+            className: 'btn-danger'
         }
-    ]);
+    },
+    callback: function () {
+         $.ajax({
+                   type: "post",
+                   url: site+"dashboard/activaciones/active_financy",
+                   dataType: "json",
+                   data: {invoice_id : invoice_id,
+                          customer_id : customer_id,
+                          kit_id : kit_id},
+                   success:function(data){                             
+                   location.reload();
+                   }         
+           });
+    }
+});
 }
 function active(invoice_id,customer_id,kit_id,price){
-    bootbox.dialog("Confirma que desea activar la cuenta?", [        
-        { "label" : "Cancelar"},
-        {
-            "label" : "Confirmar",
-            "class" : "btn-success",
-            "callback": function() {
-           $.ajax({
-               type: "post",
-               url: site+"dashboard/activaciones/active",
-               dataType: "json",
-               data: {invoice_id : invoice_id,
-                      customer_id:customer_id,
-                      kit_id : kit_id,
-                      price : price
-                      },
-               success:function(data){                             
-               location.reload();
-               }         
-           });
-           }
+    bootbox.confirm({
+    message: "Confirma que desea activar la cuenta?",
+    buttons: {
+        confirm: {
+            label: 'Confirmar',
+            className: 'btn-success'
+        },
+        cancel: {
+            label: 'Cerrar',
+            className: 'btn-danger'
         }
-    ]);
+    },
+    callback: function () {
+         $.ajax({
+                   type: "post",
+                   url: site+"dashboard/activaciones/active",
+                   dataType: "json",
+                   data: {invoice_id : invoice_id,
+                          customer_id:customer_id,
+                          kit_id : kit_id,
+                          price : price},
+                   success:function(data){                             
+                   location.reload();
+                   }         
+           });
+    }
+});
 }
 function modal_img(id){
     // Get the modal
