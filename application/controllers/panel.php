@@ -5,6 +5,7 @@ class Panel extends CI_Controller{
         parent::__construct();    
         $this->load->model("comments_model","obj_comments");
         $this->load->model("customer_model","obj_customer");
+        $this->load->model("invoices_model","obj_invoices");
         $this->load->model("unilevel_model","obj_unilevel");
         $this->load->model("points_model","obj_points");
         $this->load->model("ranges_model","obj_ranges");
@@ -20,23 +21,53 @@ class Panel extends CI_Controller{
                                     (select count(*) from invoices where active = 1) as pending_invoices",
                         "where" => "active = 1");
         $obj_pending = $this->obj_comments->get_search_row($params);
+
+        //GET DATE FOR MONTH
+        $first_day_month =  first_month_day_actual();
+        $last_day_month =  last_month_day_actual();
         
-        //GET LASTEST COMMENT  
-        $params = array(
-                        "select" =>"comment_id,
-                                    name,
-                                    comment,
-                                    email,
-                                    active,
-                                    status_value,
-                                    date_comment",
-                         "order" => "date_comment DESC"
-            );
-        $obj_last_comment = $this->obj_comments->get_search_row($params);
         
+        
+        
+        //GET MONTH
+        $year = date('y');
+        $month = date('m');
+        $mes_actual = mostrar_mes($month);
+        
+        $primer_dia_ano = "$year-01-01";
+        $ultimo_dia_ano = "$year-12-31";
+        
+        //GET DATE FOR WEEK
+        $lunes_semana_actual = first_week_actual();
+        $domingo_semana_actual =  last_week_actual(); 
+        
+        
+                //GET MES
+                $params = array(
+                        "select" =>"sum(price) as total_mes,
+                                    (SELECT count(price) FROM (invoices) JOIN kit ON invoices.kit_id = kit.kit_id WHERE date BETWEEN '$first_day_month' AND '$last_day_month' AND invoices.type = 1 and invoices.active = 2 and financy = 0) as count_total_mes,
+                                    (SELECT sum(price) FROM (invoices) JOIN kit ON invoices.kit_id = kit.kit_id WHERE date BETWEEN '$primer_dia_ano' AND '$ultimo_dia_ano' AND invoices.type = 1 and invoices.active = 2 and financy = 0) as total_year",
+                "join" => array( 'kit, invoices.kit_id = kit.kit_id'),
+                "where" => "date BETWEEN '$first_day_month' AND '$last_day_month' and invoices.type = 1 and invoices.active = 2 and financy = 0");
+            //GET DATA FROM CUSTOMER
+            $obj_invoices = $this->obj_invoices->get_search_row($params);
+            
+                //GET SEMANA    
+                $params = array(
+                        "select" =>"sum(price) as total_semana",
+                "join" => array( 'kit, invoices.kit_id = kit.kit_id'),
+                "where" => "date BETWEEN '$lunes_semana_actual' AND '$domingo_semana_actual' AND invoices.type = 1 and invoices.active = 2");
+            //GET DATA FROM CUSTOMER
+            $obj_invoices_semana = $this->obj_invoices->get_search_row($params);
+            $total_semana = $obj_invoices_semana->total_semana;
+            
+            
         //GET TOTAL ROWS
         $params = array("select" =>"count(comment_id) as total_comments,
                                     (select count(*) from customer) as total_customer, 
+                                    (select count(*) from customer where financy = 1) as total_financy,
+                                    (select count(*) from customer where kit_id > 1 and active = 1) as total_activos,
+                                    (select count(*) from customer where kit_id = 1 and active = 1) as total_position,
                                     (select count(*) from category) as total_category,
                                     (select count(*) from kit) as total_kit,
                                     (select count(*) from invoices) as total_invoices,
@@ -50,9 +81,14 @@ class Panel extends CI_Controller{
         $modulos ='Home'; 
         $link_modulo =  site_url().$modulos; 
         $seccion = 'Vista global';        
-
+        
+        
+        $this->tmp_mastercms->set('mes_actual',$mes_actual);
+        $this->tmp_mastercms->set('lunes_semana_actual',$lunes_semana_actual);
+        $this->tmp_mastercms->set('domingo_semana_actual',$domingo_semana_actual);
+        $this->tmp_mastercms->set('obj_invoices',$obj_invoices);
+        $this->tmp_mastercms->set('total_semana',$total_semana);
         $this->tmp_mastercms->set('obj_pending',$obj_pending);
-        $this->tmp_mastercms->set('obj_last_comment',$obj_last_comment);
         $this->tmp_mastercms->set('obj_total',$obj_total);
         $this->tmp_mastercms->set('modulos',$modulos);
         $this->tmp_mastercms->set('link_modulo',$link_modulo);
@@ -60,6 +96,7 @@ class Panel extends CI_Controller{
         $this->tmp_mastercms->render('panel');
      }
     
+     
      public function cron_range(){
          
          //GET DATA CUSTOMER ACTIVE

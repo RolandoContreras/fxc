@@ -64,7 +64,8 @@
               <div class="col-md-6 col-xl-4">
                 <div class="card Active-visitor">
                   <div class="card-block text-center">
-                    <h5 class="mb-3">Clientes</h5><i class="fas fa-user-friends f-30 text-c-green"></i>
+                    <h5 class="mb-3">Clientes</h5>
+                    <i class="fas fa-user-friends f-30 text-c-green"></i>
                     <h2 class="f-w-300 mt-3"><?php echo format_number_miles($obj_total->total_customer);?></h2>
                     <div class="progress mt-4 m-b-40">
                       <div class="progress-bar progress-c-theme" role="progressbar" style="width: 75%; height:7px;" aria-valuenow="75" aria-valuemin="0"
@@ -72,11 +73,11 @@
                     </div>
                     <div class="row card-active">
                       <div class="col-md-4 col-6">
-                        <h4>52%</h4><span class="text-muted">Pagados</span></div>
+                        <h4><?php echo format_number_miles($obj_total->total_activos);?></h4><span class="text-muted">Pagados</span></div>
                       <div class="col-md-4 col-6">
-                        <h4>80%</h4><span class="text-muted">Financiados</span></div>
+                        <h4><?php echo format_number_miles($obj_total->total_financy);?></h4><span class="text-muted">Financiados</span></div>
                       <div class="col-md-4 col-12">
-                        <h4>68%</h4><span class="text-muted">Posicionado</span></div>
+                        <h4><?php echo format_number_miles($obj_total->total_position);?></h4><span class="text-muted">Posicionado</span></div>
                     </div>
                   </div>
                 </div>
@@ -124,7 +125,8 @@
                 <div class="card">
                   <div class="card-block">
                     <div class="row">
-                      <div class="col"><i class="feather icon-shopping-cart f-30 text-c-green"></i>
+                      <div class="col">
+                          <i class="text-c-green" data-feather="shopping-cart" text-c-green></i>
                         <h6 class="m-t-50 m-b-0">Last week’s orders</h6>
                       </div>
                       <div class="col text-right">
@@ -205,7 +207,7 @@
                 <div class="card-block">
                   <div class="row align-items-center justify-content-center">
                     <div class="col-6">
-                      <h3 class="f-w-300 mb-0 float-left">$ 59,48</h3>
+                        <h3 class="f-w-300 mb-0 float-left"><?php echo format_number_dolar($obj_invoices->total_year);?></h3>
                     </div>
                     <div class="col-6">
                       <div id="transactions" class="float-right" style="height: 90px; width: 80px; margin: 0px auto; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 90px;" width="80"
@@ -231,7 +233,7 @@
             <div class="col-md-6 col-xl-4">
               <div class="card">
                 <div class="card-header">
-                  <h5>Transactions</h5><span class="d-block pt-2">June - July</span>
+                    <h5>Reporte / <?php echo $mes_actual;?></h5><span class="d-block pt-2">Ventas e Ingresos</span>
                   <div class="card-header-right">
                     <div class="btn-group card-option"><button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-more-horizontal"></i></button>
                       <ul
@@ -264,7 +266,7 @@
                           </div>
                         </div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 45px;" width="80"
                           height="45"></canvas></div>
-                      <h3 class="f-w-300 pt-3 mb-0 text-center">$ 80,48</h3>
+                        <h3 class="f-w-300 pt-3 mb-0 text-center"><?php echo format_number_miles($obj_invoices->count_total_mes);?></h3>
                     </div>
                     <div class="col-6">
                       <div id="transactions2" style="height: 45px; width: 80px; margin: 0px auto; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 45px;" width="80"
@@ -282,7 +284,7 @@
                           </div>
                         </div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 45px;" width="80"
                           height="45"></canvas></div>
-                      <h3 class="f-w-300 pt-3 mb-0 text-center">$ 40,27</h3>
+                      <h3 class="f-w-300 pt-3 mb-0 text-center"><?php echo format_number_dolar($obj_invoices->total_mes);?></h3>
                     </div>
                   </div>
                 </div>
@@ -291,11 +293,11 @@
             <div class="col-md-12 col-xl-4">
               <div class="card">
                 <div class="card-header">
-                  <h5>Transactions</h5><span class="d-block pt-2">Jun 23 - Jul 23</span>
+                  <h5>Ingresos Semana Actual</h5>
+                  <span class="d-block pt-2"><?php echo formato_fecha_dia_mes($lunes_semana_actual)." - ".formato_fecha_dia_mes($domingo_semana_actual);?></span>
                   <div class="card-header-right">
                     <div class="btn-group card-option"><button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-more-horizontal"></i></button>
-                      <ul
-                        class="list-unstyled card-option dropdown-menu dropdown-menu-right">
+                      <ul class="list-unstyled card-option dropdown-menu dropdown-menu-right">
                         <li class="dropdown-item full-card"><a href="#!"><span><i class="feather icon-maximize"></i> maximize</span><span style="display:none"><i class="feather icon-minimize"></i> Restore</span></a></li>
                         <li
                           class="dropdown-item minimize-card"><a href="#!"><span><i class="feather icon-minus"></i> collapse</span><span style="display:none"><i class="feather icon-plus"></i> expand</span></a></li>
@@ -309,8 +311,8 @@
                 <div class="card-block">
                   <div class="row align-items-center justify-content-center">
                     <div class="col-6">
-                      <div id="transactions3" class="float-left" style="height: 90px; width: 80px; margin: 0px auto; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 90px;" width="80"
-                          height="90"></canvas>
+                      <div id="transactions3" class="float-left" style="height: 90px; width: 80px; margin: 0px auto; padding: 0px; position: relative;">
+                          <canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 80px; height: 90px;" width="80" height="90"></canvas>
                         <div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);">
                           <div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;">
                             <div style="position: absolute; max-width: 16px; top: 90px; font: 400 0px / 0px open sans, sans-serif; color: transparent; left: 1px; text-align: center;">0.0</div>
@@ -326,7 +328,7 @@
                           height="90"></canvas></div>
                     </div>
                     <div class="col-6">
-                      <h3 class="f-w-300 mb-0 float-right">$ 59,48</h3>
+                        <h3 class="f-w-300 mb-0 float-right"><?php echo format_number_dolar($total_semana);?></h3>
                     </div>
                   </div>
                 </div>

@@ -31,7 +31,7 @@
     <meta name="theme-color" content="#ffffff">
   <!--END FAVICON-->
   <link rel="stylesheet" href="<?php echo site_url().'static/course/css/style.css';?>">
-  <link rel="stylesheet" href="<?php echo site_url().'static/cms/css/datatables.min.css';?>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="<?php echo site_url().'static/cms/css/animate.min.css';?>">
   <script src="https://unpkg.com/feather-icons"></script>
   <script type="text/javascript">
@@ -210,6 +210,27 @@
   <script src="<?php echo site_url().'static/course/js/ac-lightbox.js';?>"></script>
   <script src="<?php echo site_url().'static/cms/js/datatables.min.js';?>"></script>
   <script src="<?php echo site_url().'static/cms/js/tbl-datatable-custom.js';?>"></script>
+  
+  
+
+<script src="<?php echo site_url().'static/cms/js/core/amcharts.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/gauge.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/serial.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/light.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/pie.min.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/ammap.min.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/usaLow.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/radar.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/worldLow.js';?>"></script>
+
+<script src="<?php echo site_url().'static/cms/js/core/jquery.flot.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/jquery.flot.categories.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/curvedLines.js';?>"></script>
+<script src="<?php echo site_url().'static/cms/js/core/jquery.flot.tooltip.min.js';?>"></script>
+
+<script src="<?php echo site_url().'static/cms/js/core/dashboard-analytics.js';?>"></script>
+  
+  
   <script>
       feather.replace()
   </script>

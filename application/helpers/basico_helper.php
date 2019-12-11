@@ -86,6 +86,16 @@ function formato_fecha($fecha){
     return  $dia_semana." ".$dia." de ".$mostrar_mes." del ".$anio;
 }
 
+function formato_fecha_dia_mes($fecha){    
+    $dia=substr($fecha, 8, 2);
+    $mes=substr($fecha, 5, 2);
+    $anio=substr($fecha, 0, 4);
+    
+    $dia_semana = dia_semana($mes,$dia,$anio);
+    $mostrar_mes = mostrar_mes($mes);
+    return  $dia."/".$mostrar_mes;
+}
+
 function last_month_day($month,$year){ 
       $day = date("d", mktime(0,0,0, $month+1, 0, $year));
       return date('Y-m-d', mktime(0,0,0, $month, $day, $year));
@@ -94,6 +104,30 @@ function last_month_day($month,$year){
 function first_month_day($month,$year){
 //      $month = date('m');
 //      $year = date('Y');
+      return date('Y-m-d', mktime(0,0,0, $month, 1, $year));
+}
+
+function first_week_actual(){
+    //LUNES
+      return date("Y-m-d", strtotime('monday this week'));
+}
+
+function last_week_actual(){
+    //DOMINGO
+      return date("Y-m-d", strtotime('sunday this week')); 
+}
+
+function last_month_day_actual(){ 
+    //LUNES
+      $month = date('m');
+      $year = date('Y');
+      $day = date("d", mktime(0,0,0, $month+1, 0, $year));
+      return date('Y-m-d', mktime(0,0,0, $month, $day, $year));
+}
+
+function first_month_day_actual(){
+      $month = date('m');
+      $year = date('Y');
       return date('Y-m-d', mktime(0,0,0, $month, 1, $year));
 }
 
